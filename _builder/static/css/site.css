@@ -439,3 +439,18 @@ p { margin: 0 0 1em; }
 .swatches.swatches-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); margin: 0; }
 .sw-name { overflow-wrap: anywhere; hyphens: auto; }
 @media (max-width: 640px) { .swatches.swatches-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+/* ---------- home hero with the key art painting ----------
+   The fight fills the lower half of the painting, so the fade is short and the text panel sits below the picture
+   instead of overlapping it. The logo layer sits in the calm sky (30–70 % across, 7–41 % down). */
+.hero-has-art .hero-art .hero-painting { aspect-ratio: 1672 / 941; }
+.hero-has-art .hero-art::after { height: 14%; background: linear-gradient(180deg, rgba(10, 16, 14, 0), var(--spruce-deep)); }
+.hero-has-art .hero-panel { margin-top: 0; padding-top: 40px; }
+.hero-art .hero-logo { --logo-x: 30%; --logo-y: 7%; --logo-w: 40%;
+  filter: drop-shadow(0 4px 14px rgba(10, 16, 14, .45)) drop-shadow(0 0 2px rgba(10, 16, 14, .35)); }
+.hero-art .hero-logo img { width: 100%; height: auto; aspect-ratio: 1983 / 793; -webkit-mask-image: none; mask-image: none; }
+@media (max-width: 760px) {
+  /* the painting is small on phones, so the logo takes a bigger share of the sky */
+  .hero-art .hero-logo { --logo-x: 19%; --logo-y: 4%; --logo-w: 62%; }
+  .hero-has-art .hero-panel { padding-top: 28px; }
+}

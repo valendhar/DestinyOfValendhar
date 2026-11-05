@@ -99,21 +99,28 @@ def body(ctx):
     ]
     fact_html = "".join(f"<div><dt>{k}</dt><dd>{v}</dd></div>" for k, v in facts)
 
-    key = ctx.pick("KEYART", "KA-03")
-    alt = t("A traveller at the Wayward Dais looks up the road to the gate of Timberwatch.",
-            "Ein Reisender am Wayward Dais blickt die Straße hinauf zum Tor von Timberwatch.")
+    key = "KEYART"  # the commissioned hero painting only; the drawn stand-in shows until it exists
+    hero_cls = "hero"
     if ctx.has(key):
-        hero_art = (f'<div class="hero-art"><img src="{ctx.img_src(key, "full")}" alt="{alt}" fetchpriority="high">'
-                    + (f'<h1 class="hero-logo"><img src="{ctx.img_src("TITLE-LOGO", "full")}" alt="Destiny of Valendhar"></h1>'
+        alt = t("Below the walls of Timberwatch, a Paladin catches the leaping Alpha on his shield while a White Mage, "
+                "an Elementalist and a Ranger hold off the wolf pack coming out of the Wolfwood.",
+                "Unter den Mauern von Timberwatch fängt ein Paladin den springenden Alpha mit seinem Schild ab, während eine "
+                "Weißmagierin, ein Elementarist und ein Ranger das Wolfsrudel aus dem Wolfwood zurückhalten.")
+        # The logo is its own transparent layer over the painting's calm sky, so it stays sharp at every size.
+        hero_cls = "hero hero-has-art"
+        hero_art = (f'<div class="hero-art"><img class="hero-painting" src="{ctx.img_src(key, "full")}" alt="{alt}" fetchpriority="high">'
+                    + (f'<h1 class="hero-logo"><img src="{ctx.img_src("TITLE-LOGO", "full")}" alt="Destiny of Valendhar" fetchpriority="high"></h1>'
                        if ctx.has("TITLE-LOGO") else
                        '<h1 class="hero-wordmark"><span class="wm-small">Destiny of</span><span class="wm-big">Valendhar</span></h1>')
                     + '</div>')
     else:
+        alt = t("A traveller at the Wayward Dais looks up the road to the gate of Timberwatch.",
+                "Ein Reisender am Wayward Dais blickt die Straße hinauf zum Tor von Timberwatch.")
         hero_art = (f'<div class="hero-art">{hero_svg(alt)}'
                     '<h1 class="hero-wordmark"><span class="wm-small">Destiny of</span><span class="wm-big">Valendhar</span></h1></div>')
 
     return f"""
-<section class="hero">
+<section class="{hero_cls}">
   {hero_art}
   <div class="wrap hero-panel">
     <div class="hero-copy">
