@@ -63,6 +63,7 @@ def views(ctx):
 {ctx.gallery([
     ("TD-02", t("Painted map of Timberwatch", "Gemalte Karte von Timberwatch")),
     ("TD-04", t("Painted map of the Wolfwood", "Gemalte Karte des Wolfwood")),
+    ("TD-05", t("Layout grid of Timberwatch", "Lageplan von Timberwatch mit Raster")),
 ], "gallery-2")}""")
 
 
