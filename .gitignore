@@ -1,0 +1,6 @@
+_builder/images/originals/
+__pycache__/
+.DS_Store
+
+# Private design docs, never published
+_Docs/
