@@ -92,9 +92,9 @@ def media(ctx):
     t = ctx.t
     return section(f"""<div class="stub"><p class="kicker">{t("Coming later", "Kommt später")}</p>
 <h2>{t("Screenshots and video", "Screenshots und Videos")}</h2>
-<p>{t("In-engine screenshots and a trailer will appear here once the first chapter is playable. Until then, everything on this "
+<p>{t("In-engine screenshots and a trailer will appear here once the vertical slice is playable. Until then, everything on this "
       "site is concept art.",
-      "Screenshots aus der Engine und ein Trailer erscheinen hier, sobald das erste Kapitel spielbar ist. Bis dahin ist alles auf "
+      "Screenshots aus der Engine und ein Trailer erscheinen hier, sobald die Vertical Slice spielbar ist. Bis dahin ist alles auf "
       "dieser Seite Konzeptkunst.")}</p>
 <a class="btn btn-ghost" href="{ctx.url('art/index.html')}">{t("See the concept art", "Zur Konzeptkunst")}</a></div>""")
 

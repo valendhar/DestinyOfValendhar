@@ -7,25 +7,30 @@ def overview(ctx):
     intro = section(f"""
 <div class="intro">
   <div class="prose">
-    <p class="big">{t("Destiny of Valendhar is a third-person fantasy online RPG set in the world of Valendhar. You pick a job, "
+    <p class="big">{t("Destiny of Valendhar is a third-person fantasy online MMO set in the world of Valendhar, played by many players at the same time. You pick a job, "
                       "join its guild, and fight with a hotbar of abilities against enemies you select with a target key, the way "
-                      "classic online RPGs play.",
-                      "Destiny of Valendhar ist ein Fantasy-Online-Rollenspiel in der dritten Person, angesiedelt in der Welt "
+                      "classic MMOs play.",
+                      "Destiny of Valendhar ist ein Fantasy-Online-MMO in der dritten Person, das viele Spieler gleichzeitig spielen, angesiedelt in der Welt "
                       "Valendhar. Du wählst einen Job, trittst seiner Gilde bei und kämpfst mit einer Leiste voller Fähigkeiten gegen "
-                      "Gegner, die du per Zieltaste auswählst, so wie klassische Online-Rollenspiele sich spielen.")}</p>
-    <p>{t("The first chapter is a complete, self-contained piece of the game: one village, one forest, one road and one dungeon, "
-          "from the first step to a boss and an end screen. It is the part being built now, and the measure for everything after it.",
-          "Das erste Kapitel ist ein vollständiges, in sich geschlossenes Stück des Spiels: ein Dorf, ein Wald, eine Straße und ein "
-          "Verlies, vom ersten Schritt bis zu einem Boss und einem Abschlussbildschirm. Es ist der Teil, der gerade entsteht, und der "
-          "Maßstab für alles, was danach kommt.")}</p>
+                      "Gegner, die du per Zieltaste auswählst, so wie klassische MMOs sich spielen.")}</p>
+    <p>{t("This site shows the game's vertical slice, not the full game. A vertical slice is one small part built to finished quality "
+          "first: here, one village, one forest, one road and one dungeon, from the first step to the last boss. "
+          "It is the part being built now, and the measure for everything after it.",
+          "Diese Seite zeigt die Vertical Slice des Spiels, nicht das ganze Spiel. Eine Vertical Slice ist ein kleiner Teil, der zuerst "
+          "in fertiger Qualität entsteht: hier ein Dorf, ein Wald, eine Straße und ein Verlies, vom ersten "
+          "Schritt bis zum letzten Boss. Es ist der Teil, der gerade entsteht, und der Maßstab für alles, "
+          "was danach kommt.")}</p>
   </div>
   {facts(ctx, [
-      (("Genre", "Genre"), ("Fantasy online RPG, third person", "Fantasy-Online-Rollenspiel, dritte Person")),
+      (("Genre", "Genre"), ("Fantasy online MMO, third person", "Fantasy-Online-MMO, dritte Person")),
       (("Camera", "Kamera"), ("Orbit camera behind your character", "Orbit-Kamera hinter deiner Figur")),
       (("Combat", "Kampf"), ("Tab-target with a 10-slot hotbar", "Tab-Target mit einer Leiste aus 10 Plätzen")),
       (("Party roles", "Gruppenrollen"), ("Tank, healer, damage", "Tank, Heiler, Schaden")),
-      (("First chapter", "Erstes Kapitel"), ("45–75 minutes, levels 1 to 7", "45–75 Minuten, Stufe 1 bis 7")),
-      (("Players", "Spieler"), ("Solo, or a party of two", "Allein oder zu zweit")),
+      (("Your character", "Deine Figur"), ("Male or female, with different races to choose from later", "Männlich oder weiblich, später auch verschiedene Völker zur Auswahl")),
+      (("Vertical slice", "Vertical Slice"), ("A small finished part of the MMO, not the full game", "Ein kleiner fertiger Teil des MMOs, nicht das ganze Spiel")),
+      (("Players", "Spieler"), ("Many players at the same time, online in one world", "Viele Spieler gleichzeitig, online in einer Welt")),
+      (("Platform", "Plattform"), ("PC first", "Zuerst für PC")),
+      (("Engine", "Engine"), ("Unreal Engine 5", "Unreal Engine 5")),
   ])}
 </div>""")
 
@@ -52,9 +57,9 @@ def overview(ctx):
      "Vom Dorf aus wird das Land älter, dunkler und gefährlicher: Wiese, Holzfällerlichtungen, Buchenwald, tiefer Fichtenwald, "
      "der Wolfsbau. Du weißt immer ungefähr, wie weit du gekommen bist.")], flip=True)}
 {feature(ctx, "VW-08", ("Pillar 5", "Säule 5"), ("Better together", "Gemeinsam besser"), [
-    ("Every fight can be won alone, and every fight gets easier with a friend. A tank who holds attention and a healer who keeps "
+    ("Every fight can be won alone, and every fight gets easier with other players. A tank who holds attention and a healer who keeps "
      "people standing change how the Alpha plays.",
-     "Jeder Kampf lässt sich allein gewinnen, und jeder Kampf wird mit einem Freund leichter. Ein Tank, der die Aufmerksamkeit "
+     "Jeder Kampf lässt sich allein gewinnen, und jeder Kampf wird mit anderen Spielern leichter. Ein Tank, der die Aufmerksamkeit "
      "hält, und ein Heiler, der alle auf den Beinen hält, verändern, wie sich der Alpha spielt.")])}
 """)
 
@@ -71,7 +76,10 @@ def overview(ctx):
     (("Go further", "Weiter vorstoßen"), ("New abilities open deeper, darker parts of the forest.",
                                           "Neue Fähigkeiten öffnen tiefere, dunklere Teile des Waldes.")),
 ])}""", "band-dark")
-    return intro + pillars + loop
+    frameworks = section(f"""
+<h2>{t("Game Frameworks used", "Verwendete Spiele-Frameworks")}</h2>
+<ul class="abilities"><li>Vertical Third</li><li>Redwood MMO</li></ul>""")
+    return intro + pillars + loop + frameworks
 
 
 def combat(ctx):
@@ -132,7 +140,7 @@ JOB_DETAILS = [
       "Weißmagier halten Leute am Leben: Heilung für einen oder alle, Heilung über Zeit, Gift reinigen und Gefallene wiederbeleben."),
      ["Stone", "Cure", "Medica", "Regen", "Esuna", "Raise"],
      ("Keep them standing. That is the whole job, and it is enough.", "Halt sie auf den Beinen. Das ist die ganze Arbeit, und sie reicht."), "Mira"),
-    ("elementalist", "VW-07", ("Elementalist", "Elementarist"), ("Magic damage · rod", "Magie-Schaden · Rute"),
+    ("elementalist", "VW-07", ("Elementalist", "Elementarist"), ("Magic damage · staff", "Magie-Schaden · Stab"),
      ("Elwyn, the mage of Elwyn's Tower", "Elwyn, der Magier aus Elwyns Turm"),
      ("Deep red, a four-pointed star", "Tiefrot, ein vierzackiger Stern"),
      ("Elementalists throw fire, frost, lightning and earth: bolts, cones, channelled beams and spikes from the ground, with a "
@@ -154,10 +162,17 @@ def jobs(ctx):
                 f'{tags(ctx, [trainer, banner])}')
         out.append(f'<div id="{key}" class="job-{key}" style="scroll-margin-top:90px">'
                    + feature(ctx, img, None, name, body, flip=k % 2 == 1, extra=extra) + '</div>')
+    # The two line-ups appear once both images exist, so the page never shows a placeholder for them.
+    line_ups = ""
+    if ctx.has("PC-GROUP-M") and ctx.has("PC-GROUP-F"):
+        line_ups = '<div style="margin-bottom:72px">' + ctx.gallery([
+            ("PC-GROUP-M", t("The four jobs as male characters", "Die vier Jobs mit männlichen Figuren")),
+            ("PC-GROUP-F", t("The four jobs as female characters", "Die vier Jobs mit weiblichen Figuren")),
+        ], "gallery-2") + "</div>"
     return section(f"""
-<p class="lede" style="margin-bottom:56px">{t("You pick one job in the first chapter. Ability names are working names and will change as the jobs are tuned.",
-                       "Im ersten Kapitel wählst du einen Job. Die Namen der Fähigkeiten sind Arbeitstitel und ändern sich, während die Jobs abgestimmt werden.")}</p>
-{"".join(out)}""")
+<p class="lede" style="margin-bottom:56px">{t("Every job can be played as a male or female character, and different races to choose from will come later. You pick one job in the vertical slice. Ability names are working names and will change as the jobs are tuned.",
+                       "Jeder Job lässt sich mit einer männlichen oder weiblichen Figur spielen, und später kommen verschiedene Völker zur Auswahl dazu. In der Vertical Slice wählst du einen Job. Die Namen der Fähigkeiten sind Arbeitstitel und ändern sich, während die Jobs abgestimmt werden.")}</p>
+{line_ups}{"".join(out)}""")
 
 
 def village_life(ctx):
@@ -190,8 +205,8 @@ def village_life(ctx):
 PAGES = {
     "game/index.html": dict(
         title=("The Game", "Das Spiel"), kicker=("Overview & pillars", "Überblick & Säulen"),
-        lede=("A fantasy online RPG of jobs, guilds and readable fights, starting in one border village.",
-              "Ein Fantasy-Online-Rollenspiel mit Jobs, Gilden und lesbaren Kämpfen, das in einem Grenzdorf beginnt."),
+        lede=("A fantasy online MMO of jobs, guilds and readable fights, starting in one border village.",
+              "Ein Fantasy-Online-MMO mit Jobs, Gilden und lesbaren Kämpfen, das in einem Grenzdorf beginnt."),
         banner="KA-01", body=overview),
     "game/combat.html": dict(
         title=("Combat", "Kampf"), kicker=("The Game", "Das Spiel"),

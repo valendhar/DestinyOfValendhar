@@ -176,7 +176,7 @@ def road(ctx):
         (("The ambush point", "Der Hinterhalt"), ("An overturned cart and scattered crates. Two waves to survive.", "Ein umgestürzter Karren und verstreute Kisten. Zwei Wellen zu überleben.")),
         (("The wounded scout", "Der verwundete Kundschafter"), ("He has seen what is under the hill.", "Er hat gesehen, was unter dem Hügel ist.")),
         (("The dungeon entrance", "Der Verlieseingang"), ("An overgrown stone archway into a hillside, carved with wolf heads.", "Ein überwucherter Steinbogen in einen Hang, mit eingemeißelten Wolfsköpfen.")),
-        (("The gates of Oakhaven", "Die Tore von Oakhaven"), ("The end of the first chapter.", "Das Ende des ersten Kapitels.")),
+        (("The gates of Oakhaven", "Die Tore von Oakhaven"), ("The end of the vertical slice.", "Das Ende der Vertical Slice.")),
     ]
     return section(f"""
 {feature(ctx, "VW-08", ("Leaving Timberwatch", "Timberwatch verlassen"), ("The only road east", "Die einzige Straße nach Osten"), [
@@ -188,9 +188,9 @@ def road(ctx):
 <div style="margin-top:80px">
 {feature(ctx, "DG-01", ("Beneath the hill", "Unter dem Hügel"), ("The dungeon", "Das Verlies"), [
     ("An entrance hall, three rooms of enemies, a bridge, a round boss chamber thirty metres across, and a tunnel back out to "
-     "the road. Ten to fifteen minutes, best with a friend. It is the barrow of a forgotten wolf-cult, and its dead still stand guard.",
+     "the road. Best with other players. It is the barrow of a forgotten wolf-cult, and its dead still stand guard.",
      "Eine Eingangshalle, drei Räume voller Gegner, eine Brücke, eine runde Bosskammer von dreißig Metern und ein Tunnel zurück "
-     "zur Straße. Zehn bis fünfzehn Minuten, am besten mit einem Freund. Es ist das Hügelgrab eines vergessenen Wolfskults, und seine Toten halten noch immer Wache.")],
+     "zur Straße. Am besten mit anderen Spielern. Es ist das Hügelgrab eines vergessenen Wolfskults, und seine Toten halten noch immer Wache.")],
     flip=True)}
 </div>""")
 

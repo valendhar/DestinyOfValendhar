@@ -32,8 +32,8 @@ STOPS = [
                "Begleite einen Händlerkarren aus dem Osttor und wehre dann zwei Wellen von Angreifern ab.")),
     ("DG-01", ("A wounded scout warns you about the hill. Three packs, a two-phase boss, and a way back out to the road.",
                "Ein verwundeter Kundschafter warnt dich vor dem Hügel. Drei Gruppen, ein Boss mit zwei Phasen und ein Weg zurück zur Straße.")),
-    ("OH-GATE", ("Follow the last stretch of road to Oakhaven's gate, where the first chapter ends with a summary of your run.",
-                 "Folge dem letzten Stück Straße bis zum Tor von Oakhaven, wo das erste Kapitel mit einer Übersicht deines Laufs endet.")),
+    ("OH-GATE", ("Follow the last stretch of road to Oakhaven's gate, where the vertical slice ends.",
+                 "Folge dem letzten Stück Straße bis zum Tor von Oakhaven, wo die Vertical Slice endet.")),
 ]
 
 
@@ -47,12 +47,11 @@ def path_page(ctx):
                     + feature(ctx, img, act, name, [what], flip=k % 2 == 1, extra=extra) + '</div>')
     return section(f"""
 <div class="intro" style="margin-bottom:80px">
-  <p class="big">{t("The first chapter is one road, walked in eleven stops. It takes 45 to 75 minutes with one job, "
+  <p class="big">{t("The vertical slice is one road, walked in eleven stops, "
                     "and every stop teaches one new thing.",
-                    "Das erste Kapitel ist eine Straße in elf Stationen. Mit einem Job dauert es 45 bis 75 Minuten, "
+                    "Die Vertical Slice ist eine Straße in elf Stationen, "
                     "und jede Station bringt dir eine neue Sache bei.")}</p>
   {facts(ctx, [
-      (("Play time", "Spielzeit"), ("45–75 minutes", "45–75 Minuten")),
       (("Levels", "Stufen"), ("1 to 5 by the Alpha, 6–7 after the dungeon", "1 bis 5 beim Alpha, 6–7 nach dem Verlies")),
       (("Quests", "Quests"), ("17 main steps, one optional", "17 Hauptschritte, einer optional")),
       (("Bosses", "Bosse"), ("The Alpha, and the dungeon boss", "Der Alpha und der Verliesboss")),
@@ -110,10 +109,10 @@ def alpha_page(ctx):
   <div class="prose">
     {quote(ctx, ("It's bigger than the others. Bigger than any wolf should be. Take antidotes.",
                  "Er ist größer als die anderen. Größer, als ein Wolf sein sollte. Nimm Gegengift mit."), ("Captain Roland", "Hauptmann Roland"))}
-    <p>{t("The Alpha leads the pack from a den under a rock outcrop deep in the spruce. It is the first-chapter boss: winnable alone "
-          "at level 5 with any job, and noticeably easier with a friend who can hold its attention or keep you healed.",
-          "Der Alpha führt das Rudel aus einem Bau unter einem Felsvorsprung tief im Fichtenwald. Er ist der Boss des ersten Kapitels: "
-          "allein auf Stufe 5 mit jedem Job zu schaffen und spürbar leichter mit einem Freund, der seine Aufmerksamkeit hält oder dich heilt.")}</p>
+    <p>{t("The Alpha leads the pack from a den under a rock outcrop deep in the spruce. It is the first boss of the vertical slice: winnable alone "
+          "at level 5 with any job, and noticeably easier with another player who can hold its attention or keep you healed.",
+          "Der Alpha führt das Rudel aus einem Bau unter einem Felsvorsprung tief im Fichtenwald. Er ist der erste Boss der Vertical Slice: "
+          "allein auf Stufe 5 mit jedem Job zu schaffen und spürbar leichter mit einem anderen Spieler, der seine Aufmerksamkeit hält oder dich heilt.")}</p>
   </div>
   {facts(ctx, [
       (("Where", "Wo"), ("The wolf den, deep in the spruce wood", "Der Wolfsbau, tief im Fichtenwald")),
@@ -147,7 +146,7 @@ def alpha_page(ctx):
 PAGES = {
     "journey/index.html": dict(
         title=("From Dais to Gate", "Vom Dais zum Tor"), kicker=("The Journey", "Die Reise"),
-        lede=("The whole first chapter, stop by stop.", "Das ganze erste Kapitel, Station für Station."),
+        lede=("The whole vertical slice, stop by stop.", "Die ganze Vertical Slice, Station für Station."),
         banner="KA-03", body=path_page),
     "journey/quests.html": dict(
         title=("The Quest Chain", "Die Questreihe"), kicker=("The Journey", "Die Reise"),

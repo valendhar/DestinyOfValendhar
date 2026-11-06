@@ -24,7 +24,7 @@ ACTS = [
     (("Act 9", "Akt 9"), ("Beneath the hill", "Unter dem Hügel"),
      ("Old stone, and something older behind it.", "Alter Stein, und dahinter etwas noch Älteres."), ""),
     (("Act 10", "Akt 10"), ("The gates of Oakhaven", "Die Tore von Oakhaven"),
-     ("The end of the first chapter.", "Das Ende des ersten Kapitels."), "end"),
+     ("The end of the vertical slice.", "Das Ende der Vertical Slice."), "end"),
 ]
 
 JOBS = [
@@ -90,12 +90,15 @@ def body(ctx):
         for k, (act, name, line, kind) in enumerate(ACTS))
 
     facts = [
-        (t("Genre", "Genre"), t("Third-person fantasy online RPG", "Fantasy-Online-Rollenspiel in der dritten Person")),
+        (t("Genre", "Genre"), t("Third-person fantasy online MMO", "Fantasy-Online-MMO in der dritten Person")),
         (t("Combat", "Kampf"), t("Tab-target, hotbar, group roles", "Tab-Target, Fähigkeitenleiste, Gruppenrollen")),
         (t("Jobs", "Jobs"), t("Paladin, Ranger, White Mage, Elementalist", "Paladin, Ranger, Weißmagier, Elementarist")),
-        (t("First chapter", "Erstes Kapitel"), t("45–75 minutes, solo or in a party of two", "45–75 Minuten, allein oder zu zweit")),
+        (t("Your character", "Deine Figur"), t("Male or female, with different races to choose from later", "Männlich oder weiblich, später auch verschiedene Völker zur Auswahl")),
+        (t("Players", "Spieler"), t("Many players at the same time, online in one world", "Viele Spieler gleichzeitig, online in einer Welt")),
+        (t("Vertical slice", "Vertical Slice"), t("A small finished part of the MMO, not the full game", "Ein kleiner fertiger Teil des MMOs, nicht das ganze Spiel")),
         (t("Look", "Look"), t("Grounded, semi-realistic fantasy", "Bodenständige, halbrealistische Fantasy")),
-        (t("Built in", "Gebaut in"), t("Unreal Engine 5, for PC first", "Unreal Engine 5, zuerst für PC")),
+        (t("Engine", "Engine"), "Unreal Engine 5"),
+        (t("Game Frameworks used", "Verwendete Spiele-Frameworks"), "Vertical Third, Redwood MMO"),
     ]
     fact_html = "".join(f"<div><dt>{k}</dt><dd>{v}</dd></div>" for k, v in facts)
 
@@ -126,10 +129,10 @@ def body(ctx):
     <div class="hero-copy">
       <p class="hero-hook">{t("A border village at the edge of a forest that has grown bold.",
                               "Ein Grenzdorf am Rand eines Waldes, der kühn geworden ist.")}</p>
-      <p class="hero-sub">{t("Destiny of Valendhar is a fantasy online RPG with tab-target combat and four job guilds. "
-                             "Its first chapter takes you from the Wayward Dais through Timberwatch and the Wolfwood to the gates of Oakhaven.",
-                             "Destiny of Valendhar ist ein Fantasy-Online-Rollenspiel mit Tab-Target-Kampf und vier Job-Gilden. "
-                             "Sein erstes Kapitel führt dich vom Wayward Dais durch Timberwatch und den Wolfwood bis zu den Toren von Oakhaven.")}</p>
+      <p class="hero-sub">{t("Destiny of Valendhar is a fantasy online MMO, played by many players at the same time, with tab-target combat and four job guilds. "
+                             "This site shows its vertical slice, not the full game: from the Wayward Dais through Timberwatch and the Wolfwood to the gates of Oakhaven.",
+                             "Destiny of Valendhar ist ein Fantasy-Online-MMO, das viele Spieler gleichzeitig spielen, mit Tab-Target-Kampf und vier Job-Gilden. "
+                             "Diese Seite zeigt seine Vertical Slice, nicht das ganze Spiel: vom Wayward Dais durch Timberwatch und den Wolfwood bis zu den Toren von Oakhaven.")}</p>
       <div class="cta-row">
         <a class="btn btn-gold" href="{u('journey/index.html')}">{t("Walk the journey", "Die Reise antreten")}</a>
         <a class="btn btn-ghost" href="{u('game/jobs.html')}">{t("Meet the four jobs", "Die vier Jobs ansehen")}</a>
@@ -160,7 +163,7 @@ def body(ctx):
 
 <section class="plaster">
   <div class="wrap section">
-    <h2>{t("Five ideas hold up the first chapter", "Fünf Ideen tragen das erste Kapitel")}</h2>
+    <h2>{t("Five ideas hold up the vertical slice", "Fünf Ideen tragen die Vertical Slice")}</h2>
     <ul class="pillars">{pillar_html}</ul>
   </div>
 </section>
@@ -206,7 +209,7 @@ def body(ctx):
   <div class="wrap section">
     <div class="trail-head">
       <div>
-        <p class="kicker">{t("The first chapter", "Das erste Kapitel")}</p>
+        <p class="kicker">{t("The vertical slice", "Die Vertical Slice")}</p>
         <h2>{t("From the Dais to the gates of Oakhaven", "Vom Dais bis zu den Toren von Oakhaven")}</h2>
         <p>{t("Eleven stops on one road. Each one teaches something new, from the first step to a boss fight and a dungeon.",
               "Elf Stationen auf einer Straße. Jede bringt dir etwas Neues bei, vom ersten Schritt bis zum Bosskampf und zum Verlies.")}</p>
@@ -235,10 +238,10 @@ def body(ctx):
 PAGES = {
     "index.html": dict(
         title=("Home", "Start"),
-        description=("Destiny of Valendhar: a fantasy online RPG. Its first chapter runs from the border village of Timberwatch "
+        description=("Destiny of Valendhar: a fantasy online MMO. This site shows its vertical slice, which runs from the border village of Timberwatch "
                      "through the Wolfwood to the gates of Oakhaven.",
-                     "Destiny of Valendhar: ein Fantasy-Online-Rollenspiel. Sein erstes Kapitel führt vom Grenzdorf Timberwatch "
-                     "durch den Wolfwood bis zu den Toren von Oakhaven."),
+                     "Destiny of Valendhar: ein Fantasy-Online-MMO. Diese Seite zeigt seine Vertical Slice, die vom Grenzdorf Timberwatch "
+                     "durch den Wolfwood bis zu den Toren von Oakhaven führt."),
         body=body,
         custom_header=True,
         no_pager=True,
