@@ -320,6 +320,8 @@ p { margin: 0 0 1em; }
 .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 22px; }
 .gallery.gallery-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .gallery.gallery-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.gallery.gallery-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.gallery.gallery-4 .fig img { aspect-ratio: 3 / 4; object-fit: cover; object-position: top; }
 .gallery.gallery-169 .fig img { aspect-ratio: 16 / 9; object-fit: cover; }
 .stub { border: 1px dashed var(--line); border-radius: var(--radius); padding: 48px; text-align: center; background: var(--spruce-2); }
 
@@ -408,7 +410,7 @@ p { margin: 0 0 1em; }
   .loops, .loops.loops-3 { grid-template-columns: 1fr 1fr; }
   .modes, .catalog { grid-template-columns: 1fr 1fr; }
   .swatches { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-  .gallery.gallery-3 { grid-template-columns: 1fr 1fr; }
+  .gallery.gallery-3, .gallery.gallery-4 { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 760px) {
   .foot-note { text-align: left; }

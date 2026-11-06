@@ -152,6 +152,15 @@ JOB_DETAILS = [
 ]
 
 
+# Same left-to-right order as the line-ups.
+PORTRAIT_JOBS = [
+    ("WHITEMAGE", ("White Mage", "Weißmagier")),
+    ("PALADIN", ("Paladin", "Paladin")),
+    ("ELEMENTALIST", ("Elementalist", "Elementarist")),
+    ("RANGER", ("Ranger", "Ranger")),
+]
+
+
 def jobs(ctx):
     t = ctx.t
     out = []
@@ -169,10 +178,19 @@ def jobs(ctx):
             ("PC-GROUP-M", t("The four jobs as male characters", "Die vier Jobs mit männlichen Figuren")),
             ("PC-GROUP-F", t("The four jobs as female characters", "Die vier Jobs mit weiblichen Figuren")),
         ], "gallery-2") + "</div>"
+    # Portraits appear one by one as their images are added, so there are never placeholders.
+    portraits = ""
+    for sex, label in (("F", ("female", "weiblich")), ("M", ("male", "männlich"))):
+        row = [(f"PORTRAIT-{key}-{sex}", f"{t(*name)} ({t(*label)})")
+               for key, name in PORTRAIT_JOBS if ctx.has(f"PORTRAIT-{key}-{sex}")]
+        if row:
+            portraits += '<div style="margin-bottom:22px">' + ctx.gallery(row, "gallery-4") + "</div>"
+    if portraits:
+        portraits = f'<div style="margin-bottom:72px">{portraits}</div>'
     return section(f"""
 <p class="lede" style="margin-bottom:56px">{t("Every job can be played as a male or female character, and different races to choose from will come later. You pick one job in the vertical slice. Ability names are working names and will change as the jobs are tuned.",
                        "Jeder Job lässt sich mit einer männlichen oder weiblichen Figur spielen, und später kommen verschiedene Völker zur Auswahl dazu. In der Vertical Slice wählst du einen Job. Die Namen der Fähigkeiten sind Arbeitstitel und ändern sich, während die Jobs abgestimmt werden.")}</p>
-{line_ups}{"".join(out)}""")
+{line_ups}{portraits}{"".join(out)}""")
 
 
 def village_life(ctx):
