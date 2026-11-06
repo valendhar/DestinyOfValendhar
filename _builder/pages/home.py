@@ -108,7 +108,7 @@ def body(ctx):
         alt = t("Below the walls of Timberwatch, a Paladin catches the leaping Alpha on his shield while a White Mage, "
                 "an Elementalist and a Ranger hold off the wolf pack coming out of the Wolfwood.",
                 "Unter den Mauern von Timberwatch fängt ein Paladin den springenden Alpha mit seinem Schild ab, während eine "
-                "Weißmagierin, ein Elementarist und ein Ranger das Wolfsrudel aus dem Wolfwood zurückhalten.")
+                "Weißmagierin, ein Elementarist und eine Rangerin das Wolfsrudel aus dem Wolfwood zurückhalten.")
         # The logo is its own transparent layer over the painting's calm sky, so it stays sharp at every size.
         hero_cls = "hero hero-has-art"
         hero_art = (f'<div class="hero-art"><img class="hero-painting" src="{ctx.img_src(key, "full")}" alt="{alt}" fetchpriority="high">'
