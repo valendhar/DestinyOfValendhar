@@ -58,7 +58,7 @@ def views(ctx):
     ("VW-08", t("The East Gate and the road", "Das Osttor und die Straße")),
     ("VW-09", t("The farmstead and fields", "Der Bauernhof und die Felder")),
     ("VW-10", t("From the forest ridge", "Vom Waldkamm")),
-], "gallery-2")}
+], "gallery-2 gallery-169")}
 <h2 style="margin-top:72px">{t("Maps", "Karten")}</h2>
 {ctx.gallery([
     ("TD-02", t("Painted map of Timberwatch", "Gemalte Karte von Timberwatch")),
@@ -85,7 +85,7 @@ def interiors(ctx):
         ("IT-13", t("The general store", "Der Krämerladen")),
         ("IT-14", t("The inn cellar", "Der Gasthauskeller")),
         ("IT-15", t("The watermill", "Die Wassermühle")),
-    ], "gallery-3"))
+    ], "gallery-3 gallery-169"))
 
 
 def media(ctx):
