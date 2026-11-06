@@ -80,8 +80,8 @@ def creatures(ctx):
     ("CR-08", ("Brown bear", "Braunbär"), ("Not in the first chapter for certain. If it comes, it lives deep in the spruce.",
                                           "Im ersten Kapitel noch nicht sicher. Wenn er kommt, lebt er tief im Fichtenwald.")),
 ])}
-<p class="lede" style="margin-top:56px">{t("Ambushers on the road and whatever lives beneath the hill are still being designed.",
-                                         "Die Angreifer auf der Straße und das, was unter dem Hügel lebt, werden noch entworfen.")}</p>""")
+<p class="lede" style="margin-top:56px">{t("Past the wolves, bandits wait on the road east, and the dead of an old wolf-cult guard the barrow beneath the hill.",
+                                         "Hinter den Wölfen lauern Banditen auf der Straße nach Osten, und die Toten eines alten Wolfskults bewachen das Hügelgrab unter dem Hügel.")}</p>""")
 
 
 PAGES = {

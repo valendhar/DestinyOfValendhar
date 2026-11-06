@@ -188,9 +188,9 @@ def road(ctx):
 <div style="margin-top:80px">
 {feature(ctx, "DG-01", ("Beneath the hill", "Unter dem Hügel"), ("The dungeon", "Das Verlies"), [
     ("An entrance hall, three rooms of enemies, a bridge, a round boss chamber thirty metres across, and a tunnel back out to "
-     "the road. Ten to fifteen minutes, best with a friend. What lives down there is still being decided.",
+     "the road. Ten to fifteen minutes, best with a friend. It is the barrow of a forgotten wolf-cult, and its dead still stand guard.",
      "Eine Eingangshalle, drei Räume voller Gegner, eine Brücke, eine runde Bosskammer von dreißig Metern und ein Tunnel zurück "
-     "zur Straße. Zehn bis fünfzehn Minuten, am besten mit einem Freund. Was dort unten lebt, wird gerade noch entschieden.")],
+     "zur Straße. Zehn bis fünfzehn Minuten, am besten mit einem Freund. Es ist das Hügelgrab eines vergessenen Wolfskults, und seine Toten halten noch immer Wache.")],
     flip=True)}
 </div>""")
 
