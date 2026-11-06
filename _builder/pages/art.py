@@ -103,18 +103,18 @@ PAGES = {
     "art/index.html": dict(
         title=("Key Art", "Key Art"), kicker=("Art", "Kunst"),
         lede=("Painted concept art for Timberwatch and the Wolfwood.", "Gemalte Konzeptkunst für Timberwatch und den Wolfwood."),
-        body=key_art),
+        banner="KA-08", body=key_art),
     "art/views.html": dict(
         title=("Views & Maps", "Ansichten & Karten"), kicker=("Art", "Kunst"),
         lede=("The village from the air, from its streets, and on the map.", "Das Dorf aus der Luft, aus seinen Gassen und auf der Karte."),
-        body=views),
+        banner="VW-02", body=views),
     "art/interiors.html": dict(
         title=("Interiors", "Innenräume"), kicker=("Art", "Kunst"),
         lede=("Behind the doors you can open.", "Hinter den Türen, die sich öffnen lassen."),
-        body=interiors),
+        banner="IT-05", body=interiors),
     "media/index.html": dict(
         title=("Media", "Medien"), kicker=("Media", "Medien"),
         lede=("Screenshots and video from the game itself, once there is something to show.",
               "Screenshots und Videos aus dem Spiel selbst, sobald es etwas zu zeigen gibt."),
-        body=media),
+        banner="KA-03", body=media),
 }

@@ -67,11 +67,11 @@ def creatures(ctx):
     t = ctx.t
     return section(f"""
 {catalog(ctx, [
-    ("CR-01", ("Grey wolf", "Grauer Wolf"), ("Packs of two or three that flank you, and give up the chase if you run far enough. Level 2–3.",
+    (ctx.pick("ACT-CR-01", "CR-01", "KA-05"), ("Grey wolf", "Grauer Wolf"), ("Packs of two or three that flank you, and give up the chase if you run far enough. Level 2–3.",
                                            "Rudel zu zweit oder dritt, die dich flankieren und aufgeben, wenn du weit genug läufst. Stufe 2–3.")),
     ("CR-01", ("Dark wolf", "Dunkler Wolf"), ("The deep-wood variant: packs of three, a harder bite and a howl that strengthens the pack. Level 4.",
                                              "Die Variante aus dem tiefen Wald: Rudel zu dritt, ein härterer Biss und ein Heulen, das das Rudel stärkt. Stufe 4.")),
-    ("CR-02", ("The Alpha", "Der Alpha"), ("Charcoal fur, a heavy mane, a torn ear. The first boss of the vertical slice. Level 5, elite.",
+    (ctx.pick("ACT-CR-02", "CR-02", "KA-07"), ("The Alpha", "Der Alpha"), ("Charcoal fur, a heavy mane, a torn ear. The first boss of the vertical slice. Level 5, elite.",
                                          "Kohlschwarzes Fell, eine schwere Mähne, ein zerrissenes Ohr. Der erste Boss der Vertical Slice. Stufe 5, Elite.")),
     ("CR-03", ("Wild boar", "Wildschwein"), ("Alone, and charges in a straight line you can see coming. Level 3.",
                                            "Allein unterwegs, und greift in einer geraden Linie an, die du kommen siehst. Stufe 3.")),

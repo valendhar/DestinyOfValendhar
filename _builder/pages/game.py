@@ -235,7 +235,7 @@ PAGES = {
         title=("The Four Jobs", "Die vier Jobs"), kicker=("The Game", "Das Spiel"),
         lede=("Tank, ranged damage, healer and magic damage, each taught by its own guild in Timberwatch.",
               "Tank, Fernkampf-Schaden, Heiler und Magie-Schaden, jeder gelehrt von seiner eigenen Gilde in Timberwatch."),
-        body=jobs),
+        banner="VW-04", body=jobs),
     "game/village-life.html": dict(
         title=("Village Life", "Dorfleben"), kicker=("The Game", "Das Spiel"),
         lede=("Between the fights: vendors, crafting, potions and a warm bed.",

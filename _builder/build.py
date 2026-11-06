@@ -46,7 +46,7 @@ UI = {
     "next": ("Next", "Weiter"),
     "skip": ("Skip to content", "Zum Inhalt springen"),
     "show_pages": ("Show {} pages", "Seiten unter {} anzeigen"),
-    "image_coming": ("image coming", "Bild folgt"),
+    "image_coming": ("Artwork in progress", "Bild in Arbeit"),
     "close": ("Close", "Schließen"),
     "prev_img": ("Previous image", "Vorheriges Bild"),
     "next_img": ("Next image", "Nächstes Bild"),
@@ -338,11 +338,11 @@ def page_shell(ctx, page, trail):
 <link rel="alternate" hreflang="de" href="{ctx.lang_url('de')}">
 {og_tag}
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#0F1714">
+<meta name="theme-color" content="#12131E">
 <link rel="icon" href="{ctx.asset('favicon.svg')}" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..800;1,9..144,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Marcellus&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{ctx.asset('assets/css/site.css')}">
 </head>
 <body class="page-{ctx.path.replace('/', '-').replace('.html', '')}">

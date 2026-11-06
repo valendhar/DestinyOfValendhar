@@ -151,7 +151,7 @@ PAGES = {
     "journey/quests.html": dict(
         title=("The Quest Chain", "Die Questreihe"), kicker=("The Journey", "Die Reise"),
         lede=("Every step of the main story, and what waits on the side.", "Jeder Schritt der Hauptgeschichte, und was nebenbei wartet."),
-        body=quests_page),
+        banner="VW-02", body=quests_page),
     "journey/the-alpha.html": dict(
         title=("The Alpha", "Der Alpha"), kicker=("Boss", "Boss"),
         lede=("The wolf that taught the pack to come out of the trees.", "Der Wolf, der dem Rudel beibrachte, aus den Bäumen zu kommen."),

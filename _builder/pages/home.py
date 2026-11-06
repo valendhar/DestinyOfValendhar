@@ -28,13 +28,13 @@ ACTS = [
 ]
 
 JOBS = [
-    ("paladin", "Paladin", ("Tank", "Tank"), "VW-04", ("Bron, at the training yard", "Bron, auf dem Übungsplatz"),
+    ("paladin", "Paladin", ("Tank", "Tank"), "PORTRAIT-PALADIN-M", ("Bron, at the training yard", "Bron, auf dem Übungsplatz"),
      ("Shield up. Again.", "Schild hoch. Nochmal.")),
-    ("ranger", "Ranger", ("Ranged damage", "Fernkampf-Schaden"), "VW-05", ("Hagen, at the Hunters' Lodge", "Hagen, an der Jägerhütte"),
+    ("ranger", "Ranger", ("Ranged damage", "Fernkampf-Schaden"), "PORTRAIT-RANGER-F", ("Hagen, at the Hunters' Lodge", "Hagen, an der Jägerhütte"),
      ("Breathe out, then loose.", "Ausatmen, dann loslassen.")),
-    ("whitemage", ("White Mage", "Weißmagier"), ("Healer", "Heiler"), "VW-06", ("Mira, at the Spring Shrine", "Mira, am Quellschrein"),
+    ("whitemage", ("White Mage", "Weißmagier"), ("Healer", "Heiler"), "PORTRAIT-WHITEMAGE-F", ("Mira, at the Spring Shrine", "Mira, am Quellschrein"),
      ("Keep them standing. That is the whole job.", "Halt sie auf den Beinen. Das ist die ganze Arbeit.")),
-    ("elementalist", ("Elementalist", "Elementarist"), ("Magic damage", "Magie-Schaden"), "VW-07", ("Elwyn, in the tower courtyard", "Elwyn, im Turmhof"),
+    ("elementalist", ("Elementalist", "Elementarist"), ("Magic damage", "Magie-Schaden"), "PORTRAIT-ELEMENTALIST-M", ("Elwyn, in the tower courtyard", "Elwyn, im Turmhof"),
      ("Fire is easy. Stopping is the hard part.", "Feuer ist leicht. Aufhören ist das Schwere.")),
 ]
 
@@ -111,11 +111,11 @@ def body(ctx):
                 "Weißmagierin, ein Elementarist und eine Rangerin das Wolfsrudel aus dem Wolfwood zurückhalten.")
         # The logo is its own transparent layer over the painting's calm sky, so it stays sharp at every size.
         hero_cls = "hero hero-has-art"
-        hero_art = (f'<div class="hero-art"><img class="hero-painting" src="{ctx.img_src(key, "full")}" alt="{alt}" fetchpriority="high">'
+        hero_art = (f'<div class="hero-stage"><div class="hero-backdrop" style="{ctx.bg(key)}"></div><div class="hero-art"><img class="hero-painting" src="{ctx.img_src(key, "full")}" alt="{alt}" fetchpriority="high">'
                     + (f'<h1 class="hero-logo"><img src="{ctx.img_src("TITLE-LOGO", "full")}" alt="Destiny of Valendhar" fetchpriority="high"></h1>'
                        if ctx.has("TITLE-LOGO") else
                        '<h1 class="hero-wordmark"><span class="wm-small">Destiny of</span><span class="wm-big">Valendhar</span></h1>')
-                    + '</div>')
+                    + '</div></div>')
     else:
         alt = t("A traveller at the Wayward Dais looks up the road to the gate of Timberwatch.",
                 "Ein Reisender am Wayward Dais blickt die Straße hinauf zum Tor von Timberwatch.")
@@ -138,14 +138,12 @@ def body(ctx):
         <a class="btn btn-ghost" href="{u('game/jobs.html')}">{t("Meet the four jobs", "Die vier Jobs ansehen")}</a>
       </div>
     </div>
-    <dl class="facts">{fact_html}</dl>
   </div>
 </section>
 
 <section class="wrap section intro">
-  <h2 class="intro-title">{t("The wolves have grown bold. Timberwatch needs every blade, bow and spell it can find.",
-         "Die Wölfe sind kühn geworden. Timberwatch braucht jede Klinge, jeden Bogen und jeden Zauber, den es finden kann.")}</h2>
   <div class="intro-text">
+    <h2 class="intro-title">{t("Every blade, bow and spell is needed", "Jede Klinge, jeder Bogen und jeder Zauber wird gebraucht")}</h2>
     <p class="big">{t("You arrive as a stranger at the Wayward Dais, an old floating stone on the road outside Timberwatch, "
                       "a timber and border village at the edge of the Wolfwood.",
                       "Du kommst als Fremder am Wayward Dais an, einem alten schwebenden Stein an der Straße vor Timberwatch, "
@@ -159,13 +157,7 @@ def body(ctx):
           "musst, ein Verlies unter dem Hügel und am Ende die Tore von Oakhaven.")}</p>
     <a class="text-link" href="{u('game/index.html')}">{t("Read the full overview", "Zum vollständigen Überblick")}</a>
   </div>
-</section>
-
-<section class="plaster">
-  <div class="wrap section">
-    <h2>{t("Five ideas hold up the vertical slice", "Fünf Ideen tragen die Vertical Slice")}</h2>
-    <ul class="pillars">{pillar_html}</ul>
-  </div>
+  <dl class="facts">{fact_html}</dl>
 </section>
 
 <section class="wrap section">
@@ -174,6 +166,13 @@ def body(ctx):
     <a class="text-link" href="{u('game/jobs.html')}">{t("All four jobs and their abilities", "Alle vier Jobs und ihre Fähigkeiten")}</a>
   </div>
   <ul class="jobs">{job_html}</ul>
+</section>
+
+<section class="palisade">
+  <div class="wrap section">
+    <h2>{t("What shapes the adventure", "Was das Abenteuer ausmacht")}</h2>
+    <ul class="pillars">{pillar_html}</ul>
+  </div>
 </section>
 
 <section class="wrap section split">
