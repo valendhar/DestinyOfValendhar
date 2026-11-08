@@ -33,7 +33,7 @@ def key_art(ctx):
     ("KA-05", t("Wolves at the forest edge", "Wölfe am Waldrand")),
     ("KA-06", t("Inside the Wolfwood", "Im Wolfwood")),
     ("KA-07", t("The wolf den", "Der Wolfsbau")),
-    ("KA-08", t("Timberwatch at night", "Timberwatch bei Nacht")),
+    ("KA-08", t("Three-Oaks at night", "Three-Oaks bei Nacht")),
     ("KA-09", t("Misty dawn at the mill pond", "Nebliger Morgen am Mühlteich")),
 ], "gallery-2")}""")
 
@@ -46,7 +46,7 @@ def views(ctx):
     ("BE-01", t("Aerial from the south-east", "Luftbild von Südosten")),
     ("BE-02", t("From the north-west, over the forest", "Von Nordwesten, über den Wald")),
 ], "gallery-2")}
-<h2 style="margin-top:72px">{t("Around the village", "Rund ums Dorf")}</h2>
+<h2 style="margin-top:72px">{t("Around the town", "Rund um die Stadt")}</h2>
 {ctx.gallery([
     ("VW-01", t("From the watchtower, looking south", "Vom Wachturm nach Süden")),
     ("VW-02", t("The square and the town hall", "Der Platz und das Rathaus")),
@@ -61,9 +61,9 @@ def views(ctx):
 ], "gallery-2 gallery-169")}
 <h2 style="margin-top:72px">{t("Maps", "Karten")}</h2>
 {ctx.gallery([
-    ("TD-02", t("Painted map of Timberwatch", "Gemalte Karte von Timberwatch")),
+    ("TD-02", t("Painted map of Three-Oaks", "Gemalte Karte von Three-Oaks")),
     ("TD-04", t("Painted map of the Wolfwood", "Gemalte Karte des Wolfwood")),
-    ("TD-05", t("Layout grid of Timberwatch", "Lageplan von Timberwatch mit Raster")),
+    ("TD-05", t("Layout grid of Three-Oaks", "Lageplan von Three-Oaks mit Raster")),
 ], "gallery-2")}""")
 
 
@@ -74,7 +74,7 @@ def interiors(ctx):
         ("IT-02", t("The forge", "Die Schmiede")),
         ("IT-03", t("The council chamber", "Der Ratssaal")),
         ("IT-04", t("Watch room and armoury", "Wachstube und Waffenkammer")),
-        ("IT-05", t("A village kitchen and living room", "Küche und Stube eines Dorfhauses")),
+        ("IT-05", t("A town kitchen and living room", "Küche und Stube eines Stadthauses")),
         ("IT-06", t("Bedroom and attic", "Schlafkammer und Dachboden")),
         ("IT-07", t("The bakery", "Die Bäckerei")),
         ("IT-08", t("The herbalist's workroom", "Die Werkstatt der Kräuterkundigen")),
@@ -102,11 +102,11 @@ def media(ctx):
 PAGES = {
     "art/index.html": dict(
         title=("Key Art", "Key Art"), kicker=("Art", "Kunst"),
-        lede=("Painted concept art for Timberwatch and the Wolfwood.", "Gemalte Konzeptkunst für Timberwatch und den Wolfwood."),
+        lede=("Painted concept art for Three-Oaks and the Wolfwood.", "Gemalte Konzeptkunst für Three-Oaks und den Wolfwood."),
         banner="KA-08", body=key_art),
     "art/views.html": dict(
         title=("Views & Maps", "Ansichten & Karten"), kicker=("Art", "Kunst"),
-        lede=("The village from the air, from its streets, and on the map.", "Das Dorf aus der Luft, aus seinen Gassen und auf der Karte."),
+        lede=("The town from the air, from its streets, and on the map.", "Die Stadt aus der Luft, aus ihren Gassen und auf der Karte."),
         banner="VW-02", body=views),
     "art/interiors.html": dict(
         title=("Interiors", "Innenräume"), kicker=("Art", "Kunst"),

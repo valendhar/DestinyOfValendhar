@@ -751,7 +751,7 @@
 },
 {
 "id": "FO-07",
-"name": "Village linden (hero)",
+"name": "Town linden (hero)",
 "number": 145,
 "folder": "wolfwood"
 },
@@ -1225,37 +1225,37 @@
 },
 {
 "id": "CH-GUARD-M-PT",
-"name": "Village guard, male, portrait",
+"name": "Town guard, male, portrait",
 "number": 14,
 "folder": "people"
 },
 {
 "id": "CH-GUARD-M-FULL",
-"name": "Village guard, male, full body",
+"name": "Town guard, male, full body",
 "number": 15,
 "folder": "people"
 },
 {
 "id": "CH-GUARD-M-C1",
-"name": "Village guard, male, CC5 1: four-view character",
+"name": "Town guard, male, CC5 1: four-view character",
 "number": 654,
 "folder": "people"
 },
 {
 "id": "CH-GUARD-F-PT",
-"name": "Village guard, female, portrait",
+"name": "Town guard, female, portrait",
 "number": 16,
 "folder": "people"
 },
 {
 "id": "CH-GUARD-F-FULL",
-"name": "Village guard, female, full body",
+"name": "Town guard, female, full body",
 "number": 17,
 "folder": "people"
 },
 {
 "id": "CH-GUARD-F-C1",
-"name": "Village guard, female, CC5 1: four-view character",
+"name": "Town guard, female, CC5 1: four-view character",
 "number": 660,
 "folder": "people"
 },
@@ -1633,7 +1633,7 @@
 },
 {
 "id": "BL-30",
-"name": "Oakhaven gate (slice end)",
+"name": "Franckfurt gate (slice end)",
 "number": 79,
 "folder": "buildings"
 },
@@ -2227,25 +2227,25 @@
 },
 {
 "id": "GR-TOWN-HD",
-"name": "Village clothes (cosmetic): head, shoulders and back",
+"name": "Town clothes (cosmetic): head, shoulders and back",
 "number": 526,
 "folder": "gear"
 },
 {
 "id": "GR-TOWN-BD-M",
-"name": "Village clothes (cosmetic): body and legs, male fit",
+"name": "Town clothes (cosmetic): body and legs, male fit",
 "number": 527,
 "folder": "gear"
 },
 {
 "id": "GR-TOWN-BD-F",
-"name": "Village clothes (cosmetic): body and legs, female fit",
+"name": "Town clothes (cosmetic): body and legs, female fit",
 "number": 528,
 "folder": "gear"
 },
 {
 "id": "GR-TOWN-EX",
-"name": "Village clothes (cosmetic): hands, feet and belt",
+"name": "Town clothes (cosmetic): hands, feet and belt",
 "number": 529,
 "folder": "gear"
 },

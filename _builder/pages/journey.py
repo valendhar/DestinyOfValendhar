@@ -32,8 +32,8 @@ STOPS = [
                "Begleite einen Händlerkarren aus dem Osttor und wehre dann zwei Wellen von Angreifern ab.")),
     ("DG-01", ("A wounded scout warns you about the hill. Three packs, a two-phase boss, and a way back out to the road.",
                "Ein verwundeter Kundschafter warnt dich vor dem Hügel. Drei Gruppen, ein Boss mit zwei Phasen und ein Weg zurück zur Straße.")),
-    ("OH-GATE", ("Follow the last stretch of road to Oakhaven's gate, where the vertical slice ends.",
-                 "Folge dem letzten Stück Straße bis zum Tor von Oakhaven, wo die Vertical Slice endet.")),
+    ("OH-GATE", ("Follow the last stretch of road to Franckfurt's gate, where the vertical slice ends.",
+                 "Folge dem letzten Stück Straße bis zum Tor von Franckfurt, wo die Vertical Slice endet.")),
 ]
 
 
@@ -74,11 +74,11 @@ QUESTS = [
     ("Darker Woods", "Dunklere Wälder", "Defeat four dark wolves in the spruce wood.", "Besiege vier dunkle Wölfe im Fichtenwald."),
     ("The Alpha", "Der Alpha", "Enter the wolf den and defeat the Alpha.", "Betritt den Wolfsbau und besiege den Alpha."),
     ("Rest at the Wolf's Rest", "Rast im Wolf's Rest", "Set your return point at the inn and eat.", "Leg im Gasthaus deinen Rückkehrpunkt fest und iss."),
-    ("Road to Oakhaven", "Straße nach Oakhaven", "Escort the merchant's cart from the East Gate.", "Begleite den Händlerkarren vom Osttor."),
+    ("Road to Franckfurt", "Straße nach Franckfurt", "Escort the merchant's cart from the East Gate.", "Begleite den Händlerkarren vom Osttor."),
     ("Ambush!", "Hinterhalt!", "Defend the cart through two waves.", "Verteidige den Karren gegen zwei Wellen."),
     ("The Wounded Scout", "Der verwundete Kundschafter", "Optional: help the scout and hear his warning.", "Optional: Hilf dem Kundschafter und hör dir seine Warnung an."),
     ("Beneath the Hill", "Unter dem Hügel", "Clear the dungeon and defeat its boss.", "Säubere das Verlies und besiege seinen Boss."),
-    ("The Gates of Oakhaven", "Die Tore von Oakhaven", "Follow the road to the gate.", "Folge der Straße bis zum Tor."),
+    ("The Gates of Franckfurt", "Die Tore von Franckfurt", "Follow the road to the gate.", "Folge der Straße bis zum Tor."),
 ]
 
 
@@ -97,8 +97,8 @@ def quests_page(ctx):
     (("The hunter's blind", "Der Hochsitz"), ("A ranger's hunt", "Eine Rangerjagd"),
      ("A hunt from the raised stand deep in the beech forest.", "Eine Jagd vom Hochsitz tief im Buchenwald.")),
     (("The old glade", "Die alte Lichtung"), ("The stone circle", "Der Steinkreis"),
-     ("A ring of standing stones around a single ancient oak, and a story older than the village.",
-      "Ein Ring aus stehenden Steinen um eine einzelne uralte Eiche, und eine Geschichte, die älter ist als das Dorf.")),
+     ("A ring of standing stones around a single ancient oak, and a story older than the town.",
+      "Ein Ring aus stehenden Steinen um eine einzelne uralte Eiche, und eine Geschichte, die älter ist als die Stadt.")),
 ])}""")
 
 

@@ -28,7 +28,7 @@ SOURCES = [HERE / "images" / "characters", HERE / "images" / "sheets", ORIGINALS
 IMG_OUT = OUT / "assets" / "img"
 
 SITE_TITLE = "Destiny of Valendhar"
-SITE_TAGLINE = "A border village, a forest that has grown bold, and the road east."
+SITE_TAGLINE = "A forest town, a wood that has grown bold, and the road to Franckfurt."
 AUTHOR = "Mike Stevanovic"
 COPYRIGHT = "Mike Stevanovic"
 YEAR = "2026"
@@ -66,8 +66,8 @@ UI = {
     "stub_prep": ("In preparation", "In Vorbereitung"),
     "stub_text": ("This page is being written. Check back soon.",
                   "Diese Seite entsteht gerade. Schau bald wieder vorbei."),
-    "tagline": ("A border village, a forest that has grown bold, and the road east.",
-                "Ein Grenzdorf, ein Wald, der kühn geworden ist, und die Straße nach Osten."),
+    "tagline": ("A forest town, a wood that has grown bold, and the road to Franckfurt.",
+                "Eine Waldstadt, ein Wald, der kühn geworden ist, und die Straße nach Franckfurt."),
 }
 
 
@@ -392,6 +392,9 @@ def favicon_svg():
             '<circle cx="32" cy="16.5" r="2.2" fill="#8FD3EA"/></svg>')
 
 
+MOVED = {"world/timberwatch.html": "world/three-oaks.html", "game/village-life.html": "game/town-life.html"}
+
+
 def main():
     process_images()
     pages = load_pages()
@@ -409,8 +412,20 @@ def main():
             ctx = Ctx(path, lang)
             target = OUT / ctx.out_path
             target.parent.mkdir(parents=True, exist_ok=True)
-            target.write_text(page_shell(ctx, page, trail), encoding="utf-8")
+            html_out = page_shell(ctx, page, trail)
+            if lang == "de":
+                html_out = html_out.replace("Three-Oaks", "Dreieich")  # the town's German name (the user's choice, 2026-11-08)
+            target.write_text(html_out, encoding="utf-8")
             built += 1
+    # Pages that moved when Timberwatch became Three-Oaks: the old addresses forward, so shared links keep working.
+    for old, new in MOVED.items():
+        for lang in LANGS:
+            target = OUT / (PREFIX[lang] + old)
+            target.parent.mkdir(parents=True, exist_ok=True)
+            href = new.split("/")[-1]
+            target.write_text(f'<!doctype html><html lang="{lang}"><head><meta charset="utf-8"><title>{esc(SITE_TITLE)}</title>'
+                              f'<meta http-equiv="refresh" content="0; url={href}"><link rel="canonical" href="{href}"></head>'
+                              f'<body><a href="{href}">{href}</a></body></html>', encoding="utf-8")
     print(f"Built {built} pages, {len(IMAGES)} images -> {OUT}")
 
 

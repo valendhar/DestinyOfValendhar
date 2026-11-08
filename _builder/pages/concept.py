@@ -100,10 +100,10 @@ def heroes(ctx):
 
 def people(ctx):
     return section(
-        block(ctx, ("The named villagers", "Die Leute mit Namen"), ("A portrait and a full-body image for everyone the heroes meet by name.",
+        block(ctx, ("The named townsfolk", "Die Leute mit Namen"), ("A portrait and a full-body image for everyone the heroes meet by name.",
                                                                      "Ein Porträt und ein Bild in voller Größe für jeden, den die Helden mit Namen kennenlernen."),
               pick("people", r"^CH-.*-(PT|FULL)$"), tall=True, first=True)
-        + block(ctx, ("Villagers", "Dorfbewohner"), ("Line-ups for the people who fill the streets, the market and the inn.",
+        + block(ctx, ("Townsfolk", "Stadtbewohner"), ("Line-ups for the people who fill the streets, the market and the inn.",
                                                      "Gruppenbilder für die Leute auf den Gassen, auf dem Markt und im Gasthaus."), pick("people", r"^NP-"))
         + block(ctx, ("Model sheets", "Modellblätter"), None, pick("people", r"-C1$")))
 
@@ -122,8 +122,8 @@ def creatures(ctx):
 
 def buildings(ctx):
     return section(
-        block(ctx, ("Landmarks and houses", "Wahrzeichen und Häuser"), ("Each building of Timberwatch, with straight elevations and construction details "
-                                                                         "for the larger ones.", "Jedes Gebäude von Timberwatch, für die größeren mit geraden "
+        block(ctx, ("Landmarks and houses", "Wahrzeichen und Häuser"), ("Each building of Three-Oaks, with straight elevations and construction details "
+                                                                         "for the larger ones.", "Jedes Gebäude von Three-Oaks, für die größeren mit geraden "
                                                                          "Ansichten und Baudetails."), pick("buildings", r"^BL-"), first=True)
         + block(ctx, ("Bridges and signposts", "Brücken und Wegweiser"), None, pick("buildings", r"^ST-")))
 
@@ -173,7 +173,7 @@ def gear(ctx):
 
 SUB = [
     ("concept/heroes.html", ("Heroes", "Helden"), "PC-GROUP-M", heroes, "heroes"),
-    ("concept/people.html", ("People of Timberwatch", "Die Leute von Timberwatch"), "NP-02", people, "people"),
+    ("concept/people.html", ("People of Three-Oaks", "Die Leute von Three-Oaks"), "NP-02", people, "people"),
     ("concept/creatures.html", ("Creatures & Enemies", "Kreaturen & Gegner"), "EN-04-S", creatures, "creatures"),
     ("concept/buildings.html", ("Buildings & Landmarks", "Gebäude & Wahrzeichen"), "BL-30", buildings, "buildings"),
     ("concept/props.html", ("Props & Interiors", "Requisiten & Innenräume"), None, props, "props"),
@@ -183,13 +183,13 @@ SUB = [
 ]
 LEDE = {
     "heroes": ("The four jobs, each as a man and a woman.", "Die vier Jobs, jeweils als Mann und als Frau."),
-    "people": ("The villagers of Timberwatch.", "Die Leute von Timberwatch."),
+    "people": ("The townsfolk of Three-Oaks.", "Die Leute von Three-Oaks."),
     "creatures": ("Everything that hunts in the Wolfwood, waits on the road or sleeps beneath the hill.",
                   "Alles, was im Wolfwood jagt, an der Straße lauert oder unter dem Hügel schläft."),
-    "buildings": ("The village, building by building.", "Das Dorf, Haus für Haus."),
+    "buildings": ("The town, building by building.", "Die Stadt, Haus für Haus."),
     "props": ("What fills the streets, the workshops and the rooms.", "Was die Gassen, Werkstätten und Zimmer füllt."),
     "wolfwood": ("The forest, its stones and the barrow beneath the hill.", "Der Wald, seine Steine und das Hügelgrab unter dem Hügel."),
-    "kit": ("The reusable pieces every building in Timberwatch is made from.", "Die wiederverwendbaren Teile, aus denen jedes Gebäude in Timberwatch besteht."),
+    "kit": ("The reusable pieces every building in Three-Oaks is made from.", "Die wiederverwendbaren Teile, aus denen jedes Gebäude in Three-Oaks besteht."),
     "gear": ("Outfits for the cosmetic wardrobe.", "Kleidung für die kosmetische Garderobe."),
 }
 
@@ -217,8 +217,8 @@ def overview(ctx):
     return section(f"""
 <div class="intro" style="margin-bottom:56px">
   <div class="prose">
-    <p class="big">{t("The working drawings behind the game: every hero, villager, creature, building and prop, drawn before it is built.",
-                      "Die Arbeitszeichnungen hinter dem Spiel: jeder Held, jeder Dorfbewohner, jede Kreatur, jedes Gebäude und jedes "
+    <p class="big">{t("The working drawings behind the game: every hero, townsperson, creature, building and prop, drawn before it is built.",
+                      "Die Arbeitszeichnungen hinter dem Spiel: jeder Held, jeder Stadtbewohner, jede Kreatur, jedes Gebäude und jedes "
                       "Requisit, gezeichnet, bevor es gebaut wird.")}</p>
     <p>{t("People are drawn as polished, semi-realistic 3D game characters. The world, its buildings and its props are painted concept art. "
           "Many sheets show an object from several sides, because they guide the 3D models. Empty frames are sheets still to come.",

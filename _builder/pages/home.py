@@ -15,15 +15,15 @@ ACTS = [
      ("Silverleaf grows where the birches thin out.", "Silberblatt wächst dort, wo die Birken lichter werden."), ""),
     (("Act 5", "Akt 5"), ("The pack", "Das Rudel"),
      ("Grey shapes between the beeches.", "Graue Schatten zwischen den Buchen."), ""),
-    (("Act 6", "Akt 6"), ("Village life", "Dorfleben"),
+    (("Act 6", "Akt 6"), ("Town life", "Stadtleben"),
      ("Pelts for iron, iron for bracers.", "Felle gegen Eisen, Eisen für Armschienen."), ""),
     (("Act 7", "Akt 7"), ("The Alpha", "Der Alpha"),
      ("Bigger than the stories said.", "Größer, als die Geschichten erzählten."), "boss"),
-    (("Act 8", "Akt 8"), ("The road east", "Die Straße nach Osten"),
+    (("Act 8", "Akt 8"), ("The road to Franckfurt", "Die Straße nach Franckfurt"),
      ("One merchant's cart, and one already overturned.", "Ein Händlerkarren, und einer, der schon umgestürzt ist."), ""),
     (("Act 9", "Akt 9"), ("Beneath the hill", "Unter dem Hügel"),
      ("Old stone, and something older behind it.", "Alter Stein, und dahinter etwas noch Älteres."), ""),
-    (("Act 10", "Akt 10"), ("The gates of Oakhaven", "Die Tore von Oakhaven"),
+    (("Act 10", "Akt 10"), ("The gates of Franckfurt", "Die Tore von Franckfurt"),
      ("The end of the vertical slice.", "Das Ende der Vertical Slice."), "end"),
 ]
 
@@ -47,9 +47,9 @@ def body(ctx):
     u, t = ctx.url, ctx.t
 
     pillars = [
-        ("KA-01", t("A village that feels lived in", "Ein Dorf, in dem gelebt wird"),
-         t("Half-timbered houses, chimney smoke and firewood under every eave. Timberwatch is a real place with real work going on.",
-           "Fachwerkhäuser, Kaminrauch und Brennholz unter jedem Dachvorsprung. Timberwatch ist ein echter Ort, in dem echte Arbeit getan wird.")),
+        ("KA-01", t("A town that feels lived in", "Eine Stadt, in der gelebt wird"),
+         t("Half-timbered houses, chimney smoke and firewood under every eave. Three-Oaks is a real place with real work going on.",
+           "Fachwerkhäuser, Kaminrauch und Brennholz unter jedem Dachvorsprung. Three-Oaks ist ein echter Ort, in dem echte Arbeit getan wird.")),
         ("VW-04", t("Four guilds, four jobs", "Vier Gilden, vier Jobs"),
          t("Paladin, Ranger, White Mage or Elementalist. Each guild has its own building, banner, trainer and training ground.",
            "Paladin, Ranger, Weißmagier oder Elementarist. Jede Gilde hat ihr eigenes Haus, ihr Banner, ihren Trainer und ihren Übungsplatz.")),
@@ -60,8 +60,8 @@ def body(ctx):
          t("The Wolfwood is built in rings. The deeper you go, the darker the trees and the bolder the wolves.",
            "Der Wolfwood ist in Ringen angelegt. Je tiefer du gehst, desto dunkler die Bäume und desto kühner die Wölfe.")),
         ("VW-08", t("The road goes on", "Die Straße geht weiter"),
-         t("Guard a merchant's cart, survive an ambush, clear a dungeon under the hill and reach the gates of Oakhaven.",
-           "Begleite einen Händlerkarren, überlebe einen Hinterhalt, säubere ein Verlies unter dem Hügel und erreiche die Tore von Oakhaven.")),
+         t("Guard a merchant's cart, survive an ambush, clear a dungeon under the hill and reach the gates of Franckfurt.",
+           "Begleite einen Händlerkarren, überlebe einen Hinterhalt, säubere ein Verlies unter dem Hügel und erreiche die Tore von Franckfurt.")),
     ]
     pillar_html = "".join(f'<li class="pillar">{ctx.figure(i, alt=n, link=False)}<h3>{n}</h3><p>{d}</p></li>' for i, n, d in pillars)
 
@@ -105,9 +105,9 @@ def body(ctx):
     key = "KEYART"  # the commissioned hero painting only; the drawn stand-in shows until it exists
     hero_cls = "hero"
     if ctx.has(key):
-        alt = t("Below the walls of Timberwatch, a Paladin catches the leaping Alpha on his shield while a White Mage, "
+        alt = t("Below the walls of Three-Oaks, a Paladin catches the leaping Alpha on his shield while a White Mage, "
                 "an Elementalist and a Ranger hold off the wolf pack coming out of the Wolfwood.",
-                "Unter den Mauern von Timberwatch fängt ein Paladin den springenden Alpha mit seinem Schild ab, während eine "
+                "Unter den Mauern von Three-Oaks fängt ein Paladin den springenden Alpha mit seinem Schild ab, während eine "
                 "Weißmagierin, ein Elementarist und eine Rangerin das Wolfsrudel aus dem Wolfwood zurückhalten.")
         # The logo is its own transparent layer over the painting's calm sky, so it stays sharp at every size.
         hero_cls = "hero hero-has-art"
@@ -117,8 +117,8 @@ def body(ctx):
                        '<h1 class="hero-wordmark"><span class="wm-small">Destiny of</span><span class="wm-big">Valendhar</span></h1>')
                     + '</div></div>')
     else:
-        alt = t("A traveller at the Wayward Dais looks up the road to the gate of Timberwatch.",
-                "Ein Reisender am Wayward Dais blickt die Straße hinauf zum Tor von Timberwatch.")
+        alt = t("A traveller at the Wayward Dais looks up the road to the gate of Three-Oaks.",
+                "Ein Reisender am Wayward Dais blickt die Straße hinauf zum Tor von Three-Oaks.")
         hero_art = (f'<div class="hero-art">{hero_svg(alt)}'
                     '<h1 class="hero-wordmark"><span class="wm-small">Destiny of</span><span class="wm-big">Valendhar</span></h1></div>')
 
@@ -127,12 +127,12 @@ def body(ctx):
   {hero_art}
   <div class="wrap hero-panel">
     <div class="hero-copy">
-      <p class="hero-hook">{t("A border village at the edge of a forest that has grown bold.",
-                              "Ein Grenzdorf am Rand eines Waldes, der kühn geworden ist.")}</p>
+      <p class="hero-hook">{t("A forest town at the edge of a wood that has grown bold.",
+                              "Eine Waldstadt am Rand eines Waldes, der kühn geworden ist.")}</p>
       <p class="hero-sub">{t("Destiny of Valendhar is a fantasy online MMO, played by many players at the same time, with tab-target combat and four job guilds. "
-                             "This site shows its vertical slice, not the full game: from the Wayward Dais through Timberwatch and the Wolfwood to the gates of Oakhaven.",
+                             "This site shows its vertical slice, not the full game: from the Wayward Dais through Three-Oaks and the Wolfwood to the gates of Franckfurt.",
                              "Destiny of Valendhar ist ein Fantasy-Online-MMO, das viele Spieler gleichzeitig spielen, mit Tab-Target-Kampf und vier Job-Gilden. "
-                             "Diese Seite zeigt seine Vertical Slice, nicht das ganze Spiel: vom Wayward Dais durch Timberwatch und den Wolfwood bis zu den Toren von Oakhaven.")}</p>
+                             "Diese Seite zeigt seine Vertical Slice, nicht das ganze Spiel: vom Wayward Dais durch Three-Oaks und den Wolfwood bis zu den Toren von Franckfurt.")}</p>
       <div class="cta-row">
         <a class="btn btn-gold" href="{u('journey/index.html')}">{t("Walk the journey", "Die Reise antreten")}</a>
         <a class="btn btn-ghost" href="{u('game/jobs.html')}">{t("Meet the four jobs", "Die vier Jobs ansehen")}</a>
@@ -144,17 +144,17 @@ def body(ctx):
 <section class="wrap section intro">
   <div class="intro-text">
     <h2 class="intro-title">{t("Every blade, bow and spell is needed", "Jede Klinge, jeder Bogen und jeder Zauber wird gebraucht")}</h2>
-    <p class="big">{t("You arrive as a stranger at the Wayward Dais, an old floating stone on the road outside Timberwatch, "
-                      "a timber and border village at the edge of the Wolfwood.",
-                      "Du kommst als Fremder am Wayward Dais an, einem alten schwebenden Stein an der Straße vor Timberwatch, "
-                      "einem Holz- und Grenzdorf am Rand des Wolfwood.")}</p>
+    <p class="big">{t("You arrive as a stranger at the Wayward Dais, an old floating stone on the road outside Three-Oaks, "
+                      "a timber town in the king's forest of the Dreieich, at the edge of the Wolfwood.",
+                      "Du kommst als Fremder am Wayward Dais an, einem alten schwebenden Stein an der Straße vor Three-Oaks, "
+                      "einer Holzstadt im gleichnamigen Königsforst, am Rand des Wolfwood.")}</p>
     <p>{t("Captain Roland is short of people and the pack has started coming out of the trees. You choose one of four job guilds, "
           "learn to fight and gather, thin out the wolves, gear up at the forge and finally face the Alpha in its den. Then the road "
-          "east opens: a merchant to protect, an ambush to survive, a dungeon under the hill, and the gates of Oakhaven at the end.",
+          "north opens: a merchant to protect, an ambush to survive, a dungeon under the hill, and the gates of Franckfurt at the end.",
           "Hauptmann Roland fehlen Leute, und das Rudel kommt neuerdings aus den Bäumen. Du wählst eine von vier Job-Gilden, lernst "
           "zu kämpfen und zu sammeln, dünnst die Wölfe aus, rüstest dich in der Schmiede aus und stellst dich schließlich dem Alpha in "
-          "seinem Bau. Dann öffnet sich die Straße nach Osten: ein Händler, den du beschützen musst, ein Hinterhalt, den du überleben "
-          "musst, ein Verlies unter dem Hügel und am Ende die Tore von Oakhaven.")}</p>
+          "seinem Bau. Dann öffnet sich die Straße nach Norden: ein Händler, den du beschützen musst, ein Hinterhalt, den du überleben "
+          "musst, ein Verlies unter dem Hügel und am Ende die Tore von Franckfurt.")}</p>
     <a class="text-link" href="{u('game/index.html')}">{t("Read the full overview", "Zum vollständigen Überblick")}</a>
   </div>
   <dl class="facts">{fact_html}</dl>
@@ -162,7 +162,7 @@ def body(ctx):
 
 <section class="wrap section">
   <div class="section-head">
-    <h2>{t("Four guilds, one village", "Vier Gilden, ein Dorf")}</h2>
+    <h2>{t("Four guilds, one town", "Vier Gilden, eine Stadt")}</h2>
     <a class="text-link" href="{u('game/jobs.html')}">{t("All four jobs and their abilities", "Alle vier Jobs und ihre Fähigkeiten")}</a>
   </div>
   <ul class="jobs">{job_html}</ul>
@@ -179,18 +179,18 @@ def body(ctx):
   <div class="split-media">{ctx.figure("KA-03", alt=t("Arrival at the Wayward Dais", "Ankunft am Wayward Dais"))}</div>
   <div class="split-text">
     <p class="kicker">{t("The world", "Die Welt")}</p>
-    <h2>{t("Timberwatch guards the road", "Timberwatch bewacht die Straße")}</h2>
+    <h2>{t("Three-Oaks guards the road", "Three-Oaks bewacht die Straße")}</h2>
     <p>{t("Behind an oval wall of sharpened logs stand steep-roofed half-timbered houses, a market square with a sandstone fountain, "
-          "a forge, an inn called the Wolf's Rest and a town hall with a slate bell turret. The village lives on timber, and it "
-          "keeps watch over the only road east to Oakhaven.",
+          "a forge, an inn called the Wolf's Rest and a town hall with a slate bell turret. The town lives on timber, and it "
+          "keeps watch over the road north to Franckfurt, the capital.",
           "Hinter einer ovalen Mauer aus angespitzten Stämmen stehen steilgiebelige Fachwerkhäuser, ein Marktplatz mit einem "
           "Sandsteinbrunnen, eine Schmiede, ein Gasthaus namens Wolf's Rest und ein Rathaus mit einem schiefergedeckten "
-          "Glockentürmchen. Das Dorf lebt vom Holz und wacht über die einzige Straße nach Osten, nach Oakhaven.")}</p>
+          "Glockentürmchen. Die Stadt lebt vom Holz und wacht über die Straße nach Norden, nach Franckfurt, der Hauptstadt.")}</p>
     <p>{t("North and west the Wolfwood begins: birch and hazel at the edge, tall beeches and old oaks further in, and dark spruce "
           "where the wolf den is.",
           "Im Norden und Westen beginnt der Wolfwood: Birken und Haselsträucher am Rand, hohe Buchen und alte Eichen weiter drinnen "
           "und dunkle Fichten dort, wo der Wolfsbau liegt.")}</p>
-    <a class="text-link" href="{u('world/timberwatch.html')}">{t("Walk through Timberwatch", "Durch Timberwatch gehen")}</a>
+    <a class="text-link" href="{u('world/three-oaks.html')}">{t("Walk through Three-Oaks", "Durch Three-Oaks gehen")}</a>
   </div>
 </section>
 
@@ -198,7 +198,7 @@ def body(ctx):
   <div class="wrap section">
     <div class="section-head">
       <h2>{t("Who you'll meet", "Wen du triffst")}</h2>
-      <a class="text-link" href="{u('characters/index.html')}">{t("All the people of Timberwatch", "Alle Leute von Timberwatch")}</a>
+      <a class="text-link" href="{u('characters/index.html')}">{t("All the people of Three-Oaks", "Alle Leute von Three-Oaks")}</a>
     </div>
     <div class="cast">{cast_html}</div>
   </div>
@@ -209,7 +209,7 @@ def body(ctx):
     <div class="trail-head">
       <div>
         <p class="kicker">{t("The vertical slice", "Die Vertical Slice")}</p>
-        <h2>{t("From the Dais to the gates of Oakhaven", "Vom Dais bis zu den Toren von Oakhaven")}</h2>
+        <h2>{t("From the Dais to the gates of Franckfurt", "Vom Dais bis zu den Toren von Franckfurt")}</h2>
         <p>{t("Eleven stops on one road. Each one teaches something new, from the first step to a boss fight and a dungeon.",
               "Elf Stationen auf einer Straße. Jede bringt dir etwas Neues bei, vom ersten Schritt bis zum Bosskampf und zum Verlies.")}</p>
       </div>
@@ -237,10 +237,10 @@ def body(ctx):
 PAGES = {
     "index.html": dict(
         title=("Home", "Start"),
-        description=("Destiny of Valendhar: a fantasy online MMO. This site shows its vertical slice, which runs from the border village of Timberwatch "
-                     "through the Wolfwood to the gates of Oakhaven.",
-                     "Destiny of Valendhar: ein Fantasy-Online-MMO. Diese Seite zeigt seine Vertical Slice, die vom Grenzdorf Timberwatch "
-                     "durch den Wolfwood bis zu den Toren von Oakhaven führt."),
+        description=("Destiny of Valendhar: a fantasy online MMO. This site shows its vertical slice, which runs from the forest town of Three-Oaks "
+                     "through the Wolfwood to the gates of Franckfurt.",
+                     "Destiny of Valendhar: ein Fantasy-Online-MMO. Diese Seite zeigt seine Vertical Slice, die von der Waldstadt Three-Oaks "
+                     "durch den Wolfwood bis zu den Toren von Franckfurt führt."),
         body=body,
         custom_header=True,
         no_pager=True,

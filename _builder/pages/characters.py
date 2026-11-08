@@ -1,4 +1,4 @@
-"""Characters: the people of Timberwatch, and the creatures of the Wolfwood."""
+"""Characters: the people of Three-Oaks, and the creatures of the Wolfwood."""
 from components import T, catalog, feature, quote, section, tags
 
 PEOPLE = [
@@ -12,8 +12,8 @@ PEOPLE = [
       "Du kannst eine Waffe halten? Gut. Damit bist du den meisten meiner Wache voraus.")),
     ("CH-BRON", ("Bron", "Bron"), ("Drill master · Paladin guild", "Drillmeister · Paladin-Gilde"),
      ("Barracks & Training Yard", "Kaserne & Übungsplatz"),
-     ("Gruff, loud, and right more often than anyone likes. Bron has trained every guard in Timberwatch.",
-      "Barsch, laut und öfter im Recht, als irgendwem lieb ist. Bron hat jede Wache in Timberwatch ausgebildet."),
+     ("Gruff, loud, and right more often than anyone likes. Bron has trained every guard in Three-Oaks.",
+      "Barsch, laut und öfter im Recht, als irgendwem lieb ist. Bron hat jede Wache in Three-Oaks ausgebildet."),
      ("Shield up. Again.", "Schild hoch. Nochmal.")),
     ("CH-HAGEN", ("Hagen", "Hagen"), ("Ranger master · Ranger guild", "Rangermeister · Ranger-Gilde"),
      ("Hunters' Lodge", "Jägerhütte"),
@@ -22,15 +22,15 @@ PEOPLE = [
      ("They're not hungry. That's what worries me.", "Sie sind nicht hungrig. Das macht mir Sorgen.")),
     ("CH-MIRA", ("Mira", "Mira"), ("Herbalist · White Mage guild", "Kräuterkundige · Weißmagier-Gilde"),
      ("Herbalist's House & Spring Shrine", "Kräuterhaus & Quellschrein"),
-     ("Warm and practical. Mira patches up the village, sells herbs, and teaches healing at the old spring shrine in her garden.",
-      "Warmherzig und praktisch. Mira flickt das Dorf zusammen, verkauft Kräuter und lehrt das Heilen am alten Quellschrein in ihrem Garten."),
+     ("Warm and practical. Mira patches up the town, sells herbs, and teaches healing at the old spring shrine in her garden.",
+      "Warmherzig und praktisch. Mira flickt die Stadt zusammen, verkauft Kräuter und lehrt das Heilen am alten Quellschrein in ihrem Garten."),
      ("Sit. Drink this. Then tell me which wolf.", "Setz dich. Trink das. Dann sag mir, welcher Wolf.")),
     ("CH-ELWYN", ("Elwyn", "Elwyn"), ("The mage · Elementalist guild", "Der Magier · Elementaristen-Gilde"),
      ("Elwyn's Tower", "Elwyns Turm"),
      ("Curious and slightly distracted, with candles melted onto stacks of books. The red glow in the tower window at night "
-      "is the only magic most villagers ever see.",
+      "is the only magic most townsfolk ever see.",
       "Neugierig und etwas zerstreut, mit Kerzen, die auf Bücherstapeln heruntergebrannt sind. Das rote Leuchten im "
-      "Turmfenster ist die einzige Magie, die die meisten Dorfbewohner je sehen."),
+      "Turmfenster ist die einzige Magie, die die meisten Stadtbewohner je sehen."),
      ("Ah, a student. Mind the books. And the floor. And that.", "Ah, ein Schüler. Pass auf die Bücher auf. Und den Boden. Und darauf.")),
     ("CH-HALDOR", ("Haldor", "Haldor"), ("The smith", "Der Schmied"), ("The forge", "Die Schmiede"),
      ("Haldor sells weapons and armour, buys pelts, and will teach anyone with five pelts and some iron how to make a pair of bracers.",
@@ -42,9 +42,9 @@ OTHERS = [
     (("The innkeeper", "Der Wirt"), ("Runs the Wolf's Rest. Bed, food and a place to come back to.", "Führt das Wolf's Rest. Bett, Essen und ein Ort, zu dem man zurückkehrt.")),
     (("The storekeeper", "Der Krämer"), ("Potions, rope, lamps and bags, on the square.", "Tränke, Seile, Lampen und Taschen, am Platz.")),
     (("The woodcutter", "Der Holzfäller"), ("At the forest edge, with something to say about the wolves.", "Am Waldrand, mit etwas zu den Wölfen zu sagen.")),
-    (("The merchant", "Der Händler"), ("Waiting at the Dais for someone to see his cart to Oakhaven.", "Wartet am Dais auf jemanden, der seinen Karren nach Oakhaven bringt.")),
+    (("The merchant", "Der Händler"), ("Waiting at the Dais for someone to see his cart to Franckfurt.", "Wartet am Dais auf jemanden, der seinen Karren nach Franckfurt bringt.")),
     (("The wounded scout", "Der verwundete Kundschafter"), ("Found on the road, past the ambush.", "Auf der Straße zu finden, hinter dem Hinterhalt.")),
-    (("Villagers", "Dorfbewohner"), ("Guards, vendors, a baker, a miller, children, a bard in the inn, and a dog that chases the cat.", "Wachen, Händler, ein Bäcker, ein Müller, Kinder, ein Barde im Gasthaus und ein Hund, der die Katze jagt.")),
+    (("Townsfolk", "Stadtbewohner"), ("Guards, vendors, a baker, a miller, children, a bard in the inn, and a dog that chases the cat.", "Wachen, Händler, ein Bäcker, ein Müller, Kinder, ein Barde im Gasthaus und ein Hund, der die Katze jagt.")),
 ]
 
 
@@ -56,10 +56,10 @@ def people(ctx):
         rows.append(feature(ctx, img, None, name, body, flip=k % 2 == 1, extra=quote(ctx, line, name)))
     others = "".join(f'<div class="mode"><h3>{T(ctx, a)}</h3><p>{T(ctx, b)}</p></div>' for a, b in OTHERS)
     return section(f"""
-<p class="lede" style="margin-bottom:64px">{t("Short, grounded and a little dry: the people who run Timberwatch and send you out of it.",
-                     "Kurz, bodenständig und ein wenig trocken: die Leute, die Timberwatch am Laufen halten und dich hinausschicken.")}</p>
+<p class="lede" style="margin-bottom:64px">{t("Short, grounded and a little dry: the people who run Three-Oaks and send you out of it.",
+                     "Kurz, bodenständig und ein wenig trocken: die Leute, die Three-Oaks am Laufen halten und dich hinausschicken.")}</p>
 {"".join(rows)}
-<h2 style="margin-top:80px">{t("Also in the village", "Außerdem im Dorf")}</h2>
+<h2 style="margin-top:80px">{t("Also in town", "Außerdem in der Stadt")}</h2>
 <div class="modes">{others}</div>""")
 
 
@@ -86,9 +86,9 @@ def creatures(ctx):
 
 PAGES = {
     "characters/index.html": dict(
-        title=("People of Timberwatch", "Die Leute von Timberwatch"), kicker=("Characters", "Figuren"),
-        lede=("A captain, four guild masters, a smith, and the village around them.",
-              "Ein Hauptmann, vier Gildenmeister, ein Schmied und das Dorf um sie herum."),
+        title=("People of Three-Oaks", "Die Leute von Three-Oaks"), kicker=("Characters", "Figuren"),
+        lede=("A captain, four guild masters, a smith, and the town around them.",
+              "Ein Hauptmann, vier Gildenmeister, ein Schmied und die Stadt um sie herum."),
         banner="KA-02", body=people),
     "characters/creatures.html": dict(
         title=("Creatures", "Kreaturen"), kicker=("Characters", "Figuren"),

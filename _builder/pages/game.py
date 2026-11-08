@@ -1,4 +1,4 @@
-"""The Game: overview, combat, the four jobs, village life."""
+"""The Game: overview, combat, the four jobs, town life."""
 from components import back, facts, feature, loops, modes, quote, section, table, tags
 
 
@@ -14,10 +14,10 @@ def overview(ctx):
                       "Valendhar. Du wählst einen Job, trittst seiner Gilde bei und kämpfst mit einer Leiste voller Fähigkeiten gegen "
                       "Gegner, die du per Zieltaste auswählst, so wie klassische MMOs sich spielen.")}</p>
     <p>{t("This site shows the game's vertical slice, not the full game. A vertical slice is one small part built to finished quality "
-          "first: here, one village, one forest, one road and one dungeon, from the first step to the last boss. "
+          "first: here, one town, one forest, one road and one dungeon, from the first step to the last boss. "
           "It is the part being built now, and the measure for everything after it.",
           "Diese Seite zeigt die Vertical Slice des Spiels, nicht das ganze Spiel. Eine Vertical Slice ist ein kleiner Teil, der zuerst "
-          "in fertiger Qualität entsteht: hier ein Dorf, ein Wald, eine Straße und ein Verlies, vom ersten "
+          "in fertiger Qualität entsteht: hier eine Stadt, ein Wald, eine Straße und ein Verlies, vom ersten "
           "Schritt bis zum letzten Boss. Es ist der Teil, der gerade entsteht, und der Maßstab für alles, "
           "was danach kommt.")}</p>
   </div>
@@ -37,10 +37,10 @@ def overview(ctx):
     pillars = section(f"""
 <h2>{t("What the game stands on", "Worauf das Spiel steht")}</h2>
 {feature(ctx, "KA-01", ("Pillar 1", "Säule 1"), ("A grounded world", "Eine bodenständige Welt"), [
-    ("Valendhar looks semi-realistic: real proportions, honest materials, painterly light. The villages read like late-medieval "
-     "Central Europe. Magic is rare in town and grows stronger out in the forest and at the old monuments.",
-     "Valendhar sieht halbrealistisch aus: echte Proportionen, ehrliche Materialien, malerisches Licht. Die Dörfer wirken wie das "
-     "spätmittelalterliche Mitteleuropa. Magie ist im Dorf selten und wird draußen im Wald und an den alten Monumenten stärker.")])}
+    ("Valendhar looks semi-realistic: real proportions, honest materials, painterly light. The towns read like a late-medieval "
+     "Germany that never was. Magic is rare in town and grows stronger out in the forest and at the old monuments.",
+     "Valendhar sieht halbrealistisch aus: echte Proportionen, ehrliche Materialien, malerisches Licht. Die Städte wirken wie ein "
+     "spätmittelalterliches Deutschland, das es nie gab. Magie ist in der Stadt selten und wird draußen im Wald und an den alten Monumenten stärker.")])}
 {feature(ctx, "VW-04", ("Pillar 2", "Säule 2"), ("Jobs, not classes on a menu", "Jobs statt Klassen aus einem Menü"), [
     ("You choose your job in the world, by walking into a guild and talking to its trainer. Each guild is a real building with "
      "its own banner, people and training ground.",
@@ -52,9 +52,9 @@ def overview(ctx):
      "Ein Zielfenster, Zauberleisten, Schadenszahlen und Bodenmarkierungen für jeden Spezialangriff. Du sollst immer wissen, was "
      "gleich auf dich zukommt, und einen Moment haben, um auszuweichen.")])}
 {feature(ctx, "KA-06", ("Pillar 4", "Säule 4"), ("A gradient of danger", "Gefahr in Stufen"), [
-    ("Outward from the village, the land gets older, darker and more dangerous: meadow, woodcutters' clearings, beech forest, "
+    ("Outward from the town, the land gets older, darker and more dangerous: meadow, woodcutters' clearings, beech forest, "
      "deep spruce, the wolf den. You always know roughly how far you have come.",
-     "Vom Dorf aus wird das Land älter, dunkler und gefährlicher: Wiese, Holzfällerlichtungen, Buchenwald, tiefer Fichtenwald, "
+     "Von der Stadt aus wird das Land älter, dunkler und gefährlicher: Wiese, Holzfällerlichtungen, Buchenwald, tiefer Fichtenwald, "
      "der Wolfsbau. Du weißt immer ungefähr, wie weit du gekommen bist.")], flip=True)}
 {feature(ctx, "VW-08", ("Pillar 5", "Säule 5"), ("Better together", "Gemeinsam besser"), [
     ("Every fight can be won alone, and every fight gets easier with other players. A tank who holds attention and a healer who keeps "
@@ -65,10 +65,10 @@ def overview(ctx):
 
     loop = section(f"""
 <h2>{t("The loop", "Der Kreislauf")}</h2>
-<p class="lede">{t("What you do, again and again, between the Dais and Oakhaven.", "Was du zwischen dem Dais und Oakhaven immer wieder tust.")}</p>
+<p class="lede">{t("What you do, again and again, between the Dais and Franckfurt.", "Was du zwischen dem Dais und Franckfurt immer wieder tust.")}</p>
 {loops(ctx, [
-    (("Take a task", "Auftrag annehmen"), ("From Captain Roland, a trainer or a villager with a problem.",
-                                           "Von Hauptmann Roland, einem Trainer oder einem Dorfbewohner mit einem Problem.")),
+    (("Take a task", "Auftrag annehmen"), ("From Captain Roland, a trainer or a townsperson with a problem.",
+                                           "Von Hauptmann Roland, einem Trainer oder einem Stadtbewohner mit einem Problem.")),
     (("Head out", "Losziehen"), ("Gather herbs at the forest edge, hunt wolves, find what was lost.",
                                  "Kräuter am Waldrand sammeln, Wölfe jagen, Verlorenes finden.")),
     (("Come back", "Zurückkehren"), ("Turn in, level up, sell pelts, buy and craft better gear.",
@@ -193,7 +193,7 @@ def jobs(ctx):
 {line_ups}{portraits}{"".join(out)}""")
 
 
-def village_life(ctx):
+def town_life(ctx):
     t = ctx.t
     return section(f"""
 {feature(ctx, "KA-04", ("The forge", "Die Schmiede"), ("Haldor buys pelts and sells steel", "Haldor kauft Felle und verkauft Stahl"), [
@@ -223,8 +223,8 @@ def village_life(ctx):
 PAGES = {
     "game/index.html": dict(
         title=("The Game", "Das Spiel"), kicker=("Overview & pillars", "Überblick & Säulen"),
-        lede=("A fantasy online MMO of jobs, guilds and readable fights, starting in one border village.",
-              "Ein Fantasy-Online-MMO mit Jobs, Gilden und lesbaren Kämpfen, das in einem Grenzdorf beginnt."),
+        lede=("A fantasy online MMO of jobs, guilds and readable fights, starting in one forest town.",
+              "Ein Fantasy-Online-MMO mit Jobs, Gilden und lesbaren Kämpfen, das in einer Waldstadt beginnt."),
         banner="KA-01", body=overview),
     "game/combat.html": dict(
         title=("Combat", "Kampf"), kicker=("The Game", "Das Spiel"),
@@ -233,12 +233,12 @@ PAGES = {
         banner="KA-07", body=combat),
     "game/jobs.html": dict(
         title=("The Four Jobs", "Die vier Jobs"), kicker=("The Game", "Das Spiel"),
-        lede=("Tank, ranged damage, healer and magic damage, each taught by its own guild in Timberwatch.",
-              "Tank, Fernkampf-Schaden, Heiler und Magie-Schaden, jeder gelehrt von seiner eigenen Gilde in Timberwatch."),
+        lede=("Tank, ranged damage, healer and magic damage, each taught by its own guild in Three-Oaks.",
+              "Tank, Fernkampf-Schaden, Heiler und Magie-Schaden, jeder gelehrt von seiner eigenen Gilde in Three-Oaks."),
         banner="VW-04", body=jobs),
-    "game/village-life.html": dict(
-        title=("Village Life", "Dorfleben"), kicker=("The Game", "Das Spiel"),
+    "game/town-life.html": dict(
+        title=("Town Life", "Stadtleben"), kicker=("The Game", "Das Spiel"),
         lede=("Between the fights: vendors, crafting, potions and a warm bed.",
               "Zwischen den Kämpfen: Händler, Handwerk, Tränke und ein warmes Bett."),
-        banner="KA-02", body=village_life),
+        banner="KA-02", body=town_life),
 }

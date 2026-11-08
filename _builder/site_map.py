@@ -1,7 +1,7 @@
 """Navigation tree for the whole site.
 
 Each node: ((english label, german label), path, children)
-- path is relative to the language root, e.g. "world/timberwatch.html"
+- path is relative to the language root, e.g. "world/three-oaks.html"
   (the German copy of every page lives under de/ with the same path)
 - a node with children and a path gets a "landing" link plus a dropdown
 """
@@ -12,7 +12,7 @@ NAV = [
         (("Overview & Pillars", "Überblick & Säulen"), "game/index.html", []),
         (("Combat", "Kampf"), "game/combat.html", []),
         (("The Four Jobs", "Die vier Jobs"), "game/jobs.html", []),
-        (("Village Life", "Dorfleben"), "game/village-life.html", []),
+        (("Town Life", "Stadtleben"), "game/town-life.html", []),
     ]),
     (("The Journey", "Die Reise"), "journey/index.html", [
         (("From Dais to Gate", "Vom Dais zum Tor"), "journey/index.html", []),
@@ -21,12 +21,12 @@ NAV = [
     ]),
     (("World", "Welt"), "world/index.html", [
         (("Valendhar", "Valendhar"), "world/index.html", []),
-        (("Timberwatch", "Timberwatch"), "world/timberwatch.html", []),
+        (("Three-Oaks", "Three-Oaks"), "world/three-oaks.html", []),
         (("The Wolfwood", "Der Wolfwood"), "world/wolfwood.html", []),
-        (("Road to Oakhaven", "Straße nach Oakhaven"), "world/road.html", []),
+        (("Road to Franckfurt", "Straße nach Franckfurt"), "world/road.html", []),
     ]),
     (("Characters", "Figuren"), "characters/index.html", [
-        (("People of Timberwatch", "Die Leute von Timberwatch"), "characters/index.html", []),
+        (("People of Three-Oaks", "Die Leute von Three-Oaks"), "characters/index.html", []),
         (("Creatures", "Kreaturen"), "characters/creatures.html", []),
     ]),
     (("Art", "Kunst"), "art/index.html", [
@@ -37,7 +37,7 @@ NAV = [
     (("Concept Art", "Konzeptkunst"), "concept/index.html", [
         (("Overview", "Überblick"), "concept/index.html", []),
         (("Heroes", "Helden"), "concept/heroes.html", []),
-        (("People of Timberwatch", "Die Leute von Timberwatch"), "concept/people.html", []),
+        (("People of Three-Oaks", "Die Leute von Three-Oaks"), "concept/people.html", []),
         (("Creatures & Enemies", "Kreaturen & Gegner"), "concept/creatures.html", []),
         (("Buildings & Landmarks", "Gebäude & Wahrzeichen"), "concept/buildings.html", []),
         (("Props & Interiors", "Requisiten & Innenräume"), "concept/props.html", []),
