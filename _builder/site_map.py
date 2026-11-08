@@ -34,6 +34,17 @@ NAV = [
         (("Views & Maps", "Ansichten & Karten"), "art/views.html", []),
         (("Interiors", "Innenräume"), "art/interiors.html", []),
     ]),
+    (("Concept Art", "Konzeptkunst"), "concept/index.html", [
+        (("Overview", "Überblick"), "concept/index.html", []),
+        (("Heroes", "Helden"), "concept/heroes.html", []),
+        (("People of Timberwatch", "Die Leute von Timberwatch"), "concept/people.html", []),
+        (("Creatures & Enemies", "Kreaturen & Gegner"), "concept/creatures.html", []),
+        (("Buildings & Landmarks", "Gebäude & Wahrzeichen"), "concept/buildings.html", []),
+        (("Props & Interiors", "Requisiten & Innenräume"), "concept/props.html", []),
+        (("Wolfwood & Barrow", "Wolfwood & Hügelgrab"), "concept/wolfwood.html", []),
+        (("Modular Kit", "Baukasten"), "concept/kit.html", []),
+        (("Gear & Costumes", "Ausrüstung & Kostüme"), "concept/gear.html", []),
+    ]),
     (("Media", "Medien"), "media/index.html", []),
 ]
 

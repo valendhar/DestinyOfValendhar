@@ -23,6 +23,8 @@ from site_map import NAV, all_paths  # noqa: E402
 
 OUT = Path(sys.argv[1]).resolve() if len(sys.argv) > 1 else HERE.parent
 ORIGINALS = HERE / "images" / "originals"
+# Character images and the concept sheets are published too (the Concept Art pages). originals come last, so they win on a shared id.
+SOURCES = [HERE / "images" / "characters", HERE / "images" / "sheets", ORIGINALS]
 IMG_OUT = OUT / "assets" / "img"
 
 SITE_TITLE = "Destiny of Valendhar"
@@ -89,7 +91,7 @@ FLAG_DE = ('<svg viewBox="0 0 60 32" aria-hidden="true"><rect width="60" height=
 def process_images():
     (IMG_OUT / "full").mkdir(parents=True, exist_ok=True)
     (IMG_OUT / "thumb").mkdir(parents=True, exist_ok=True)
-    for src in sorted(ORIGINALS.glob("*")):
+    for src in [f for d in SOURCES for f in sorted(d.rglob("*"))]:
         if src.suffix.lower() not in (".png", ".jpg", ".jpeg", ".webp"):
             continue
         img_id = src.stem.upper()
@@ -161,8 +163,8 @@ class Ctx:
         act = "ACT-" + img_id.upper()
         return act if act in IMAGES else img_id
 
-    def img_src(self, img_id, kind="thumb"):
-        return f"{self.root}assets/img/{kind}/{self.swap(img_id)}.webp"
+    def img_src(self, img_id, kind="thumb", swap=True):
+        return f"{self.root}assets/img/{kind}/{self.swap(img_id) if swap else img_id}.webp"
 
     def has(self, img_id):
         return img_id.upper() in IMAGES
@@ -174,22 +176,22 @@ class Ctx:
                 return i
         return ids[0]
 
-    def figure(self, img_id, caption=None, alt=None, cls="", eager=False, link=True, show_caption=True):
-        img_id = self.swap(img_id.upper())
+    def figure(self, img_id, caption=None, alt=None, cls="", eager=False, link=True, show_caption=True, swap=True, note=None):
+        img_id = self.swap(img_id.upper()) if swap else img_id.upper()
         alt = alt or caption or img_id
         cap = f"<figcaption>{caption}</figcaption>" if caption and show_caption else ""
         if img_id in IMAGES:
             m = IMAGES[img_id]
             loading = 'fetchpriority="high"' if eager else 'loading="lazy" decoding="async"'
-            tag = (f'<img src="{self.img_src(img_id)}" alt="{esc(alt)}" width="{m["tw"]}" '
+            tag = (f'<img src="{self.img_src(img_id, swap=False)}" alt="{esc(alt)}" width="{m["tw"]}" '
                    f'height="{m["th"]}" {loading}>')
             if link:
-                tag = (f'<a class="lb" href="{self.img_src(img_id, "full")}" '
+                tag = (f'<a class="lb" href="{self.img_src(img_id, "full", swap=False)}" '
                        f'data-caption="{esc(caption or "")}">{tag}</a>')
             return f'<figure class="fig {cls}">{tag}{cap}</figure>'
         return (
             f'<figure class="fig ph {cls}"><div class="ph-box" role="img" aria-label="{esc(alt)}">'
-            f'<span class="ph-id">{img_id}</span><span class="ph-note">{self.ui("image_coming")}</span></div>{cap}</figure>'
+            f'<span class="ph-id">{img_id}</span><span class="ph-note">{note or self.ui("image_coming")}</span></div>{cap}</figure>'
         )
 
     def gallery(self, items, cls=""):

@@ -1,4 +1,7 @@
 _builder/images/originals/
+# Sheet sources and old versions: the site builds web copies of the sheets into assets/img
+_builder/images/sheets/
+_builder/images/archive/
 __pycache__/
 .DS_Store
 
