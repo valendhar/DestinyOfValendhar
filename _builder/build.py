@@ -416,6 +416,8 @@ def main():
             if lang == "de":
                 # German names (the user's choice, 2026-11-08): the forest Three-Oaks is the Dreieich, the Wolfwood the Wolfsforst.
                 html_out = html_out.replace("Three-Oaks", "Dreieich").replace("Wolfwoods", "Wolfsforsts").replace("Wolfwood", "Wolfsforst")
+                # Saxenhausen is English only (2026-11-08): in German, Sachsenhausen and its watchtower the Sachsenhäuser Warte
+                html_out = html_out.replace("Saxenhausen Watchtower", "Sachsenhäuser Warte").replace("Saxenhausen", "Sachsenhausen")
             target.write_text(html_out, encoding="utf-8")
             built += 1
     # Pages that moved when Timberwatch became Three-Oaks and then Hayn: the old addresses forward, so shared links keep working.

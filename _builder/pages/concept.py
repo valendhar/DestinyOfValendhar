@@ -134,6 +134,9 @@ def props(ctx):
         + block(ctx, ("The market", "Der Markt"), None, pick("props", r"^MK-"))
         + block(ctx, ("Workshops", "Werkstätten"), None, pick("props", r"^WS-"))
         + block(ctx, ("Lights", "Licht"), None, pick("props", r"^LT-"))
+        + block(ctx, ("Trees, gardens and fields", "Bäume, Gärten und Felder"), ("The town linden, the orchards, the kitchen gardens and the fields outside the wall.",
+                                                                              "Die große Linde, die Obstbäume, die Küchengärten und die Felder vor der Mauer."),
+                pick("props", r"^(FO|PL)-"))
         + block(ctx, ("Furniture and interiors", "Möbel und Innenräume"), None, pick("props", r"^IN-"))
         + block(ctx, ("Items", "Gegenstände"), ("Loot, crafting materials, potions and food.", "Beute, Handwerksmaterial, Tränke und Speisen."),
                 pick("props", r"^IM-")))

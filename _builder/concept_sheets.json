@@ -7,14 +7,14 @@
 },
 {
 "id": "BL-02",
-"name": "South Gatehouse",
+"name": "South Gate",
 "number": 248,
 "folder": "buildings"
 },
 {
 "id": "BL-03",
 "name": "North Gate",
-"number": 431,
+"number": 432,
 "folder": "buildings"
 },
 {
@@ -37,14 +37,14 @@
 },
 {
 "id": "BL-07",
-"name": "Inn \"The Wolf's Rest\"",
+"name": "Inn \"The Golden Acorn\"",
 "number": 260,
 "folder": "buildings"
 },
 {
 "id": "BL-08",
 "name": "Stables & coach shed",
-"number": 438,
+"number": 439,
 "folder": "buildings"
 },
 {
@@ -86,25 +86,25 @@
 {
 "id": "BL-15",
 "name": "Cooper's house & workshop",
-"number": 439,
+"number": 440,
 "folder": "buildings"
 },
 {
 "id": "BL-16",
 "name": "Weaver's house",
-"number": 440,
+"number": 441,
 "folder": "buildings"
 },
 {
 "id": "BL-17",
 "name": "Carpenter & wheelwright workshop",
-"number": 441,
+"number": 442,
 "folder": "buildings"
 },
 {
 "id": "BL-18",
 "name": "Butcher & smokehouse",
-"number": 442,
+"number": 443,
 "folder": "buildings"
 },
 {
@@ -140,31 +140,31 @@
 {
 "id": "BL-24",
 "name": "Chapel of the Dawn",
-"number": 443,
+"number": 444,
 "folder": "buildings"
 },
 {
 "id": "BL-25",
 "name": "Farmhouse",
-"number": 444,
+"number": 445,
 "folder": "buildings"
 },
 {
 "id": "BL-26",
 "name": "Barn",
-"number": 445,
+"number": 446,
 "folder": "buildings"
 },
 {
 "id": "BL-27",
 "name": "Watermill",
-"number": 446,
+"number": 447,
 "folder": "buildings"
 },
 {
 "id": "BL-28",
 "name": "Sawmill shed",
-"number": 447,
+"number": 448,
 "folder": "buildings"
 },
 {
@@ -176,133 +176,133 @@
 {
 "id": "ST-06",
 "name": "Small stone arch bridge",
-"number": 448,
+"number": 449,
 "folder": "buildings"
 },
 {
 "id": "ST-07",
 "name": "Plank footbridge",
-"number": 449,
+"number": 450,
 "folder": "buildings"
 },
 {
 "id": "ST-08",
 "name": "Signposts & milestone",
-"number": 315,
+"number": 316,
 "folder": "buildings"
 },
 {
 "id": "EX-01",
 "name": "Barrels set",
-"number": 316,
+"number": 317,
 "folder": "props"
 },
 {
 "id": "EX-02",
 "name": "Crates set",
-"number": 317,
+"number": 318,
 "folder": "props"
 },
 {
 "id": "EX-03",
 "name": "Sacks set",
-"number": 318,
+"number": 319,
 "folder": "props"
 },
 {
 "id": "EX-04",
 "name": "Baskets set",
-"number": 319,
+"number": 320,
 "folder": "props"
 },
 {
 "id": "EX-05",
 "name": "Ladders set",
-"number": 320,
+"number": 321,
 "folder": "props"
 },
 {
 "id": "EX-06",
 "name": "Wheelbarrow & handcart",
-"number": 321,
+"number": 322,
 "folder": "props"
 },
 {
 "id": "EX-07",
 "name": "Haywain (hay wagon)",
-"number": 322,
+"number": 323,
 "folder": "props"
 },
 {
 "id": "EX-08",
 "name": "Covered merchant wagon",
-"number": 450,
+"number": 451,
 "folder": "props"
 },
 {
 "id": "EX-09",
 "name": "Cart wheels & spare parts",
-"number": 451,
+"number": 452,
 "folder": "props"
 },
 {
 "id": "EX-10",
 "name": "Firewood set",
-"number": 323,
+"number": 324,
 "folder": "props"
 },
 {
 "id": "EX-11",
 "name": "Troughs, pump & buckets",
-"number": 324,
+"number": 325,
 "folder": "props"
 },
 {
 "id": "EX-12",
 "name": "Draw well with roof",
-"number": 325,
+"number": 326,
 "folder": "props"
 },
 {
 "id": "EX-13",
 "name": "Farm & garden tools",
-"number": 326,
+"number": 327,
 "folder": "props"
 },
 {
 "id": "EX-14",
 "name": "Fences & gates",
-"number": 327,
+"number": 328,
 "folder": "props"
 },
 {
 "id": "EX-15",
 "name": "Benches & outdoor tables",
-"number": 328,
+"number": 329,
 "folder": "props"
 },
 {
 "id": "EX-16",
 "name": "Laundry line set",
-"number": 452,
+"number": 453,
 "folder": "props"
 },
 {
 "id": "EX-17",
 "name": "Planters & flowers",
-"number": 453,
+"number": 454,
 "folder": "props"
 },
 {
 "id": "EX-18",
 "name": "Guild & shop signs",
-"number": 329,
+"number": 330,
 "folder": "props"
 },
 {
 "id": "EX-19",
 "name": "Banners & flags",
-"number": 330,
+"number": 331,
 "folder": "props"
 },
 {
@@ -314,565 +314,565 @@
 {
 "id": "EX-21",
 "name": "Pillory / stocks",
-"number": 509,
+"number": 510,
 "folder": "props"
 },
 {
 "id": "EX-22",
 "name": "Small outbuildings",
-"number": 454,
+"number": 455,
 "folder": "props"
 },
 {
 "id": "EX-23",
 "name": "Animal shelters",
-"number": 455,
+"number": 456,
 "folder": "props"
 },
 {
 "id": "EX-24",
 "name": "Beehives",
-"number": 456,
+"number": 457,
 "folder": "props"
 },
 {
 "id": "EX-25",
 "name": "Dovecote & birdhouses",
-"number": 510,
+"number": 511,
 "folder": "props"
 },
 {
 "id": "EX-26",
 "name": "Hay & straw",
-"number": 457,
+"number": 458,
 "folder": "props"
 },
 {
 "id": "EX-27",
 "name": "Scarecrow",
-"number": 458,
+"number": 459,
 "folder": "props"
 },
 {
 "id": "EX-28",
 "name": "Dung heap & compost",
-"number": 511,
+"number": 512,
 "folder": "props"
 },
 {
 "id": "EX-29",
 "name": "Cemetery set",
-"number": 459,
+"number": 460,
 "folder": "props"
 },
 {
 "id": "EX-30",
 "name": "Weather vanes",
-"number": 512,
+"number": 513,
 "folder": "props"
 },
 {
 "id": "EX-31",
 "name": "Guard props",
-"number": 331,
+"number": 332,
 "folder": "props"
 },
 {
 "id": "EX-32",
 "name": "Training yard set",
-"number": 332,
+"number": 333,
 "folder": "props"
 },
 {
 "id": "EX-33",
 "name": "Hunting props",
-"number": 460,
+"number": 461,
 "folder": "props"
 },
 {
 "id": "EX-34",
 "name": "Weaver's dye yard",
-"number": 461,
+"number": 462,
 "folder": "props"
 },
 {
 "id": "EX-35",
 "name": "Jetty & rowing boat",
-"number": 462,
+"number": 463,
 "folder": "props"
 },
 {
 "id": "EX-36",
 "name": "Ropes, chains & pulleys",
-"number": 463,
+"number": 464,
 "folder": "props"
 },
 {
 "id": "EX-37",
 "name": "Stable props",
-"number": 464,
+"number": 465,
 "folder": "props"
 },
 {
 "id": "EX-38",
 "name": "Clutter & debris",
-"number": 513,
+"number": 514,
 "folder": "props"
 },
 {
 "id": "EX-39",
 "name": "Road ambush set",
-"number": 465,
+"number": 466,
 "folder": "props"
 },
 {
 "id": "MK-01",
 "name": "Market stall",
-"number": 335,
+"number": 336,
 "folder": "props"
 },
 {
 "id": "MK-02",
 "name": "Produce display",
-"number": 336,
+"number": 337,
 "folder": "props"
 },
 {
 "id": "MK-03",
 "name": "Bakery goods",
-"number": 337,
+"number": 338,
 "folder": "props"
 },
 {
 "id": "MK-04",
 "name": "Textile goods",
-"number": 466,
+"number": 467,
 "folder": "props"
 },
 {
 "id": "MK-05",
 "name": "Pottery goods",
-"number": 467,
+"number": 468,
 "folder": "props"
 },
 {
 "id": "MK-06",
 "name": "Fish & meat goods",
-"number": 468,
+"number": 469,
 "folder": "props"
 },
 {
 "id": "MK-07",
 "name": "Scales & coin box",
-"number": 338,
+"number": 339,
 "folder": "props"
 },
 {
 "id": "MK-08",
 "name": "Dairy goods",
-"number": 469,
+"number": 470,
 "folder": "props"
 },
 {
 "id": "WS-01",
 "name": "Anvils",
-"number": 339,
+"number": 340,
 "folder": "props"
 },
 {
 "id": "WS-02",
 "name": "Forge hearth & bellows",
-"number": 340,
+"number": 341,
 "folder": "props"
 },
 {
 "id": "WS-03",
 "name": "Grindstone",
-"number": 341,
+"number": 342,
 "folder": "props"
 },
 {
 "id": "WS-04",
 "name": "Blacksmith tools",
-"number": 342,
+"number": 343,
 "folder": "props"
 },
 {
 "id": "WS-05",
 "name": "Weapon & armour display",
-"number": 343,
+"number": 344,
 "folder": "props"
 },
 {
 "id": "WS-06",
 "name": "Carpentry bench & tools",
-"number": 470,
+"number": 471,
 "folder": "props"
 },
 {
 "id": "WS-07",
 "name": "Shaving horse, sawhorses, pole lathe",
-"number": 471,
+"number": 472,
 "folder": "props"
 },
 {
 "id": "WS-08",
 "name": "Cooperage set",
-"number": 472,
+"number": 473,
 "folder": "props"
 },
 {
 "id": "WS-09",
 "name": "Logs & lumber stacks",
-"number": 344,
+"number": 345,
 "folder": "props"
 },
 {
 "id": "WS-10",
 "name": "Sawmill machinery",
-"number": 473,
+"number": 474,
 "folder": "props"
 },
 {
 "id": "WS-11",
 "name": "Loom & spinning wheel",
-"number": 474,
+"number": 475,
 "folder": "props"
 },
 {
 "id": "WS-12",
 "name": "Mill machinery",
-"number": 475,
+"number": 476,
 "folder": "props"
 },
 {
 "id": "WS-13",
 "name": "Bread oven & bakery tools",
-"number": 345,
+"number": 346,
 "folder": "props"
 },
 {
 "id": "IN-01",
 "name": "Tables",
-"number": 373,
+"number": 374,
 "folder": "props"
 },
 {
 "id": "IN-02",
 "name": "Chairs & seating",
-"number": 374,
+"number": 375,
 "folder": "props"
 },
 {
 "id": "IN-03",
 "name": "Beds",
-"number": 375,
+"number": 376,
 "folder": "props"
 },
 {
 "id": "IN-04",
 "name": "Storage furniture",
-"number": 376,
+"number": 377,
 "folder": "props"
 },
 {
 "id": "IN-05",
 "name": "Kitchen hearth set",
-"number": 377,
+"number": 378,
 "folder": "props"
 },
 {
 "id": "IN-06",
 "name": "Tiled stove (Kachelofen) with bench",
-"number": 378,
+"number": 379,
 "folder": "props"
 },
 {
 "id": "IN-07",
 "name": "Kitchenware",
-"number": 379,
+"number": 380,
 "folder": "props"
 },
 {
 "id": "IN-08",
 "name": "Food storage & hanging food",
-"number": 380,
+"number": 381,
 "folder": "props"
 },
 {
 "id": "IN-09",
 "name": "Textiles",
-"number": 496,
+"number": 497,
 "folder": "props"
 },
 {
 "id": "IN-10",
 "name": "Washstand & laundry",
-"number": 497,
+"number": 498,
 "folder": "props"
 },
 {
 "id": "IN-11",
 "name": "Tavern bar set",
-"number": 381,
+"number": 382,
 "folder": "props"
 },
 {
 "id": "IN-12",
 "name": "Tavern fireplace",
-"number": 382,
+"number": 383,
 "folder": "props"
 },
 {
 "id": "IN-13",
 "name": "Books & writing",
-"number": 498,
+"number": 499,
 "folder": "props"
 },
 {
 "id": "IN-14",
 "name": "Mage's study set",
-"number": 383,
+"number": 384,
 "folder": "props"
 },
 {
 "id": "IN-15",
 "name": "Herbalist set",
-"number": 384,
+"number": 385,
 "folder": "props"
 },
 {
 "id": "IN-16",
 "name": "Barracks interior set",
-"number": 385,
+"number": 386,
 "folder": "props"
 },
 {
 "id": "IN-17",
 "name": "Hunters' lodge interior set",
-"number": 386,
+"number": 387,
 "folder": "props"
 },
 {
 "id": "IN-18",
 "name": "Chapel interior set",
-"number": 499,
+"number": 500,
 "folder": "props"
 },
 {
 "id": "IN-19",
 "name": "Council hall set",
-"number": 387,
+"number": 388,
 "folder": "props"
 },
 {
 "id": "IN-20",
 "name": "Cellar set",
-"number": 500,
+"number": 501,
 "folder": "props"
 },
 {
 "id": "IN-21",
 "name": "Domestic clutter",
-"number": 501,
+"number": 502,
 "folder": "props"
 },
 {
 "id": "IN-22",
 "name": "Holding cell",
-"number": 515,
+"number": 516,
 "folder": "props"
 },
 {
 "id": "LT-01",
 "name": "Wall lanterns",
-"number": 346,
+"number": 347,
 "folder": "props"
 },
 {
 "id": "LT-02",
 "name": "Street lamp post",
-"number": 347,
+"number": 348,
 "folder": "props"
 },
 {
 "id": "LT-03",
 "name": "Torches & braziers",
-"number": 348,
+"number": 349,
 "folder": "props"
 },
 {
 "id": "LT-04",
 "name": "Hanging lanterns",
-"number": 476,
+"number": 477,
 "folder": "props"
 },
 {
 "id": "LT-05",
 "name": "Candles & chandeliers",
-"number": 349,
+"number": 350,
 "folder": "props"
 },
 {
 "id": "FO-01",
 "name": "European beech",
-"number": 350,
+"number": 351,
 "folder": "wolfwood"
 },
 {
 "id": "FO-02",
 "name": "English oak",
-"number": 351,
+"number": 352,
 "folder": "wolfwood"
 },
 {
 "id": "FO-03",
 "name": "Norway spruce",
-"number": 352,
+"number": 353,
 "folder": "wolfwood"
 },
 {
 "id": "FO-04",
 "name": "Silver fir",
-"number": 477,
+"number": 478,
 "folder": "wolfwood"
 },
 {
 "id": "FO-05",
 "name": "Silver birch",
-"number": 353,
+"number": 354,
 "folder": "wolfwood"
 },
 {
 "id": "FO-06",
 "name": "Black alder",
-"number": 478,
+"number": 479,
 "folder": "wolfwood"
 },
 {
 "id": "FO-07",
 "name": "Town linden (hero)",
 "number": 145,
-"folder": "wolfwood"
+"folder": "props"
 },
 {
 "id": "FO-08",
 "name": "Horse chestnut",
-"number": 479,
-"folder": "wolfwood"
+"number": 480,
+"folder": "props"
 },
 {
 "id": "FO-09",
 "name": "Yew",
-"number": 514,
+"number": 515,
 "folder": "wolfwood"
 },
 {
 "id": "FO-10",
 "name": "Apple & pear trees",
-"number": 480,
-"folder": "wolfwood"
+"number": 481,
+"folder": "props"
 },
 {
 "id": "FO-11",
 "name": "Pollard willow",
-"number": 481,
+"number": 482,
 "folder": "wolfwood"
 },
 {
 "id": "FO-12",
 "name": "Understory shrubs",
-"number": 354,
+"number": 355,
 "folder": "wolfwood"
 },
 {
 "id": "FO-13",
 "name": "Brambles & wild rose",
-"number": 355,
+"number": 356,
 "folder": "wolfwood"
 },
 {
 "id": "PL-01",
 "name": "Grass set",
-"number": 356,
+"number": 357,
 "folder": "wolfwood"
 },
 {
 "id": "PL-02",
 "name": "Ferns",
-"number": 357,
+"number": 358,
 "folder": "wolfwood"
 },
 {
 "id": "PL-03",
 "name": "Wildflowers",
-"number": 358,
+"number": 359,
 "folder": "wolfwood"
 },
 {
 "id": "PL-04",
 "name": "Forest floor plants",
-"number": 359,
+"number": 360,
 "folder": "wolfwood"
 },
 {
 "id": "PL-05",
 "name": "Mushrooms",
-"number": 482,
+"number": 483,
 "folder": "wolfwood"
 },
 {
 "id": "PL-06",
 "name": "Water plants",
-"number": 483,
+"number": 484,
 "folder": "wolfwood"
 },
 {
 "id": "PL-07",
 "name": "Garden & wall plants",
-"number": 484,
-"folder": "wolfwood"
+"number": 485,
+"folder": "props"
 },
 {
 "id": "PL-08",
 "name": "Crops",
-"number": 485,
-"folder": "wolfwood"
+"number": 486,
+"folder": "props"
 },
 {
 "id": "PL-09",
 "name": "Gatherable herb nodes (gameplay)",
-"number": 360,
+"number": 361,
 "folder": "wolfwood"
 },
 {
 "id": "RK-01",
 "name": "Boulders",
-"number": 361,
+"number": 362,
 "folder": "wolfwood"
 },
 {
 "id": "RK-02",
 "name": "Riverbed stones",
-"number": 486,
+"number": 487,
 "folder": "wolfwood"
 },
 {
 "id": "RK-03",
 "name": "Cliffs & outcrops",
-"number": 362,
+"number": 363,
 "folder": "wolfwood"
 },
 {
 "id": "RK-04",
 "name": "Fallen trees & stumps",
-"number": 363,
+"number": 364,
 "folder": "wolfwood"
 },
 {
 "id": "RK-05",
 "name": "Forest debris",
-"number": 364,
+"number": 365,
 "folder": "wolfwood"
 },
 {
@@ -890,7 +890,7 @@
 {
 "id": "FS-03",
 "name": "Wolf den",
-"number": 365,
+"number": 366,
 "folder": "wolfwood"
 },
 {
@@ -902,7 +902,7 @@
 {
 "id": "FS-05",
 "name": "Woodcutter camp",
-"number": 493,
+"number": 494,
 "folder": "wolfwood"
 },
 {
@@ -914,55 +914,55 @@
 {
 "id": "FS-07",
 "name": "Wayside shrines",
-"number": 494,
+"number": 495,
 "folder": "wolfwood"
 },
 {
 "id": "FS-08",
 "name": "Stream crossing set",
-"number": 495,
+"number": 496,
 "folder": "wolfwood"
 },
 {
 "id": "CR-01",
 "name": "Grey wolf",
-"number": 388,
+"number": 389,
 "folder": "creatures"
 },
 {
 "id": "CR-02",
 "name": "Alpha wolf (boss)",
-"number": 389,
+"number": 390,
 "folder": "creatures"
 },
 {
 "id": "CR-03",
 "name": "Wild boar",
-"number": 390,
+"number": 391,
 "folder": "creatures"
 },
 {
 "id": "CR-04",
 "name": "Red deer",
-"number": 502,
+"number": 503,
 "folder": "creatures"
 },
 {
 "id": "CR-05",
 "name": "Roe deer",
-"number": 516,
+"number": 517,
 "folder": "creatures"
 },
 {
 "id": "CR-06",
 "name": "Red fox",
-"number": 503,
+"number": 504,
 "folder": "creatures"
 },
 {
 "id": "CR-07",
 "name": "Small animals",
-"number": 504,
+"number": 505,
 "folder": "creatures"
 },
 {
@@ -974,43 +974,43 @@
 {
 "id": "CR-09",
 "name": "Birds",
-"number": 505,
+"number": 506,
 "folder": "creatures"
 },
 {
 "id": "CR-10",
 "name": "Fish, frogs & insects",
-"number": 517,
+"number": 518,
 "folder": "creatures"
 },
 {
 "id": "AN-01",
 "name": "Horses",
-"number": 391,
+"number": 392,
 "folder": "creatures"
 },
 {
 "id": "AN-02",
 "name": "Cow",
-"number": 506,
+"number": 507,
 "folder": "creatures"
 },
 {
 "id": "AN-03",
 "name": "Pig",
-"number": 507,
+"number": 508,
 "folder": "creatures"
 },
 {
 "id": "AN-04",
 "name": "Goat & sheep",
-"number": 508,
+"number": 509,
 "folder": "creatures"
 },
 {
 "id": "AN-05",
 "name": "Poultry",
-"number": 392,
+"number": 393,
 "folder": "creatures"
 },
 {
@@ -1022,7 +1022,7 @@
 {
 "id": "PC-PAL-M-C1",
 "name": "Paladin, male, CC5 1: four-view character",
-"number": 530,
+"number": 531,
 "folder": "heroes"
 },
 {
@@ -1034,19 +1034,19 @@
 {
 "id": "PC-PAL-F-C1",
 "name": "Paladin, female, CC5 1: four-view character",
-"number": 540,
+"number": 541,
 "folder": "heroes"
 },
 {
 "id": "PC-PAL-F-K",
 "name": "Paladin, female, starter outfit, full body",
-"number": 546,
+"number": 547,
 "folder": "heroes"
 },
 {
 "id": "PC-RAN-M-C1",
 "name": "Ranger, male, CC5 1: four-view character",
-"number": 552,
+"number": 553,
 "folder": "heroes"
 },
 {
@@ -1058,19 +1058,19 @@
 {
 "id": "PC-RAN-F-C1",
 "name": "Ranger, female, CC5 1: four-view character",
-"number": 562,
+"number": 563,
 "folder": "heroes"
 },
 {
 "id": "PC-RAN-F-K",
 "name": "Ranger, female, starter outfit, full body",
-"number": 568,
+"number": 569,
 "folder": "heroes"
 },
 {
 "id": "PC-WM-F-C1",
 "name": "White Mage, female, CC5 1: four-view character",
-"number": 574,
+"number": 575,
 "folder": "heroes"
 },
 {
@@ -1082,19 +1082,19 @@
 {
 "id": "PC-WM-M-C1",
 "name": "White Mage, male, CC5 1: four-view character",
-"number": 584,
+"number": 585,
 "folder": "heroes"
 },
 {
 "id": "PC-WM-M-K",
 "name": "White Mage, male, starter outfit, full body",
-"number": 590,
+"number": 591,
 "folder": "heroes"
 },
 {
 "id": "PC-ELE-M-C1",
 "name": "Elementalist, male, CC5 1: four-view character",
-"number": 596,
+"number": 597,
 "folder": "heroes"
 },
 {
@@ -1106,13 +1106,13 @@
 {
 "id": "PC-ELE-F-C1",
 "name": "Elementalist, female, CC5 1: four-view character",
-"number": 606,
+"number": 607,
 "folder": "heroes"
 },
 {
 "id": "PC-ELE-F-K",
 "name": "Elementalist, female, starter outfit, full body",
-"number": 612,
+"number": 613,
 "folder": "heroes"
 },
 {
@@ -1130,7 +1130,7 @@
 {
 "id": "CH-ROLAND-C1",
 "name": "Captain Roland, CC5 1: four-view character",
-"number": 618,
+"number": 619,
 "folder": "people"
 },
 {
@@ -1148,7 +1148,7 @@
 {
 "id": "CH-BRON-C1",
 "name": "Bron, CC5 1: four-view character",
-"number": 624,
+"number": 625,
 "folder": "people"
 },
 {
@@ -1166,7 +1166,7 @@
 {
 "id": "CH-HAGEN-C1",
 "name": "Hagen, CC5 1: four-view character",
-"number": 630,
+"number": 631,
 "folder": "people"
 },
 {
@@ -1184,7 +1184,7 @@
 {
 "id": "CH-MIRA-C1",
 "name": "Mira, CC5 1: four-view character",
-"number": 636,
+"number": 637,
 "folder": "people"
 },
 {
@@ -1202,7 +1202,7 @@
 {
 "id": "CH-ELWYN-C1",
 "name": "Elwyn, CC5 1: four-view character",
-"number": 642,
+"number": 643,
 "folder": "people"
 },
 {
@@ -1220,7 +1220,7 @@
 {
 "id": "CH-HALDOR-C1",
 "name": "Haldor, CC5 1: four-view character",
-"number": 648,
+"number": 649,
 "folder": "people"
 },
 {
@@ -1238,7 +1238,7 @@
 {
 "id": "CH-GUARD-M-C1",
 "name": "Town guard, male, CC5 1: four-view character",
-"number": 654,
+"number": 655,
 "folder": "people"
 },
 {
@@ -1256,7 +1256,7 @@
 {
 "id": "CH-GUARD-F-C1",
 "name": "Town guard, female, CC5 1: four-view character",
-"number": 660,
+"number": 661,
 "folder": "people"
 },
 {
@@ -1274,7 +1274,7 @@
 {
 "id": "CH-INNKEEPER-C1",
 "name": "The innkeeper, CC5 1: four-view character",
-"number": 666,
+"number": 667,
 "folder": "people"
 },
 {
@@ -1292,25 +1292,25 @@
 {
 "id": "CH-STOREKEEPER-C1",
 "name": "The storekeeper, CC5 1: four-view character",
-"number": 672,
+"number": 673,
 "folder": "people"
 },
 {
 "id": "CH-WOODCUTTER-PT",
 "name": "The woodcutter, portrait",
-"number": 397,
+"number": 398,
 "folder": "people"
 },
 {
 "id": "CH-WOODCUTTER-FULL",
 "name": "The woodcutter, full body",
-"number": 398,
+"number": 399,
 "folder": "people"
 },
 {
 "id": "CH-WOODCUTTER-C1",
 "name": "The woodcutter, CC5 1: four-view character",
-"number": 678,
+"number": 679,
 "folder": "people"
 },
 {
@@ -1328,7 +1328,7 @@
 {
 "id": "CH-MERCHANT-C1",
 "name": "The merchant, CC5 1: four-view character",
-"number": 684,
+"number": 685,
 "folder": "people"
 },
 {
@@ -1346,13 +1346,13 @@
 {
 "id": "CH-SCOUT-C1",
 "name": "The wounded scout, CC5 1: four-view character",
-"number": 690,
+"number": 691,
 "folder": "people"
 },
 {
 "id": "NP-01",
 "name": "Market vendors",
-"number": 399,
+"number": 400,
 "folder": "people"
 },
 {
@@ -1364,19 +1364,19 @@
 {
 "id": "NP-03",
 "name": "Inn people",
-"number": 400,
+"number": 401,
 "folder": "people"
 },
 {
 "id": "NP-04",
 "name": "Farmers and woodcutters",
-"number": 401,
+"number": 402,
 "folder": "people"
 },
 {
 "id": "NP-05",
 "name": "Elders and children",
-"number": 402,
+"number": 403,
 "folder": "people"
 },
 {
@@ -1394,7 +1394,7 @@
 {
 "id": "EN-01-H",
 "name": "Grey wolf, head study",
-"number": 403,
+"number": 404,
 "folder": "creatures"
 },
 {
@@ -1418,13 +1418,13 @@
 {
 "id": "EN-02-H",
 "name": "Dark wolf, head study",
-"number": 404,
+"number": 405,
 "folder": "creatures"
 },
 {
 "id": "EN-02-P",
 "name": "Dark wolf, attack poses",
-"number": 405,
+"number": 406,
 "folder": "creatures"
 },
 {
@@ -1442,13 +1442,13 @@
 {
 "id": "EN-03-H",
 "name": "Wild boar, head study",
-"number": 406,
+"number": 407,
 "folder": "creatures"
 },
 {
 "id": "EN-03-P",
 "name": "Wild boar, attack poses",
-"number": 407,
+"number": 408,
 "folder": "creatures"
 },
 {
@@ -1466,7 +1466,7 @@
 {
 "id": "EN-04-H",
 "name": "The Alpha, head study",
-"number": 408,
+"number": 409,
 "folder": "creatures"
 },
 {
@@ -1496,7 +1496,7 @@
 {
 "id": "EN-05A-C1",
 "name": "Bandit cutthroat, CC5 1: four-view character",
-"number": 702,
+"number": 703,
 "folder": "creatures"
 },
 {
@@ -1520,7 +1520,7 @@
 {
 "id": "EN-05B-C1",
 "name": "Bandit archer, CC5 1: four-view character",
-"number": 708,
+"number": 709,
 "folder": "creatures"
 },
 {
@@ -1544,7 +1544,7 @@
 {
 "id": "EN-05C-C1",
 "name": "Bandit leader, CC5 1: four-view character",
-"number": 714,
+"number": 715,
 "folder": "creatures"
 },
 {
@@ -1562,7 +1562,7 @@
 {
 "id": "EN-06A-C1",
 "name": "Barrow thrall, CC5 1: four-view character",
-"number": 720,
+"number": 721,
 "folder": "creatures"
 },
 {
@@ -1580,7 +1580,7 @@
 {
 "id": "EN-06B-C1",
 "name": "Barrow archer, CC5 1: four-view character",
-"number": 724,
+"number": 725,
 "folder": "creatures"
 },
 {
@@ -1610,13 +1610,13 @@
 {
 "id": "EN-07-C1",
 "name": "Barrow Warden, CC5 1: four-view character",
-"number": 728,
+"number": 729,
 "folder": "creatures"
 },
 {
 "id": "EN-07-H",
 "name": "Barrow Warden, wolf-skull helm",
-"number": 409,
+"number": 410,
 "folder": "creatures"
 },
 {
@@ -1628,25 +1628,25 @@
 {
 "id": "EN-07-P",
 "name": "Barrow Warden, attack poses",
-"number": 410,
+"number": 411,
 "folder": "creatures"
 },
 {
 "id": "BL-30",
-"name": "Frankfurt gate (slice end)",
+"name": "Frankfurt gate",
 "number": 79,
 "folder": "buildings"
 },
 {
 "id": "EX-40",
 "name": "Rune stones (Elementalist training spot)",
-"number": 333,
+"number": 334,
 "folder": "props"
 },
 {
 "id": "EX-41",
 "name": "Job training spots",
-"number": 334,
+"number": 335,
 "folder": "props"
 },
 {
@@ -1664,7 +1664,7 @@
 {
 "id": "FS-09",
 "name": "Wolf den arena dressing",
-"number": 372,
+"number": 373,
 "folder": "wolfwood"
 },
 {
@@ -1694,13 +1694,13 @@
 {
 "id": "DK-05",
 "name": "Tomb props",
-"number": 393,
+"number": 394,
 "folder": "wolfwood"
 },
 {
 "id": "DK-06",
 "name": "Dungeon doors and loot",
-"number": 394,
+"number": 395,
 "folder": "wolfwood"
 },
 {
@@ -1730,7 +1730,7 @@
 {
 "id": "IM-03",
 "name": "Potions and food",
-"number": 395,
+"number": 396,
 "folder": "props"
 },
 {
@@ -1742,7 +1742,7 @@
 {
 "id": "IM-05",
 "name": "Trophy and rare drops",
-"number": 396,
+"number": 397,
 "folder": "props"
 },
 {
@@ -2072,181 +2072,181 @@
 {
 "id": "BL-04-E1",
 "name": "front and rear elevations",
-"number": 435,
+"number": 436,
 "folder": "buildings"
 },
 {
 "id": "BL-04-E2",
 "name": "left and right elevations",
-"number": 436,
+"number": 437,
 "folder": "buildings"
 },
 {
 "id": "BL-04-D",
 "name": "construction details",
-"number": 437,
+"number": 438,
 "folder": "buildings"
 },
 {
 "id": "BL-03-E1",
 "name": "front and rear elevations",
-"number": 432,
+"number": 433,
 "folder": "buildings"
 },
 {
 "id": "BL-03-E2",
 "name": "left and right elevations",
-"number": 433,
+"number": 434,
 "folder": "buildings"
 },
 {
 "id": "BL-03-D",
 "name": "construction details",
-"number": 434,
+"number": 435,
 "folder": "buildings"
 },
 {
 "id": "FS-03-E1",
 "name": "front and rear elevations",
-"number": 366,
+"number": 367,
 "folder": "wolfwood"
 },
 {
 "id": "FS-03-E2",
 "name": "left and right elevations",
-"number": 367,
+"number": 368,
 "folder": "wolfwood"
 },
 {
 "id": "FS-03-D",
 "name": "construction details",
-"number": 368,
+"number": 369,
 "folder": "wolfwood"
 },
 {
 "id": "FS-06-E1",
 "name": "front and rear elevations",
-"number": 369,
+"number": 370,
 "folder": "wolfwood"
 },
 {
 "id": "FS-06-E2",
 "name": "left and right elevations",
-"number": 370,
+"number": 371,
 "folder": "wolfwood"
 },
 {
 "id": "FS-06-D",
 "name": "construction details",
-"number": 371,
+"number": 372,
 "folder": "wolfwood"
 },
 {
 "id": "FS-02-E1",
 "name": "front and rear elevations",
-"number": 490,
+"number": 491,
 "folder": "wolfwood"
 },
 {
 "id": "FS-02-E2",
 "name": "left and right elevations",
-"number": 491,
+"number": 492,
 "folder": "wolfwood"
 },
 {
 "id": "FS-02-D",
 "name": "construction details",
-"number": 492,
+"number": 493,
 "folder": "wolfwood"
 },
 {
 "id": "FS-01-E1",
 "name": "front and rear elevations",
-"number": 487,
+"number": 488,
 "folder": "wolfwood"
 },
 {
 "id": "FS-01-E2",
 "name": "left and right elevations",
-"number": 488,
+"number": 489,
 "folder": "wolfwood"
 },
 {
 "id": "FS-01-D",
 "name": "construction details",
-"number": 489,
+"number": 490,
 "folder": "wolfwood"
 },
 {
 "id": "GR-WOLF-HD",
 "name": "Wolfhide set (cosmetic): head, shoulders and back",
-"number": 518,
+"number": 519,
 "folder": "gear"
 },
 {
 "id": "GR-WOLF-BD-M",
 "name": "Wolfhide set (cosmetic): body and legs, male fit",
-"number": 519,
+"number": 520,
 "folder": "gear"
 },
 {
 "id": "GR-WOLF-BD-F",
 "name": "Wolfhide set (cosmetic): body and legs, female fit",
-"number": 520,
+"number": 521,
 "folder": "gear"
 },
 {
 "id": "GR-WOLF-EX",
 "name": "Wolfhide set (cosmetic): hands, feet and belt",
-"number": 521,
+"number": 522,
 "folder": "gear"
 },
 {
 "id": "GR-BARROW-HD",
 "name": "Barrow bronze set (cosmetic): head, shoulders and back",
-"number": 522,
+"number": 523,
 "folder": "gear"
 },
 {
 "id": "GR-BARROW-BD-M",
 "name": "Barrow bronze set (cosmetic): body and legs, male fit",
-"number": 523,
+"number": 524,
 "folder": "gear"
 },
 {
 "id": "GR-BARROW-BD-F",
 "name": "Barrow bronze set (cosmetic): body and legs, female fit",
-"number": 524,
+"number": 525,
 "folder": "gear"
 },
 {
 "id": "GR-BARROW-EX",
 "name": "Barrow bronze set (cosmetic): hands, feet and belt",
-"number": 525,
+"number": 526,
 "folder": "gear"
 },
 {
 "id": "GR-TOWN-HD",
 "name": "Town clothes (cosmetic): head, shoulders and back",
-"number": 526,
+"number": 527,
 "folder": "gear"
 },
 {
 "id": "GR-TOWN-BD-M",
 "name": "Town clothes (cosmetic): body and legs, male fit",
-"number": 527,
+"number": 528,
 "folder": "gear"
 },
 {
 "id": "GR-TOWN-BD-F",
 "name": "Town clothes (cosmetic): body and legs, female fit",
-"number": 528,
+"number": 529,
 "folder": "gear"
 },
 {
 "id": "GR-TOWN-EX",
 "name": "Town clothes (cosmetic): hands, feet and belt",
-"number": 529,
+"number": 530,
 "folder": "gear"
 },
 {
@@ -2498,13 +2498,13 @@
 {
 "id": "KP-DR_Leaf_Barn",
 "name": "DR_Leaf_Barn",
-"number": 411,
+"number": 412,
 "folder": "kit"
 },
 {
 "id": "KP-DR_Leaf_Barn_Inset",
 "name": "DR_Leaf_Barn_Inset",
-"number": 412,
+"number": 413,
 "folder": "kit"
 },
 {
@@ -2534,7 +2534,7 @@
 {
 "id": "KP-DR_TrapDoor",
 "name": "DR_TrapDoor",
-"number": 413,
+"number": 414,
 "folder": "kit"
 },
 {
@@ -2576,25 +2576,25 @@
 {
 "id": "KP-OR_Oriel_Box_W200",
 "name": "OR_Oriel_Box_W200",
-"number": 414,
+"number": 415,
 "folder": "kit"
 },
 {
 "id": "KP-OR_Oriel_Poly_W200",
 "name": "OR_Oriel_Poly_W200",
-"number": 415,
+"number": 416,
 "folder": "kit"
 },
 {
 "id": "KP-OR_Turret_Round_D250",
 "name": "OR_Turret_Round_D250",
-"number": 416,
+"number": 417,
 "folder": "kit"
 },
 {
 "id": "KP-PN_Wattle_Broken_W100_H200",
 "name": "PN_Wattle_Broken_W100_H200",
-"number": 417,
+"number": 418,
 "folder": "kit"
 },
 {
@@ -2606,13 +2606,13 @@
 {
 "id": "KP-ST_Baluster_Turned",
 "name": "ST_Baluster_Turned",
-"number": 418,
+"number": 419,
 "folder": "kit"
 },
 {
 "id": "KP-ST_Newel_Carved",
 "name": "ST_Newel_Carved",
-"number": 419,
+"number": 420,
 "folder": "kit"
 },
 {
@@ -2624,19 +2624,19 @@
 {
 "id": "KP-PW_Logs_Broken_W200",
 "name": "PW_Logs_Broken_W200",
-"number": 420,
+"number": 421,
 "folder": "kit"
 },
 {
 "id": "KP-RF_BellTurret_H400",
 "name": "RF_BellTurret_H400",
-"number": 421,
+"number": 422,
 "folder": "kit"
 },
 {
 "id": "KP-RF_Dormer_Eyebrow_W200",
 "name": "RF_Dormer_Eyebrow_W200",
-"number": 422,
+"number": 423,
 "folder": "kit"
 },
 {
@@ -2666,13 +2666,13 @@
 {
 "id": "KP-RF_Spire_Slate_H600",
 "name": "RF_Spire_Slate_H600",
-"number": 423,
+"number": 424,
 "folder": "kit"
 },
 {
 "id": "KP-RF_StorkNest",
 "name": "RF_StorkNest",
-"number": 424,
+"number": 425,
 "folder": "kit"
 },
 {
@@ -2702,7 +2702,7 @@
 {
 "id": "KP-TW_Top_Ruined_90",
 "name": "TW_Top_Ruined_90",
-"number": 425,
+"number": 426,
 "folder": "kit"
 },
 {
@@ -2732,7 +2732,7 @@
 {
 "id": "KP-SS_Pillar_H300",
 "name": "SS_Pillar_H300",
-"number": 426,
+"number": 427,
 "folder": "kit"
 },
 {
@@ -2750,7 +2750,7 @@
 {
 "id": "KP-SS_Vault_W400",
 "name": "SS_Vault_W400",
-"number": 427,
+"number": 428,
 "folder": "kit"
 },
 {
@@ -2822,7 +2822,7 @@
 {
 "id": "KP-TF_Bracket_C",
 "name": "TF_Bracket_C",
-"number": 428,
+"number": 429,
 "folder": "kit"
 },
 {
@@ -2846,7 +2846,7 @@
 {
 "id": "KP-TF_JoistEnd_Carved_B",
 "name": "TF_JoistEnd_Carved_B",
-"number": 429,
+"number": 430,
 "folder": "kit"
 },
 {
@@ -2894,7 +2894,7 @@
 {
 "id": "KP-WN_Casement_Band_W200",
 "name": "WN_Casement_Band_W200",
-"number": 430,
+"number": 431,
 "folder": "kit"
 },
 {
@@ -2932,5 +2932,23 @@
 "name": "WN_Shutter_Leaf_R",
 "number": 243,
 "folder": "kit"
+},
+{
+"id": "AR-01",
+"name": "Coat of arms of Hayn",
+"number": 733,
+"folder": "props"
+},
+{
+"id": "AR-02",
+"name": "Coat of arms of the kingdom",
+"number": 734,
+"folder": "props"
+},
+{
+"id": "BL-31",
+"name": "Saxenhausen Watchtower (slice end)",
+"number": 315,
+"folder": "buildings"
 }
 ]

@@ -121,7 +121,7 @@ def combat(ctx):
 JOB_DETAILS = [
     ("paladin", "VW-04", ("Paladin", "Paladin"), ("Tank · sword and shield, blessed", "Tank · Schwert und Schild, gesegnet"),
      ("Bron, drill master of the Barracks and Training Yard", "Bron, Drillmeister der Kaserne und des Übungsplatzes"),
-     ("Steel blue, the kingdom's golden eagle on a shield", "Stahlblau, der goldene Adler des Königreichs auf einem Schild"),
+     ("Oxblood red, the kingdom's golden eagle", "Ochsenblutrot, der goldene Adler des Königreichs"),
      ("Paladins stand in front. They hold an enemy's attention, take the blows and keep the rest of the party out of harm's way.",
       "Paladine stehen vorn. Sie halten die Aufmerksamkeit eines Gegners, stecken die Schläge ein und halten den Rest der Gruppe aus der Gefahr."),
      ["Combo strike", "Shield Bash", "Provoke", "Holy Guard", "Radiant Sweep"],
@@ -142,7 +142,7 @@ JOB_DETAILS = [
      ("Keep them standing. That is the whole job, and it is enough.", "Halt sie auf den Beinen. Das ist die ganze Arbeit, und sie reicht."), "Mira"),
     ("elementalist", "VW-07", ("Elementalist", "Elementarist"), ("Magic damage · staff", "Magie-Schaden · Stab"),
      ("Elwyn, the mage of Elwyn's Tower", "Elwyn, der Magier aus Elwyns Turm"),
-     ("Deep red, a four-pointed star", "Tiefrot, ein vierzackiger Stern"),
+     ("Deep indigo, a golden four-pointed star", "Tiefes Indigo, ein goldener vierzackiger Stern"),
      ("Elementalists throw fire, frost, lightning and earth: bolts, cones, channelled beams and spikes from the ground, with a "
       "short blink to get clear.",
       "Elementaristen schleudern Feuer, Frost, Blitz und Erde: Geschosse, Kegel, gebündelte Strahlen und Stacheln aus dem Boden, "
