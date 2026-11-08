@@ -45,6 +45,7 @@ NAV = [
         (("Modular Kit", "Baukasten"), "concept/kit.html", []),
         (("Gear & Costumes", "Ausrüstung & Kostüme"), "concept/gear.html", []),
     ]),
+    (("DevLog", "DevLog"), "devlog/index.html", []),
     (("Media", "Medien"), "media/index.html", []),
 ]
 

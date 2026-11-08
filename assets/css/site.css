@@ -482,3 +482,13 @@ p { margin: 0 0 1em; }
   .gallery.gallery-sheets { grid-template-columns: 1fr 1fr; gap: 20px 12px; }
   .sheet-head { flex-direction: column; gap: 0; }
 }
+
+/* ---------- devlog: one video per entry, newest first ---------- */
+.devlog-intro { color: var(--parchment-dim); max-width: 70ch; margin: 0 0 48px; }
+.devlog-entry { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: 36px; align-items: center; padding: 0 0 56px; margin: 0 0 56px; border-bottom: 1px solid var(--line); }
+.devlog-entry:last-child { border-bottom: 0; margin-bottom: 0; }
+.devlog-video { position: relative; width: 100%; padding: 1px; background: var(--brass-edge); clip-path: var(--plate); }
+.devlog-video iframe { display: block; width: 100%; height: 100%; border: 0; background: var(--night-deep); clip-path: var(--plate); }
+.devlog-text h2 { margin: 4px 0 12px; }
+.devlog-text p { color: var(--parchment-dim); }
+@media (max-width: 900px) { .devlog-entry { grid-template-columns: 1fr; gap: 20px; } }
