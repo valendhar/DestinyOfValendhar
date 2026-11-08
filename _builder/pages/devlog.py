@@ -8,9 +8,9 @@ from components import section
 VIDEOS = [
     dict(loom="69c90e95a88d42f2b42c090bd647b8b0", ratio="4 / 3", minutes=("2½ minutes", "2½ Minuten"), when=("November 2026", "November 2026"),
          title=("Initial town greyboxing", "Erstes Greyboxing der Stadt"),
-         text=("The first walk through Three-Oaks in Unreal Engine: simple blocks for every building, the streets, the wall and the gates, "
+         text=("The first walk through Hayn in Unreal Engine: simple blocks for every building, the streets, the wall and the gates, "
                "to check that the town has the right size and feels right before anything is modeled.",
-               "Der erste Gang durch Three-Oaks in der Unreal Engine: einfache Blöcke für jedes Gebäude, die Gassen, die Mauer und die Tore, "
+               "Der erste Gang durch Hayn in der Unreal Engine: einfache Blöcke für jedes Gebäude, die Gassen, die Mauer und die Tore, "
                "um zu prüfen, ob die Stadt die richtige Größe hat und sich richtig anfühlt, bevor etwas modelliert wird.")),
 ]
 

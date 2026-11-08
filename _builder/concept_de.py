@@ -57,7 +57,7 @@ NAMES = {
     "Market fountain (Marktbrunnen)": "Marktbrunnen", "Market stall": "Marktstand", "Market vendors": "Marktleute", "Mill machinery": "Mühlwerk", "Mira": "Mira",
     "Moss (tiles every 100 cm)": "Moos (Kachel 100 cm)", "Mushrooms": "Pilze", "North Gate": "Nordtor", "Norway spruce": "Fichte", "Notice board & quest board": "Anschlagtafel und Questbrett",
     "Oak, black paint (tiles every 100 cm)": "Eiche, schwarz gestrichen (Kachel 100 cm)", "Oak, oxblood paint (tiles every 100 cm)": "Eiche, ochsenblutrot gestrichen (Kachel 100 cm)",
-    "Oak, raw (tiles every 100 cm)": "Eiche, roh (Kachel 100 cm)", "Franckfurt gate (slice end)": "Tor von Franckfurt (Ende der Vertical Slice)", "Paladin, female": "Paladinin",
+    "Oak, raw (tiles every 100 cm)": "Eiche, roh (Kachel 100 cm)", "Frankfurt gate (slice end)": "Tor von Frankfurt (Ende der Vertical Slice)", "Paladin, female": "Paladinin",
     "Paladin, male": "Paladin", "Pig": "Schwein", "Pillory / stocks": "Pranger", "Plank footbridge": "Holzsteg", "Planters & flowers": "Pflanzkübel und Blumen",
     "Pollard willow": "Kopfweide", "Potions and food": "Tränke und Speisen", "Pottery goods": "Töpferwaren", "Poultry": "Geflügel", "Produce display": "Obst- und Gemüsestand",
     "Ranger, female": "Waldläuferin", "Ranger, male": "Waldläufer", "Red deer": "Rothirsch", "Red fox": "Rotfuchs", "Red sandstone (tiles every 100 cm)": "Roter Sandstein (Kachel 100 cm)",

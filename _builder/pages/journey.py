@@ -28,12 +28,12 @@ STOPS = [
                "Verkaufe Felle, schmiede Wolfsleder-Armschienen, braue Heiltränke und finde die Tasche des Kundschafters am verfallenen Wachturm.")),
     ("KA-07", ("Dark wolves in the spruce, then the Alpha in its den: telegraphs, summoned wolves and a frenzy at the end.",
                "Dunkle Wölfe in den Fichten, dann der Alpha in seinem Bau: Bodenmarkierungen, herbeigerufene Wölfe und am Ende eine Raserei.")),
-    ("VW-08", ("Escort a merchant's cart out of the East Gate, then hold off two waves of ambushers.",
-               "Begleite einen Händlerkarren aus dem Osttor und wehre dann zwei Wellen von Angreifern ab.")),
+    ("VW-08", ("Escort a merchant's cart out of the North Gate, then hold off two waves of ambushers.",
+               "Begleite einen Händlerkarren aus dem Nordtor und wehre dann zwei Wellen von Angreifern ab.")),
     ("DG-01", ("A wounded scout warns you about the hill. Three packs, a two-phase boss, and a way back out to the road.",
                "Ein verwundeter Kundschafter warnt dich vor dem Hügel. Drei Gruppen, ein Boss mit zwei Phasen und ein Weg zurück zur Straße.")),
-    ("OH-GATE", ("Follow the last stretch of road to Franckfurt's gate, where the vertical slice ends.",
-                 "Folge dem letzten Stück Straße bis zum Tor von Franckfurt, wo die Vertical Slice endet.")),
+    ("OH-GATE", ("Follow the last stretch of road to Frankfurt's gate, where the vertical slice ends.",
+                 "Folge dem letzten Stück Straße bis zum Tor von Frankfurt, wo die Vertical Slice endet.")),
 ]
 
 
@@ -74,11 +74,11 @@ QUESTS = [
     ("Darker Woods", "Dunklere Wälder", "Defeat four dark wolves in the spruce wood.", "Besiege vier dunkle Wölfe im Fichtenwald."),
     ("The Alpha", "Der Alpha", "Enter the wolf den and defeat the Alpha.", "Betritt den Wolfsbau und besiege den Alpha."),
     ("Rest at the Wolf's Rest", "Rast im Wolf's Rest", "Set your return point at the inn and eat.", "Leg im Gasthaus deinen Rückkehrpunkt fest und iss."),
-    ("Road to Franckfurt", "Straße nach Franckfurt", "Escort the merchant's cart from the East Gate.", "Begleite den Händlerkarren vom Osttor."),
+    ("Road to Frankfurt", "Straße nach Frankfurt", "Escort the merchant's cart from the North Gate.", "Begleite den Händlerkarren vom Nordtor."),
     ("Ambush!", "Hinterhalt!", "Defend the cart through two waves.", "Verteidige den Karren gegen zwei Wellen."),
     ("The Wounded Scout", "Der verwundete Kundschafter", "Optional: help the scout and hear his warning.", "Optional: Hilf dem Kundschafter und hör dir seine Warnung an."),
     ("Beneath the Hill", "Unter dem Hügel", "Clear the dungeon and defeat its boss.", "Säubere das Verlies und besiege seinen Boss."),
-    ("The Gates of Franckfurt", "Die Tore von Franckfurt", "Follow the road to the gate.", "Folge der Straße bis zum Tor."),
+    ("The Gates of Frankfurt", "Die Tore von Frankfurt", "Follow the road to the gate.", "Folge der Straße bis zum Tor."),
 ]
 
 

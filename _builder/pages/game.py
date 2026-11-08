@@ -65,7 +65,7 @@ def overview(ctx):
 
     loop = section(f"""
 <h2>{t("The loop", "Der Kreislauf")}</h2>
-<p class="lede">{t("What you do, again and again, between the Dais and Franckfurt.", "Was du zwischen dem Dais und Franckfurt immer wieder tust.")}</p>
+<p class="lede">{t("What you do, again and again, between the Dais and Frankfurt.", "Was du zwischen dem Dais und Frankfurt immer wieder tust.")}</p>
 {loops(ctx, [
     (("Take a task", "Auftrag annehmen"), ("From Captain Roland, a trainer or a townsperson with a problem.",
                                            "Von Hauptmann Roland, einem Trainer oder einem Stadtbewohner mit einem Problem.")),
@@ -121,7 +121,7 @@ def combat(ctx):
 JOB_DETAILS = [
     ("paladin", "VW-04", ("Paladin", "Paladin"), ("Tank · sword and shield, blessed", "Tank · Schwert und Schild, gesegnet"),
      ("Bron, drill master of the Barracks and Training Yard", "Bron, Drillmeister der Kaserne und des Übungsplatzes"),
-     ("Steel blue, a golden sun on a shield", "Stahlblau, eine goldene Sonne auf einem Schild"),
+     ("Steel blue, the kingdom's golden eagle on a shield", "Stahlblau, der goldene Adler des Königreichs auf einem Schild"),
      ("Paladins stand in front. They hold an enemy's attention, take the blows and keep the rest of the party out of harm's way.",
       "Paladine stehen vorn. Sie halten die Aufmerksamkeit eines Gegners, stecken die Schläge ein und halten den Rest der Gruppe aus der Gefahr."),
      ["Combo strike", "Shield Bash", "Provoke", "Holy Guard", "Radiant Sweep"],
@@ -233,8 +233,8 @@ PAGES = {
         banner="KA-07", body=combat),
     "game/jobs.html": dict(
         title=("The Four Jobs", "Die vier Jobs"), kicker=("The Game", "Das Spiel"),
-        lede=("Tank, ranged damage, healer and magic damage, each taught by its own guild in Three-Oaks.",
-              "Tank, Fernkampf-Schaden, Heiler und Magie-Schaden, jeder gelehrt von seiner eigenen Gilde in Three-Oaks."),
+        lede=("Tank, ranged damage, healer and magic damage, each taught by its own guild in Hayn.",
+              "Tank, Fernkampf-Schaden, Heiler und Magie-Schaden, jeder gelehrt von seiner eigenen Gilde in Hayn."),
         banner="VW-04", body=jobs),
     "game/town-life.html": dict(
         title=("Town Life", "Stadtleben"), kicker=("The Game", "Das Spiel"),

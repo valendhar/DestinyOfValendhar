@@ -122,8 +122,8 @@ def creatures(ctx):
 
 def buildings(ctx):
     return section(
-        block(ctx, ("Landmarks and houses", "Wahrzeichen und Häuser"), ("Each building of Three-Oaks, with straight elevations and construction details "
-                                                                         "for the larger ones.", "Jedes Gebäude von Three-Oaks, für die größeren mit geraden "
+        block(ctx, ("Landmarks and houses", "Wahrzeichen und Häuser"), ("Each building of Hayn, with straight elevations and construction details "
+                                                                         "for the larger ones.", "Jedes Gebäude von Hayn, für die größeren mit geraden "
                                                                          "Ansichten und Baudetails."), pick("buildings", r"^BL-"), first=True)
         + block(ctx, ("Bridges and signposts", "Brücken und Wegweiser"), None, pick("buildings", r"^ST-")))
 
@@ -173,7 +173,7 @@ def gear(ctx):
 
 SUB = [
     ("concept/heroes.html", ("Heroes", "Helden"), "PC-GROUP-M", heroes, "heroes"),
-    ("concept/people.html", ("People of Three-Oaks", "Die Leute von Three-Oaks"), "NP-02", people, "people"),
+    ("concept/people.html", ("People of Hayn", "Die Leute von Hayn"), "NP-02", people, "people"),
     ("concept/creatures.html", ("Creatures & Enemies", "Kreaturen & Gegner"), "EN-04-S", creatures, "creatures"),
     ("concept/buildings.html", ("Buildings & Landmarks", "Gebäude & Wahrzeichen"), "BL-30", buildings, "buildings"),
     ("concept/props.html", ("Props & Interiors", "Requisiten & Innenräume"), None, props, "props"),
@@ -183,13 +183,13 @@ SUB = [
 ]
 LEDE = {
     "heroes": ("The four jobs, each as a man and a woman.", "Die vier Jobs, jeweils als Mann und als Frau."),
-    "people": ("The townsfolk of Three-Oaks.", "Die Leute von Three-Oaks."),
+    "people": ("The townsfolk of Hayn.", "Die Leute von Hayn."),
     "creatures": ("Everything that hunts in the Wolfwood, waits on the road or sleeps beneath the hill.",
                   "Alles, was im Wolfwood jagt, an der Straße lauert oder unter dem Hügel schläft."),
     "buildings": ("The town, building by building.", "Die Stadt, Haus für Haus."),
     "props": ("What fills the streets, the workshops and the rooms.", "Was die Gassen, Werkstätten und Zimmer füllt."),
     "wolfwood": ("The forest, its stones and the barrow beneath the hill.", "Der Wald, seine Steine und das Hügelgrab unter dem Hügel."),
-    "kit": ("The reusable pieces every building in Three-Oaks is made from.", "Die wiederverwendbaren Teile, aus denen jedes Gebäude in Three-Oaks besteht."),
+    "kit": ("The reusable pieces every building in Hayn is made from.", "Die wiederverwendbaren Teile, aus denen jedes Gebäude in Hayn besteht."),
     "gear": ("Outfits for the cosmetic wardrobe.", "Kleidung für die kosmetische Garderobe."),
 }
 

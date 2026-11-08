@@ -1,7 +1,7 @@
 """Navigation tree for the whole site.
 
 Each node: ((english label, german label), path, children)
-- path is relative to the language root, e.g. "world/three-oaks.html"
+- path is relative to the language root, e.g. "world/hayn.html"
   (the German copy of every page lives under de/ with the same path)
 - a node with children and a path gets a "landing" link plus a dropdown
 """
@@ -21,12 +21,12 @@ NAV = [
     ]),
     (("World", "Welt"), "world/index.html", [
         (("Valendhar", "Valendhar"), "world/index.html", []),
-        (("Three-Oaks", "Three-Oaks"), "world/three-oaks.html", []),
+        (("Hayn", "Hayn"), "world/hayn.html", []),
         (("The Wolfwood", "Der Wolfwood"), "world/wolfwood.html", []),
-        (("Road to Franckfurt", "Straße nach Franckfurt"), "world/road.html", []),
+        (("Road to Frankfurt", "Straße nach Frankfurt"), "world/road.html", []),
     ]),
     (("Characters", "Figuren"), "characters/index.html", [
-        (("People of Three-Oaks", "Die Leute von Three-Oaks"), "characters/index.html", []),
+        (("People of Hayn", "Die Leute von Hayn"), "characters/index.html", []),
         (("Creatures", "Kreaturen"), "characters/creatures.html", []),
     ]),
     (("Art", "Kunst"), "art/index.html", [
@@ -37,7 +37,7 @@ NAV = [
     (("Concept Art", "Konzeptkunst"), "concept/index.html", [
         (("Overview", "Überblick"), "concept/index.html", []),
         (("Heroes", "Helden"), "concept/heroes.html", []),
-        (("People of Three-Oaks", "Die Leute von Three-Oaks"), "concept/people.html", []),
+        (("People of Hayn", "Die Leute von Hayn"), "concept/people.html", []),
         (("Creatures & Enemies", "Kreaturen & Gegner"), "concept/creatures.html", []),
         (("Buildings & Landmarks", "Gebäude & Wahrzeichen"), "concept/buildings.html", []),
         (("Props & Interiors", "Requisiten & Innenräume"), "concept/props.html", []),

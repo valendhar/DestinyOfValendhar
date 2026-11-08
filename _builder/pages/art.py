@@ -33,7 +33,7 @@ def key_art(ctx):
     ("KA-05", t("Wolves at the forest edge", "Wölfe am Waldrand")),
     ("KA-06", t("Inside the Wolfwood", "Im Wolfwood")),
     ("KA-07", t("The wolf den", "Der Wolfsbau")),
-    ("KA-08", t("Three-Oaks at night", "Three-Oaks bei Nacht")),
+    ("KA-08", t("Hayn at night", "Hayn bei Nacht")),
     ("KA-09", t("Misty dawn at the mill pond", "Nebliger Morgen am Mühlteich")),
 ], "gallery-2")}""")
 
@@ -55,15 +55,15 @@ def views(ctx):
     ("VW-05", t("Hunters' Lodge and archery range", "Jägerhütte und Bogenschießplatz")),
     ("VW-06", t("Herbalist's garden and spring shrine", "Kräutergarten und Quellschrein")),
     ("VW-07", t("Elwyn's tower courtyard", "Der Hof von Elwyns Turm")),
-    ("VW-08", t("The East Gate and the road", "Das Osttor und die Straße")),
+    ("VW-08", t("The road out of town", "Die Straße aus der Stadt")),
     ("VW-09", t("The farmstead and fields", "Der Bauernhof und die Felder")),
     ("VW-10", t("From the forest ridge", "Vom Waldkamm")),
 ], "gallery-2 gallery-169")}
 <h2 style="margin-top:72px">{t("Maps", "Karten")}</h2>
 {ctx.gallery([
-    ("TD-02", t("Painted map of Three-Oaks", "Gemalte Karte von Three-Oaks")),
-    ("TD-04", t("Painted map of the Wolfwood", "Gemalte Karte des Wolfwood")),
-    ("TD-05", t("Layout grid of Three-Oaks", "Lageplan von Three-Oaks mit Raster")),
+    ("TD-02", t("Painted map of Hayn", "Gemalte Karte von Hayn")),
+    ("TD-04", t("Painted map of the Wolfwood", "Gemalte Karte des Wolfwoods")),
+    ("TD-05", t("Layout grid of Hayn", "Lageplan von Hayn mit Raster")),
 ], "gallery-2")}""")
 
 
@@ -102,7 +102,7 @@ def media(ctx):
 PAGES = {
     "art/index.html": dict(
         title=("Key Art", "Key Art"), kicker=("Art", "Kunst"),
-        lede=("Painted concept art for Three-Oaks and the Wolfwood.", "Gemalte Konzeptkunst für Three-Oaks und den Wolfwood."),
+        lede=("Painted concept art for Hayn and the Wolfwood.", "Gemalte Konzeptkunst für Hayn und den Wolfwood."),
         banner="KA-08", body=key_art),
     "art/views.html": dict(
         title=("Views & Maps", "Ansichten & Karten"), kicker=("Art", "Kunst"),

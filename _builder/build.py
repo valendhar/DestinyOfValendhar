@@ -28,7 +28,7 @@ SOURCES = [HERE / "images" / "characters", HERE / "images" / "sheets", ORIGINALS
 IMG_OUT = OUT / "assets" / "img"
 
 SITE_TITLE = "Destiny of Valendhar"
-SITE_TAGLINE = "A forest town, a wood that has grown bold, and the road to Franckfurt."
+SITE_TAGLINE = "A forest town, a wood that has grown bold, and the road to Frankfurt."
 AUTHOR = "Mike Stevanovic"
 COPYRIGHT = "Mike Stevanovic"
 YEAR = "2026"
@@ -66,8 +66,8 @@ UI = {
     "stub_prep": ("In preparation", "In Vorbereitung"),
     "stub_text": ("This page is being written. Check back soon.",
                   "Diese Seite entsteht gerade. Schau bald wieder vorbei."),
-    "tagline": ("A forest town, a wood that has grown bold, and the road to Franckfurt.",
-                "Eine Waldstadt, ein Wald, der kühn geworden ist, und die Straße nach Franckfurt."),
+    "tagline": ("A forest town, a wood that has grown bold, and the road to Frankfurt.",
+                "Eine Waldstadt, ein Wald, der kühn geworden ist, und die Straße nach Frankfurt."),
 }
 
 
@@ -392,7 +392,7 @@ def favicon_svg():
             '<circle cx="32" cy="16.5" r="2.2" fill="#8FD3EA"/></svg>')
 
 
-MOVED = {"world/timberwatch.html": "world/three-oaks.html", "game/village-life.html": "game/town-life.html"}
+MOVED = {"world/timberwatch.html": "world/hayn.html", "world/three-oaks.html": "world/hayn.html", "game/village-life.html": "game/town-life.html"}
 
 
 def main():
@@ -414,10 +414,11 @@ def main():
             target.parent.mkdir(parents=True, exist_ok=True)
             html_out = page_shell(ctx, page, trail)
             if lang == "de":
-                html_out = html_out.replace("Three-Oaks", "Dreieich")  # the town's German name (the user's choice, 2026-11-08)
+                # German names (the user's choice, 2026-11-08): the forest Three-Oaks is the Dreieich, the Wolfwood the Wolfsforst.
+                html_out = html_out.replace("Three-Oaks", "Dreieich").replace("Wolfwoods", "Wolfsforsts").replace("Wolfwood", "Wolfsforst")
             target.write_text(html_out, encoding="utf-8")
             built += 1
-    # Pages that moved when Timberwatch became Three-Oaks: the old addresses forward, so shared links keep working.
+    # Pages that moved when Timberwatch became Three-Oaks and then Hayn: the old addresses forward, so shared links keep working.
     for old, new in MOVED.items():
         for lang in LANGS:
             target = OUT / (PREFIX[lang] + old)
