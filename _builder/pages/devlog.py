@@ -6,6 +6,14 @@ a title and a line in English and German, and its aspect ratio (Loom's oEmbed gi
 from components import section
 
 VIDEOS = [
+    dict(loom="35b0e525d46b45db979834cd7fd38fc8", ratio="4 / 3", minutes=("2½ minutes", "2½ Minuten"), when=("November 2026", "November 2026"),
+         title=("Greyboxing, part two", "Greyboxing, Teil zwei"),
+         text=("The greybox one step further, recorded just before the town's design changed: the first timber-framed buildings "
+               "stand in the streets, simple trees mark the green, and the player walks through it all with the game's interface on screen. "
+               "The next update brings the stone wall and the new gates.",
+               "Das Greyboxing einen Schritt weiter, aufgenommen kurz bevor sich das Design der Stadt geändert hat: Die ersten "
+               "Fachwerkhäuser stehen in den Gassen, einfache Bäume markieren die Grünflächen, und die Spielfigur geht mit der "
+               "Spieloberfläche durch alles hindurch. Das nächste Update bringt die Steinmauer und die neuen Tore.")),
     dict(loom="69c90e95a88d42f2b42c090bd647b8b0", ratio="4 / 3", minutes=("2½ minutes", "2½ Minuten"), when=("November 2026", "November 2026"),
          title=("Initial town greyboxing", "Erstes Greyboxing der Stadt"),
          text=("The first walk through Hayn in Unreal Engine: simple blocks for every building, the streets, the wall and the gates, "
