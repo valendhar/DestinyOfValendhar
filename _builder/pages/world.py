@@ -128,7 +128,7 @@ def hayn(ctx):
 {table(ctx, [("Place", "Ort"), ("Who", "Wer"), ("Why you go there", "Warum du hingehst")], [
     [("Wayward Dais", "Wayward Dais"), "—", ("Arrival and return point", "Ankunft und Rückkehrpunkt")],
     [("Town Hall & Watch House", "Rathaus & Wachhaus"), ("Captain Roland", "Hauptmann Roland"), ("The main quests", "Die Hauptquests")],
-    [("Forge", "Schmiede"), "Haldor", ("Weapons, armour, pelts, forging", "Waffen, Rüstung, Felle, Schmieden")],
+    [("Forge", "Schmiede"), "Hermann", ("Weapons, armour, pelts, forging", "Waffen, Rüstung, Felle, Schmieden")],
     [("Barracks & Training Yard", "Kaserne & Übungsplatz"), "Bron", ("Paladin guild", "Paladin-Gilde")],
     [("Hunters' Lodge", "Jägerhütte"), "Hagen", ("Ranger guild and archery range", "Ranger-Gilde und Bogenschießplatz")],
     [("Herbalist's House & Spring Shrine", "Kräuterhaus & Quellschrein"), "Mira", ("White Mage guild, herbs, alchemy", "Weißmagier-Gilde, Kräuter, Alchemie")],

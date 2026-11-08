@@ -196,10 +196,10 @@ def jobs(ctx):
 def town_life(ctx):
     t = ctx.t
     return section(f"""
-{feature(ctx, "KA-04", ("The forge", "Die Schmiede"), ("Haldor buys pelts and sells steel", "Haldor kauft Felle und verkauft Stahl"), [
-    ("Haldor the smith sells weapons and armour, buys the wolf pelts you bring back, and teaches you to forge: five pelts and "
+{feature(ctx, "KA-04", ("The forge", "Die Schmiede"), ("Hermann buys pelts and sells steel", "Hermann kauft Felle und verkauft Stahl"), [
+    ("Hermann the smith sells weapons and armour, buys the wolf pelts you bring back, and teaches you to forge: five pelts and "
      "some iron make a pair of Wolfhide Bracers.",
-     "Haldor der Schmied verkauft Waffen und Rüstungen, kauft die Wolfsfelle, die du mitbringst, und bringt dir das Schmieden bei: "
+     "Hermann der Schmied verkauft Waffen und Rüstungen, kauft die Wolfsfelle, die du mitbringst, und bringt dir das Schmieden bei: "
      "fünf Felle und etwas Eisen ergeben ein Paar Wolfsleder-Armschienen.")])}
 {feature(ctx, "IT-08", ("The herbalist", "Die Kräuterkundige"), ("Silverleaf into Healing Draughts", "Silberblatt wird zu Heiltränken"), [
     ("The herbs you gather at the forest edge go onto Mira's alchemy table and come back as Healing Draughts. Wolfsbane makes "

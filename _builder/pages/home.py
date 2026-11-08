@@ -73,7 +73,7 @@ def body(ctx):
 
     cast = [
         ("CH-ROLAND", t("Captain Roland", "Hauptmann Roland"), t("The tired border captain", "Der müde Grenzhauptmann")),
-        ("CH-HALDOR", "Haldor", t("The smith", "Der Schmied")),
+        ("CH-HALDOR", "Hermann", t("The smith", "Der Schmied")),
         ("CH-MIRA", "Mira", t("The herbalist", "Die Kräuterkundige")),
         ("CH-ELWYN", "Elwyn", t("The mage in the tower", "Der Magier im Turm")),
     ]

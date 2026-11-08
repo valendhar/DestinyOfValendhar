@@ -1207,19 +1207,19 @@
 },
 {
 "id": "CH-HALDOR-PT",
-"name": "Haldor, portrait",
+"name": "Hermann, portrait",
 "number": 12,
 "folder": "people"
 },
 {
 "id": "CH-HALDOR-FULL",
-"name": "Haldor, full body",
+"name": "Hermann, full body",
 "number": 13,
 "folder": "people"
 },
 {
 "id": "CH-HALDOR-C1",
-"name": "Haldor, CC5 1: four-view character",
+"name": "Hermann, CC5 1: four-view character",
 "number": 649,
 "folder": "people"
 },

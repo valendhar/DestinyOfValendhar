@@ -22,19 +22,19 @@ PEOPLE = [
      ("They're not hungry. That's what worries me.", "Sie sind nicht hungrig. Das macht mir Sorgen.")),
     ("CH-MIRA", ("Mira", "Mira"), ("Herbalist · White Mage guild", "Kräuterkundige · Weißmagier-Gilde"),
      ("Herbalist's House & Spring Shrine", "Kräuterhaus & Quellschrein"),
-     ("Warm and practical. Mira patches up the town, sells herbs, and teaches healing at the old spring shrine in her garden.",
-      "Warmherzig und praktisch. Mira flickt die Stadt zusammen, verkauft Kräuter und lehrt das Heilen am alten Quellschrein in ihrem Garten."),
+     ("Warm and practical, and a Shumadii, one of the elf-like people from another world. Mira patches up the town, sells herbs, and teaches healing at the old spring shrine in her garden.",
+      "Warmherzig und praktisch, und eine Shumadii vom elfenhaften Volk aus einer anderen Welt. Mira flickt die Stadt zusammen, verkauft Kräuter und lehrt das Heilen am alten Quellschrein in ihrem Garten."),
      ("Sit. Drink this. Then tell me which wolf.", "Setz dich. Trink das. Dann sag mir, welcher Wolf.")),
     ("CH-ELWYN", ("Elwyn", "Elwyn"), ("The mage · Elementalist guild", "Der Magier · Elementaristen-Gilde"),
      ("Elwyn's Tower", "Elwyns Turm"),
-     ("Curious and slightly distracted, with candles melted onto stacks of books. The red glow in the tower window at night "
+     ("A Shumadii, one of the elf-like people from another world, older than anyone in Hayn can remember. Curious and slightly distracted, with candles melted onto stacks of books. The red glow in the tower window at night "
       "is the only magic most townsfolk ever see.",
-      "Neugierig und etwas zerstreut, mit Kerzen, die auf Bücherstapeln heruntergebrannt sind. Das rote Leuchten im "
+      "Ein Shumadii aus dem elfenhaften Volk einer anderen Welt, älter, als sich irgendwer in Hayn erinnern kann. Neugierig und etwas zerstreut, mit Kerzen, die auf Bücherstapeln heruntergebrannt sind. Das rote Leuchten im "
       "Turmfenster ist die einzige Magie, die die meisten Stadtbewohner je sehen."),
      ("Ah, a student. Mind the books. And the floor. And that.", "Ah, ein Schüler. Pass auf die Bücher auf. Und den Boden. Und darauf.")),
-    ("CH-HALDOR", ("Haldor", "Haldor"), ("The smith", "Der Schmied"), ("The forge", "Die Schmiede"),
-     ("Haldor sells weapons and armour, buys pelts, and will teach anyone with five pelts and some iron how to make a pair of bracers.",
-      "Haldor verkauft Waffen und Rüstungen, kauft Felle und bringt jedem, der fünf Felle und etwas Eisen hat, bei, wie man Armschienen macht."),
+    ("CH-HALDOR", ("Hermann", "Hermann"), ("The smith", "Der Schmied"), ("The forge", "Die Schmiede"),
+     ("Hermann sells weapons and armour, buys pelts, and will teach anyone with five pelts and some iron how to make a pair of bracers.",
+      "Hermann verkauft Waffen und Rüstungen, kauft Felle und bringt jedem, der fünf Felle und etwas Eisen hat, bei, wie man Armschienen macht."),
      ("Pelts. Not scraps. Pelts.", "Felle. Keine Fetzen. Felle.")),
 ]
 

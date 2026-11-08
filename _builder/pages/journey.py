@@ -67,7 +67,7 @@ QUESTS = [
     ("First Lessons", "Erste Lektionen", "Train with your guild master and beat the sparring dummy.", "Trainiere bei deinem Gildenmeister und besiege die Übungspuppe."),
     ("Field Supplies", "Vorräte vom Feld", "Gather six Silverleaf at the forest edge for Mira.", "Sammle sechs Silberblatt am Waldrand für Mira."),
     ("Cull the Pack", "Dünn das Rudel aus", "Defeat six grey wolves in the Wolfwood.", "Besiege sechs graue Wölfe im Wolfwood."),
-    ("Pelts for the Smith", "Felle für den Schmied", "Bring Haldor five wolf pelts.", "Bring Haldor fünf Wolfsfelle."),
+    ("Pelts for the Smith", "Felle für den Schmied", "Bring Hermann five wolf pelts.", "Bring Hermann fünf Wolfsfelle."),
     ("Gear Up", "Ausrüsten", "Craft Wolfhide Bracers and equip a forged weapon.", "Stell Wolfsleder-Armschienen her und rüste eine geschmiedete Waffe aus."),
     ("Bitter Remedy", "Bittere Arznei", "Brew three Healing Draughts at Mira's table.", "Braue drei Heiltränke an Miras Tisch."),
     ("The Old Watchtower", "Der alte Wachturm", "Find the scout's satchel at the ruined tower.", "Finde die Tasche des Kundschafters am verfallenen Turm."),

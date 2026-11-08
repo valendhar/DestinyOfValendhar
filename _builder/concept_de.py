@@ -44,7 +44,7 @@ NAMES = {
     "Gable frame, timber only": "Giebel, nur das Fachwerk", "Garden & wall plants": "Garten- und Mauerpflanzen", "Gatherable herb nodes (gameplay)": "Sammelbare Kräuter (Gameplay)",
     "Gatherable plants, close study": "Sammelpflanzen, Detailstudie", "General store": "Krämerladen", "Goat & sheep": "Ziege und Schaf", "Grass set": "Gräser",
     "Grey oak shingle (tiles every 50 cm)": "Graue Eichenschindeln (Kachel 50 cm)", "Grey wolf": "Grauwolf", "Grindstone": "Schleifstein", "Guard props": "Ausrüstung der Wache",
-    "Guild & shop signs": "Gilden- und Ladenschilder", "Hagen": "Hagen", "Haldor": "Haldor", "Hand-made brick (tiles every 200 cm)": "Handgestrichener Ziegel (Kachel 200 cm)",
+    "Guild & shop signs": "Gilden- und Ladenschilder", "Hagen": "Hagen", "Hermann": "Hermann", "Hand-made brick (tiles every 200 cm)": "Handgestrichener Ziegel (Kachel 200 cm)",
     "Hanging lanterns": "Hängelaternen", "Hay & straw": "Heu und Stroh", "Haywain (hay wagon)": "Heuwagen", "Herbalist set": "Kräuterkunde",
     "Herbalist's cottage (White Mage guild)": "Haus der Kräuterkundigen (Gilde der Weißmagier)", "Holding cell": "Arrestzelle", "Horse chestnut": "Rosskastanie",
     "Horses": "Pferde", "House 1 — townhouse": "Haus 1 – Stadthaus", "House 2 — merchant's house": "Haus 2 – Kaufmannshaus", "House 3 — shop house": "Haus 3 – Ladenhaus",
