@@ -108,11 +108,11 @@ def hayn(ctx):
      "Vom Südtor steigt eine gepflasterte Gasse sanft nach Norden an. Unterwegs biegt sie leicht ab, sodass sich der Platz erst "
      "nach und nach zeigt, statt am Ende eines Korridors zu stehen. Links glüht die Schmiede.")])}
 {feature(ctx, "KA-02", ("The heart", "Das Herz"), ("Market square and fountain", "Marktplatz und Brunnen"), [
-    ("Red sandstone slabs around a nine-metre fountain, where a statue of the town's founder, a woodsman-knight with an axe "
-     "and a hunting hound at his feet, stands above four bronze stag-head spouts. Six market stalls, a great old linden with the bounty "
+    ("Red sandstone slabs around a nine-metre fountain, where a bronze Forest Warden, the warden of the king's forest, "
+     "stands with his hand on a red stag above four bronze stag-head spouts. Six market stalls, a great old linden with the bounty "
      "board, and the town hall on the north side.",
-     "Rote Sandsteinplatten um einen neun Meter breiten Brunnen, wo die Statue des Stadtgründers, ein Holzfäller-Ritter mit Axt "
-     "und einem Jagdhund zu seinen Füßen, über vier bronzenen Hirschkopf-Speiern steht. Sechs Marktstände, eine große alte Linde mit "
+     "Rote Sandsteinplatten um einen neun Meter breiten Brunnen, wo ein bronzener Forstwart, der Hüter des königlichen Waldes, "
+     "mit der Hand auf einem Rothirsch über vier bronzenen Hirschkopf-Speiern steht. Sechs Marktstände, eine große alte Linde mit "
      "dem Kopfgeldbrett und im Norden das Rathaus.")], flip=True)}
 {feature(ctx, "VW-02", ("Captain Roland's post", "Hauptmann Rolands Posten"), ("Town Hall and Watch House", "Rathaus und Wachhaus"), [
     ("The grandest building in town: an arcade of four sandstone arches below, two richly carved half-timbered floors "
