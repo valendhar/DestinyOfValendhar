@@ -58,9 +58,9 @@ UI = {
     "foot_note": ("In development. This site shows the game's vertical slice, not the full game. All art shown is concept and design work, not in-engine capture.",
                   "In Entwicklung. Diese Seite zeigt die Vertical Slice des Spiels, nicht das ganze Spiel. Alle gezeigten Bilder sind Konzept- und Designarbeiten, keine Aufnahmen aus der Engine."),
     "rights": ("All rights reserved.", "Alle Rechte vorbehalten."),
-    "trademark": ("Unreal Engine is a trademark of Epic Games, Inc. This project is not affiliated with or endorsed by Epic Games. Vertical Third and Redwood MMO belong to their respective owners.",
+    "trademark": ("Unreal Engine is a trademark of Epic Games, Inc. This project is not affiliated with or endorsed by Epic Games. Vertical Third belongs to its respective owners.",
                   "Unreal Engine ist eine Marke von Epic Games, Inc. Dieses Projekt steht in keiner Verbindung zu Epic Games "
-                  "und wird nicht von Epic Games unterstützt. Vertical Third und Redwood MMO gehören ihren jeweiligen Inhabern."),
+                  "und wird nicht von Epic Games unterstützt. Vertical Third gehört seinen jeweiligen Inhabern."),
     "names_note": ("Place and character names are working names.", "Orts- und Figurennamen sind Arbeitstitel."),
     "stub_kicker": ("Coming soon", "Demnächst"),
     "stub_prep": ("In preparation", "In Vorbereitung"),
@@ -94,7 +94,7 @@ def process_images():
     for src in [f for d in SOURCES for f in sorted(d.rglob("*"))]:
         if src.suffix.lower() not in (".png", ".jpg", ".jpeg", ".webp"):
             continue
-        img_id = src.stem.upper()
+        img_id = src.stem.strip().upper()  # a stray space before the extension happens when saving
         full = IMG_OUT / "full" / f"{img_id}.webp"
         thumb = IMG_OUT / "thumb" / f"{img_id}.webp"
         is_logo = img_id.startswith("LOGO")
