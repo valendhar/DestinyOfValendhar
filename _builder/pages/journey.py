@@ -32,7 +32,7 @@ STOPS = [
                "Begleite einen Händlerkarren aus dem Nordtor und wehre dann zwei Wellen von Angreifern ab.")),
     ("DG-01", ("A wounded scout warns you about the hill. Three packs, a two-phase boss, and a way back out to the road.",
                "Ein verwundeter Kundschafter warnt dich vor dem Hügel. Drei Gruppen, ein Boss mit zwei Phasen und ein Weg zurück zur Straße.")),
-    ("OH-GATE", ("Follow the last stretch of road up to the Saxenhausen Watchtower, where Frankfurt lies below and the vertical slice ends.",
+    ("WARTE-ARRIVAL", ("Follow the last stretch of road up to the Saxenhausen Watchtower, where Frankfurt lies below and the vertical slice ends.",
                  "Folge dem letzten Stück Straße hinauf zur Sachsenhäuser Warte, unter der Frankfurt liegt und wo die Vertical Slice endet.")),
 ]
 
