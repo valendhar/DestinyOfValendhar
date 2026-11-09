@@ -133,7 +133,7 @@ def hayn(ctx):
     [("Hunters' Lodge", "Jägerhütte"), "Hagen", ("Ranger guild and archery range", "Ranger-Gilde und Bogenschießplatz")],
     [("Herbalist's House & Spring Shrine", "Kräuterhaus & Quellschrein"), "Mira", ("White Mage guild, herbs, alchemy", "Weißmagier-Gilde, Kräuter, Alchemie")],
     [("Elwyn's Tower", "Elwyns Turm"), "Elwyn", ("Elementalist guild and rune circle", "Elementaristen-Gilde und Runenkreis")],
-    [("Inn: the Wolf's Rest", "Gasthaus: Wolf's Rest"), ("The innkeeper", "Der Wirt"), ("Return point, food", "Rückkehrpunkt, Essen")],
+    [("Inn: the Golden Acorn", "Gasthaus: Zur Goldenen Eichel"), ("The innkeeper", "Der Wirt"), ("Return point, food", "Rückkehrpunkt, Essen")],
     [("General store", "Krämerladen"), ("The storekeeper", "Der Krämer"), ("Potions, supplies, bags", "Tränke, Vorräte, Taschen")],
     [("North Gate & Watchtower", "Nordtor & Wachturm"), ("The guards", "Die Wachen"), ("The road to Frankfurt and the way into the Wolfwood", "Die Straße nach Frankfurt und der Weg in den Wolfwood")],
 ])}
@@ -201,7 +201,7 @@ def road(ctx):
         (("The ambush point", "Der Hinterhalt"), ("An overturned cart and scattered crates. Two waves to survive.", "Ein umgestürzter Karren und verstreute Kisten. Zwei Wellen zu überleben.")),
         (("The wounded scout", "Der verwundete Kundschafter"), ("He has seen what is under the hill.", "Er hat gesehen, was unter dem Hügel ist.")),
         (("The dungeon entrance", "Der Verlieseingang"), ("An overgrown stone archway into a hillside, carved with wolf heads.", "Ein überwucherter Steinbogen in einen Hang, mit eingemeißelten Wolfsköpfen.")),
-        (("The gates of Frankfurt", "Die Tore von Frankfurt"), ("The end of the vertical slice.", "Das Ende der Vertical Slice.")),
+        (("The Saxenhausen Watchtower", "Die Sachsenhäuser Warte"), ("The end of the vertical slice, with Frankfurt below.", "Das Ende der Vertical Slice, mit Frankfurt darunter.")),
     ]
     return section(f"""
 {feature(ctx, "VW-08", ("Leaving Hayn", "Hayn verlassen"), ("The road to the capital", "Die Straße zur Hauptstadt"), [

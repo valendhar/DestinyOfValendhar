@@ -32,8 +32,8 @@ STOPS = [
                "Begleite einen Händlerkarren aus dem Nordtor und wehre dann zwei Wellen von Angreifern ab.")),
     ("DG-01", ("A wounded scout warns you about the hill. Three packs, a two-phase boss, and a way back out to the road.",
                "Ein verwundeter Kundschafter warnt dich vor dem Hügel. Drei Gruppen, ein Boss mit zwei Phasen und ein Weg zurück zur Straße.")),
-    ("OH-GATE", ("Follow the last stretch of road to Frankfurt's gate, where the vertical slice ends.",
-                 "Folge dem letzten Stück Straße bis zum Tor von Frankfurt, wo die Vertical Slice endet.")),
+    ("OH-GATE", ("Follow the last stretch of road up to the Saxenhausen Watchtower, where Frankfurt lies below and the vertical slice ends.",
+                 "Folge dem letzten Stück Straße hinauf zur Sachsenhäuser Warte, unter der Frankfurt liegt und wo die Vertical Slice endet.")),
 ]
 
 
@@ -73,12 +73,12 @@ QUESTS = [
     ("The Old Watchtower", "Der alte Wachturm", "Find the scout's satchel at the ruined tower.", "Finde die Tasche des Kundschafters am verfallenen Turm."),
     ("Darker Woods", "Dunklere Wälder", "Defeat four dark wolves in the spruce wood.", "Besiege vier dunkle Wölfe im Fichtenwald."),
     ("The Alpha", "Der Alpha", "Enter the wolf den and defeat the Alpha.", "Betritt den Wolfsbau und besiege den Alpha."),
-    ("Rest at the Wolf's Rest", "Rast im Wolf's Rest", "Set your return point at the inn and eat.", "Leg im Gasthaus deinen Rückkehrpunkt fest und iss."),
+    ("Rest at the Golden Acorn", "Rast in der Goldenen Eichel", "Set your return point at the inn and eat.", "Leg im Gasthaus deinen Rückkehrpunkt fest und iss."),
     ("Road to Frankfurt", "Straße nach Frankfurt", "Escort the merchant's cart from the North Gate.", "Begleite den Händlerkarren vom Nordtor."),
     ("Ambush!", "Hinterhalt!", "Defend the cart through two waves.", "Verteidige den Karren gegen zwei Wellen."),
     ("The Wounded Scout", "Der verwundete Kundschafter", "Optional: help the scout and hear his warning.", "Optional: Hilf dem Kundschafter und hör dir seine Warnung an."),
     ("Beneath the Hill", "Unter dem Hügel", "Clear the dungeon and defeat its boss.", "Säubere das Verlies und besiege seinen Boss."),
-    ("The Gates of Frankfurt", "Die Tore von Frankfurt", "Follow the road to the gate.", "Folge der Straße bis zum Tor."),
+    ("The Saxenhausen Watchtower", "Die Sachsenhäuser Warte", "Follow the road to the watchtower above Frankfurt.", "Folge der Straße bis zur Warte über Frankfurt."),
 ]
 
 
@@ -86,8 +86,8 @@ def quests_page(ctx):
     t = ctx.t
     rows = [[str(k + 1), (en, de), (den, dde)] for k, (en, de, den, dde) in enumerate(QUESTS)]
     return section(f"""
-<p class="lede" style="margin-bottom:28px">{t("Eighteen steps from the first signpost to the last gate. Names are working names.",
-                     "Achtzehn Schritte vom ersten Wegweiser bis zum letzten Tor. Die Namen sind Arbeitstitel.")}</p>
+<p class="lede" style="margin-bottom:28px">{t("Eighteen steps from the first signpost to the watchtower above Frankfurt. Names are working names.",
+                     "Achtzehn Schritte vom ersten Wegweiser bis zur Warte über Frankfurt. Die Namen sind Arbeitstitel.")}</p>
 {table(ctx, [("Step", "Schritt"), ("Quest", "Quest"), ("What you do", "Was du tust")], rows, "quest-table")}
 <h2 style="margin-top:80px">{t("On the side", "Nebenbei")}</h2>
 {modes(ctx, [
@@ -145,7 +145,7 @@ def alpha_page(ctx):
 
 PAGES = {
     "journey/index.html": dict(
-        title=("From Dais to Gate", "Vom Dais zum Tor"), kicker=("The Journey", "Die Reise"),
+        title=("From Dais to Watchtower", "Vom Dais zur Warte"), kicker=("The Journey", "Die Reise"),
         lede=("The whole vertical slice, stop by stop.", "Die ganze Vertical Slice, Station für Station."),
         banner="KA-03", body=path_page),
     "journey/quests.html": dict(

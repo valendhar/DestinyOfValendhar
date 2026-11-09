@@ -1,7 +1,7 @@
 """Home page (English and German)."""
 from illustration import hero_svg
 
-# The journey, Dais to gate. Shared with pages/journey.py so the two never drift apart.
+# The journey, Dais to watchtower. Shared with pages/journey.py so the two never drift apart.
 ACTS = [
     (("Act 0", "Akt 0"), ("The Wayward Dais", "Das Wayward Dais"),
      ("The stone hums. The road leads north.", "Der Stein summt. Die Straße führt nach Norden."), ""),
@@ -23,8 +23,8 @@ ACTS = [
      ("One merchant's cart, and one already overturned.", "Ein Händlerkarren, und einer, der schon umgestürzt ist."), ""),
     (("Act 9", "Akt 9"), ("Beneath the hill", "Unter dem Hügel"),
      ("Old stone, and something older behind it.", "Alter Stein, und dahinter etwas noch Älteres."), ""),
-    (("Act 10", "Akt 10"), ("The gates of Frankfurt", "Die Tore von Frankfurt"),
-     ("The end of the vertical slice.", "Das Ende der Vertical Slice."), "end"),
+    (("Act 10", "Akt 10"), ("The Saxenhausen Watchtower", "Die Sachsenhäuser Warte"),
+     ("Frankfurt below, and the end of the vertical slice.", "Unten liegt Frankfurt, und hier endet die Vertical Slice."), "end"),
 ]
 
 JOBS = [
@@ -60,8 +60,8 @@ def body(ctx):
          t("The Wolfwood is built in rings. The deeper you go, the darker the trees and the bolder the wolves.",
            "Der Wolfwood ist in Ringen angelegt. Je tiefer du gehst, desto dunkler die Bäume und desto kühner die Wölfe.")),
         ("VW-08", t("The road goes on", "Die Straße geht weiter"),
-         t("Guard a merchant's cart, survive an ambush, clear a dungeon under the hill and reach the gates of Frankfurt.",
-           "Begleite einen Händlerkarren, überlebe einen Hinterhalt, säubere ein Verlies unter dem Hügel und erreiche die Tore von Frankfurt.")),
+         t("Guard a merchant's cart, survive an ambush, clear a dungeon under the hill and reach the Saxenhausen Watchtower above Frankfurt.",
+           "Begleite einen Händlerkarren, überlebe einen Hinterhalt, säubere ein Verlies unter dem Hügel und erreiche die Sachsenhäuser Warte über Frankfurt.")),
     ]
     pillar_html = "".join(f'<li class="pillar">{ctx.figure(i, alt=n, link=False)}<h3>{n}</h3><p>{d}</p></li>' for i, n, d in pillars)
 
@@ -130,9 +130,9 @@ def body(ctx):
       <p class="hero-hook">{t("A forest town at the edge of a wood that has grown bold.",
                               "Eine Waldstadt am Rand eines Waldes, der kühn geworden ist.")}</p>
       <p class="hero-sub">{t("Destiny of Valendhar is a fantasy online MMO, played by many players at the same time, with tab-target combat and four job guilds. "
-                             "This site shows its vertical slice, not the full game: from the Wayward Dais through Hayn and the Wolfwood to the gates of Frankfurt.",
+                             "This site shows its vertical slice, not the full game: from the Wayward Dais through Hayn and the Wolfwood to the Saxenhausen Watchtower above Frankfurt.",
                              "Destiny of Valendhar ist ein Fantasy-Online-MMO, das viele Spieler gleichzeitig spielen, mit Tab-Target-Kampf und vier Job-Gilden. "
-                             "Diese Seite zeigt seine Vertical Slice, nicht das ganze Spiel: vom Wayward Dais durch Hayn und den Wolfwood bis zu den Toren von Frankfurt.")}</p>
+                             "Diese Seite zeigt seine Vertical Slice, nicht das ganze Spiel: vom Wayward Dais durch Hayn und den Wolfwood bis zur Sachsenhäuser Warte über Frankfurt.")}</p>
       <div class="cta-row">
         <a class="btn btn-gold" href="{u('journey/index.html')}">{t("Walk the journey", "Die Reise antreten")}</a>
         <a class="btn btn-ghost" href="{u('game/jobs.html')}">{t("Meet the four jobs", "Die vier Jobs ansehen")}</a>
@@ -150,11 +150,11 @@ def body(ctx):
                       "einer ummauerten Stadt im Königsforst Dreieich, am Rand des Wolfwoods.")}</p>
     <p>{t("Captain Roland is short of people and the pack has started coming out of the trees. You choose one of four job guilds, "
           "learn to fight and gather, thin out the wolves, gear up at the forge and finally face the Alpha in its den. Then the road "
-          "north opens: a merchant to protect, an ambush to survive, a dungeon under the hill, and the gates of Frankfurt at the end.",
+          "north opens: a merchant to protect, an ambush to survive, a dungeon under the hill, and at the end the Saxenhausen Watchtower, with Frankfurt below.",
           "Hauptmann Roland fehlen Leute, und das Rudel kommt neuerdings aus den Bäumen. Du wählst eine von vier Job-Gilden, lernst "
           "zu kämpfen und zu sammeln, dünnst die Wölfe aus, rüstest dich in der Schmiede aus und stellst dich schließlich dem Alpha in "
           "seinem Bau. Dann öffnet sich die Straße nach Norden: ein Händler, den du beschützen musst, ein Hinterhalt, den du überleben "
-          "musst, ein Verlies unter dem Hügel und am Ende die Tore von Frankfurt.")}</p>
+          "musst, ein Verlies unter dem Hügel und am Ende die Sachsenhäuser Warte, unter der Frankfurt liegt.")}</p>
     <a class="text-link" href="{u('game/index.html')}">{t("Read the full overview", "Zum vollständigen Überblick")}</a>
   </div>
   <dl class="facts">{fact_html}</dl>
@@ -181,10 +181,10 @@ def body(ctx):
     <p class="kicker">{t("The world", "Die Welt")}</p>
     <h2>{t("Hayn guards the road", "Hayn bewacht die Straße")}</h2>
     <p>{t("Behind an oval stone wall stand steep-roofed half-timbered houses, a market square with a sandstone fountain, "
-          "a forge, an inn called the Wolf's Rest and a town hall with a slate bell turret. The town lives on timber, and it "
+          "a forge, an inn called the Golden Acorn and a town hall with a slate bell turret. The town lives on timber, and it "
           "keeps watch over the road north to Frankfurt, the capital.",
           "Hinter einer ovalen Steinmauer stehen steilgiebelige Fachwerkhäuser, ein Marktplatz mit einem "
-          "Sandsteinbrunnen, eine Schmiede, ein Gasthaus namens Wolf's Rest und ein Rathaus mit einem schiefergedeckten "
+          "Sandsteinbrunnen, eine Schmiede, ein Gasthaus namens Zur Goldenen Eichel und ein Rathaus mit einem schiefergedeckten "
           "Glockentürmchen. Die Stadt lebt vom Holz und wacht über die Straße nach Norden, nach Frankfurt, der Hauptstadt.")}</p>
     <p>{t("North and west the Wolfwood begins: birch and hazel at the edge, tall beeches and old oaks further in, and dark spruce "
           "where the wolf den is.",
@@ -209,7 +209,7 @@ def body(ctx):
     <div class="trail-head">
       <div>
         <p class="kicker">{t("The vertical slice", "Die Vertical Slice")}</p>
-        <h2>{t("From the Dais to the gates of Frankfurt", "Vom Dais bis zu den Toren von Frankfurt")}</h2>
+        <h2>{t("From the Dais to the Saxenhausen Watchtower", "Vom Dais bis zur Sachsenhäuser Warte")}</h2>
         <p>{t("Eleven stops on one road. Each one teaches something new, from the first step to a boss fight and a dungeon.",
               "Elf Stationen auf einer Straße. Jede bringt dir etwas Neues bei, vom ersten Schritt bis zum Bosskampf und zum Verlies.")}</p>
       </div>
@@ -238,9 +238,9 @@ PAGES = {
     "index.html": dict(
         title=("Home", "Start"),
         description=("Destiny of Valendhar: a fantasy online MMO. This site shows its vertical slice, which runs from the forest town of Hayn "
-                     "through the Wolfwood to the gates of Frankfurt.",
+                     "through the Wolfwood to the Saxenhausen Watchtower above Frankfurt.",
                      "Destiny of Valendhar: ein Fantasy-Online-MMO. Diese Seite zeigt seine Vertical Slice, die von der Waldstadt Hayn "
-                     "durch den Wolfwood bis zu den Toren von Frankfurt führt."),
+                     "durch den Wolfwood bis zur Sachsenhäuser Warte über Frankfurt führt."),
         body=body,
         custom_header=True,
         no_pager=True,

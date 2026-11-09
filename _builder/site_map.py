@@ -15,7 +15,7 @@ NAV = [
         (("Town Life", "Stadtleben"), "game/town-life.html", []),
     ]),
     (("The Journey", "Die Reise"), "journey/index.html", [
-        (("From Dais to Gate", "Vom Dais zum Tor"), "journey/index.html", []),
+        (("From Dais to Watchtower", "Vom Dais zur Warte"), "journey/index.html", []),
         (("The Quest Chain", "Die Questreihe"), "journey/quests.html", []),
         (("The Alpha", "Der Alpha"), "journey/the-alpha.html", []),
     ]),

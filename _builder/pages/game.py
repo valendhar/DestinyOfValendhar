@@ -206,7 +206,7 @@ def town_life(ctx):
      "antidotes, which you will want before the Alpha.",
      "Die Kräuter vom Waldrand landen auf Miras Alchemietisch und kommen als Heiltränke zurück. Aus Wolfseisenhut werden "
      "Gegengifte, die du vor dem Alpha haben willst.")], flip=True)}
-{feature(ctx, "IT-01", ("The inn", "Das Gasthaus"), ("A bed and a hot meal at the Wolf's Rest", "Ein Bett und eine warme Mahlzeit im Wolf's Rest"), [
+{feature(ctx, "IT-01", ("The inn", "Das Gasthaus"), ("A bed and a hot meal at the Golden Acorn", "Ein Bett und eine warme Mahlzeit in der Goldenen Eichel"), [
     ("Set your return point at the inn, and eat before a hard fight: the innkeeper's food gives a short boost.",
      "Leg im Gasthaus deinen Rückkehrpunkt fest und iss vor einem schweren Kampf: Das Essen des Wirts gibt dir einen kurzen Bonus.")])}
 <h2 style="margin-top:72px">{t("What you gather and earn", "Was du sammelst und verdienst")}</h2>
