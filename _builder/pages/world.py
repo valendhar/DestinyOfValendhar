@@ -62,9 +62,9 @@ def valendhar(ctx):
      "gebaut sind, führt hinüber nach Sachsenhausen am Südufer, einem Viertel der Fischer, Gärten und Obstwiesen, und Mauern "
      "und Türme umschließen beide Hälften der Stadt. Über den steilen Dächern ragen der Domturm und die Halle des Königs auf."),
     ("Frankfurt is where the heroes truly learn their craft, in the great houses of their guilds, and where the real "
-     "adventure begins. Its gate is the end of the vertical slice.",
+     "adventure begins. The vertical slice ends on the hill above it, at the Saxenhausen Watchtower, with the city in view.",
      "In Frankfurt lernen die Helden ihr Handwerk wirklich, in den großen Häusern ihrer Gilden, und hier beginnt das "
-     "eigentliche Abenteuer. Sein Tor ist das Ende der Vertical Slice.")])}
+     "eigentliche Abenteuer. Die Vertical Slice endet auf dem Hügel darüber, an der Sachsenhäuser Warte, mit der Stadt in Sicht.")])}
 <h2 style="margin-top:56px">{t("Explore", "Erkunden")}</h2>
 {modes(ctx, [
     (("The town", "Die Stadt"), (f'<a href="{ctx.url("world/hayn.html")}">Hayn</a>',) * 2,
