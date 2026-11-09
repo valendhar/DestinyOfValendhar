@@ -6,6 +6,15 @@ a title and a line in English and German, and its aspect ratio (Loom's oEmbed gi
 from components import section
 
 VIDEOS = [
+    dict(loom="6844cb63b5f64c5aa861ddb8af9ee488", ratio="4 / 3", minutes=("2 minutes", "2 Minuten"), when=("November 2026", "November 2026"),
+         title=("Gameplay bootcamp: the first quest", "Gameplay-Bootcamp: die erste Quest"),
+         text=("A testing ground built next to the town, where each gameplay system is tried out on its own before it goes into the "
+               "real world. This first greybox area tests quests: the player takes on a task, the objectives track each step, and the "
+               "quest completes. Small and plain on purpose, so that what works here can later be placed in Hayn with confidence.",
+               "Ein Testgelände neben der Stadt, auf dem jedes Gameplay-System für sich ausprobiert wird, bevor es in die echte Welt "
+               "kommt. Dieser erste Greybox-Bereich testet Quests: Die Spielfigur nimmt eine Aufgabe an, die Ziele verfolgen jeden "
+               "Schritt, und die Quest wird abgeschlossen. Bewusst klein und schlicht, damit das, was hier funktioniert, später mit "
+               "Sicherheit in Hayn eingebaut werden kann.")),
     dict(loom="35b0e525d46b45db979834cd7fd38fc8", ratio="4 / 3", minutes=("2½ minutes", "2½ Minuten"), when=("November 2026", "November 2026"),
          title=("Greyboxing, part two", "Greyboxing, Teil zwei"),
          text=("The greybox one step further, recorded just before the town's design changed: the first timber-framed buildings "
