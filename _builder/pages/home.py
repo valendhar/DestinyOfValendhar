@@ -51,8 +51,8 @@ def body(ctx):
          t("Half-timbered houses, chimney smoke and firewood under every eave. Hayn is a real place with real work going on.",
            "Fachwerkhäuser, Kaminrauch und Brennholz unter jedem Dachvorsprung. Hayn ist ein echter Ort, in dem echte Arbeit getan wird.")),
         ("VW-04", t("Four guilds, four jobs", "Vier Gilden, vier Jobs"),
-         t("Paladin, Ranger, White Mage or Elementalist. Each guild has its own building, banner, trainer and training ground.",
-           "Paladin, Ranger, Weißmagier oder Elementarist. Jede Gilde hat ihr eigenes Haus, ihr Banner, ihren Trainer und ihren Übungsplatz.")),
+         t("Paladin, Ranger, White Mage and Elementalist. Each guild has its own building, banner, trainer and training ground, and one character can learn them all.",
+           "Paladin, Ranger, Weißmagier und Elementarist. Jede Gilde hat ihr eigenes Haus, ihr Banner, ihren Trainer und ihren Übungsplatz, und eine Figur kann sie alle lernen.")),
         ("KA-05", t("Fights you can read", "Kämpfe, die man lesen kann"),
          t("Tab-target combat with a hotbar of abilities. Every special attack shows on the ground before it lands.",
            "Tab-Target-Kampf mit einer Leiste voller Fähigkeiten. Jeder Spezialangriff zeigt sich am Boden, bevor er trifft.")),
@@ -92,8 +92,9 @@ def body(ctx):
     facts = [
         (t("Genre", "Genre"), t("Third-person fantasy online MMO", "Fantasy-Online-MMO in der dritten Person")),
         (t("Combat", "Kampf"), t("Tab-target, hotbar, group roles", "Tab-Target, Fähigkeitenleiste, Gruppenrollen")),
-        (t("Jobs", "Jobs"), t("Paladin, Ranger, White Mage, Elementalist", "Paladin, Ranger, Weißmagier, Elementarist")),
-        (t("Your character", "Deine Figur"), t("Male or female, with different races to choose from later", "Männlich oder weiblich, später auch verschiedene Völker zur Auswahl")),
+        (t("Jobs", "Jobs"), t("Paladin, Ranger, White Mage, Elementalist: switch between them, level each on its own",
+                             "Paladin, Ranger, Weißmagier, Elementarist: zwischen ihnen wechseln, jeden für sich leveln")),
+        (t("Your character", "Deine Figur"), t("One of eight heroes, four women and four men, chosen in the character creator; different races to choose from later", "Einer von acht Helden, vier Frauen und vier Männer, gewählt im Charakter-Editor; später auch verschiedene Völker zur Auswahl")),
         (t("Players", "Spieler"), t("Many players at the same time, online in one world", "Viele Spieler gleichzeitig, online in einer Welt")),
         (t("Vertical slice", "Vertical Slice"), t("A small finished part of the MMO, not the full game", "Ein kleiner fertiger Teil des MMOs, nicht das ganze Spiel")),
         (t("Look", "Look"), t("Grounded, semi-realistic fantasy", "Bodenständige, halbrealistische Fantasy")),
@@ -148,10 +149,10 @@ def body(ctx):
                       "a walled town in the king's forest of Three-Oaks, at the edge of the Wolfwood.",
                       "Du kommst als Fremder am Runenportal an, einem alten schwebenden Stein an der Straße vor Hayn, "
                       "einer ummauerten Stadt im Königsforst Dreieich, am Rand des Wolfwoods.")}</p>
-    <p>{t("Captain Roland is short of people and the pack has started coming out of the trees. You choose one of four job guilds, "
+    <p>{t("Captain Roland is short of people and the pack has started coming out of the trees. You choose your first job at one of four guilds, "
           "learn to fight and gather, thin out the wolves, gear up at the forge and finally face the Alpha in its den. Then the road "
           "north opens: a merchant to protect, an ambush to survive, a dungeon under the hill, and at the end the Saxenhausen Watchtower, with Frankfurt below.",
-          "Hauptmann Roland fehlen Leute, und das Rudel kommt neuerdings aus den Bäumen. Du wählst eine von vier Job-Gilden, lernst "
+          "Hauptmann Roland fehlen Leute, und das Rudel kommt neuerdings aus den Bäumen. Du wählst deinen ersten Job in einer von vier Gilden, lernst "
           "zu kämpfen und zu sammeln, dünnst die Wölfe aus, rüstest dich in der Schmiede aus und stellst dich schließlich dem Alpha in "
           "seinem Bau. Dann öffnet sich die Straße nach Norden: ein Händler, den du beschützen musst, ein Hinterhalt, den du überleben "
           "musst, ein Verlies unter dem Hügel und am Ende die Sachsenhäuser Warte, unter der Frankfurt liegt.")}</p>

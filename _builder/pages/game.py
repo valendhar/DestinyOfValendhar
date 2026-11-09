@@ -7,11 +7,11 @@ def overview(ctx):
     intro = section(f"""
 <div class="intro">
   <div class="prose">
-    <p class="big">{t("Destiny of Valendhar is a third-person fantasy online MMO set in the world of Valendhar, played by many players at the same time. You pick a job, "
-                      "join its guild, and fight with a hotbar of abilities against enemies you select with a target key, the way "
+    <p class="big">{t("Destiny of Valendhar is a third-person fantasy online MMO set in the world of Valendhar, played by many players at the same time. You play one "
+                      "character, learn every job at its guild, and fight with a hotbar of abilities against enemies you select with a target key, the way "
                       "classic MMOs play.",
                       "Destiny of Valendhar ist ein Fantasy-Online-MMO in der dritten Person, das viele Spieler gleichzeitig spielen, angesiedelt in der Welt "
-                      "Valendhar. Du wählst einen Job, trittst seiner Gilde bei und kämpfst mit einer Leiste voller Fähigkeiten gegen "
+                      "Valendhar. Du spielst eine Figur, lernst jeden Job in seiner Gilde und kämpfst mit einer Leiste voller Fähigkeiten gegen "
                       "Gegner, die du per Zieltaste auswählst, so wie klassische MMOs sich spielen.")}</p>
     <p>{t("This site shows the game's vertical slice, not the full game. A vertical slice is one small part built to finished quality "
           "first: here, one town, one forest, one road and one dungeon, from the first step to the last boss. "
@@ -26,7 +26,8 @@ def overview(ctx):
       (("Camera", "Kamera"), ("Orbit camera behind your character", "Orbit-Kamera hinter deiner Figur")),
       (("Combat", "Kampf"), ("Tab-target with a 10-slot hotbar", "Tab-Target mit einer Leiste aus 10 Plätzen")),
       (("Party roles", "Gruppenrollen"), ("Tank, healer, damage", "Tank, Heiler, Schaden")),
-      (("Your character", "Deine Figur"), ("Male or female, with different races to choose from later", "Männlich oder weiblich, später auch verschiedene Völker zur Auswahl")),
+      (("Your character", "Deine Figur"), ("One of eight heroes, four women and four men, chosen in the character creator; different races to choose from later", "Einer von acht Helden, vier Frauen und vier Männer, gewählt im Charakter-Editor; später auch verschiedene Völker zur Auswahl")),
+      (("Jobs", "Jobs"), ("One character, every job: unlock them at the guilds, switch between them, and level each one on its own", "Eine Figur, alle Jobs: in den Gilden freischalten, zwischen ihnen wechseln und jeden für sich leveln")),
       (("Vertical slice", "Vertical Slice"), ("A small finished part of the MMO, not the full game", "Ein kleiner fertiger Teil des MMOs, nicht das ganze Spiel")),
       (("Players", "Spieler"), ("Many players at the same time, online in one world", "Viele Spieler gleichzeitig, online in einer Welt")),
       (("Platform", "Plattform"), ("PC first", "Zuerst für PC")),
@@ -42,10 +43,13 @@ def overview(ctx):
      "Valendhar sieht halbrealistisch aus: echte Proportionen, ehrliche Materialien, malerisches Licht. Die Städte wirken wie ein "
      "spätmittelalterliches Deutschland, das es nie gab. Magie ist in der Stadt selten und wird draußen im Wald und an den alten Monumenten stärker.")])}
 {feature(ctx, "VW-04", ("Pillar 2", "Säule 2"), ("Jobs, not classes on a menu", "Jobs statt Klassen aus einem Menü"), [
-    ("You choose your job in the world, by walking into a guild and talking to its trainer. Each guild is a real building with "
-     "its own banner, people and training ground.",
-     "Du wählst deinen Job in der Welt, indem du eine Gilde betrittst und mit ihrem Trainer sprichst. Jede Gilde ist ein echtes "
-     "Gebäude mit eigenem Banner, eigenen Leuten und eigenem Übungsplatz.")], flip=True)}
+    ("You learn a job in the world, by walking into a guild and talking to its trainer. Each guild is a real building with "
+     "its own banner, people and training ground. Your character isn't tied to one job: unlock the others at their guilds, switch "
+     "between them as you like, and level each job on its own, so a seasoned Paladin still starts out as a new Ranger.",
+     "Du lernst einen Job in der Welt, indem du eine Gilde betrittst und mit ihrem Trainer sprichst. Jede Gilde ist ein echtes "
+     "Gebäude mit eigenem Banner, eigenen Leuten und eigenem Übungsplatz. Deine Figur ist nicht an einen Job gebunden: Schalte die "
+     "anderen in ihren Gilden frei, wechsle nach Belieben zwischen ihnen und level jeden Job für sich, sodass ein erfahrener Paladin "
+     "als Ranger trotzdem neu anfängt.")], flip=True)}
 {feature(ctx, "KA-05", ("Pillar 3", "Säule 3"), ("Combat you can read", "Kampf, den man lesen kann"), [
     ("A target frame, cast bars, damage numbers and ground markings for every special attack. You should always know what is "
      "about to hit you, and have a moment to move.",
@@ -188,8 +192,8 @@ def jobs(ctx):
     if portraits:
         portraits = f'<div style="margin-bottom:72px">{portraits}</div>'
     return section(f"""
-<p class="lede" style="margin-bottom:56px">{t("Every job can be played as a male or female character, and different races to choose from will come later. You pick one job in the vertical slice. Ability names are working names and will change as the jobs are tuned.",
-                       "Jeder Job lässt sich mit einer männlichen oder weiblichen Figur spielen, und später kommen verschiedene Völker zur Auswahl dazu. In der Vertical Slice wählst du einen Job. Die Namen der Fähigkeiten sind Arbeitstitel und ändern sich, während die Jobs abgestimmt werden.")}</p>
+<p class="lede" style="margin-bottom:56px">{t("The eight heroes on this page, four women and four men, are the characters you choose from in the character creator. Your character can learn all four jobs, switch between them and level each one separately. Different races to choose from will come later. Ability names are working names and will change as the jobs are tuned.",
+                       "Die acht Helden auf dieser Seite, vier Frauen und vier Männer, sind die Figuren, aus denen du im Charakter-Editor wählst. Deine Figur kann alle vier Jobs lernen, zwischen ihnen wechseln und jeden für sich leveln. Später kommen verschiedene Völker zur Auswahl dazu. Die Namen der Fähigkeiten sind Arbeitstitel und ändern sich, während die Jobs abgestimmt werden.")}</p>
 {line_ups}{portraits}{"".join(out)}""")
 
 
