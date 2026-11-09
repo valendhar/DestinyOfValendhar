@@ -7,3 +7,4 @@ __pycache__/
 
 # Private design docs, never published
 _Docs/
+_builder/images/inbox/
