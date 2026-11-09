@@ -1,7 +1,7 @@
 [
 {
 "id": "BL-01",
-"name": "Wayward Dais (wilderness variant)",
+"name": "Rune Portal (wilderness variant)",
 "number": 244,
 "folder": "buildings"
 },
@@ -139,7 +139,7 @@
 },
 {
 "id": "BL-24",
-"name": "Chapel of the Dawn",
+"name": "St. Mary's Chapel",
 "number": 444,
 "folder": "buildings"
 },

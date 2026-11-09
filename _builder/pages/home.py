@@ -1,9 +1,9 @@
 """Home page (English and German)."""
 from illustration import hero_svg
 
-# The journey, Dais to watchtower. Shared with pages/journey.py so the two never drift apart.
+# The journey, Rune Portal to watchtower. Shared with pages/journey.py so the two never drift apart.
 ACTS = [
-    (("Act 0", "Akt 0"), ("The Wayward Dais", "Das Wayward Dais"),
+    (("Act 0", "Akt 0"), ("The Rune Portal", "Das Runenportal"),
      ("The stone hums. The road leads north.", "Der Stein summt. Die Straße führt nach Norden."), ""),
     (("Act 1", "Akt 1"), ("The Watch House", "Das Wachhaus"),
      ("Captain Roland has a task, and not enough people.", "Hauptmann Roland hat eine Aufgabe und zu wenig Leute."), ""),
@@ -117,8 +117,8 @@ def body(ctx):
                        '<h1 class="hero-wordmark"><span class="wm-small">Destiny of</span><span class="wm-big">Valendhar</span></h1>')
                     + '</div></div>')
     else:
-        alt = t("A traveller at the Wayward Dais looks up the road to the gate of Hayn.",
-                "Ein Reisender am Wayward Dais blickt die Straße hinauf zum Tor von Hayn.")
+        alt = t("A traveller at the Rune Portal looks up the road to the gate of Hayn.",
+                "Ein Reisender am Runenportal blickt die Straße hinauf zum Tor von Hayn.")
         hero_art = (f'<div class="hero-art">{hero_svg(alt)}'
                     '<h1 class="hero-wordmark"><span class="wm-small">Destiny of</span><span class="wm-big">Valendhar</span></h1></div>')
 
@@ -130,9 +130,9 @@ def body(ctx):
       <p class="hero-hook">{t("A forest town at the edge of a wood that has grown bold.",
                               "Eine Waldstadt am Rand eines Waldes, der kühn geworden ist.")}</p>
       <p class="hero-sub">{t("Destiny of Valendhar is a fantasy online MMO, played by many players at the same time, with tab-target combat and four job guilds. "
-                             "This site shows its vertical slice, not the full game: from the Wayward Dais through Hayn and the Wolfwood to the Saxenhausen Watchtower above Frankfurt.",
+                             "This site shows its vertical slice, not the full game: from the Rune Portal through Hayn and the Wolfwood to the Saxenhausen Watchtower above Frankfurt.",
                              "Destiny of Valendhar ist ein Fantasy-Online-MMO, das viele Spieler gleichzeitig spielen, mit Tab-Target-Kampf und vier Job-Gilden. "
-                             "Diese Seite zeigt seine Vertical Slice, nicht das ganze Spiel: vom Wayward Dais durch Hayn und den Wolfwood bis zur Sachsenhäuser Warte über Frankfurt.")}</p>
+                             "Diese Seite zeigt seine Vertical Slice, nicht das ganze Spiel: vom Runenportal durch Hayn und den Wolfwood bis zur Sachsenhäuser Warte über Frankfurt.")}</p>
       <div class="cta-row">
         <a class="btn btn-gold" href="{u('journey/index.html')}">{t("Walk the journey", "Die Reise antreten")}</a>
         <a class="btn btn-ghost" href="{u('game/jobs.html')}">{t("Meet the four jobs", "Die vier Jobs ansehen")}</a>
@@ -144,9 +144,9 @@ def body(ctx):
 <section class="wrap section intro">
   <div class="intro-text">
     <h2 class="intro-title">{t("Every blade, bow and spell is needed", "Jede Klinge, jeder Bogen und jeder Zauber wird gebraucht")}</h2>
-    <p class="big">{t("You arrive as a stranger at the Wayward Dais, an old floating stone on the road outside Hayn, "
+    <p class="big">{t("You arrive as a stranger at the Rune Portal, an old floating stone on the road outside Hayn, "
                       "a walled town in the king's forest of Three-Oaks, at the edge of the Wolfwood.",
-                      "Du kommst als Fremder am Wayward Dais an, einem alten schwebenden Stein an der Straße vor Hayn, "
+                      "Du kommst als Fremder am Runenportal an, einem alten schwebenden Stein an der Straße vor Hayn, "
                       "einer ummauerten Stadt im Königsforst Dreieich, am Rand des Wolfwoods.")}</p>
     <p>{t("Captain Roland is short of people and the pack has started coming out of the trees. You choose one of four job guilds, "
           "learn to fight and gather, thin out the wolves, gear up at the forge and finally face the Alpha in its den. Then the road "
@@ -176,7 +176,7 @@ def body(ctx):
 </section>
 
 <section class="wrap section split">
-  <div class="split-media">{ctx.figure("KA-03", alt=t("Arrival at the Wayward Dais", "Ankunft am Wayward Dais"))}</div>
+  <div class="split-media">{ctx.figure("KA-03", alt=t("Arrival at the Rune Portal", "Ankunft am Runenportal"))}</div>
   <div class="split-text">
     <p class="kicker">{t("The world", "Die Welt")}</p>
     <h2>{t("Hayn guards the road", "Hayn bewacht die Straße")}</h2>
@@ -209,7 +209,7 @@ def body(ctx):
     <div class="trail-head">
       <div>
         <p class="kicker">{t("The vertical slice", "Die Vertical Slice")}</p>
-        <h2>{t("From the Dais to the Saxenhausen Watchtower", "Vom Dais bis zur Sachsenhäuser Warte")}</h2>
+        <h2>{t("From the Rune Portal to the Saxenhausen Watchtower", "Vom Runenportal bis zur Sachsenhäuser Warte")}</h2>
         <p>{t("Eleven stops on one road. Each one teaches something new, from the first step to a boss fight and a dungeon.",
               "Elf Stationen auf einer Straße. Jede bringt dir etwas Neues bei, vom ersten Schritt bis zum Bosskampf und zum Verlies.")}</p>
       </div>

@@ -61,7 +61,7 @@ def path_page(ctx):
 
 
 QUESTS = [
-    ("The Wayward Road", "Die Wayward-Straße", "Walk from the Dais to the South Gate and read the signpost.", "Geh vom Dais zum Südtor und lies den Wegweiser."),
+    ("The Portal Road", "Der Portalweg", "Walk from the Rune Portal to the South Gate and read the signpost.", "Geh vom Runenportal zum Südtor und lies den Wegweiser."),
     ("Report to the Captain", "Melde dich beim Hauptmann", "Find Captain Roland at the Watch House.", "Finde Hauptmann Roland im Wachhaus."),
     ("A Calling", "Eine Berufung", "Visit the guilds and choose your job.", "Besuche die Gilden und wähle deinen Job."),
     ("First Lessons", "Erste Lektionen", "Train with your guild master and beat the sparring dummy.", "Trainiere bei deinem Gildenmeister und besiege die Übungspuppe."),
@@ -145,7 +145,7 @@ def alpha_page(ctx):
 
 PAGES = {
     "journey/index.html": dict(
-        title=("From Dais to Watchtower", "Vom Dais zur Warte"), kicker=("The Journey", "Die Reise"),
+        title=("From Portal to Watchtower", "Vom Portal zur Warte"), kicker=("The Journey", "Die Reise"),
         lede=("The whole vertical slice, stop by stop.", "Die ganze Vertical Slice, Station für Station."),
         banner="KA-03", body=path_page),
     "journey/quests.html": dict(

@@ -12,10 +12,10 @@ def valendhar(ctx):
                       "Valendhar ist ein mittelalterliches Deutschland, das es so nie gab: das Vereinigte Deutsche Königreich, regiert von "
                       "Frankfurt am Main aus. Die meisten Leute leben von Holz, Feld und Handel, und Magie begegnet dir in einem Turm oder "
                       "an einem Schrein, nicht auf der Straße.")}</p>
-    <p>{t("Scattered across the land stand the Daises: weathered stone platforms ringed with faint blue glyphs, each with a "
+    <p>{t("Scattered across the land stand the Rune Portals: weathered stone platforms ringed with faint blue glyphs, each with a "
           "rough megalith floating above it. Travellers arrive by them and leave by them. Nobody in Hayn remembers who "
           "built them.",
-          "Überall im Land stehen die Daise: verwitterte Steinplattformen mit einem Ring aus schwach blauen Glyphen, über denen "
+          "Überall im Land stehen die Runenportale: verwitterte Steinplattformen mit einem Ring aus schwach blauen Glyphen, über denen "
           "jeweils ein roher Monolith schwebt. Reisende kommen durch sie an und reisen durch sie ab. Niemand in Hayn "
           "erinnert sich, wer sie gebaut hat.")}</p>
   </div>
@@ -29,7 +29,7 @@ def valendhar(ctx):
       (("Magic", "Magie"), ("Rare in town, stronger in the wild", "Selten in der Stadt, stärker in der Wildnis")),
   ])}
 </div>
-{feature(ctx, "KA-03", ("Arrival", "Ankunft"), ("The Wayward Dais", "Das Wayward Dais"), [
+{feature(ctx, "KA-03", ("Arrival", "Ankunft"), ("The Rune Portal", "Das Runenportal"), [
     ("A circular granite platform twelve metres across, its rim carved with glyphs that glow softly blue. Above its centre, a "
      "rough-hewn stone hangs two metres in the air, with thin blue cracks running through it. This is where every adventurer "
      "in Hayn first sets foot.",
@@ -126,7 +126,7 @@ def hayn(ctx):
      "Spitze von Elwyns Turm, die schwach rot über den Dächern glüht.")], flip=True)}
 <h2 style="margin-top:72px">{t("Places in town", "Orte in der Stadt")}</h2>
 {table(ctx, [("Place", "Ort"), ("Who", "Wer"), ("Why you go there", "Warum du hingehst")], [
-    [("Wayward Dais", "Wayward Dais"), "—", ("Arrival and return point", "Ankunft und Rückkehrpunkt")],
+    [("Rune Portal", "Runenportal"), "—", ("Arrival and return point", "Ankunft und Rückkehrpunkt")],
     [("Town Hall & Watch House", "Rathaus & Wachhaus"), ("Captain Roland", "Hauptmann Roland"), ("The main quests", "Die Hauptquests")],
     [("Forge", "Schmiede"), "Hermann", ("Weapons, armour, pelts, forging", "Waffen, Rüstung, Felle, Schmieden")],
     [("Barracks & Training Yard", "Kaserne & Übungsplatz"), "Bron", ("Paladin guild", "Paladin-Gilde")],

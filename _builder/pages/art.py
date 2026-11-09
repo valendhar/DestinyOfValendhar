@@ -7,7 +7,7 @@ def key_art(ctx):
     swatches = [
         ("#F1E9D8", t("Lime plaster", "Kalkputz")), ("#1F1A15", t("Black beams", "Schwarze Balken")),
         ("#7A2E22", t("Oxblood beams", "Ochsenblutbalken")), ("#7A3A26", t("Clay tile", "Tonziegel")),
-        ("#E2A63E", t("Autumn sun", "Herbstsonne")), ("#8FD3EA", t("Dais glyph", "Dais-Glyphe")),
+        ("#E2A63E", t("Autumn sun", "Herbstsonne")), ("#8FD3EA", t("Portal rune", "Portalrune")),
     ]
     sw = "".join(f'<li><span class="swatch" style="background:{c}"></span><span class="sw-name">{n}</span>'
                  f'<span class="sw-hex">{c}</span></li>' for c, n in swatches)
@@ -28,7 +28,7 @@ def key_art(ctx):
 {ctx.gallery([
     ("KA-01", t("The main street at golden hour", "Die Hauptgasse zur goldenen Stunde")),
     ("KA-02", t("Market day around the fountain", "Markttag am Brunnen")),
-    ("KA-03", t("Arrival at the Wayward Dais", "Ankunft am Wayward Dais")),
+    ("KA-03", t("Arrival at the Rune Portal", "Ankunft am Runenportal")),
     ("KA-04", t("The forge", "Die Schmiede")),
     ("KA-05", t("Wolves at the forest edge", "Wölfe am Waldrand")),
     ("KA-06", t("Inside the Wolfwood", "Im Wolfwood")),

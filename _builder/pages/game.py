@@ -65,7 +65,7 @@ def overview(ctx):
 
     loop = section(f"""
 <h2>{t("The loop", "Der Kreislauf")}</h2>
-<p class="lede">{t("What you do, again and again, between the Dais and Frankfurt.", "Was du zwischen dem Dais und Frankfurt immer wieder tust.")}</p>
+<p class="lede">{t("What you do, again and again, between the Rune Portal and Frankfurt.", "Was du zwischen dem Runenportal und Frankfurt immer wieder tust.")}</p>
 {loops(ctx, [
     (("Take a task", "Auftrag annehmen"), ("From Captain Roland, a trainer or a townsperson with a problem.",
                                            "Von Hauptmann Roland, einem Trainer oder einem Stadtbewohner mit einem Problem.")),

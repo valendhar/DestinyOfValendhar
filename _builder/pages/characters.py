@@ -42,7 +42,7 @@ OTHERS = [
     (("The innkeeper", "Der Wirt"), ("Runs the Golden Acorn. Bed, food and a place to come back to.", "Führt die Goldene Eichel. Bett, Essen und ein Ort, zu dem man zurückkehrt.")),
     (("The storekeeper", "Der Krämer"), ("Potions, rope, lamps and bags, on the square.", "Tränke, Seile, Lampen und Taschen, am Platz.")),
     (("The woodcutter", "Der Holzfäller"), ("At the forest edge, with something to say about the wolves.", "Am Waldrand, mit etwas zu den Wölfen zu sagen.")),
-    (("The merchant", "Der Händler"), ("Waiting at the Dais for someone to see his cart to Frankfurt.", "Wartet am Dais auf jemanden, der seinen Karren nach Frankfurt bringt.")),
+    (("The merchant", "Der Händler"), ("Waiting at the Rune Portal for someone to see his cart to Frankfurt.", "Wartet am Runenportal auf jemanden, der seinen Karren nach Frankfurt bringt.")),
     (("The wounded scout", "Der verwundete Kundschafter"), ("Found on the road, past the ambush.", "Auf der Straße zu finden, hinter dem Hinterhalt.")),
     (("Townsfolk", "Stadtbewohner"), ("Guards, vendors, a baker, a miller, children, a bard in the inn, and a dog that chases the cat.", "Wachen, Händler, ein Bäcker, ein Müller, Kinder, ein Barde im Gasthaus und ein Hund, der die Katze jagt.")),
 ]
