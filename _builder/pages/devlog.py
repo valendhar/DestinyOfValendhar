@@ -6,6 +6,18 @@ a title and a line in English and German, and its aspect ratio (Loom's oEmbed gi
 from components import section
 
 VIDEOS = [
+    dict(loom="73aadce009fd426cb5bf49760992f193", ratio="4 / 3", minutes=("3 minutes", "3 Minuten"), when=("November 2026", "November 2026"),
+         title=("Gameplay bootcamp: jobs, cursors and selection", "Gameplay-Bootcamp: Jobs, Mauszeiger und Auswahl"),
+         text=("Three systems that make the town readable and the hero flexible. The cursor now changes as it passes over people: "
+               "a merchant, a trainer or a guard each shows their own, and someone with a quest for you shows whether it is new, "
+               "under way or ready to hand in, so you know who to talk to before you click. Clicking a person puts a selection "
+               "ring at their feet. And the job system is in: a character can switch between the jobs they have unlocked, so the "
+               "same hero can be a Paladin today and a Ranger tomorrow.",
+               "Drei Systeme, die die Stadt lesbar und die Spielfigur wandelbar machen. Der Mauszeiger ändert sich jetzt über "
+               "Personen: Händler, Ausbilder oder Wache zeigen jeweils ihren eigenen, und wer eine Quest für dich hat, zeigt, ob sie "
+               "neu, in Arbeit oder abgabebereit ist, damit du weißt, mit wem du sprechen solltest, bevor du klickst. Ein Klick auf "
+               "eine Person legt einen Auswahlring zu ihren Füßen. Und das Job-System ist da: Eine Figur kann zwischen den Jobs "
+               "wechseln, die sie freigeschaltet hat, sodass derselbe Held heute Paladin und morgen Ranger sein kann.")),
     dict(loom="6844cb63b5f64c5aa861ddb8af9ee488", ratio="4 / 3", minutes=("2 minutes", "2 Minuten"), when=("November 2026", "November 2026"),
          title=("Gameplay bootcamp: the first quest", "Gameplay-Bootcamp: die erste Quest"),
          text=("A testing ground built next to the town, where each gameplay system is tried out on its own before it goes into the "
