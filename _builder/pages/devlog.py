@@ -6,6 +6,16 @@ a title and a line in English and German, and its aspect ratio (Loom's oEmbed gi
 from components import section
 
 VIDEOS = [
+    dict(loom="fc35adab12c64f4795c0f056c6a3b894", ratio="4 / 3", minutes=("1½ minutes", "1½ Minuten"), when=("November 2026", "November 2026"),
+         title=("Gameplay bootcamp: joining the guilds", "Gameplay-Bootcamp: den Gilden beitreten"),
+         text=("Each of the four guilds now has a dialog where you ask to join, and joining is what unlocks its job. A new bar of "
+               "four job buttons fills in as you join: one for the Paladin, the Ranger, the White Mage and the Elementalist. Click one "
+               "and you switch jobs on the spot, and the main hotbar swaps in that job's skills, which made it easy to check that "
+               "every job carries the right abilities.",
+               "Jede der vier Gilden hat jetzt einen Dialog, in dem du um Aufnahme bittest, und erst der Beitritt schaltet ihren Job "
+               "frei. Eine neue Leiste mit vier Job-Knöpfen füllt sich, während du beitrittst: je einer für Paladin, Ranger, Weißmagier "
+               "und Elementarist. Ein Klick wechselt den Job sofort, und die Hauptleiste tauscht die Fähigkeiten dieses Jobs ein, "
+               "so ließ sich leicht prüfen, dass jeder Job die richtigen Fähigkeiten mitbringt.")),
     dict(loom="73aadce009fd426cb5bf49760992f193", ratio="4 / 3", minutes=("3 minutes", "3 Minuten"), when=("November 2026", "November 2026"),
          title=("Gameplay bootcamp: jobs, cursors and selection", "Gameplay-Bootcamp: Jobs, Mauszeiger und Auswahl"),
          text=("Three systems that make the town readable and the hero flexible. The cursor now changes as it passes over people: "
