@@ -91,10 +91,13 @@ FLAG_DE = ('<svg viewBox="0 0 60 32" aria-hidden="true"><rect width="60" height=
 def process_images():
     (IMG_OUT / "full").mkdir(parents=True, exist_ok=True)
     (IMG_OUT / "thumb").mkdir(parents=True, exist_ok=True)
+    # One source per image id: a later folder in SOURCES wins, so the transparent web copies in originals (made by
+    # _Docs/Tools/cutout.py) replace the portraits of the same name in characters.
+    chosen = {}
     for src in [f for d in SOURCES for f in sorted(d.rglob("*"))]:
-        if src.suffix.lower() not in (".png", ".jpg", ".jpeg", ".webp"):
-            continue
-        img_id = src.stem.strip().upper()  # a stray space before the extension happens when saving
+        if src.suffix.lower() in (".png", ".jpg", ".jpeg", ".webp"):
+            chosen[src.stem.strip().upper()] = src  # a stray space before the extension happens when saving
+    for img_id, src in chosen.items():
         full = IMG_OUT / "full" / f"{img_id}.webp"
         thumb = IMG_OUT / "thumb" / f"{img_id}.webp"
         is_logo = img_id.startswith("LOGO")
