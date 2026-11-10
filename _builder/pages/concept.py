@@ -43,22 +43,22 @@ def label(ctx, e):
     return name
 
 
-def sheet_grid(ctx, entries, tall=False):
+def sheet_grid(ctx, entries, tall=False, shape=""):
     """Made sheets first, then a box for each sheet still to come."""
     made = [e for e in entries if ctx.has(e["id"])]
     todo = [e for e in entries if not ctx.has(e["id"])]
     figs = "".join(ctx.figure(e["id"], label(ctx, e), swap=False, note=ctx.t("Coming soon", "Demnächst")) for e in made + todo)
-    return f'<div class="gallery gallery-sheets{" gallery-tall" if tall else ""}">{figs}</div>'
+    return f'<div class="gallery gallery-sheets{" gallery-tall" if tall else ""}{" " + shape if shape else ""}">{figs}</div>'
 
 
-def block(ctx, title, intro, entries, tall=False, first=False):
+def block(ctx, title, intro, entries, tall=False, first=False, shape=""):
     if not entries:
         return ""
     made = sum(1 for e in entries if ctx.has(e["id"]))
     count = ctx.t(f"{made} of {len(entries)} made", f"{made} von {len(entries)} fertig")
     p = f'<p class="sheet-intro">{ctx.t(*intro)}</p>' if intro else ""
     return (f'<div class="sheet-block{" first" if first else ""}"><div class="sheet-head"><h2>{ctx.t(*title)}</h2>'
-            f'<span class="sheet-count">{count}</span></div>{p}{sheet_grid(ctx, entries, tall)}</div>')
+            f'<span class="sheet-count">{count}</span></div>{p}{sheet_grid(ctx, entries, tall, shape)}</div>')
 
 
 def pick(folder, pattern=None, exclude=None):
@@ -156,7 +156,7 @@ def kit(ctx):
     return section(
         block(ctx, ("Materials", "Materialien"), ("Seamless surfaces for plaster, timber, stone and roofs. Each one tiles across a whole wall.",
                                                   "Nahtlose Oberflächen für Putz, Holz, Stein und Dächer. Jede wiederholt sich über eine ganze Wand."),
-              pick("kit", r"^KM-"), first=True)
+              pick("kit", r"^KM-"), first=True, shape="gallery-square")
         + block(ctx, ("Trim sheets", "Trim Sheets"), ("Carved and edged strips that dress beams, stone and roof edges.",
                                                       "Geschnitzte und gekantete Streifen für Balken, Stein und Dachkanten."), pick("kit", r"^KX-"))
         + block(ctx, ("How the kit fits together", "Wie das Baukastensystem zusammenpasst"), ("Every house is built from the same reusable pieces: "

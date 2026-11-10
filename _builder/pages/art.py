@@ -90,13 +90,14 @@ def interiors(ctx):
 
 def media(ctx):
     t = ctx.t
-    return section(f"""<div class="stub"><p class="kicker">{t("Coming later", "Kommt später")}</p>
-<h2>{t("Screenshots and video", "Screenshots und Videos")}</h2>
-<p>{t("In-engine screenshots and a trailer will appear here once the vertical slice is playable. Until then, everything on this "
-      "site is concept art.",
-      "Screenshots aus der Engine und ein Trailer erscheinen hier, sobald die Vertical Slice spielbar ist. Bis dahin ist alles auf "
-      "dieser Seite Konzeptkunst.")}</p>
-<a class="btn btn-ghost" href="{ctx.url('art/index.html')}">{t("See the concept art", "Zur Konzeptkunst")}</a></div>""")
+    return section(f"""<div class="stub"><p class="kicker">{t("From the engine", "Aus der Engine")}</p>
+<h2>{t("Videos are on the DevLog", "Die Videos sind im DevLog")}</h2>
+<p>{t("Short videos from Unreal Engine show each system as it is built: the town greybox, quests, jobs and guilds. Polished "
+      "screenshots and a trailer will follow here once the vertical slice is playable.",
+      "Kurze Videos aus der Unreal Engine zeigen jedes System, während es entsteht: das Greyboxing der Stadt, Quests, Jobs und "
+      "Gilden. Fertige Screenshots und ein Trailer folgen hier, sobald die Vertical Slice spielbar ist.")}</p>
+<div class="cta-row" style="justify-content:center"><a class="btn btn-gold" href="{ctx.url('devlog/index.html')}">{t("Watch the DevLog", "Zum DevLog")}</a>
+<a class="btn btn-ghost" href="{ctx.url('art/index.html')}">{t("See the concept art", "Zur Konzeptkunst")}</a></div></div>""")
 
 
 PAGES = {
@@ -114,7 +115,6 @@ PAGES = {
         banner="IT-05", body=interiors),
     "media/index.html": dict(
         title=("Media", "Medien"), kicker=("Media", "Medien"),
-        lede=("Screenshots and video from the game itself, once there is something to show.",
-              "Screenshots und Videos aus dem Spiel selbst, sobald es etwas zu zeigen gibt."),
+        lede=("Video and screenshots from the game itself.", "Videos und Screenshots aus dem Spiel selbst."),
         banner="KA-03", body=media),
 }

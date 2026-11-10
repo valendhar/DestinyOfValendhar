@@ -166,6 +166,44 @@ p { margin: 0 0 1em; }
 .page-head-text h1, .page-head-text .lede { text-shadow: 0 2px 20px rgba(0, 0, 0, .55); }
 @media (max-width: 640px) { .page-head-text { margin-top: -2.5rem; } }
 
+/* ---------- section tabs: every page of a section, under the page head; sticks under the header ---------- */
+.section-tabs { position: sticky; top: var(--header-h); z-index: 40; background: rgba(27, 28, 43, .94); border-bottom: 1px solid var(--line);
+  box-shadow: 0 10px 24px rgba(6, 6, 12, .35); }
+@media (min-width: 1081px) { .section-tabs { background: rgba(27, 28, 43, .86); backdrop-filter: blur(8px); } }
+.st-inner { display: flex; align-items: stretch; gap: 0; min-height: 54px; }
+.st-name { display: flex; align-items: center; flex-shrink: 0; padding-right: 22px; margin-right: 6px; text-decoration: none;
+  font: 400 1.12rem/1 var(--display); color: var(--brass-hi); border-right: 1px solid var(--line); }
+.st-name:hover { color: var(--brass); }
+.st-list { list-style: none; margin: 0; padding: 0; display: flex; gap: 2px; flex: 1; min-width: 0;
+  overflow-x: auto; scrollbar-width: none; overscroll-behavior-x: contain; }
+.st-list::-webkit-scrollbar { display: none; }
+.st-list li { flex-shrink: 0; display: flex; }
+.st-list a { position: relative; display: flex; align-items: center; padding: 0 16px; white-space: nowrap; text-decoration: none;
+  font-size: 1.02rem; font-weight: 500; color: var(--parchment-dim); transition: color .15s, background-color .15s; }
+.st-list a:hover { color: var(--parchment); background: rgba(240, 231, 211, .05); }
+/* the current page: lit like a brass plate set into the bar */
+.st-list a[aria-current="page"] { color: var(--parchment); background: linear-gradient(180deg, rgba(208, 161, 85, .05), rgba(208, 161, 85, .16)); }
+.st-list a[aria-current="page"]::after { content: ""; position: absolute; left: 10px; right: 10px; bottom: 0; height: 3px;
+  background: linear-gradient(90deg, var(--brass-deep), var(--brass-hi), var(--brass-deep)); clip-path: polygon(3px 0, calc(100% - 3px) 0, 100% 100%, 0 100%); }
+.st-list a:focus-visible { outline-offset: -3px; }
+.st-count { display: flex; align-items: center; flex-shrink: 0; padding-left: 18px; font-style: italic; font-size: .95rem; color: var(--muted); white-space: nowrap; }
+/* on wide screens nothing hides: the row wraps instead of scrolling */
+@media (min-width: 761px) { .st-list { flex-wrap: wrap; overflow: visible; } .st-list a { min-height: 54px; } }
+@media (max-width: 1000px) { .st-count { display: none; } }
+@media (max-width: 760px) {
+  .st-inner { padding-right: 0; min-height: 50px; }
+  .st-name { font-size: 1rem; padding-right: 14px; }
+  .st-list a { padding: 0 13px; font-size: .97rem; }
+  /* fades at the edges say the row goes on that way */
+  .st-list { --fl: 0px; --fr: 36px;
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 var(--fl), #000 calc(100% - var(--fr)), transparent);
+    mask-image: linear-gradient(90deg, transparent, #000 var(--fl), #000 calc(100% - var(--fr)), transparent); }
+  .st-list.not-start { --fl: 36px; }
+  .st-list.at-end { --fr: 0px; }
+}
+/* anchors land below the two sticky bars */
+html { scroll-padding-top: calc(var(--header-h) + 62px); }
+
 /* ---------- buttons: gold, sitting on a dark timber ledge it presses into ---------- */
 .cta-row { display: flex; gap: 16px; flex-wrap: wrap; }
 .btn {
@@ -426,6 +464,8 @@ p { margin: 0 0 1em; }
   body { font-size: 17px; }
   .section { padding: 60px 16px; }
   .wrap { padding: 0 16px; }
+  /* an inner page's body is both: keep the section's breathing room */
+  .wrap.section { padding: 48px 16px 56px; }
   .hero-panel { margin-top: 0; padding-top: 8px; }
   .pillars { grid-template-columns: 1fr; gap: 36px; }
   .pillars .pillar:nth-child(5) { width: auto; justify-self: stretch; }
@@ -468,6 +508,9 @@ p { margin: 0 0 1em; }
 .gallery.gallery-sheets { grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 28px 20px; }
 .gallery-sheets .fig img { aspect-ratio: 16 / 9; object-fit: contain; }
 .gallery-sheets.gallery-tall .fig img, .gallery-sheets.gallery-tall .ph-box { aspect-ratio: 3 / 4; }
+/* materials are square, seamless surfaces: they fill their tile, smaller and more of them to a row */
+.gallery.gallery-sheets.gallery-square { grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); }
+.gallery-sheets.gallery-square .fig img, .gallery-sheets.gallery-square .ph-box { aspect-ratio: 1; object-fit: cover; }
 .gallery-sheets figcaption { font-size: .92rem; }
 .concept-cards { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 36px 24px; }
 .concept-card { display: block; color: inherit; text-decoration: none; }

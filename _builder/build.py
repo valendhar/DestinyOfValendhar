@@ -10,6 +10,7 @@ Usage:  python3 _builder/build.py [output_dir]
 import html
 import importlib.util
 import os
+import re
 import shutil
 import sys
 import zlib
@@ -198,7 +199,15 @@ class Ctx:
         )
 
     def gallery(self, items, cls=""):
-        figs = "".join(self.figure(i, c) for i, c in items)
+        # a picture not made yet is left out of a gallery rather than shown as an empty box among finished art;
+        # the Concept Art pages, which show what is still to come on purpose, build their own grids
+        made = [(i, c) for i, c in items if self.swap(i.upper()) in IMAGES]
+        shown = made or items
+        figs = "".join(self.figure(i, c) for i, c in shown)
+        cols = re.search(r"\bgallery-([234])\b", cls)
+        if cols and len(shown) < int(cols.group(1)):
+            # fewer pictures than columns: use as many columns as there are pictures, so no hole is left
+            cls = cls.replace(cols.group(0), f"gallery-{max(len(shown), 2)}")
         return f'<div class="gallery {cls}">{figs}</div>'
 
     def bg(self, img_id):
@@ -284,8 +293,46 @@ def footer(ctx):
 </footer>"""
 
 
+def section_of(ctx):
+    """The top-level nav node whose pages include this one, when that section has more than one page."""
+    for label, path, kids in NAV:
+        if len(kids) > 1 and any(k[1] == ctx.path for k in kids):
+            return label, path, kids
+    return None
+
+
+# short names for the tab strip, where the full page titles would not fit in one row
+TAB_SHORT = {
+    "concept/index.html": ("Overview", "Überblick"), "concept/heroes.html": ("Heroes", "Helden"),
+    "concept/people.html": ("People", "Leute"), "concept/creatures.html": ("Creatures", "Kreaturen"),
+    "concept/buildings.html": ("Buildings", "Gebäude"), "concept/props.html": ("Props", "Requisiten"),
+    "concept/wolfwood.html": ("Wolfwood", "Wolfwood"), "concept/kit.html": ("Modular kit", "Baukasten"),
+    "concept/gear.html": ("Gear", "Ausrüstung"),
+    "game/index.html": ("Overview", "Überblick"), "journey/index.html": ("Portal to Watchtower", "Portal zur Warte"),
+}
+
+
+def section_tabs(ctx):
+    """Every page of the current section as a row of tabs under the page head. It sticks under the header while
+    scrolling, so the other pages of a section are always in view, not only in the pager at the bottom."""
+    sec = section_of(ctx)
+    if not sec:
+        return ""
+    label, path, kids = sec
+    name = tr(label, ctx.lang)
+    tabs = "".join(
+        f'<li><a href="{ctx.url(p)}"{" aria-current=\"page\"" if p == ctx.path else ""}>{esc(tr(TAB_SHORT.get(p, l), ctx.lang))}</a></li>'
+        for l, p, _ in kids)
+    pos = [k[1] for k in kids].index(ctx.path) + 1
+    count = ctx.t(f"Page {pos} of {len(kids)}", f"Seite {pos} von {len(kids)}")
+    return (f'<nav class="section-tabs" aria-label="{esc(name)}"><div class="wrap st-inner">'
+            f'<a class="st-name" href="{ctx.url(path)}">{esc(name)}</a>'
+            f'<ol class="st-list">{tabs}</ol><span class="st-count">{count}</span></div></nav>')
+
+
 def crumbs(ctx, trail):
-    if ctx.path == "index.html" or len(trail) < 2:
+    # pages in a section get the tab strip instead, which names the section and shows where you are in it
+    if ctx.path == "index.html" or len(trail) < 2 or section_of(ctx):
         return ""
     parts = [f'<a href="{ctx.url("index.html")}">{ctx.ui("home")}</a>'] + [esc(tr(t, ctx.lang)) for t in trail[:-1]]
     return f'<p class="crumbs">{" / ".join(parts)}</p>'
@@ -311,6 +358,13 @@ def page_shell(ctx, page, trail):
     header_block = ""
     if not page.get("custom_header"):
         kicker = f'<p class="kicker">{esc(tr(page["kicker"], L))}</p>' if page.get("kicker") else ""
+        sec = section_of(ctx)
+        if sec and page.get("kicker"):
+            # the tab strip names the section and the page, so a kicker repeating either says nothing new
+            k = tr(page["kicker"], L).lower()
+            names = {tr(sec[0], L).lower()} | {tr(l, L).lower() for l, p, _ in sec[2] if p == ctx.path}
+            if k in names:
+                kicker = ""
         lede = f'<p class="lede">{tr(page["lede"], L)}</p>' if page.get("lede") else ""
         bgimg = first_uploaded(page.get("banner"))
         if page.get("banner_full") and bgimg and ctx.has(bgimg):
@@ -355,6 +409,7 @@ def page_shell(ctx, page, trail):
 {nav_html(ctx)}
 <main id="main">
 {header_block}
+{section_tabs(ctx) if not page.get("custom_header") else ""}
 {body}
 <div class="wrap">{pager(ctx) if not page.get("no_pager") else ""}</div>
 </main>
