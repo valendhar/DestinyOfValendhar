@@ -10,10 +10,11 @@ permissions:
   pages: write
   id-token: write
 
-# Only one deployment at a time; let an in-progress deploy finish.
+# Only one deployment at a time. A newer push replaces a deploy still running: it carries the whole site anyway, and a
+# deploy that hangs on GitHub's side (as on 2026-11-10) would otherwise hold every later one in the queue.
 concurrency:
   group: pages
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   build:
