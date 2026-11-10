@@ -39,6 +39,16 @@ THUMB_MAX = 960
 
 IMAGES = {}  # id -> dict(w, h, tw, th)
 
+# Kit piece images (KP-) keep their plain grey or white background in the sources, because Tripo and Meshy need it; the site
+# shows them cut out. The cut-out is the portraits' method in _Docs/Tools/cutout.py (private, so the build skips it, and
+# publishes the plain image, if _Docs isn't there). It runs only when an image is new or changed: about 15 s each.
+CUT_OUT = ("KP-",)
+try:
+    sys.path.insert(0, str(HERE.parent / "_Docs" / "Tools"))
+    from cutout import cutout as _cutout  # noqa: E402
+except ImportError:
+    _cutout = None
+
 LANGS = ("en", "de")
 PREFIX = {"en": "", "de": "de/"}
 
@@ -107,6 +117,11 @@ def process_images():
             mode = "RGBA" if im.mode in ("RGBA", "LA", "P") else "RGB"
             im = im.convert(mode)
             fresh = full.exists() and full.stat().st_mtime >= src.stat().st_mtime
+            if not fresh and mode == "RGB" and _cutout and img_id.startswith(CUT_OUT):
+                tmp = IMG_OUT / "_cutout.png"
+                _cutout(src, tmp)
+                im = Image.open(tmp).convert("RGBA")
+                tmp.unlink()
             if not fresh:
                 f = im.copy()
                 f.thumbnail((FULL_MAX, FULL_MAX), Image.LANCZOS)
