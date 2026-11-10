@@ -6,6 +6,16 @@ a title and a line in English and German, and its aspect ratio (Loom's oEmbed gi
 from components import section
 
 VIDEOS = [
+    dict(loom="4cf242cf300d44aa8edab4b84bb31e00", ratio="4 / 3", minutes=("2½ minutes", "2½ Minuten"), when=("November 2026", "November 2026"),
+         title=("Gameplay bootcamp: the Paladin's trial and quest markers", "Gameplay-Bootcamp: die Prüfung des Paladins und Quest-Markierungen"),
+         text=("The first job now has to be earned. The Paladin guild sets a short chain of trial quests, one leading to the next, and "
+               "finishing it is what teaches you the Paladin job. Along with it come quest markers above people's heads, so you can read "
+               "the town at a glance: one marker shows who has a new quest for you, and a different one shows who is waiting for you to "
+               "hand a finished quest in.",
+               "Den ersten Job muss man sich jetzt verdienen. Die Paladin-Gilde stellt eine kurze Kette von Prüfungsquests, eine führt "
+               "zur nächsten, und erst wer sie abschließt, lernt den Job des Paladins. Dazu kommen Quest-Markierungen über den Köpfen der "
+               "Leute, damit man die Stadt auf einen Blick lesen kann: Eine Markierung zeigt, wer eine neue Quest für dich hat, eine andere, "
+               "wer darauf wartet, dass du eine erledigte Quest abgibst.")),
     dict(loom="fc35adab12c64f4795c0f056c6a3b894", ratio="4 / 3", minutes=("1½ minutes", "1½ Minuten"), when=("November 2026", "November 2026"),
          title=("Gameplay bootcamp: joining the guilds", "Gameplay-Bootcamp: den Gilden beitreten"),
          text=("Each of the four guilds now has a dialog where you ask to join, and joining is what unlocks its job. A new bar of "
