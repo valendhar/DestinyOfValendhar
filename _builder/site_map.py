@@ -48,7 +48,7 @@ NAV = [
     (("DevLog", "DevLog"), "devlog/index.html", [
         (("Latest", "Neuestes"), "devlog/index.html", []),
         (("Town greyboxing", "Greyboxing der Stadt"), "devlog/greyboxing.html", []),
-        (("Bootcamp gameplay", "Gameplay-Bootcamp"), "devlog/bootcamp.html", []),
+        (("Gameplay greyboxing", "Gameplay-Greyboxing"), "devlog/gameplay.html", []),
     ]),
     (("Media", "Medien"), "media/index.html", []),
 ]

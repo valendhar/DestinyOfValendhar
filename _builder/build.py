@@ -450,7 +450,8 @@ def favicon_svg():
             '<circle cx="32" cy="16.5" r="2.2" fill="#8FD3EA"/></svg>')
 
 
-MOVED = {"world/timberwatch.html": "world/hayn.html", "world/three-oaks.html": "world/hayn.html", "game/village-life.html": "game/town-life.html"}
+MOVED = {"world/timberwatch.html": "world/hayn.html", "world/three-oaks.html": "world/hayn.html", "game/village-life.html": "game/town-life.html",
+         "devlog/bootcamp.html": "devlog/gameplay.html"}
 
 
 def main():
@@ -485,6 +486,7 @@ def main():
             target.parent.mkdir(parents=True, exist_ok=True)
             href = new.split("/")[-1]
             target.write_text(f'<!doctype html><html lang="{lang}"><head><meta charset="utf-8"><title>{esc(SITE_TITLE)}</title>'
+                              f'<script>location.replace("{href}" + location.hash)</script>'
                               f'<meta http-equiv="refresh" content="0; url={href}"><link rel="canonical" href="{href}"></head>'
                               f'<body><a href="{href}">{href}</a></body></html>', encoding="utf-8")
     print(f"Built {built} pages, {len(IMAGES)} images -> {OUT}")

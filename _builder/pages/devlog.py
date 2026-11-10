@@ -19,13 +19,15 @@ SERIES = {
               "part picks up where the last one stopped.",
               "Einfache Blöcke für jedes Gebäude, jede Gasse, Mauer und jedes Tor, zu Fuß abgelaufen, um Größe und Gefühl der "
               "Stadt zu prüfen. Jeder Teil macht dort weiter, wo der letzte aufgehört hat.")),
-    "bootcamp": dict(
-        path="devlog/bootcamp.html", name=("Bootcamp gameplay", "Gameplay-Bootcamp"),
-        lede=("Each gameplay system tried out on its own testing ground.", "Jedes Gameplay-System für sich auf einem Testgelände ausprobiert."),
-        text=("A greybox area next to the town where quests, jobs and guilds are built and tested one at a time, before they "
-              "go into the real world.",
-              "Ein Greybox-Bereich neben der Stadt, auf dem Quests, Jobs und Gilden einzeln gebaut und getestet werden, bevor "
-              "sie in die echte Welt kommen.")),
+    "gameplay": dict(
+        path="devlog/gameplay.html", name=("Gameplay greyboxing", "Gameplay-Greyboxing"),
+        lede=("The game's systems blocked out and tested before they go into the town.",
+              "Die Systeme des Spiels als Rohbau angelegt und getestet, bevor sie in die Stadt kommen."),
+        text=("Greyboxing for how the game plays rather than how it looks: on the Bootcamp, a plain test map next to the town, "
+              "quests, jobs and guilds are built and tried out one at a time, and only what works moves into Hayn.",
+              "Greyboxing dafür, wie sich das Spiel spielt, nicht wie es aussieht: Auf dem Bootcamp, einer schlichten Testkarte "
+              "neben der Stadt, werden Quests, Jobs und Gilden einzeln gebaut und ausprobiert, und nur was funktioniert, "
+              "kommt nach Hayn.")),
 }
 
 # oldest first; the newest is the last one
@@ -44,7 +46,7 @@ VIDEOS = [
                "Das Greyboxing einen Schritt weiter, aufgenommen kurz bevor sich das Design der Stadt geändert hat: Die ersten "
                "Fachwerkhäuser stehen in den Gassen, einfache Bäume markieren die Grünflächen, und die Spielfigur geht mit der "
                "Spieloberfläche durch alles hindurch. Das nächste Update bringt die Steinmauer und die neuen Tore.")),
-    dict(loom="6844cb63b5f64c5aa861ddb8af9ee488", series="bootcamp", ratio="4 / 3", minutes=("2 min", "2 Min."), when=("November 2026", "November 2026"),
+    dict(loom="6844cb63b5f64c5aa861ddb8af9ee488", series="gameplay", ratio="4 / 3", minutes=("2 min", "2 Min."), when=("November 2026", "November 2026"),
          title=("The first quest", "Die erste Quest"),
          text=("A testing ground built next to the town, where each gameplay system is tried out on its own before it goes into the "
                "real world. This first greybox area tests quests: the player takes on a task, the objectives track each step, and the "
@@ -53,7 +55,7 @@ VIDEOS = [
                "kommt. Dieser erste Greybox-Bereich testet Quests: Die Spielfigur nimmt eine Aufgabe an, die Ziele verfolgen jeden "
                "Schritt, und die Quest wird abgeschlossen. Bewusst klein und schlicht, damit das, was hier funktioniert, später mit "
                "Sicherheit in Hayn eingebaut werden kann.")),
-    dict(loom="73aadce009fd426cb5bf49760992f193", series="bootcamp", ratio="4 / 3", minutes=("3 min", "3 Min."), when=("November 2026", "November 2026"),
+    dict(loom="73aadce009fd426cb5bf49760992f193", series="gameplay", ratio="4 / 3", minutes=("3 min", "3 Min."), when=("November 2026", "November 2026"),
          title=("Jobs, cursors and selection", "Jobs, Mauszeiger und Auswahl"),
          text=("Three systems that make the town readable and the hero flexible. The cursor now changes as it passes over people: "
                "a merchant, a trainer or a guard each shows their own, and someone with a quest for you shows whether it is new, "
@@ -65,7 +67,7 @@ VIDEOS = [
                "neu, in Arbeit oder abgabebereit ist, damit du weißt, mit wem du sprechen solltest, bevor du klickst. Ein Klick auf "
                "eine Person legt einen Auswahlring zu ihren Füßen. Und das Job-System ist da: Eine Figur kann zwischen den Jobs "
                "wechseln, die sie freigeschaltet hat, sodass derselbe Held heute Paladin und morgen Ranger sein kann.")),
-    dict(loom="fc35adab12c64f4795c0f056c6a3b894", series="bootcamp", ratio="4 / 3", minutes=("1½ min", "1½ Min."), when=("November 2026", "November 2026"),
+    dict(loom="fc35adab12c64f4795c0f056c6a3b894", series="gameplay", ratio="4 / 3", minutes=("1½ min", "1½ Min."), when=("November 2026", "November 2026"),
          title=("Joining the guilds", "Den Gilden beitreten"),
          text=("Each of the four guilds now has a dialog where you ask to join, and joining is what unlocks its job. A new bar of "
                "four job buttons fills in as you join: one for the Paladin, the Ranger, the White Mage and the Elementalist. Click one "
@@ -75,7 +77,7 @@ VIDEOS = [
                "frei. Eine neue Leiste mit vier Job-Knöpfen füllt sich, während du beitrittst: je einer für Paladin, Ranger, Weißmagier "
                "und Elementarist. Ein Klick wechselt den Job sofort, und die Hauptleiste tauscht die Fähigkeiten dieses Jobs ein, "
                "so ließ sich leicht prüfen, dass jeder Job die richtigen Fähigkeiten mitbringt.")),
-    dict(loom="4cf242cf300d44aa8edab4b84bb31e00", series="bootcamp", ratio="4 / 3", minutes=("2½ min", "2½ Min."), when=("November 2026", "November 2026"),
+    dict(loom="4cf242cf300d44aa8edab4b84bb31e00", series="gameplay", ratio="4 / 3", minutes=("2½ min", "2½ Min."), when=("November 2026", "November 2026"),
          title=("The Paladin's trial and quest markers", "Die Prüfung des Paladins und Quest-Markierungen"),
          text=("The first job now has to be earned. The Paladin guild sets a short chain of trial quests, one leading to the next, and "
                "finishing it is what teaches you the Paladin job. Along with it come quest markers above people's heads, so you can read "
