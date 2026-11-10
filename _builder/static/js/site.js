@@ -134,6 +134,58 @@
     atEnd();
   }
 
+  // ---------------- devlog viewer: a card opens its video here instead of on Loom; the player loads only then.
+  // Each part has its own address (#v-<id>), so a link can open a video directly. Prev / Next step through the series.
+  const dlv = document.querySelector(".dl-viewer");
+  if (dlv && typeof dlv.showModal === "function") {
+    const frame = dlv.querySelector(".dl-v-frame");
+    let list = [], at = 0, opener = null;
+    const fill = i => {
+      at = i;
+      const a = list[i], d = a.dataset;
+      frame.innerHTML = "";
+      const f = document.createElement("iframe");
+      f.src = "https://www.loom.com/embed/" + d.loom + "?autoplay=1";
+      f.title = d.title;
+      f.allow = "fullscreen; picture-in-picture; autoplay";
+      f.allowFullscreen = true;
+      f.referrerPolicy = "strict-origin-when-cross-origin";
+      f.style.aspectRatio = d.ratio;
+      frame.appendChild(f);
+      dlv.querySelector(".dl-v-label").textContent = d.label;
+      dlv.querySelector("h2").textContent = d.title;
+      dlv.querySelector(".dl-v-meta").textContent = d.meta;
+      dlv.querySelector(".dl-v-body").textContent = d.text;
+      dlv.querySelector(".dl-v-loom").href = a.href;
+      dlv.querySelector(".dl-v-prev").disabled = i === 0;
+      dlv.querySelector(".dl-v-next").disabled = i === list.length - 1;
+      history.replaceState(null, "", "#" + a.closest(".dl-card").id);
+    };
+    const openCard = a => {
+      list = [...a.closest(".dl-grid").querySelectorAll(".dl-open")];
+      opener = a;
+      fill(list.indexOf(a));
+      if (!dlv.open) dlv.showModal();
+    };
+    document.addEventListener("click", e => {
+      const a = e.target.closest(".dl-open");
+      if (!a || e.ctrlKey || e.metaKey || e.shiftKey) return;
+      e.preventDefault();
+      openCard(a);
+    });
+    dlv.querySelector(".dl-v-prev").addEventListener("click", () => fill(at - 1));
+    dlv.querySelector(".dl-v-next").addEventListener("click", () => fill(at + 1));
+    dlv.querySelector(".dl-v-close").addEventListener("click", () => dlv.close());
+    dlv.addEventListener("click", e => { if (e.target === dlv) dlv.close(); });
+    dlv.addEventListener("close", () => {
+      frame.innerHTML = "";   // stops the video
+      history.replaceState(null, "", location.pathname + location.search);
+      if (opener) opener.focus();
+    });
+    const fromHash = document.querySelector(location.hash && location.hash.startsWith("#v-") ? location.hash + " .dl-open" : null);
+    if (fromHash) openCard(fromHash);
+  }
+
   // ---------------- lightbox
   const lb = document.querySelector(".lightbox");
   if (!lb) return;

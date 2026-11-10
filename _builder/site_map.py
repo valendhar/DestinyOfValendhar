@@ -45,7 +45,11 @@ NAV = [
         (("Modular Kit", "Baukasten"), "concept/kit.html", []),
         (("Gear & Costumes", "Ausrüstung & Kostüme"), "concept/gear.html", []),
     ]),
-    (("DevLog", "DevLog"), "devlog/index.html", []),
+    (("DevLog", "DevLog"), "devlog/index.html", [
+        (("Latest", "Neuestes"), "devlog/index.html", []),
+        (("Town greyboxing", "Greyboxing der Stadt"), "devlog/greyboxing.html", []),
+        (("Bootcamp gameplay", "Gameplay-Bootcamp"), "devlog/bootcamp.html", []),
+    ]),
     (("Media", "Medien"), "media/index.html", []),
 ]
 

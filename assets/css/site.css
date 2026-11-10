@@ -526,7 +526,7 @@ html { scroll-padding-top: calc(var(--header-h) + 62px); }
   .sheet-head { flex-direction: column; gap: 0; }
 }
 
-/* ---------- devlog: one video per entry, newest first ---------- */
+/* ---------- devlog: the newest video large, then each series as a grid of parts, oldest first ---------- */
 .devlog-intro { color: var(--parchment-dim); max-width: 70ch; margin: 0 0 48px; }
 .devlog-entry { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: 36px; align-items: center; padding: 0 0 56px; margin: 0 0 56px; border-bottom: 1px solid var(--line); }
 .devlog-entry:last-child { border-bottom: 0; margin-bottom: 0; }
@@ -535,3 +535,63 @@ html { scroll-padding-top: calc(var(--header-h) + 62px); }
 .devlog-text h2 { margin: 4px 0 12px; }
 .devlog-text p { color: var(--parchment-dim); }
 @media (max-width: 900px) { .devlog-entry { grid-template-columns: 1fr; gap: 20px; } }
+.dl-latest { border-bottom: 0; padding-bottom: 0; }
+.dl-latest .kicker a { color: inherit; }
+.dl-meta { font-style: italic; color: var(--muted); font-size: .95rem; }
+.dl-all { margin: 88px 0 8px; }
+.dl-row { padding: 36px 0 8px; border-top: 1px solid var(--line); margin-top: 28px; }
+.dl-row-head { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; }
+.dl-row-head h2 { font-size: clamp(1.5rem, 2.6vw, 2rem); margin: 0; }
+.dl-row-head h2 a { color: var(--parchment); text-decoration: none; }
+.dl-row-head h2 a:hover { color: var(--brass-hi); }
+.dl-count { font-style: italic; color: var(--muted); white-space: nowrap; }
+.dl-row-text { color: var(--parchment-dim); max-width: 70ch; margin: 6px 0 22px; }
+/* the grid: a series reads left to right, part 1 first */
+.dl-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 30px 20px; }
+.dl-grid-big { grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 40px 28px; }
+.dl-open { display: flex; flex-direction: column; gap: 4px; text-decoration: none; color: inherit; }
+.dl-thumb { --cut: 12px; position: relative; display: block; padding: 1px; background: var(--brass-edge); clip-path: var(--plate); margin-bottom: 10px; }
+.dl-thumb img, .dl-noimg { display: block; width: 100%; aspect-ratio: 16 / 9.2; object-fit: cover; object-position: 50% 30%; clip-path: var(--plate);
+  background: var(--night-2); filter: saturate(.8) brightness(.82); transition: filter .25s; }
+/* the play mark: a brass disc with a dark arrow, the same brass as the frames */
+.dl-play { position: absolute; left: 50%; top: 50%; width: 58px; height: 58px; margin: -29px 0 0 -29px; border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #F2D595, var(--brass) 60%, #A5763A); box-shadow: 0 6px 20px rgba(6, 6, 12, .55);
+  transition: transform .2s; }
+.dl-play::after { content: ""; position: absolute; left: 23px; top: 18px; border-style: solid; border-width: 11px 0 11px 17px;
+  border-color: transparent transparent transparent #1C1409; }
+.dl-len { position: absolute; right: 12px; bottom: 10px; padding: 2px 9px; font-size: .88rem; color: var(--parchment);
+  background: rgba(11, 12, 20, .78); }
+.dl-label { font-style: italic; color: var(--brass-hi); font-size: 1rem; }
+.dl-title { font: 400 1.25rem/1.25 var(--display); color: var(--parchment); }
+.dl-grid-big .dl-title { font-size: 1.4rem; }
+.dl-open:hover .dl-thumb img, .dl-open:focus-visible .dl-thumb img { filter: none; }
+.dl-open:hover .dl-play, .dl-open:focus-visible .dl-play { transform: scale(1.08); }
+.dl-open:hover .dl-title { color: var(--brass-hi); }
+.dl-card:target .dl-title { color: var(--brass-hi); }
+
+/* the viewer: the video big, its text beside it, and the way to the next part */
+.dl-viewer { width: min(1240px, calc(100vw - 32px)); max-height: calc(100vh - 32px); padding: 0; border: 0; color: var(--text);
+  background: var(--night-2); overflow: auto; }
+.dl-viewer::backdrop { background: rgba(6, 6, 12, .9); }
+.dl-viewer[open] { display: grid; grid-template-columns: minmax(0, 1.75fr) minmax(0, 1fr); }
+.dl-v-frame { background: #000; align-self: start; }
+.dl-v-frame iframe { display: block; width: 100%; aspect-ratio: 4 / 3; border: 0; }
+.dl-v-text { padding: 34px 32px 28px; display: flex; flex-direction: column; }
+.dl-v-label { font-style: italic; color: var(--brass-hi); margin: 0 0 4px; }
+.dl-v-text h2 { font-size: clamp(1.5rem, 2.4vw, 2rem); margin: 0 0 8px; }
+.dl-v-meta { font-style: italic; color: var(--muted); font-size: .95rem; margin: 0 0 16px; }
+.dl-v-body { color: var(--parchment-dim); }
+.dl-v-nav { display: flex; gap: 10px; margin-top: auto; padding-top: 18px; border-top: 1px solid var(--line); }
+.dl-v-nav button { flex: 1; padding: 11px 12px; background: rgba(240, 231, 211, .06); color: var(--parchment); border: 0;
+  box-shadow: inset 0 0 0 1px var(--line); font: 400 1rem var(--display); cursor: pointer; }
+.dl-v-nav button:hover:not(:disabled) { box-shadow: inset 0 0 0 1px var(--brass); color: var(--brass-hi); }
+.dl-v-nav button:disabled { opacity: .35; cursor: default; }
+.dl-v-close { position: absolute; top: 10px; right: 10px; width: 42px; height: 42px; border-radius: 50%; border: 1px solid var(--line);
+  background: rgba(11, 12, 20, .8); color: var(--parchment); font-size: 1.7rem; line-height: 1; cursor: pointer; }
+.dl-v-close:hover { border-color: var(--brass); color: var(--brass-hi); }
+@media (max-width: 900px) {
+  .dl-viewer[open] { grid-template-columns: 1fr; }
+  .dl-v-text { padding: 22px 18px 20px; }
+  .dl-grid, .dl-grid-big { grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }
+}
+@media (max-width: 560px) { .dl-row-head { flex-direction: column; gap: 2px; } .dl-all { margin-top: 64px; } }
