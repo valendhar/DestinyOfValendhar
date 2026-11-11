@@ -269,6 +269,57 @@
       ],
       "method": "blender-mixed",
       "note": "Head beam, two scalloped braces (Kopfbänder) lapped over the beam and onto the post (traced from the photo, the right one mirrored), square upper and lower post, a turned section with collars and a four-start rope twist cut into the turned surface, a sill with V-notched ends, six forged nail heads (M_TW_Metal). 2.4 m tall assumed."
+    },
+    {
+      "id": "HI-WeatherVane_Sun_01",
+      "mesh": "SM_HI_WeatherVane_Sun_01",
+      "category": "Ironwork",
+      "type": "WeatherVanes",
+      "name": [
+        "Sun-disc weather vane",
+        "Wetterfahne mit Sonnenscheibe"
+      ],
+      "size_cm": [
+        64.2,
+        16.6,
+        117.5
+      ],
+      "method": "blender-mixed",
+      "note": "Cast brass: turned column (vase finial, trumpet, collars, stepped base) measured row by row; flame finial and the flag (tail fleur, pierced quatrefoil sun with rays, flame tendrils) traced and cast as one relief, thin parts round, plates 7 mm with rounded edges; the sun's two raised rings on both faces. 1 px = 1 mm."
+    },
+    {
+      "id": "HI-WeatherVane_Grid_01",
+      "mesh": "SM_HI_WeatherVane_Grid_01",
+      "category": "Ironwork",
+      "type": "WeatherVanes",
+      "name": [
+        "Grid-banner weather vane",
+        "Wetterfahne mit Gitterbanner"
+      ],
+      "size_cm": [
+        51.7,
+        16.5,
+        121.6
+      ],
+      "method": "blender-mixed",
+      "note": "Cast brass: turned column with orb, collars and base; fleur finial, beaded grid banner with fleur corners and the ringed fleurs on the crossbar traced and cast as relief; raised square frames round the six quatrefoil windows; turned crossbar arms; the orb's leaf crown modelled (four splayed legs, a ring, eight lobed leaves). 1 px = 1 mm."
+    },
+    {
+      "id": "HI-WeatherVane_Orb_01",
+      "mesh": "SM_HI_WeatherVane_Orb_01",
+      "category": "Ironwork",
+      "type": "WeatherVanes",
+      "name": [
+        "Orb weather finial with fleury cross",
+        "Wetterspitze mit Kugel und Lilienkreuz"
+      ],
+      "size_cm": [
+        27.8,
+        18.5,
+        129.8
+      ],
+      "method": "blender-mixed",
+      "note": "Cast brass: turned column (trumpet neck, orb, carved collar, rod, stepped base) measured row by row; the orb a true sphere with three raised straps and 16 rivets; the pierced fleury cross traced and cast as relief. The collar's carving is texture. 1 px = 1 mm."
     }
   ]
 }
