@@ -225,6 +225,24 @@
       "method": "blender-lathe",
       "note": "Turned from the profile measured row by row (build_lathe.py), every moulding kept: cove and fillet under the cap, two fillet-and-torus rings, the vase belly, scotia and torus at the foot; square cap, plate and plinth with small bevels. 80 cm tall assumed. The granite speckle is texture.",
       "cutout": "light"
+    },
+    {
+      "id": "HI-Baluster_Bulb_01",
+      "mesh": "SM_HI_Baluster_Bulb_01",
+      "category": "Architecture",
+      "type": "Balusters",
+      "name": [
+        "Stone bulb baluster",
+        "Steinbaluster mit tiefem Bauch"
+      ],
+      "size_cm": [
+        25.4,
+        25.4,
+        90
+      ],
+      "method": "blender-lathe",
+      "note": "Turned from the profile measured row by row (build_lathe.py): cushion collar and fillet under the cap, astragal, the long flaring shaft, collar ring, the low bulb, a torus ring, the narrow neck and the flared foot on a round disc; square cap and plinth with small bevels. 90 cm tall assumed. The stone grain is texture.",
+      "cutout": "light"
     }
   ]
 }
