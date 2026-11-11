@@ -80,10 +80,7 @@ def overview(ctx):
     (("Go further", "Weiter vorstoßen"), ("New abilities open deeper, darker parts of the forest.",
                                           "Neue Fähigkeiten öffnen tiefere, dunklere Teile des Waldes.")),
 ])}""", "band-dark")
-    frameworks = section(f"""
-<h2>{t("Game framework used", "Verwendetes Spiele-Framework")}</h2>
-<ul class="abilities"><li>Vertical Third</li></ul>""")
-    return intro + pillars + loop + frameworks
+    return intro + pillars + loop
 
 
 def combat(ctx):

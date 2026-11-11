@@ -99,7 +99,6 @@ def body(ctx):
         (t("Vertical slice", "Vertical Slice"), t("A small finished part of the MMO, not the full game", "Ein kleiner fertiger Teil des MMOs, nicht das ganze Spiel")),
         (t("Look", "Look"), t("Grounded, semi-realistic fantasy", "Bodenständige, halbrealistische Fantasy")),
         (t("Engine", "Engine"), "Unreal Engine 5"),
-        (t("Game framework used", "Verwendetes Spiele-Framework"), "Vertical Third"),
     ]
     fact_html = "".join(f"<div><dt>{k}</dt><dd>{v}</dd></div>" for k, v in facts)
 

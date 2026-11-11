@@ -107,9 +107,9 @@ UI = {
     "foot_note": ("In development. This site shows the game's vertical slice, not the full game. All art shown is concept and design work, not in-engine capture.",
                   "In Entwicklung. Diese Seite zeigt die Vertical Slice des Spiels, nicht das ganze Spiel. Alle gezeigten Bilder sind Konzept- und Designarbeiten, keine Aufnahmen aus der Engine."),
     "rights": ("All rights reserved.", "Alle Rechte vorbehalten."),
-    "trademark": ("Unreal Engine is a trademark of Epic Games, Inc. This project is not affiliated with or endorsed by Epic Games. Vertical Third belongs to its respective owners.",
+    "trademark": ("Unreal Engine is a trademark of Epic Games, Inc. This project is not affiliated with or endorsed by Epic Games.",
                   "Unreal Engine ist eine Marke von Epic Games, Inc. Dieses Projekt steht in keiner Verbindung zu Epic Games "
-                  "und wird nicht von Epic Games unterstützt. Vertical Third gehört seinen jeweiligen Inhabern."),
+                  "und wird nicht von Epic Games unterstützt."),
     "names_note": ("Place and character names are working names.", "Orts- und Figurennamen sind Arbeitstitel."),
     "stub_kicker": ("Coming soon", "Demnächst"),
     "stub_prep": ("In preparation", "In Vorbereitung"),
