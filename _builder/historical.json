@@ -19,6 +19,15 @@
             "Turned and carved balusters for stairs, galleries and balconies.",
             "Gedrechselte und geschnitzte Baluster für Treppen, Galerien und Balkone."
           ]
+        },
+        "Posts": {
+          "de": "Ständer",
+          "en": "Posts",
+          "tall": true,
+          "intro": [
+            "Timber posts with their head beams, braces and sills, as they stand under galleries and jetties.",
+            "Holzständer mit Sattelholz, Kopfbändern und Schwelle, wie sie unter Galerien und Vorkragungen stehen."
+          ]
         }
       }
     },
@@ -243,6 +252,23 @@
       "method": "blender-lathe",
       "note": "Turned from the profile measured row by row (build_lathe.py): cushion collar and fillet under the cap, astragal, the long flaring shaft, collar ring, the low bulb, a torus ring, the narrow neck and the flared foot on a round disc; square cap and plinth with small bevels. 90 cm tall assumed. The stone grain is texture.",
       "cutout": "light"
+    },
+    {
+      "id": "HI-Post_Braced_01",
+      "mesh": "SM_HI_Post_Braced_01",
+      "category": "Architecture",
+      "type": "Posts",
+      "name": [
+        "Braced post with rope twist",
+        "Ständer mit Kopfbändern und Kordeldrehung"
+      ],
+      "size_cm": [
+        140,
+        32.7,
+        240
+      ],
+      "method": "blender-mixed",
+      "note": "Head beam, two scalloped braces (Kopfbänder) lapped over the beam and onto the post (traced from the photo, the right one mirrored), square upper and lower post, a turned section with collars and a four-start rope twist cut into the turned surface, a sill with V-notched ends, six forged nail heads (M_TW_Metal). 2.4 m tall assumed."
     }
   ]
 }
