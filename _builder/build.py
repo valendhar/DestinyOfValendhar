@@ -51,17 +51,19 @@ except ImportError:
 # Light pieces (pale stone on white) would vanish under the brightness rule; the registry marks them "cutout": "light".
 import json  # noqa: E402
 try:
-    LIGHT_CUT = {p["id"].upper() for p in json.loads((HERE / "historical.json").read_text(encoding="utf-8"))["pieces"]
-                 if p.get("cutout") == "light"}
+    CUT_MODE = {p["id"].upper(): p["cutout"] for p in json.loads((HERE / "historical.json").read_text(encoding="utf-8"))["pieces"]
+                if p.get("cutout")}
 except (OSError, ValueError, KeyError):
-    LIGHT_CUT = set()
+    CUT_MODE = {}
 
 
-def cutout_on_white(src, dst, light=False):
+def cutout_on_white(src, dst, mode=""):
     """Historical references (HI-) are dark iron or wood photographed on plain white, with curls that enclose background and soft
     grey shadows: the portrait method keeps both. Here brightness decides, everywhere: light and colourless is background (shadow
     included), dark or warm is the object. Edge colour is un-mixed from white so no pale rim is left.
-    light=True (pale stone): only light pixels connected to the image border are background; everything enclosed stays solid."""
+    mode "light" (pale stone): only light pixels connected to the image border are background; everything enclosed stays solid.
+    mode "warm" (wood): only clearly warm or very dark pixels are the object, so grey floor shadows go and openings stay open.
+    The registry sets the mode per piece ("cutout")."""
     import numpy as np
     from PIL import ImageDraw, ImageFilter
     a = np.asarray(Image.open(src).convert("RGB"), float)
@@ -69,9 +71,11 @@ def cutout_on_white(src, dst, light=False):
     warm = np.clip(a[..., 0] - a[..., 2] - 8, 0, None)               # brown iron and wood stay, however light
     alpha = np.clip((215 - lum) / 70, 0, 1)
     alpha = np.maximum(alpha, np.clip(warm / 14, 0, 1) * (lum < 235))
+    if mode == "warm":       # replaces both rules above: wood warmth is 90+, the floor shadows stay under 75
+        alpha = np.clip((a[..., 0] - a[..., 2] - 50) / 25, 0, 1)
     m = Image.fromarray((alpha * 255).astype("uint8")).filter(ImageFilter.MedianFilter(3))
     alpha = np.asarray(m, float) / 255
-    if light:
+    if mode == "light":
         cand = Image.fromarray(np.pad(np.where(alpha < 0.5, 255, 0), 1, constant_values=255).astype("uint8")).copy()   # copy: fromarray images can be read-only
         ImageDraw.floodfill(cand, (0, 0), 128, thresh=0)
         outside = (np.asarray(cand)[1:-1, 1:-1] == 128)
@@ -153,7 +157,7 @@ def process_images():
             if not fresh and mode == "RGB" and _cutout and img_id.startswith(CUT_OUT):
                 tmp = IMG_OUT / "_cutout.png"
                 if img_id.startswith("HI-"):
-                    cutout_on_white(src, tmp, light=img_id in LIGHT_CUT)
+                    cutout_on_white(src, tmp, mode=CUT_MODE.get(img_id, ""))
                 else:
                     _cutout(src, tmp)
                 im = Image.open(tmp).convert("RGBA")

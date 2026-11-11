@@ -1,8 +1,9 @@
 {
-  "_about": "The Historical kit: pieces rebuilt from historical reference images, as detailing meshes for the greybox. Grouped by category and type, which are also the folders: reference images in _builder/images/sheets/historical/<Category>/<Type>/<id>.png (the site shows only these), work files in _Docs/Kit/Historical/<Category>/<Type>/, FBX in _Docs/Kit/FBX/Historical/<Category>/<Type>/. Mesh name SM_HI_<Type>_<Descriptor>_<NN>, image id HI-<Type>_<Descriptor>_<NN>. method: blender-fretwork, blender-lathe, blender-sweep, blender-modelled or meshy.",
+  "_about": "The Historical kit: pieces rebuilt from historical reference images, as detailing meshes for the greybox. Grouped by category (the material: Woodwork, Stonework, Ironwork) and type, which are also the folders: reference images in _builder/images/sheets/historical/<Category>/<Type>/<id>.png (the site shows only these), work files in _Docs/Kit/Historical/<Category>/<Type>/, FBX in _Docs/Kit/FBX/Historical/<Category>/<Type>/. Mesh name SM_HI_<Type>_<Descriptor>_<NN>, image id HI-<Type>_<Descriptor>_<NN>. method: blender-fretwork, blender-lathe, blender-sweep, blender-modelled or meshy.",
   "categories": {
-    "Architecture": {
-      "de": "Architektur",
+    "Woodwork": {
+      "de": "Holz",
+      "en": "Woodwork",
       "types": {
         "Brackets": {
           "de": "Konsolen",
@@ -16,8 +17,8 @@
           "en": "Balusters",
           "tall": true,
           "intro": [
-            "Turned and carved balusters for stairs, galleries and balconies.",
-            "Gedrechselte und geschnitzte Baluster für Treppen, Galerien und Balkone."
+            "Turned, twisted and sawn wooden balusters for stairs, galleries and balconies.",
+            "Gedrechselte, gedrehte und gesägte Holzbaluster für Treppen, Galerien und Balkone."
           ]
         },
         "Posts": {
@@ -27,6 +28,21 @@
           "intro": [
             "Timber posts with their head beams, braces and sills, as they stand under galleries and jetties.",
             "Holzständer mit Sattelholz, Kopfbändern und Schwelle, wie sie unter Galerien und Vorkragungen stehen."
+          ]
+        }
+      }
+    },
+    "Stonework": {
+      "de": "Stein",
+      "en": "Stonework",
+      "types": {
+        "Balusters": {
+          "de": "Baluster",
+          "en": "Balusters",
+          "tall": true,
+          "intro": [
+            "Turned stone balusters for terraces, balconies and stair rails.",
+            "Gedrehte Steinbaluster für Terrassen, Balkone und Treppengeländer."
           ]
         }
       }
@@ -67,7 +83,7 @@
     {
       "id": "HI-Bracket_Fretwork_01",
       "mesh": "SM_HI_Bracket_Fretwork_01",
-      "category": "Architecture",
+      "category": "Woodwork",
       "type": "Brackets",
       "name": [
         "Fretwork bracket",
@@ -203,7 +219,7 @@
     {
       "id": "HI-Baluster_BarleyTwist_01",
       "mesh": "SM_HI_Baluster_BarleyTwist_01",
-      "category": "Architecture",
+      "category": "Woodwork",
       "type": "Balusters",
       "name": [
         "Barley-twist baluster",
@@ -220,7 +236,7 @@
     {
       "id": "HI-Baluster_Vase_01",
       "mesh": "SM_HI_Baluster_Vase_01",
-      "category": "Architecture",
+      "category": "Stonework",
       "type": "Balusters",
       "name": [
         "Stone vase baluster",
@@ -238,7 +254,7 @@
     {
       "id": "HI-Baluster_Bulb_01",
       "mesh": "SM_HI_Baluster_Bulb_01",
-      "category": "Architecture",
+      "category": "Stonework",
       "type": "Balusters",
       "name": [
         "Stone bulb baluster",
@@ -256,7 +272,7 @@
     {
       "id": "HI-Post_Braced_01",
       "mesh": "SM_HI_Post_Braced_01",
-      "category": "Architecture",
+      "category": "Woodwork",
       "type": "Posts",
       "name": [
         "Braced post with rope twist",
@@ -320,6 +336,78 @@
       ],
       "method": "blender-mixed",
       "note": "Cast brass: turned column (trumpet neck, orb, carved collar, rod, stepped base) measured row by row; the orb a true sphere with three raised straps and 16 rivets; the pierced fleury cross traced and cast as relief. The collar's carving is texture. 1 px = 1 mm."
+    },
+    {
+      "id": "HI-Baluster_Urn_01",
+      "mesh": "SM_HI_Baluster_Urn_01",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Wooden urn baluster",
+        "Holzbaluster mit Urne"
+      ],
+      "size_cm": [
+        13.6,
+        13.6,
+        85
+      ],
+      "method": "blender-lathe",
+      "note": "Turned (build_lathe.py, widths measured to a fraction of a pixel every 1 px): ring collars, a long tapering body over a turned urn, square blocks top and bottom. 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_Scroll_01",
+      "mesh": "SM_HI_Baluster_Scroll_01",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Sawn scroll baluster",
+        "Gesägter Baluster mit Ranken"
+      ],
+      "size_cm": [
+        16.1,
+        14,
+        85
+      ],
+      "method": "blender-mixed",
+      "note": "Mixed: turned collars top and bottom; the middle a sawn board 4 cm thick with heart-and-scroll openings, its narrow bars rounded like carving (traced, cast as relief). 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_Slender_01",
+      "mesh": "SM_HI_Baluster_Slender_01",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Slender wooden baluster",
+        "Schlanker Holzbaluster"
+      ],
+      "size_cm": [
+        8.8,
+        8.8,
+        85
+      ],
+      "method": "blender-lathe",
+      "note": "Turned: fine rings, a long slender shaft swelling below the middle, a small vase and rings at the foot; square blocks. 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_Pear_01",
+      "mesh": "SM_HI_Baluster_Pear_01",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Wooden pear baluster",
+        "Holzbaluster mit Birnform"
+      ],
+      "size_cm": [
+        11.3,
+        11.3,
+        85
+      ],
+      "method": "blender-lathe",
+      "note": "Turned: ring collars, a long pear-shaped body over a ball, square blocks. 85 cm tall assumed.",
+      "cutout": "warm"
     }
   ]
 }
