@@ -49,6 +49,25 @@ try:
 except ImportError:
     _cutout = None
 
+
+def cutout_on_white(src, dst):
+    """Historical references (HI-) are dark iron or wood photographed on plain white, with curls that enclose background and soft
+    grey shadows: the portrait method keeps both. Here brightness decides, everywhere: light and colourless is background (shadow
+    included), dark or warm is the object. Edge colour is un-mixed from white so no pale rim is left."""
+    import numpy as np
+    from PIL import ImageFilter
+    a = np.asarray(Image.open(src).convert("RGB"), float)
+    lum = a.mean(-1)
+    warm = np.clip(a[..., 0] - a[..., 2] - 8, 0, None)               # brown iron and wood stay, however light
+    alpha = np.clip((215 - lum) / 70, 0, 1)
+    alpha = np.maximum(alpha, np.clip(warm / 14, 0, 1) * (lum < 235))
+    m = Image.fromarray((alpha * 255).astype("uint8")).filter(ImageFilter.MedianFilter(3))
+    alpha = np.asarray(m, float) / 255
+    al = np.maximum(alpha, 0.05)[..., None]
+    rgb = np.clip((a - (1 - al) * 255) / al, 0, 255)
+    rgb[alpha < 0.02] = 0
+    Image.fromarray(np.dstack([rgb, alpha * 255]).astype("uint8"), "RGBA").save(dst)
+
 LANGS = ("en", "de")
 PREFIX = {"en": "", "de": "de/"}
 
@@ -119,7 +138,7 @@ def process_images():
             fresh = full.exists() and full.stat().st_mtime >= src.stat().st_mtime
             if not fresh and mode == "RGB" and _cutout and img_id.startswith(CUT_OUT):
                 tmp = IMG_OUT / "_cutout.png"
-                _cutout(src, tmp)
+                (cutout_on_white if img_id.startswith("HI-") else _cutout)(src, tmp)
                 im = Image.open(tmp).convert("RGBA")
                 tmp.unlink()
             if not fresh:

@@ -24,6 +24,23 @@
           ],
           "en": "Weather vanes",
           "tall": true
+        },
+        "StrapHinges": {
+          "de": "Langbänder",
+          "en": "Strap hinges",
+          "intro": [
+            "Sheet-iron strap hinges for doors, gates and shutters, each nail hole cut through.",
+            "Langbänder aus Flacheisen für Türen, Tore und Läden, jedes Nagelloch durchgehend."
+          ]
+        },
+        "Ornaments": {
+          "de": "Ornamente",
+          "en": "Ornaments",
+          "tall": true,
+          "intro": [
+            "Forged scrollwork from round bar, for doors and walls.",
+            "Geschmiedete Ranken aus Rundeisen für Türen und Wände."
+          ]
         }
       }
     }
@@ -62,6 +79,108 @@
       ],
       "method": "blender-mixed",
       "note": "Flag traced (8 mm sheet); rod, stem, collar and sleeves turned from the measured profile; fleur-de-lis finial traced and shaped as a forged height field with a spine. 1 px = 1 mm, so 1.43 m tall. Pivot at the rod's tip."
+    },
+    {
+      "id": "HI-StrapHinge_FanLeaf_01",
+      "mesh": "SM_HI_StrapHinge_FanLeaf_01",
+      "category": "Ironwork",
+      "type": "StrapHinges",
+      "name": [
+        "Strap hinge with fan-leaf end",
+        "Langband mit Blattfächer"
+      ],
+      "size_cm": [
+        70,
+        0.6,
+        19.7
+      ],
+      "method": "blender-fretwork",
+      "note": "Traced (outline and every nail hole) and built as 6 mm sheet iron with build_ironwork.py --mode flat; 70 cm long assumed. Pivot at the hinge end, centred."
+    },
+    {
+      "id": "HI-StrapHinge_Scroll_01",
+      "mesh": "SM_HI_StrapHinge_Scroll_01",
+      "category": "Ironwork",
+      "type": "StrapHinges",
+      "name": [
+        "Strap hinge with scrolls",
+        "Langband mit Voluten"
+      ],
+      "size_cm": [
+        70,
+        0.6,
+        24.2
+      ],
+      "method": "blender-fretwork",
+      "note": "Traced (outline and every nail hole) and built as 6 mm sheet iron with build_ironwork.py --mode flat; 70 cm long assumed. Pivot at the hinge end, centred."
+    },
+    {
+      "id": "HI-StrapHinge_Crescent_01",
+      "mesh": "SM_HI_StrapHinge_Crescent_01",
+      "category": "Ironwork",
+      "type": "StrapHinges",
+      "name": [
+        "Strap hinge with crescent",
+        "Langband mit Halbmond"
+      ],
+      "size_cm": [
+        70,
+        0.6,
+        32.4
+      ],
+      "method": "blender-fretwork",
+      "note": "Traced (outline and every nail hole) and built as 6 mm sheet iron with build_ironwork.py --mode flat; 70 cm long assumed. Pivot at the hinge end, centred."
+    },
+    {
+      "id": "HI-StrapHinge_CurlTee_01",
+      "mesh": "SM_HI_StrapHinge_CurlTee_01",
+      "category": "Ironwork",
+      "type": "StrapHinges",
+      "name": [
+        "Strap hinge with curled tee",
+        "Langband mit gerolltem Kreuz"
+      ],
+      "size_cm": [
+        70,
+        0.6,
+        20.0
+      ],
+      "method": "blender-fretwork",
+      "note": "Traced (outline and every nail hole) and built as 6 mm sheet iron with build_ironwork.py --mode flat; 70 cm long assumed. Pivot at the hinge end, centred."
+    },
+    {
+      "id": "HI-StrapHinge_FleurDeLis_01",
+      "mesh": "SM_HI_StrapHinge_FleurDeLis_01",
+      "category": "Ironwork",
+      "type": "StrapHinges",
+      "name": [
+        "Strap hinge with fleur-de-lis",
+        "Langband mit Lilie"
+      ],
+      "size_cm": [
+        70,
+        0.6,
+        18.9
+      ],
+      "method": "blender-fretwork",
+      "note": "Traced (outline and every nail hole) and built as 6 mm sheet iron with build_ironwork.py --mode flat; 70 cm long assumed. Pivot at the hinge end, centred."
+    },
+    {
+      "id": "HI-Ornament_ScrollBow_01",
+      "mesh": "SM_HI_Ornament_ScrollBow_01",
+      "category": "Ironwork",
+      "type": "Ornaments",
+      "name": [
+        "Forged scroll ornament",
+        "Geschmiedetes Rankenornament"
+      ],
+      "size_cm": [
+        26.1,
+        1.0,
+        50.0
+      ],
+      "method": "blender-forged",
+      "note": "Traced and built as half-round bar on a flat back with build_ironwork.py --mode forged; 50 cm tall assumed. Pivot at the wall plate."
     }
   ]
 }
