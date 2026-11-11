@@ -43,6 +43,7 @@ NAV = [
         (("Props & Interiors", "Requisiten & Innenräume"), "concept/props.html", []),
         (("Wolfwood & Barrow", "Wolfwood & Hügelgrab"), "concept/wolfwood.html", []),
         (("Modular Kit", "Baukasten"), "concept/kit.html", []),
+        (("Historical", "Historisch"), "concept/historical.html", []),
         (("Gear & Costumes", "Ausrüstung & Kostüme"), "concept/gear.html", []),
     ]),
     (("DevLog", "DevLog"), "devlog/index.html", [

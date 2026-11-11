@@ -1,0 +1,13 @@
+{
+  "_about": "The Historical kit: pieces rebuilt from historical reference images, as detailing meshes for the greybox. Grouped by category and type, which are also the folders: images in _builder/images/sheets/historical/<Category>/<Type>/ (the reference as <id>.png, a render of the mesh as <id>-MESH.png), work files in _Docs/Kit/Historical/<Category>/<Type>/, FBX in _Docs/Kit/FBX/Historical/<Category>/<Type>/. Mesh name SM_HI_<Type>_<Descriptor>_<NN>, image id HI-<Type>_<Descriptor>_<NN>. method: blender-fretwork, blender-lathe, blender-sweep, blender-modelled or meshy.",
+  "categories": {
+    "Architecture": {"de": "Architektur", "types": {
+      "Brackets": {"de": "Konsolen", "intro": ["Sawn and carved brackets under eaves, balconies and jetties.", "Gesägte und geschnitzte Konsolen unter Traufen, Balkonen und Vorkragungen."]}
+    }}
+  },
+  "pieces": [
+    {"id": "HI-Bracket_Fretwork_01", "mesh": "SM_HI_Bracket_Fretwork_01", "category": "Architecture", "type": "Brackets",
+     "name": ["Fretwork bracket", "Laubsägekonsole"], "size_cm": [3.5, 60, 33.8], "method": "blender-fretwork",
+     "note": "Traced from the reference with trace_profile.py and built with build_fretwork.py; a 2.5 cm board with a 3.5 cm upright. Width of 60 cm assumed."}
+  ]
+}

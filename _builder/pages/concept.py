@@ -168,6 +168,40 @@ def kit(ctx):
                                                   "Die detaillierten Einzelteile: Türen, geschnitzte Knaggen, Schornsteinköpfe und mehr."), pick("kit", r"^KP-")))
 
 
+HIST = json.loads((Path(__file__).resolve().parent.parent / "historical.json").read_text(encoding="utf-8"))
+METHOD = {"blender-fretwork": ("traced and built in Blender", "in Blender nachgezeichnet und gebaut"),
+          "blender-lathe": ("turned in Blender", "in Blender gedrechselt"), "blender-sweep": ("swept in Blender", "in Blender gezogen"),
+          "blender-modelled": ("modelled in Blender", "in Blender modelliert"), "meshy": ("generated in Meshy", "in Meshy erzeugt")}
+
+
+def historical(ctx):
+    """One block per category and type: each piece's historical reference next to the mesh rebuilt from it."""
+    out, first = [], True
+    for cat, c in HIST["categories"].items():
+        for typ, t in c["types"].items():
+            pieces = [p for p in HIST["pieces"] if p["category"] == cat and p["type"] == typ]
+            figs = ""
+            for p in pieces:
+                name = ctx.t(*p["name"])
+                figs += ctx.figure(p["id"].upper(), f'{name}, {ctx.t("reference", "Vorlage")}', swap=False, note=ctx.t("Coming soon", "Demnächst"))
+                figs += ctx.figure(p["id"].upper() + "-MESH", f'{name}, {ctx.t(*METHOD[p["method"]])}', swap=False,
+                                   note=ctx.t("Mesh coming soon", "Modell demnächst"))
+            made = sum(1 for p in pieces if ctx.has(p["id"].upper() + "-MESH"))
+            title = f'{ctx.t(cat, c["de"])}: {ctx.t(typ, t["de"])}'
+            count = ctx.t(f"{made} of {len(pieces)} built", f"{made} von {len(pieces)} gebaut")
+            out.append(f'<div class="sheet-block{" first" if first else ""}"><div class="sheet-head"><h2>{title}</h2>'
+                       f'<span class="sheet-count">{count}</span></div><p class="sheet-intro">{ctx.t(*t["intro"])}</p>'
+                       f'<div class="gallery gallery-sheets">{figs}</div></div>')
+            first = False
+    return section(f'<p class="sheet-intro" style="margin-bottom:48px">{ctx.t(HIST_INTRO[0], HIST_INTRO[1])}</p>' + "".join(out))
+
+
+HIST_INTRO = ("Real historical details, from brackets and balusters to newel posts, each rebuilt as a 3D piece next to the reference it "
+              "came from. They are a detailing step for the town's greybox, not final art.",
+              "Echte historische Details, von Konsolen und Balustern bis zu Treppenpfosten, jedes als 3D-Teil neben der Vorlage, aus der "
+              "es entstand. Sie sind ein Detaillierungsschritt für das Greybox-Modell der Stadt, keine fertige Grafik.")
+
+
 def gear(ctx):
     return section(
         block(ctx, ("Cosmetic sets", "Kosmetische Sets"), ("Outfits a player can wear over their gear, shown without a body.",
@@ -182,6 +216,7 @@ SUB = [
     ("concept/props.html", ("Props & Interiors", "Requisiten & Innenräume"), None, props, "props"),
     ("concept/wolfwood.html", ("Wolfwood & Barrow", "Wolfwood & Hügelgrab"), "DK-02", wolfwood, "wolfwood"),
     ("concept/kit.html", ("Modular Kit", "Baukasten"), "KX-TIMBER", kit, "kit"),
+    ("concept/historical.html", ("Historical", "Historisch"), "HI-BRACKET_FRETWORK_01-MESH", historical, "historical"),
     ("concept/gear.html", ("Gear & Costumes", "Ausrüstung & Kostüme"), None, gear, "gear"),
 ]
 LEDE = {
@@ -193,6 +228,7 @@ LEDE = {
     "props": ("What fills the streets, the workshops and the rooms.", "Was die Gassen, Werkstätten und Zimmer füllt."),
     "wolfwood": ("The forest, its stones and the barrow beneath the hill.", "Der Wald, seine Steine und das Hügelgrab unter dem Hügel."),
     "kit": ("The reusable pieces every building in Hayn is made from.", "Die wiederverwendbaren Teile, aus denen jedes Gebäude in Hayn besteht."),
+    "historical": ("Historical details, rebuilt piece by piece.", "Historische Details, Stück für Stück nachgebaut."),
     "gear": ("Outfits for the cosmetic wardrobe.", "Kleidung für die kosmetische Garderobe."),
 }
 
@@ -202,6 +238,8 @@ def counts(ctx, folder):
     extra = []
     if folder == "heroes":
         extra = ["PC-GROUP-M", "PC-GROUP-F"] + [f"PORTRAIT-{j}-{g}" for j, _ in JOBS for g in "MF"] + [f"FULL_{j}_{g}" for j, _ in JOBS for g in "MF"]
+    if folder == "historical":
+        return sum(1 for p in HIST["pieces"] if ctx.has(p["id"].upper() + "-MESH")), len(HIST["pieces"])
     made = sum(1 for e in entries if ctx.has(e["id"])) + sum(1 for i in extra if ctx.has(i))
     return made, len(entries) + len(extra)
 

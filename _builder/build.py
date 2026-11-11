@@ -42,7 +42,7 @@ IMAGES = {}  # id -> dict(w, h, tw, th)
 # Kit piece and kit reference images (KP-, KE-) keep their plain grey or white background in the sources, because Tripo and Meshy need it; the site
 # shows them cut out. The cut-out is the portraits' method in _Docs/Tools/cutout.py (private, so the build skips it, and
 # publishes the plain image, if _Docs isn't there). It runs only when an image is new or changed: about 15 s each.
-CUT_OUT = ("KP-", "KE-")  # kit pieces and the kit references ("How the kit fits together")
+CUT_OUT = ("KP-", "KE-", "HI-")  # kit pieces, the kit references ("How the kit fits together") and the Historical references
 try:
     sys.path.insert(0, str(HERE.parent / "_Docs" / "Tools"))
     from cutout import cutout as _cutout  # noqa: E402
