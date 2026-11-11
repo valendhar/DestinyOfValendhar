@@ -207,6 +207,24 @@
       ],
       "method": "blender-lathe",
       "note": "Turned from the profile measured row by row; rope twist (5 beads), twisted bulb (10), reeded urn (18) and a 12-leaf collar carved onto the turned surface; gilt rings as a second material (M_TW_Brass). 90 cm tall assumed. The band's small gilt ornaments are left out."
+    },
+    {
+      "id": "HI-Baluster_Vase_01",
+      "mesh": "SM_HI_Baluster_Vase_01",
+      "category": "Architecture",
+      "type": "Balusters",
+      "name": [
+        "Stone vase baluster",
+        "Steinbaluster in Vasenform"
+      ],
+      "size_cm": [
+        30.5,
+        30.5,
+        80
+      ],
+      "method": "blender-lathe",
+      "note": "Turned from the profile measured row by row (build_lathe.py), every moulding kept: cove and fillet under the cap, two fillet-and-torus rings, the vase belly, scotia and torus at the foot; square cap, plate and plinth with small bevels. 80 cm tall assumed. The granite speckle is texture.",
+      "cutout": "light"
     }
   ]
 }

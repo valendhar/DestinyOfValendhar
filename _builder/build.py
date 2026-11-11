@@ -48,14 +48,22 @@ try:
     from cutout import cutout as _cutout  # noqa: E402
 except ImportError:
     _cutout = None
+# Light pieces (pale stone on white) would vanish under the brightness rule; the registry marks them "cutout": "light".
+import json  # noqa: E402
+try:
+    LIGHT_CUT = {p["id"].upper() for p in json.loads((HERE / "historical.json").read_text(encoding="utf-8"))["pieces"]
+                 if p.get("cutout") == "light"}
+except (OSError, ValueError, KeyError):
+    LIGHT_CUT = set()
 
 
-def cutout_on_white(src, dst):
+def cutout_on_white(src, dst, light=False):
     """Historical references (HI-) are dark iron or wood photographed on plain white, with curls that enclose background and soft
     grey shadows: the portrait method keeps both. Here brightness decides, everywhere: light and colourless is background (shadow
-    included), dark or warm is the object. Edge colour is un-mixed from white so no pale rim is left."""
+    included), dark or warm is the object. Edge colour is un-mixed from white so no pale rim is left.
+    light=True (pale stone): only light pixels connected to the image border are background; everything enclosed stays solid."""
     import numpy as np
-    from PIL import ImageFilter
+    from PIL import ImageDraw, ImageFilter
     a = np.asarray(Image.open(src).convert("RGB"), float)
     lum = a.mean(-1)
     warm = np.clip(a[..., 0] - a[..., 2] - 8, 0, None)               # brown iron and wood stay, however light
@@ -63,6 +71,12 @@ def cutout_on_white(src, dst):
     alpha = np.maximum(alpha, np.clip(warm / 14, 0, 1) * (lum < 235))
     m = Image.fromarray((alpha * 255).astype("uint8")).filter(ImageFilter.MedianFilter(3))
     alpha = np.asarray(m, float) / 255
+    if light:
+        cand = Image.fromarray(np.pad(np.where(alpha < 0.5, 255, 0), 1, constant_values=255).astype("uint8")).copy()   # copy: fromarray images can be read-only
+        ImageDraw.floodfill(cand, (0, 0), 128, thresh=0)
+        outside = (np.asarray(cand)[1:-1, 1:-1] == 128)
+        outside = np.asarray(Image.fromarray((outside * 255).astype("uint8")).filter(ImageFilter.MaxFilter(3))) > 0
+        alpha = np.where(outside, alpha, 1.0)
     al = np.maximum(alpha, 0.05)[..., None]
     rgb = np.clip((a - (1 - al) * 255) / al, 0, 255)
     rgb[alpha < 0.02] = 0
@@ -138,7 +152,10 @@ def process_images():
             fresh = full.exists() and full.stat().st_mtime >= src.stat().st_mtime
             if not fresh and mode == "RGB" and _cutout and img_id.startswith(CUT_OUT):
                 tmp = IMG_OUT / "_cutout.png"
-                (cutout_on_white if img_id.startswith("HI-") else _cutout)(src, tmp)
+                if img_id.startswith("HI-"):
+                    cutout_on_white(src, tmp, light=img_id in LIGHT_CUT)
+                else:
+                    _cutout(src, tmp)
                 im = Image.open(tmp).convert("RGBA")
                 tmp.unlink()
             if not fresh:
