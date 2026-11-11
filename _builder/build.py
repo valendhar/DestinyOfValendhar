@@ -26,6 +26,7 @@ OUT = Path(sys.argv[1]).resolve() if len(sys.argv) > 1 else HERE.parent
 ORIGINALS = HERE / "images" / "originals"
 # Character images and the concept sheets are published too (the Concept Art pages). originals come last, so they win on a shared id.
 SOURCES = [HERE / "images" / "characters", HERE / "images" / "sheets", ORIGINALS]
+PRIVATE_SHEETS = HERE / "images" / "sheets" / "materials"  # material and texture library: private, never built
 IMG_OUT = OUT / "assets" / "img"
 
 SITE_TITLE = "Destiny of Valendhar"
@@ -204,6 +205,8 @@ def process_images():
     # _Docs/Tools/cutout.py) replace the portraits of the same name in characters.
     chosen = {}
     for src in [f for d in SOURCES for f in sorted(d.rglob("*"))]:
+        if PRIVATE_SHEETS in src.parents:
+            continue  # the material library stays off the site (2026-11-11): no web copy, so nothing is published
         if src.suffix.lower() in (".png", ".jpg", ".jpeg", ".webp"):
             chosen[src.stem.strip().upper()] = src  # a stray space before the extension happens when saving
     for img_id, src in chosen.items():
