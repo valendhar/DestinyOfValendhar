@@ -595,3 +595,6 @@ html { scroll-padding-top: calc(var(--header-h) + 62px); }
   .dl-grid, .dl-grid-big { grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }
 }
 @media (max-width: 560px) { .dl-row-head { flex-direction: column; gap: 2px; } .dl-all { margin-top: 64px; } }
+
+/* Images can't be dragged out, selected or long-pressed into a save menu (user, 2026-11-11) */
+img { -webkit-user-drag: none; user-select: none; -webkit-user-select: none; -webkit-touch-callout: none; }

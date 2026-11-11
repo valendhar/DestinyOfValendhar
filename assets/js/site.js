@@ -233,3 +233,10 @@
     if (e.key === "ArrowRight") show(idx + 1);
   });
 })();
+
+/* Images: no context menu ("Save image as") and no dragging out of the page (user, 2026-11-11). A deterrent only. */
+(function () {
+  const onImage = el => el && (el.tagName === "IMG" || (el.closest && el.closest("picture, figure, .lightbox")));
+  document.addEventListener("contextmenu", e => { if (onImage(e.target)) e.preventDefault(); });
+  document.addEventListener("dragstart", e => { if (e.target && e.target.tagName === "IMG") e.preventDefault(); });
+})();

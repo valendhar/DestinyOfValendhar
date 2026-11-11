@@ -34,10 +34,11 @@ AUTHOR = "Mike Stevanovic"
 COPYRIGHT = "Mike Stevanovic"
 YEAR = "2026"
 
-FULL_MAX = 2400
+FULL_MAX = 1600   # published full size, capped so web copies are of little use beyond viewing (user, 2026-11-11)
 THUMB_MAX = 960
 
 IMAGES = {}  # id -> dict(w, h, tw, th)
+WM_REBUILT = set()  # ids whose web copy was rebuilt from its source in this build
 
 # Kit piece and kit reference images (KP-, KE-) keep their plain grey or white background in the sources, because Tripo and Meshy need it; the site
 # shows them cut out. The cut-out is the portraits' method in _Docs/Tools/cutout.py (private, so the build skips it, and
@@ -135,6 +136,66 @@ FLAG_DE = ('<svg viewBox="0 0 60 32" aria-hidden="true"><rect width="60" height=
            '<rect y="10.67" width="60" height="10.67" fill="#DD0000"/><rect y="21.33" width="60" height="10.67" fill="#FFCE00"/></svg>')
 
 
+# ---------------------------------------------------------------- watermark
+# Every published image (full and thumb) gets a small "(c) Destiny of Valendhar" mark in its lower right corner (user, 2026-11-11).
+# It is stamped on the web copies only, once: _builder/watermarked.json lists the ids already stamped; a picture whose web copy
+# is rebuilt from its source is dropped from that list and stamped again. Logos and very small images are left clean.
+WM_LIST = HERE / "watermarked.json"
+WM_TEXT = "© Destiny of Valendhar"
+WM_FONTS = [Path(r"C:/Windows/Fonts/georgia.ttf"), Path(r"C:/Windows/Fonts/constan.ttf")]
+
+
+def _wm_font(size):
+    from PIL import ImageFont
+    for f in WM_FONTS:
+        if f.exists():
+            return ImageFont.truetype(str(f), size)
+    return ImageFont.load_default(size)
+
+
+def stamp(path, cap=None):
+    """Cap the size (full copies) and draw the corner mark into a web copy, in place."""
+    from PIL import ImageDraw
+    with Image.open(path) as im:
+        im.load()
+        im = im.convert("RGBA")
+    if cap and max(im.size) > cap:
+        im.thumbnail((cap, cap), Image.LANCZOS)
+    w, h = im.size
+    size = max(11, round(min(w, h * 1.4) * 0.018))
+    font = _wm_font(size)
+    layer = Image.new("RGBA", im.size, (0, 0, 0, 0))
+    d = ImageDraw.Draw(layer)
+    x0, y0, x1, y1 = d.textbbox((0, 0), WM_TEXT, font=font)
+    pad = round(size * 0.9)
+    x, y = w - (x1 - x0) - pad, h - (y1 - y0) - pad - y0
+    d.text((x + 1, y + 1), WM_TEXT, font=font, fill=(0, 0, 0, 110))          # soft shadow, readable on light and dark
+    d.text((x, y), WM_TEXT, font=font, fill=(255, 248, 230, 150))
+    im = Image.alpha_composite(im, layer)
+    opaque = im.getchannel("A").getextrema()[0] == 255
+    (im.convert("RGB") if opaque else im).save(path, "WEBP", quality=84, method=6)
+
+
+def watermark_images():
+    import json as _json
+    done = set(_json.loads(WM_LIST.read_text(encoding="utf-8"))) if WM_LIST.exists() else set()
+    changed = set()
+    for full in sorted((IMG_OUT / "full").glob("*.webp")):
+        img_id = full.stem.upper()
+        thumb = IMG_OUT / "thumb" / full.name
+        if img_id in done or img_id.startswith("LOGO"):
+            continue
+        with Image.open(full) as f:
+            if max(f.size) < 300:
+                continue
+        stamp(full, cap=FULL_MAX)
+        if thumb.exists():
+            stamp(thumb)
+        done.add(img_id); changed.add(img_id)
+    WM_LIST.write_text(_json.dumps(sorted(done), indent=0) + "\n", encoding="utf-8")
+    return changed
+
+
 # ---------------------------------------------------------------- images
 def process_images():
     (IMG_OUT / "full").mkdir(parents=True, exist_ok=True)
@@ -163,6 +224,7 @@ def process_images():
                 im = Image.open(tmp).convert("RGBA")
                 tmp.unlink()
             if not fresh:
+                WM_REBUILT.add(img_id)                             # a fresh, unmarked web copy: stamp it again
                 f = im.copy()
                 f.thumbnail((FULL_MAX, FULL_MAX), Image.LANCZOS)
                 f.save(full, "WEBP", quality=88 if is_logo else 82, method=6)
@@ -174,6 +236,15 @@ def process_images():
             with Image.open(thumb) as t:
                 tw, th = t.size
         IMAGES[img_id] = dict(w=w, h=h, tw=tw, th=th)
+    # Fresh web copies lose their mark; stamp everything not yet stamped and refresh the sizes of what changed
+    if WM_REBUILT and WM_LIST.exists():
+        import json as _json
+        WM_LIST.write_text(_json.dumps(sorted(set(_json.loads(WM_LIST.read_text(encoding="utf-8"))) - WM_REBUILT), indent=0) + "\n",
+                           encoding="utf-8")
+    for img_id in watermark_images():
+        if img_id in IMAGES:
+            with Image.open(IMG_OUT / "full" / f"{img_id}.webp") as f, Image.open(IMG_OUT / "thumb" / f"{img_id}.webp") as t:
+                IMAGES[img_id] = dict(w=f.size[0], h=f.size[1], tw=t.size[0], th=t.size[1])
     # Images already converted in an earlier build (originals not kept in the repo)
     for full in sorted((IMG_OUT / "full").glob("*.webp")):
         img_id = full.stem.upper()
