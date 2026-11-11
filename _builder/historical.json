@@ -10,6 +10,15 @@
             "Sawn and carved brackets under eaves, balconies and jetties.",
             "Gesägte und geschnitzte Konsolen unter Traufen, Balkonen und Vorkragungen."
           ]
+        },
+        "Balusters": {
+          "de": "Baluster",
+          "en": "Balusters",
+          "tall": true,
+          "intro": [
+            "Turned and carved balusters for stairs, galleries and balconies.",
+            "Gedrechselte und geschnitzte Baluster für Treppen, Galerien und Balkone."
+          ]
         }
       }
     },
@@ -181,6 +190,23 @@
       ],
       "method": "blender-forged",
       "note": "Traced and built as half-round bar on a flat back with build_ironwork.py --mode forged; 50 cm tall assumed. Pivot at the wall plate."
+    },
+    {
+      "id": "HI-Baluster_BarleyTwist_01",
+      "mesh": "SM_HI_Baluster_BarleyTwist_01",
+      "category": "Architecture",
+      "type": "Balusters",
+      "name": [
+        "Barley-twist baluster",
+        "Baluster mit Kordeldrehung"
+      ],
+      "size_cm": [
+        7.9,
+        7.9,
+        90
+      ],
+      "method": "blender-lathe",
+      "note": "Turned from the profile measured row by row; rope twist (5 beads), twisted bulb (10), reeded urn (18) and a 12-leaf collar carved onto the turned surface; gilt rings as a second material (M_TW_Brass). 90 cm tall assumed. The band's small gilt ornaments are left out."
     }
   ]
 }
