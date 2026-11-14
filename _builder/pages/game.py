@@ -37,12 +37,12 @@ def overview(ctx):
 
     pillars = section(f"""
 <h2>{t("What the game stands on", "Worauf das Spiel steht")}</h2>
-{feature(ctx, "KA-01", ("Pillar 1", "Säule 1"), ("A grounded world", "Eine bodenständige Welt"), [
+{feature(ctx, ("GAME-WORLD", "KA-01"), ("Pillar 1", "Säule 1"), ("A grounded world", "Eine bodenständige Welt"), [
     ("Valendhar looks semi-realistic: real proportions, honest materials, painterly light. The towns read like a late-medieval "
      "Germany that never was. Magic is rare in town and grows stronger out in the forest and at the old monuments.",
      "Valendhar sieht halbrealistisch aus: echte Proportionen, ehrliche Materialien, malerisches Licht. Die Städte wirken wie ein "
      "spätmittelalterliches Deutschland, das es nie gab. Magie ist in der Stadt selten und wird draußen im Wald und an den alten Monumenten stärker.")])}
-{feature(ctx, "VW-04", ("Pillar 2", "Säule 2"), ("Jobs, not classes on a menu", "Jobs statt Klassen aus einem Menü"), [
+{feature(ctx, ("JOB-RAN-3", "VW-04"), ("Pillar 2", "Säule 2"), ("Jobs, not classes on a menu", "Jobs statt Klassen aus einem Menü"), [
     ("You learn a job in the world, by walking into a guild and talking to its trainer. Each guild is a real building with "
      "its own banner, people and training ground. Your character isn't tied to one job: unlock the others at their guilds, switch "
      "between them as you like, and level each job on its own, so a seasoned Paladin still starts out as a new Ranger.",
@@ -50,17 +50,17 @@ def overview(ctx):
      "Gebäude mit eigenem Banner, eigenen Leuten und eigenem Übungsplatz. Deine Figur ist nicht an einen Job gebunden: Schalte die "
      "anderen in ihren Gilden frei, wechsle nach Belieben zwischen ihnen und level jeden Job für sich, sodass ein erfahrener Paladin "
      "als Ranger trotzdem neu anfängt.")], flip=True)}
-{feature(ctx, "KA-05", ("Pillar 3", "Säule 3"), ("Combat you can read", "Kampf, den man lesen kann"), [
+{feature(ctx, ("GAME-READ", "KA-05"), ("Pillar 3", "Säule 3"), ("Combat you can read", "Kampf, den man lesen kann"), [
     ("A target frame, cast bars, damage numbers and ground markings for every special attack. You should always know what is "
      "about to hit you, and have a moment to move.",
      "Ein Zielfenster, Zauberleisten, Schadenszahlen und Bodenmarkierungen für jeden Spezialangriff. Du sollst immer wissen, was "
      "gleich auf dich zukommt, und einen Moment haben, um auszuweichen.")])}
-{feature(ctx, "KA-06", ("Pillar 4", "Säule 4"), ("A gradient of danger", "Gefahr in Stufen"), [
+{feature(ctx, ("GAME-DANGER", "KA-06"), ("Pillar 4", "Säule 4"), ("A gradient of danger", "Gefahr in Stufen"), [
     ("Outward from the town, the land gets older, darker and more dangerous: meadow, woodcutters' clearings, beech forest, "
      "deep spruce, the wolf den. You always know roughly how far you have come.",
      "Von der Stadt aus wird das Land älter, dunkler und gefährlicher: Wiese, Holzfällerlichtungen, Buchenwald, tiefer Fichtenwald, "
      "der Wolfsbau. Du weißt immer ungefähr, wie weit du gekommen bist.")], flip=True)}
-{feature(ctx, "VW-08", ("Pillar 5", "Säule 5"), ("Better together", "Gemeinsam besser"), [
+{feature(ctx, ("CO-01", "VW-08"), ("Pillar 5", "Säule 5"), ("Better together", "Gemeinsam besser"), [
     ("Every fight can be won alone, and every fight gets easier with other players. A tank who holds attention and a healer who keeps "
      "people standing change how the Alpha plays.",
      "Jeder Kampf lässt sich allein gewinnen, und jeder Kampf wird mit anderen Spielern leichter. Ein Tank, der die Aufmerksamkeit "
@@ -86,12 +86,12 @@ def overview(ctx):
 def combat(ctx):
     t = ctx.t
     return section(f"""
-{feature(ctx, "KA-05", ("Targeting", "Zielauswahl"), ("Pick your target, then act", "Ziel wählen, dann handeln"), [
+{feature(ctx, ("COMBAT-TARGET", "KA-05"), ("Targeting", "Zielauswahl"), ("Pick your target, then act", "Ziel wählen, dann handeln"), [
     ("Press Tab to cycle through enemies in front of you, use the nearest-target key, or click an enemy. Your target shows in a "
      "frame at the top of the screen with its health and whatever it is casting.",
      "Mit Tab wechselst du zwischen den Gegnern vor dir, mit der Nächstes-Ziel-Taste nimmst du den nächsten, oder du klickst einen "
      "Gegner an. Dein Ziel erscheint oben in einem Fenster, mit seiner Gesundheit und allem, was es gerade wirkt.")])}
-{feature(ctx, "KA-07", ("Abilities", "Fähigkeiten"), ("A hotbar, not a button-masher", "Eine Fähigkeitenleiste, kein Tastenhämmern"), [
+{feature(ctx, ("JOB-PAL-1", "KA-07"), ("Abilities", "Fähigkeiten"), ("A hotbar, not a button-masher", "Eine Fähigkeitenleiste, kein Tastenhämmern"), [
     ("Auto-attack runs while you have a target. Your abilities sit on a hotbar of at least ten slots on the number keys, with a "
      "shared cooldown that gives each choice weight. New abilities arrive at levels 2, 3 and 5.",
      "Der automatische Angriff läuft, solange du ein Ziel hast. Deine Fähigkeiten liegen auf einer Leiste mit mindestens zehn "
@@ -226,20 +226,20 @@ PAGES = {
         title=("The Game", "Das Spiel"), kicker=("Overview & pillars", "Überblick & Säulen"),
         lede=("A fantasy online MMO of jobs, guilds and readable fights, starting in one forest town.",
               "Ein Fantasy-Online-MMO mit Jobs, Gilden und lesbaren Kämpfen, das in einer Waldstadt beginnt."),
-        banner="KA-01", body=overview),
+        banner=["GAME-BANNER", "KA-01"], body=overview),
     "game/combat.html": dict(
         title=("Combat", "Kampf"), kicker=("The Game", "Das Spiel"),
         lede=("Select a target, read what it is about to do, and answer with the right ability.",
               "Wähle ein Ziel, lies, was es gleich tun wird, und antworte mit der richtigen Fähigkeit."),
-        banner="KA-07", body=combat),
+        banner=["CO-02", "KA-07"], body=combat),
     "game/jobs.html": dict(
         title=("The Four Jobs", "Die vier Jobs"), kicker=("The Game", "Das Spiel"),
         lede=("Tank, ranged damage, healer and magic damage, each taught by its own guild in Hayn.",
               "Tank, Fernkampf-Schaden, Heiler und Magie-Schaden, jeder gelehrt von seiner eigenen Gilde in Hayn."),
-        banner="VW-04", body=jobs),
+        banner=["JOBS-BANNER", "VW-04"], body=jobs),
     "game/town-life.html": dict(
         title=("Town Life", "Stadtleben"), kicker=("The Game", "Das Spiel"),
         lede=("Between the fights: vendors, crafting, potions and a warm bed.",
               "Zwischen den Kämpfen: Händler, Handwerk, Tränke und ein warmes Bett."),
-        banner="KA-02", body=town_life),
+        banner=["TOWNLIFE-BANNER", "KA-02"], body=town_life),
 }

@@ -47,19 +47,19 @@ def body(ctx):
     u, t = ctx.url, ctx.t
 
     pillars = [
-        ("KA-01", t("A town that feels lived in", "Eine Stadt, in der gelebt wird"),
+        (("VL-01", "KA-01"), t("A town that feels lived in", "Eine Stadt, in der gelebt wird"),
          t("Half-timbered houses, chimney smoke and firewood under every eave. Hayn is a real place with real work going on.",
            "Fachwerkhäuser, Kaminrauch und Brennholz unter jedem Dachvorsprung. Hayn ist ein echter Ort, in dem echte Arbeit getan wird.")),
-        ("VW-04", t("Four guilds, four jobs", "Vier Gilden, vier Jobs"),
+        (("HOME-GUILDS", "VW-04"), t("Four guilds, four jobs", "Vier Gilden, vier Jobs"),
          t("Paladin, Ranger, White Mage and Elementalist. Each guild has its own building, banner, trainer and training ground, and one character can learn them all.",
            "Paladin, Ranger, Weißmagier und Elementarist. Jede Gilde hat ihr eigenes Haus, ihr Banner, ihren Trainer und ihren Übungsplatz, und eine Figur kann sie alle lernen.")),
-        ("KA-05", t("Fights you can read", "Kämpfe, die man lesen kann"),
+        (("HOME-FIGHT", "KA-05"), t("Fights you can read", "Kämpfe, die man lesen kann"),
          t("Tab-target combat with a hotbar of abilities. Every special attack shows on the ground before it lands.",
            "Tab-Target-Kampf mit einer Leiste voller Fähigkeiten. Jeder Spezialangriff zeigt sich am Boden, bevor er trifft.")),
-        ("KA-06", t("A forest that grows older", "Ein Wald, der älter wird"),
+        (("HOME-FOREST", "KA-06"), t("A forest that grows older", "Ein Wald, der älter wird"),
          t("The Wolfwood is built in rings. The deeper you go, the darker the trees and the bolder the wolves.",
            "Der Wolfwood ist in Ringen angelegt. Je tiefer du gehst, desto dunkler die Bäume und desto kühner die Wölfe.")),
-        ("VW-08", t("The road goes on", "Die Straße geht weiter"),
+        (("RD-02", "VW-08"), t("The road goes on", "Die Straße geht weiter"),
          t("Guard a merchant's cart, survive an ambush, clear a dungeon under the hill and reach the Saxenhausen Watchtower above Frankfurt.",
            "Begleite einen Händlerkarren, überlebe einen Hinterhalt, säubere ein Verlies unter dem Hügel und erreiche die Sachsenhäuser Warte über Frankfurt.")),
     ]
@@ -176,7 +176,7 @@ def body(ctx):
 </section>
 
 <section class="wrap section split">
-  <div class="split-media">{ctx.figure("KA-03", alt=t("Arrival at the Rune Portal", "Ankunft am Runenportal"))}</div>
+  <div class="split-media">{ctx.figure(("VL-02", "KA-03"), alt=t("Arrival at the Rune Portal", "Ankunft am Runenportal"))}</div>
   <div class="split-text">
     <p class="kicker">{t("The world", "Die Welt")}</p>
     <h2>{t("Hayn guards the road", "Hayn bewacht die Straße")}</h2>

@@ -186,7 +186,7 @@ def wolfwood(ctx):
 <h2 style="margin-top:72px">{t("Pictures from the forest", "Bilder aus dem Wald")}</h2>
 {ctx.gallery([
     ("KA-05", t("Wolves at the forest edge, at dusk", "Wölfe am Waldrand in der Dämmerung")),
-    ("KA-07", t("The wolf den", "Der Wolfsbau")),
+    (("WOOD-CLEARING", "KA-07"), t("The woodcutters' clearing", "Die Lichtung der Holzfäller") if ctx.has("WOOD-CLEARING") else t("The wolf den", "Der Wolfsbau")),
     ("BE-02", t("From the north-west, over the forest to the town", "Von Nordwesten über den Wald zur Stadt")),
     ("VW-10", t("From the forest ridge", "Vom Waldkamm aus")),
 ], "gallery-2")}""")
@@ -225,20 +225,20 @@ PAGES = {
         title=("Valendhar", "Valendhar"), kicker=("World", "Welt"),
         lede=("A medieval Germany that never was: old forests, walled towns and the floating stones that bring travellers in.",
               "Ein mittelalterliches Deutschland, das es nie gab: alte Wälder, ummauerte Städte und die schwebenden Steine, die Reisende herbringen."),
-        banner="BE-01", body=valendhar),
+        banner=["WORLD-BANNER", "BE-01"], body=valendhar),
     "world/hayn.html": dict(
         title=("Hayn", "Hayn"), kicker=("World", "Welt"),
         lede=("A half-timbered town behind a stone wall, in the king's forest of Three-Oaks.",
               "Eine Fachwerkstadt hinter einer Steinmauer, im Königsforst Dreieich."),
-        banner="KA-01", body=hayn),
+        banner=["HAYN-BANNER", "KA-01"], body=hayn),
     "world/wolfwood.html": dict(
         title=("The Wolfwood", "Der Wolfwood"), kicker=("World", "Welt"),
         lede=("Meadow, beech, spruce, den: the forest gets older the deeper you go.",
               "Wiese, Buche, Fichte, Bau: Der Wald wird älter, je tiefer du gehst."),
-        banner="KA-06", body=wolfwood),
+        banner=["SD-03", "KA-06"], body=wolfwood),
     "world/road.html": dict(
         title=("Road to Frankfurt", "Straße nach Frankfurt"), kicker=("World", "Welt"),
         lede=("A cart to guard, an ambush, a dungeon under a hill, and a gate at the end.",
               "Ein Karren zum Beschützen, ein Hinterhalt, ein Verlies unter einem Hügel und am Ende ein Tor."),
-        banner="VW-08", body=road),
+        banner=["RD-03", "VW-08"], body=road),
 }

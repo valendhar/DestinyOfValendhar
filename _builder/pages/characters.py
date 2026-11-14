@@ -89,10 +89,10 @@ PAGES = {
         title=("People of Hayn", "Die Leute von Hayn"), kicker=("Characters", "Figuren"),
         lede=("A captain, four guild masters, a smith, and the town around them.",
               "Ein Hauptmann, vier Gildenmeister, ein Schmied und die Stadt um sie herum."),
-        banner="KA-02", body=people),
+        banner=["PEOPLE-BANNER", "KA-02"], body=people),
     "characters/creatures.html": dict(
         title=("Creatures", "Kreaturen"), kicker=("Characters", "Figuren"),
         lede=("Realistic animals first. The Wolfwood is dangerous because it is real.",
               "Zuerst realistische Tiere. Der Wolfwood ist gefährlich, weil er echt ist."),
-        banner="KA-05", body=creatures),
+        banner=["CREATURES-BANNER", "KA-05"], body=creatures),
 }

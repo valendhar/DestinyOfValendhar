@@ -310,6 +310,8 @@ class Ctx:
         return ids[0]
 
     def figure(self, img_id, caption=None, alt=None, cls="", eager=False, link=True, show_caption=True, swap=True, note=None):
+        if isinstance(img_id, (list, tuple)):  # (new picture, current picture): the new one shows once it is saved
+            img_id = self.pick(*img_id)
         img_id = self.swap(img_id.upper()) if swap else img_id.upper()
         alt = alt or caption or img_id
         cap = f"<figcaption>{caption}</figcaption>" if caption and show_caption else ""
@@ -330,6 +332,7 @@ class Ctx:
     def gallery(self, items, cls=""):
         # a picture not made yet is left out of a gallery rather than shown as an empty box among finished art;
         # the Concept Art pages, which show what is still to come on purpose, build their own grids
+        items = [(self.pick(*i) if isinstance(i, (list, tuple)) else i, c) for i, c in items]
         made = [(i, c) for i, c in items if self.swap(i.upper()) in IMAGES]
         shown = made or items
         figs = "".join(self.figure(i, c) for i, c in shown)
