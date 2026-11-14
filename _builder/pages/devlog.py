@@ -87,6 +87,17 @@ VIDEOS = [
                "zur nächsten, und erst wer sie abschließt, lernt den Job des Paladins. Dazu kommen Quest-Markierungen über den Köpfen der "
                "Leute, damit man die Stadt auf einen Blick lesen kann: Eine Markierung zeigt, wer eine neue Quest für dich hat, eine andere, "
                "wer darauf wartet, dass du eine erledigte Quest abgibst.")),
+    dict(loom="4f529178809e46d1bfc301bcc24993e9", series="gameplay", ratio="4 / 3", minutes=("1 min", "1 Min."), when=("November 2026", "November 2026"),
+         title=("Our own interface: options and hotbar", "Eine eigene Oberfläche: Optionen und Aktionsleiste"),
+         text=("The first test of the game's own interface art in Unreal Engine. The options window and the hotbar are no longer "
+               "placeholders: their frames, buttons, switches and ability icons are drawn for Destiny of Valendhar, in a cool, glassy "
+               "theme with silver edges and soft rune light. The interface is built from themes, so the same windows can take on a "
+               "different look, and an interface-scale setting makes every element larger or smaller to suit the player.",
+               "Der erste Test der eigenen Oberflächen-Grafik des Spiels in der Unreal Engine. Optionsfenster und Aktionsleiste sind "
+               "keine Platzhalter mehr: Rahmen, Knöpfe, Schalter und Fähigkeiten-Symbole sind für Destiny of Valendhar gezeichnet, "
+               "in einem kühlen, gläsernen Stil mit silbernen Kanten und sanftem Runenlicht. Die Oberfläche ist aus Themes aufgebaut, "
+               "so können dieselben Fenster ein anderes Aussehen bekommen, und eine Einstellung zur Oberflächengröße macht jedes "
+               "Element größer oder kleiner, wie es dem Spieler passt.")),
 ]
 
 
