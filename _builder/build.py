@@ -470,6 +470,15 @@ def crumbs(ctx, trail):
     return f'<p class="crumbs">{" / ".join(parts)}</p>'
 
 
+# Where a page banner's wide strip sits in its picture, for pictures whose people would lose their heads in a centred crop.
+BANNER_FOCUS = {"GAME-BANNER": "center 22%"}
+
+
+def banner_focus(ctx, img_id):
+    pos = BANNER_FOCUS.get(ctx.swap(img_id.upper()))
+    return f";background-position:{pos}" if pos else ""
+
+
 def first_uploaded(ids):
     """A page's banner/og may be one image id or a list of candidates; use the first one uploaded.
     A single id is returned as-is even when missing, so existing pages behave exactly as before."""
@@ -508,7 +517,7 @@ def page_shell(ctx, page, trail):
   <div class="wrap page-head-text">{crumbs(ctx, trail)}{kicker}<h1>{esc(title)}</h1>{lede}</div>
 </section>"""
         else:
-            style = f' style="{ctx.bg(bgimg)}"' if bgimg and ctx.has(bgimg) else ""
+            style = f' style="{ctx.bg(bgimg)}{banner_focus(ctx, bgimg)}"' if bgimg and ctx.has(bgimg) else ""
             cls = " has-bg" if style else ""
             header_block = f"""
 <section class="page-head{cls}"{style}><div class="wrap">
