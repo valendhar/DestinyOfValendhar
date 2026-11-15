@@ -63,7 +63,7 @@ def body(ctx):
          t("Guard a merchant's cart, survive an ambush, clear a dungeon under the hill and reach the Saxenhausen Watchtower above Frankfurt.",
            "Begleite einen Händlerkarren, überlebe einen Hinterhalt, säubere ein Verlies unter dem Hügel und erreiche die Sachsenhäuser Warte über Frankfurt.")),
     ]
-    pillar_html = "".join(f'<li class="pillar">{ctx.figure(i, alt=n, link=False)}<h3>{n}</h3><p>{d}</p></li>' for i, n, d in pillars)
+    pillar_html = "".join(f'<li class="pillar">{ctx.figure(i, caption=n, alt=n, show_caption=False)}<h3>{n}</h3><p>{d}</p></li>' for i, n, d in pillars)
 
     job_html = "".join(
         f'<li><a class="job-card job-{key}" href="{u("game/jobs.html")}#{key}">{ctx.figure(img, alt=_T(ctx, name), link=False)}'
