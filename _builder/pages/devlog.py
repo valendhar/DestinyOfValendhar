@@ -28,6 +28,15 @@ SERIES = {
               "Greyboxing dafür, wie sich das Spiel spielt, nicht wie es aussieht: Auf dem Bootcamp, einer schlichten Testkarte "
               "neben der Stadt, werden Quests, Jobs und Gilden einzeln gebaut und ausprobiert, und nur was funktioniert, "
               "kommt nach Hayn.")),
+    "ui": dict(
+        path="devlog/ui.html", name=("Interface", "Benutzeroberfläche"),
+        lede=("The game's own interface, built and tested piece by piece in Unreal Engine.",
+              "Die eigene Oberfläche des Spiels, Stück für Stück in der Unreal Engine gebaut und getestet."),
+        text=("Windows, buttons, bars and the hotbar, drawn for Destiny of Valendhar and put together in the engine. Each part is "
+              "tested on its own first, so the real menus can be built from pieces that already work.",
+              "Fenster, Knöpfe, Leisten und die Fähigkeitenleiste, für Destiny of Valendhar gezeichnet und in der Engine "
+              "zusammengesetzt. Jeder Baustein wird zuerst für sich getestet, damit die echten Menüs aus Teilen entstehen, "
+              "die schon funktionieren.")),
 }
 
 # oldest first; the newest is the last one
@@ -87,7 +96,7 @@ VIDEOS = [
                "zur nächsten, und erst wer sie abschließt, lernt den Job des Paladins. Dazu kommen Quest-Markierungen über den Köpfen der "
                "Leute, damit man die Stadt auf einen Blick lesen kann: Eine Markierung zeigt, wer eine neue Quest für dich hat, eine andere, "
                "wer darauf wartet, dass du eine erledigte Quest abgibst.")),
-    dict(loom="4f529178809e46d1bfc301bcc24993e9", series="gameplay", ratio="4 / 3", minutes=("1 min", "1 Min."), when=("November 2026", "November 2026"),
+    dict(loom="4f529178809e46d1bfc301bcc24993e9", series="ui", ratio="4 / 3", minutes=("1 min", "1 Min."), when=("November 2026", "November 2026"),
          title=("Our own interface: options and hotbar", "Eine eigene Oberfläche: Optionen und Aktionsleiste"),
          text=("The first test of the game's own interface art in Unreal Engine. The options window and the hotbar are no longer "
                "placeholders: their frames, buttons, switches and ability icons are drawn for Destiny of Valendhar, in a cool, glassy "
@@ -98,7 +107,7 @@ VIDEOS = [
                "in einem kühlen, gläsernen Stil mit silbernen Kanten und sanftem Runenlicht. Die Oberfläche ist aus Themes aufgebaut, "
                "so können dieselben Fenster ein anderes Aussehen bekommen, und eine Einstellung zur Oberflächengröße macht jedes "
                "Element größer oder kleiner, wie es dem Spieler passt.")),
-    dict(loom="d1f2367af16f4af99a06a54d048b062c", series="gameplay", ratio="4 / 3", minutes=("2 min", "2 Min."), when=("November 2026", "November 2026"),
+    dict(loom="d1f2367af16f4af99a06a54d048b062c", series="ui", ratio="4 / 3", minutes=("2 min", "2 Min."), when=("November 2026", "November 2026"),
          title=("A gallery of interface parts", "Eine Galerie der Oberflächen-Bausteine"),
          text=("Every part the game's menus are built from, together in one test window: buttons, a red warning button for things you "
                "cannot undo, text fields and a search box, number steppers and choices, an item list with icons and counts, sliders, "
