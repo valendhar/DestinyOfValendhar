@@ -95,10 +95,10 @@ def quests_page(ctx):
      ("Repeatable jobs pinned under the old linden: five boar, or five Moonberries from the glade.",
       "Wiederholbare Aufträge unter der alten Linde: fünf Wildschweine oder fünf Mondbeeren von der Lichtung.")),
     (("The hunter's blind", "Der Hochsitz"), ("A ranger's hunt", "Eine Rangerjagd"),
-     ("A hunt from the raised stand deep in the beech forest.", "Eine Jagd vom Hochsitz tief im Buchenwald.")),
+     ("A hunt from the raised stand deep in the beech forest.", "Eine Jagd vom Hochsitz tief im Buchenwald."), "SD-02"),
     (("The old glade", "Die alte Lichtung"), ("The stone circle", "Der Steinkreis"),
      ("A ring of standing stones around a single ancient oak, and a story older than the town.",
-      "Ein Ring aus stehenden Steinen um eine einzelne uralte Eiche, und eine Geschichte, die älter ist als die Stadt.")),
+      "Ein Ring aus stehenden Steinen um eine einzelne uralte Eiche, und eine Geschichte, die älter ist als die Stadt."), "SD-03"),
 ])}""")
 
 

@@ -381,6 +381,8 @@ html { scroll-padding-top: calc(var(--header-h) + 62px); }
 .mode h3 { margin-top: 0; }
 .mode p:last-child { color: var(--parchment-dim); font-size: .97rem; margin: 0; }
 .mode .kicker { margin-bottom: 4px; }
+.mode .mode-fig { margin: -24px -24px 20px; }
+.mode .mode-fig img { aspect-ratio: 16 / 9; object-fit: cover; width: 100%; display: block; }
 .table-wrap { overflow-x: auto; margin-top: 8px; }
 .data-table { width: 100%; border-collapse: collapse; min-width: 600px; }
 .data-table th, .data-table td { text-align: left; padding: 13px 16px; border-bottom: 1px solid var(--line); vertical-align: top; }

@@ -42,9 +42,12 @@ def loops(ctx, rows, cls=""):
 
 
 def modes(ctx, rows):
-    """Small cards: rows of (kicker, title, text)."""
-    items = "".join(f'<div class="mode"><p class="kicker">{T(ctx, k)}</p><h3>{T(ctx, h)}</h3><p>{T(ctx, p)}</p></div>'
-                    for k, h, p in rows)
+    """Small cards: rows of (kicker, title, text), or (kicker, title, text, image id) for a card with a picture on top,
+    shown only once that picture is made."""
+    def card(k, h, p, img=None):
+        fig = ctx.figure(img, caption=T(ctx, h), alt=T(ctx, h), cls="mode-fig", show_caption=False) if img and ctx.has(img) else ""
+        return f'<div class="mode">{fig}<p class="kicker">{T(ctx, k)}</p><h3>{T(ctx, h)}</h3><p>{T(ctx, p)}</p></div>'
+    items = "".join(card(*r) for r in rows)
     return f'<div class="modes">{items}</div>'
 
 
