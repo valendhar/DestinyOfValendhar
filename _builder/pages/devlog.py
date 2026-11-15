@@ -149,6 +149,14 @@ VIDEOS = [
                "drei übereinanderliegende Fähigkeitenleisten mit ihren Tastenbeschriftungen, die Momentum-Leiste über der Figur, die "
                "Job-Knöpfe an der Seite und ein Chatfenster mit Eingabezeile. Ein automatischer Demo-Modus drückt Tasten und klickt "
                "von selbst, so lässt sich jedes Teil bei seiner Reaktion auf Eingaben beobachten, ohne dass jemand an der Tastatur sitzt.")),
+    dict(loom="840d2cb9ec6845b59f5f803c6eebf888", series="ui", ratio="4 / 3", minutes=("2 min", "2 Min."), when=("November 2026", "November 2026"),
+         title=("Main menu, quest journal and dialog pages", "Hauptmenü, Questtagebuch und Dialogseiten"),
+         text=("A test of the next set of windows on the new HUD. The main menu opens over the game, the quest journal lists the "
+               "quests a player has taken on, and a quest giver such as the travelling merchant now speaks in dialog pages that are "
+               "turned one at a time, all built from the components of the gallery tests.",
+               "Ein Test der nächsten Fenster auf dem neuen HUD. Das Hauptmenü öffnet sich über dem Spiel, das Questtagebuch listet "
+               "die angenommenen Quests auf, und ein Questgeber wie der reisende Händler spricht jetzt in Dialogseiten, die man eine "
+               "nach der anderen umblättert, alles aus den Bausteinen der Galerie-Tests gebaut.")),
 ]
 
 
