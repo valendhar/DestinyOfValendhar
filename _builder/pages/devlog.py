@@ -98,6 +98,17 @@ VIDEOS = [
                "in einem kühlen, gläsernen Stil mit silbernen Kanten und sanftem Runenlicht. Die Oberfläche ist aus Themes aufgebaut, "
                "so können dieselben Fenster ein anderes Aussehen bekommen, und eine Einstellung zur Oberflächengröße macht jedes "
                "Element größer oder kleiner, wie es dem Spieler passt.")),
+    dict(loom="d1f2367af16f4af99a06a54d048b062c", series="gameplay", ratio="4 / 3", minutes=("2 min", "2 Min."), when=("November 2026", "November 2026"),
+         title=("A gallery of interface parts", "Eine Galerie der Oberflächen-Bausteine"),
+         text=("Every part the game's menus are built from, together in one test window: buttons, a red warning button for things you "
+               "cannot undo, text fields and a search box, number steppers and choices, an item list with icons and counts, sliders, "
+               "switches and checkboxes. Clicking through them all at once is the quickest way to check that each part looks right, "
+               "reacts to the mouse and fits the theme, before the real windows are built from the same pieces.",
+               "Alle Bausteine, aus denen die Menüs des Spiels bestehen, zusammen in einem Testfenster: Knöpfe, ein roter Warnknopf für "
+               "Dinge, die sich nicht rückgängig machen lassen, Textfelder und eine Suche, Zahlenwähler und Auswahlen, eine Gegenstandsliste "
+               "mit Symbolen und Anzahl, Schieberegler, Schalter und Häkchen. Alles auf einmal durchzuklicken ist der schnellste Weg zu "
+               "prüfen, ob jeder Baustein richtig aussieht, auf die Maus reagiert und zum Theme passt, bevor die echten Fenster aus "
+               "denselben Teilen gebaut werden.")),
 ]
 
 
