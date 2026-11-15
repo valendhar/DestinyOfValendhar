@@ -31,7 +31,7 @@ NAV = [
     ]),
     (("Art", "Kunst"), "art/index.html", [
         (("Key Art", "Key Art"), "art/index.html", []),
-        (("Views & Maps", "Ansichten & Karten"), "art/views.html", []),
+        (("Views", "Ansichten"), "art/views.html", []),
         (("Interiors", "Innenräume"), "art/interiors.html", []),
     ]),
     (("Concept Art", "Konzeptkunst"), "concept/index.html", [

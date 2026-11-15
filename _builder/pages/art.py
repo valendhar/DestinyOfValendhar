@@ -58,13 +58,7 @@ def views(ctx):
     ("VW-08", t("The road out of town", "Die Straße aus der Stadt")),
     ("VW-09", t("The farmstead and fields", "Der Bauernhof und die Felder")),
     ("VW-10", t("From the forest ridge", "Vom Waldkamm")),
-], "gallery-2 gallery-169")}
-<h2 style="margin-top:72px">{t("Maps", "Karten")}</h2>
-{ctx.gallery([
-    ("TD-02", t("Painted map of Hayn", "Gemalte Karte von Hayn")),
-    ("TD-04", t("Painted map of the Wolfwood", "Gemalte Karte des Wolfwoods")),
-    ("TD-05", t("Layout grid of Hayn", "Lageplan von Hayn mit Raster")),
-], "gallery-2")}""")
+], "gallery-2 gallery-169")}""")
 
 
 def interiors(ctx):
@@ -106,8 +100,8 @@ PAGES = {
         lede=("Painted concept art for Hayn and the Wolfwood.", "Gemalte Konzeptkunst für Hayn und den Wolfwood."),
         banner="KA-08", body=key_art),
     "art/views.html": dict(
-        title=("Views & Maps", "Ansichten & Karten"), kicker=("Art", "Kunst"),
-        lede=("The town from the air, from its streets, and on the map.", "Die Stadt aus der Luft, aus ihren Gassen und auf der Karte."),
+        title=("Views", "Ansichten"), kicker=("Art", "Kunst"),
+        lede=("The town from the air and from its streets.", "Die Stadt aus der Luft und aus ihren Gassen."),
         banner="VW-02", body=views),
     "art/interiors.html": dict(
         title=("Interiors", "Innenräume"), kicker=("Art", "Kunst"),
