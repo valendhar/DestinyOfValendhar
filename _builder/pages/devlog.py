@@ -139,6 +139,16 @@ VIDEOS = [
                "drei auf einmal, und ein Klick schickt eine weg; ein Banner kündigt größere Momente quer über den Bildschirm an. "
                "Bleibt die Maus auf einem Knopf, einem Gegenstand, einer Fähigkeit oder einem Statussymbol, öffnet sich nach einem "
                "Augenblick der Tooltip, mit gedrückter Umschalttaste sofort, und der Wechsel zum nächsten Teil braucht kein neues Warten.")),
+    dict(loom="e088b6ad7c624a5b9c21799a689ecd05", series="ui", ratio="4 / 3", minutes=("1½ min", "1½ Min."), when=("November 2026", "November 2026"),
+         title=("The new HUD in the game", "Das neue HUD im Spiel"),
+         text=("The parts from the gallery tests, now put together on the game screen: the player frame with health and mana, "
+               "three stacked hotbars with their key labels, the Momentum gauge over the character, the job buttons at the side and "
+               "a chat window with its input line. An automated demo mode presses keys and clicks on its own, so every part can be "
+               "watched reacting to input without anyone at the keyboard.",
+               "Die Teile aus den Galerie-Tests, jetzt zusammen auf dem Spielbildschirm: das Spielerfenster mit Leben und Mana, "
+               "drei übereinanderliegende Fähigkeitenleisten mit ihren Tastenbeschriftungen, die Momentum-Leiste über der Figur, die "
+               "Job-Knöpfe an der Seite und ein Chatfenster mit Eingabezeile. Ein automatischer Demo-Modus drückt Tasten und klickt "
+               "von selbst, so lässt sich jedes Teil bei seiner Reaktion auf Eingaben beobachten, ohne dass jemand an der Tastatur sitzt.")),
 ]
 
 
