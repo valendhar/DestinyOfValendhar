@@ -471,7 +471,7 @@ def crumbs(ctx, trail):
 
 
 # Where a page banner's wide strip sits in its picture, for pictures whose people would lose their heads in a centred crop.
-BANNER_FOCUS = {"GAME-BANNER": "center 22%", "JOBS-BANNER": "center 30%", "TOWNLIFE-BANNER": "center 22%", "PEOPLE-BANNER": "center 18%", "CREATURES-BANNER": "center 35%"}
+BANNER_FOCUS = {"GAME-BANNER": "center 22%", "JOBS-BANNER": "center 30%", "TOWNLIFE-BANNER": "center 22%", "PEOPLE-BANNER": "center 18%", "CREATURES-BANNER": "center 35%", "JOURNEY-BANNER": "center 45%"}
 
 
 def banner_focus(ctx, img_id):
