@@ -118,6 +118,17 @@ VIDEOS = [
                "mit Symbolen und Anzahl, Schieberegler, Schalter und Häkchen. Alles auf einmal durchzuklicken ist der schnellste Weg zu "
                "prüfen, ob jeder Baustein richtig aussieht, auf die Maus reagiert und zum Theme passt, bevor die echten Fenster aus "
                "denselben Teilen gebaut werden.")),
+    dict(loom="6400e7fae7714a5dae7c2a41e412336d", series="ui", ratio="4 / 3", minutes=("1½ min", "1½ Min."), when=("November 2026", "November 2026"),
+         title=("Item slots, bars and status icons", "Gegenstandsfelder, Leisten und Statussymbole"),
+         text=("A second test window with the parts that show what you carry and how you are doing. Item slots show every quality "
+               "from worn to relic by the colour of their frame, and every state an item can be in: new, junk, locked, equipped, "
+               "unusable or cooling down. Below them are the bars for health, mana, the Momentum gauge, casting and experience, "
+               "status icons with their timers and stacks, and the spinner that turns while something is loading.",
+               "Ein zweites Testfenster mit den Teilen, die zeigen, was du bei dir trägst und wie es dir geht. Gegenstandsfelder "
+               "zeigen jede Qualität von abgenutzt bis Relikt an der Farbe ihres Rahmens, und jeden Zustand, den ein Gegenstand "
+               "haben kann: neu, Plunder, gesperrt, angelegt, nicht benutzbar oder in der Abklingzeit. Darunter die Leisten für "
+               "Leben, Mana, die Momentum-Leiste, das Wirken und die Erfahrung, Statussymbole mit ihrer Dauer und ihren Stapeln "
+               "und das Rad, das sich dreht, während etwas lädt.")),
 ]
 
 
