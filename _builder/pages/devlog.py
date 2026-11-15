@@ -157,6 +157,14 @@ VIDEOS = [
                "Ein Test der nächsten Fenster auf dem neuen HUD. Das Hauptmenü öffnet sich über dem Spiel, das Questtagebuch listet "
                "die angenommenen Quests auf, und ein Questgeber wie der reisende Händler spricht jetzt in Dialogseiten, die man eine "
                "nach der anderen umblättert, alles aus den Bausteinen der Galerie-Tests gebaut.")),
+    dict(loom="427978ec61a24d43bc76a1c67e0d9da4", series="ui", ratio="4 / 3", minutes=("2½ min", "2½ Min."), when=("November 2026", "November 2026"),
+         title=("Character and inventory screen", "Charakter- und Inventarfenster"),
+         text=("A test of the character screen and the inventory side by side. Gear is equipped in two ways: through the menu on an "
+               "item, or by dragging it from a bag slot straight onto its place on the character, and it can be taken off again the "
+               "same way.",
+               "Ein Test des Charakterfensters und des Inventars nebeneinander. Ausrüstung lässt sich auf zwei Wegen anlegen: über das "
+               "Menü eines Gegenstands oder indem man ihn aus einem Taschenplatz direkt auf seinen Platz an der Figur zieht, und auf "
+               "dieselbe Weise wieder ablegen.")),
 ]
 
 
