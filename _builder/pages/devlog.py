@@ -129,6 +129,16 @@ VIDEOS = [
                "haben kann: neu, Plunder, gesperrt, angelegt, nicht benutzbar oder in der Abklingzeit. Darunter die Leisten für "
                "Leben, Mana, die Momentum-Leiste, das Wirken und die Erfahrung, Statussymbole mit ihrer Dauer und ihren Stapeln "
                "und das Rad, das sich dreht, während etwas lädt.")),
+    dict(loom="876c3ca5e7fe4c27a0ce035e136a2681", series="ui", ratio="4 / 3", minutes=("½ min", "½ Min."), when=("November 2026", "November 2026"),
+         title=("Messages, banners and tooltips", "Meldungen, Banner und Tooltips"),
+         text=("The parts that pop up over the game. Short messages and item drops slide in at the side, at most three at a time, "
+               "and a click sends one away; a banner announces bigger moments across the screen. Resting the mouse on a button, "
+               "an item, an ability or a status icon opens its tooltip after a moment, or at once while holding Shift, and moving "
+               "on to the next part needs no new wait.",
+               "Die Teile, die über dem Spiel aufgehen. Kurze Meldungen und gefundene Gegenstände gleiten seitlich herein, höchstens "
+               "drei auf einmal, und ein Klick schickt eine weg; ein Banner kündigt größere Momente quer über den Bildschirm an. "
+               "Bleibt die Maus auf einem Knopf, einem Gegenstand, einer Fähigkeit oder einem Statussymbol, öffnet sich nach einem "
+               "Augenblick der Tooltip, mit gedrückter Umschalttaste sofort, und der Wechsel zum nächsten Teil braucht kein neues Warten.")),
 ]
 
 
