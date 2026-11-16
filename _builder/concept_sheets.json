@@ -1632,6 +1632,30 @@
 "folder": "creatures"
 },
 {
+"id": "BL-32",
+"name": "West Gate (postern)",
+"number": 781,
+"folder": "buildings"
+},
+{
+"id": "BL-29-B",
+"name": "Market fountain, stonework alone (for Meshy)",
+"number": 783,
+"folder": "buildings"
+},
+{
+"id": "BL-29-ST",
+"name": "Market fountain, statue alone (for Meshy)",
+"number": 784,
+"folder": "buildings"
+},
+{
+"id": "BL-29-SP",
+"name": "Market fountain, stag-head spout alone (for Meshy)",
+"number": 785,
+"folder": "buildings"
+},
+{
 "id": "BL-30",
 "name": "Frankfurt gate",
 "number": 79,
@@ -1836,219 +1860,9 @@
 "folder": "buildings"
 },
 {
-"id": "BL-09-E1",
-"name": "front and rear elevations",
-"number": 264,
-"folder": "buildings"
-},
-{
-"id": "BL-09-E2",
-"name": "left and right elevations",
-"number": 265,
-"folder": "buildings"
-},
-{
-"id": "BL-09-D",
-"name": "construction details",
-"number": 266,
-"folder": "buildings"
-},
-{
-"id": "BL-10-E1",
-"name": "front and rear elevations",
-"number": 268,
-"folder": "buildings"
-},
-{
-"id": "BL-10-E2",
-"name": "left and right elevations",
-"number": 269,
-"folder": "buildings"
-},
-{
-"id": "BL-10-D",
-"name": "construction details",
-"number": 270,
-"folder": "buildings"
-},
-{
-"id": "BL-11-E1",
-"name": "front and rear elevations",
-"number": 272,
-"folder": "buildings"
-},
-{
-"id": "BL-11-E2",
-"name": "left and right elevations",
-"number": 273,
-"folder": "buildings"
-},
-{
-"id": "BL-11-D",
-"name": "construction details",
-"number": 274,
-"folder": "buildings"
-},
-{
-"id": "BL-12-E1",
-"name": "front and rear elevations",
-"number": 276,
-"folder": "buildings"
-},
-{
-"id": "BL-12-E2",
-"name": "left and right elevations",
-"number": 277,
-"folder": "buildings"
-},
-{
-"id": "BL-12-D",
-"name": "construction details",
-"number": 278,
-"folder": "buildings"
-},
-{
-"id": "BL-13-E1",
-"name": "front and rear elevations",
-"number": 280,
-"folder": "buildings"
-},
-{
-"id": "BL-13-E2",
-"name": "left and right elevations",
-"number": 281,
-"folder": "buildings"
-},
-{
-"id": "BL-13-D",
-"name": "construction details",
-"number": 282,
-"folder": "buildings"
-},
-{
-"id": "BL-14-E1",
-"name": "front and rear elevations",
-"number": 284,
-"folder": "buildings"
-},
-{
-"id": "BL-14-E2",
-"name": "left and right elevations",
-"number": 285,
-"folder": "buildings"
-},
-{
-"id": "BL-14-D",
-"name": "construction details",
-"number": 286,
-"folder": "buildings"
-},
-{
-"id": "BL-19-E1",
-"name": "front and rear elevations",
-"number": 288,
-"folder": "buildings"
-},
-{
-"id": "BL-19-E2",
-"name": "left and right elevations",
-"number": 289,
-"folder": "buildings"
-},
-{
-"id": "BL-19-D",
-"name": "construction details",
-"number": 290,
-"folder": "buildings"
-},
-{
-"id": "BL-20-E1",
-"name": "front and rear elevations",
-"number": 292,
-"folder": "buildings"
-},
-{
-"id": "BL-20-E2",
-"name": "left and right elevations",
-"number": 293,
-"folder": "buildings"
-},
-{
-"id": "BL-20-D",
-"name": "construction details",
-"number": 294,
-"folder": "buildings"
-},
-{
-"id": "BL-21-E1",
-"name": "front and rear elevations",
-"number": 296,
-"folder": "buildings"
-},
-{
-"id": "BL-21-E2",
-"name": "left and right elevations",
-"number": 297,
-"folder": "buildings"
-},
-{
-"id": "BL-21-D",
-"name": "construction details",
-"number": 298,
-"folder": "buildings"
-},
-{
-"id": "BL-22-E1",
-"name": "front and rear elevations",
-"number": 300,
-"folder": "buildings"
-},
-{
-"id": "BL-22-E2",
-"name": "left and right elevations",
-"number": 301,
-"folder": "buildings"
-},
-{
-"id": "BL-22-D",
-"name": "construction details",
-"number": 302,
-"folder": "buildings"
-},
-{
-"id": "BL-23-E1",
-"name": "front and rear elevations",
-"number": 304,
-"folder": "buildings"
-},
-{
-"id": "BL-23-E2",
-"name": "left and right elevations",
-"number": 305,
-"folder": "buildings"
-},
-{
-"id": "BL-23-D",
-"name": "construction details",
-"number": 306,
-"folder": "buildings"
-},
-{
 "id": "BL-29-E1",
-"name": "front and rear elevations",
+"name": "front elevation and top plan, for modelling",
 "number": 308,
-"folder": "buildings"
-},
-{
-"id": "BL-29-E2",
-"name": "left and right elevations",
-"number": 309,
-"folder": "buildings"
-},
-{
-"id": "BL-29-D",
-"name": "construction details",
-"number": 310,
 "folder": "buildings"
 },
 {
@@ -2106,24 +1920,6 @@
 "folder": "buildings"
 },
 {
-"id": "FS-03-E1",
-"name": "front and rear elevations",
-"number": 366,
-"folder": "wolfwood"
-},
-{
-"id": "FS-03-E2",
-"name": "left and right elevations",
-"number": 367,
-"folder": "wolfwood"
-},
-{
-"id": "FS-03-D",
-"name": "construction details",
-"number": 368,
-"folder": "wolfwood"
-},
-{
 "id": "FS-06-E1",
 "name": "front and rear elevations",
 "number": 369,
@@ -2142,40 +1938,52 @@
 "folder": "wolfwood"
 },
 {
-"id": "FS-02-E1",
+"id": "BL-24-E1",
 "name": "front and rear elevations",
-"number": 489,
-"folder": "wolfwood"
+"number": 766,
+"folder": "buildings"
 },
 {
-"id": "FS-02-E2",
+"id": "BL-24-E2",
 "name": "left and right elevations",
-"number": 490,
-"folder": "wolfwood"
+"number": 767,
+"folder": "buildings"
 },
 {
-"id": "FS-02-D",
+"id": "BL-24-D",
 "name": "construction details",
-"number": 491,
-"folder": "wolfwood"
+"number": 768,
+"folder": "buildings"
 },
 {
-"id": "FS-01-E1",
+"id": "BL-27-E1",
 "name": "front and rear elevations",
-"number": 486,
-"folder": "wolfwood"
+"number": 775,
+"folder": "buildings"
 },
 {
-"id": "FS-01-E2",
-"name": "left and right elevations",
-"number": 487,
-"folder": "wolfwood"
-},
-{
-"id": "FS-01-D",
+"id": "BL-27-D",
 "name": "construction details",
-"number": 488,
-"folder": "wolfwood"
+"number": 777,
+"folder": "buildings"
+},
+{
+"id": "BL-28-E1",
+"name": "front and rear elevations",
+"number": 778,
+"folder": "buildings"
+},
+{
+"id": "BL-28-E2",
+"name": "left and right elevations",
+"number": 779,
+"folder": "buildings"
+},
+{
+"id": "BL-28-D",
+"name": "construction details",
+"number": 780,
+"folder": "buildings"
 },
 {
 "id": "GR-WOLF-HD",

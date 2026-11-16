@@ -11,6 +11,8 @@ from components import section
 from concept_de import NAMES, SUFFIX
 
 SHEETS = json.loads((Path(__file__).resolve().parent.parent / "concept_sheets.json").read_text(encoding="utf-8"))
+# Images filed outside the prompt list that still belong on a page (user, 2026-11-16: show every image we made).
+SHEETS += [{"id": "DK-01b", "name": "Barrow architecture kit, mottled stone variant", "number": 0, "folder": "wolfwood"}]
 BY_ID = {e["id"]: e for e in SHEETS}
 EXTRA = re.compile(r"-(E1|E2|D)$")
 SHOW_EN = {"CC5 1: four-view character": "model sheet"}
@@ -139,7 +141,10 @@ def props(ctx):
                 pick("props", r"^(FO|PL)-"))
         + block(ctx, ("Furniture and interiors", "Möbel und Innenräume"), None, pick("props", r"^IN-"))
         + block(ctx, ("Items", "Gegenstände"), ("Loot, crafting materials, potions and food.", "Beute, Handwerksmaterial, Tränke und Speisen."),
-                pick("props", r"^IM-")))
+                pick("props", r"^IM-"))
+        + block(ctx, ("Coats of arms", "Wappen"), ("The town's oak and the kingdom's crowned eagle, the two symbols on banners, signs and shields.",
+                                                   "Die Eiche der Stadt und der gekrönte Adler des Königreichs, die beiden Zeichen auf Bannern, Schildern und Schilden."),
+                pick("props", r"^AR-")))
 
 
 def wolfwood(ctx):
@@ -171,19 +176,29 @@ def kit(ctx):
 HIST = json.loads((Path(__file__).resolve().parent.parent / "historical.json").read_text(encoding="utf-8"))
 
 
+HIST_SHOWN = 4     # the page shows at most 4 examples per type; the registry (and the asset library) holds them all (user, 2026-11-15)
+
+
+def hist_shown(ctx, pieces):
+    """The examples a type shows: pieces marked "site": true first, then registry order; only pieces with an image, unless none has one."""
+    have = [p for p in pieces if ctx.has(p["id"].upper())]
+    pool = have or pieces
+    return (sorted(pool, key=lambda p: not p.get("site")))[:HIST_SHOWN]
+
+
 def historical(ctx):
-    """One block per category and type: each piece's historical reference image only (user, 2026-11-11: no mesh renders on the page)."""
+    """One block per category and type: up to HIST_SHOWN reference images (user, 2026-11-11: no mesh renders on the page)."""
     out, first = [], True
     for cat, c in HIST["categories"].items():
         for typ, t in c["types"].items():
             pieces = [p for p in HIST["pieces"] if p["category"] == cat and p["type"] == typ]
+            shown = hist_shown(ctx, pieces)
             figs = ""
-            for p in pieces:
+            for p in shown:
                 name = ctx.t(*p["name"])
                 figs += ctx.figure(p["id"].upper(), name, swap=False, note=ctx.t("Coming soon", "Demnächst"))
-            made = sum(1 for p in pieces if ctx.has(p["id"].upper()))
             title = f'{ctx.t(c.get("en", cat), c["de"])}: {ctx.t(t.get("en", typ), t["de"])}'  # display names; the keys are folder names
-            count = ctx.t(f"{made} of {len(pieces)} made", f"{made} von {len(pieces)} fertig")
+            count = ctx.t(f"{len(shown)} of {len(pieces)} shown", f"{len(shown)} von {len(pieces)} gezeigt")
             out.append(f'<div class="sheet-block{" first" if first else ""}"><div class="sheet-head"><h2>{title}</h2>'
                        f'<span class="sheet-count">{count}</span></div><p class="sheet-intro">{ctx.t(*t["intro"])}</p>'
                        f'<div class="gallery gallery-sheets{" gallery-tall" if t.get("tall") else ""}">{figs}</div></div>')  # tall pieces in 3:4 cards
@@ -234,7 +249,9 @@ def counts(ctx, folder):
     if folder == "heroes":
         extra = ["PC-GROUP-M", "PC-GROUP-F"] + [f"PORTRAIT-{j}-{g}" for j, _ in JOBS for g in "MF"] + [f"FULL_{j}_{g}" for j, _ in JOBS for g in "MF"]
     if folder == "historical":
-        return sum(1 for p in HIST["pieces"] if ctx.has(p["id"].upper())), len(HIST["pieces"])
+        shown = [p for c, cv in HIST["categories"].items() for t in cv["types"]
+                 for p in hist_shown(ctx, [q for q in HIST["pieces"] if q["category"] == c and q["type"] == t])]
+        return sum(1 for p in shown if ctx.has(p["id"].upper())), len(shown)
     made = sum(1 for e in entries if ctx.has(e["id"])) + sum(1 for i in extra if ctx.has(i))
     return made, len(entries) + len(extra)
 

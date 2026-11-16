@@ -92,3 +92,7 @@ NAMES = {
     "Wolfhide set (cosmetic): head, shoulders and back": "Wolfsfellset (kosmetisch): Kopf, Schultern und Rücken",
     "Woodcutter camp": "Holzfällerlager", "Wrought iron (tiles every 50 cm)": "Schmiedeeisen (Kachel 50 cm)", "Yew": "Eibe",
 }
+
+# 2026-11-16: the coats of arms block on Props and the barrow kit's stone variant on Wolfwood
+NAMES.update({"Coat of arms of Hayn": "Wappen von Hayn", "Coat of arms of the kingdom": "Wappen des Königreichs",
+              "Barrow architecture kit, mottled stone variant": "Bauteile des Hügelgrabs, gefleckter Stein"})

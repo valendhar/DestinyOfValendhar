@@ -29,6 +29,24 @@
             "Timber posts with their head beams, braces and sills, as they stand under galleries and jetties.",
             "Holzständer mit Sattelholz, Kopfbändern und Schwelle, wie sie unter Galerien und Vorkragungen stehen."
           ]
+        },
+        "NewelPosts": {
+          "de": "Treppenpfosten",
+          "en": "Newel posts",
+          "tall": true,
+          "intro": [
+            "Newel posts at the foot and turns of a stair: turned shafts on panelled pedestals under moulded caps.",
+            "Treppenpfosten am Antritt und an den Wendungen einer Treppe: gedrechselte Schäfte auf gefelderten Sockeln unter profilierten Kappen."
+          ]
+        },
+        "Finials": {
+          "de": "Aufsätze und Zapfen",
+          "en": "Finials and drops",
+          "tall": true,
+          "intro": [
+            "Turned finials that crown newel posts, gables and roof ridges, and drops that hang beneath brackets and stair landings.",
+            "Gedrechselte Aufsätze auf Treppenpfosten, Giebeln und Firsten, und Zapfen, die unter Konsolen und Treppenpodesten hängen."
+          ]
         }
       }
     },
@@ -96,6 +114,96 @@
       ],
       "method": "blender-fretwork",
       "note": "Traced from the reference with trace_profile.py and built with build_fretwork.py; a 2.5 cm board with a 3.5 cm upright. Width of 60 cm assumed."
+    },
+    {
+      "id": "HI-Bracket_Heart_01",
+      "mesh": "SM_HI_Bracket_Heart_01",
+      "category": "Woodwork",
+      "type": "Brackets",
+      "name": [
+        "Fretwork bracket with heart cut-out",
+        "Laubsägekonsole mit Herzausschnitt"
+      ],
+      "size_cm": [
+        2.5,
+        60,
+        24.6
+      ],
+      "method": "blender-fretwork",
+      "note": "A sawn board with a square fixing end, scrolled leaf lobes, a spear tip and a heart, a round hole and a diamond cut through. The cut-outs come out slightly narrow where the photo shows their inner walls. Traced from the reference (warm-colour mask, wall shadows removed) and built with build_fretwork_mesh.py. 60 cm long assumed, 2.5 cm thick.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Bracket_Quatrefoil_01",
+      "mesh": "SM_HI_Bracket_Quatrefoil_01",
+      "category": "Woodwork",
+      "type": "Brackets",
+      "name": [
+        "Fretwork bracket with quatrefoil",
+        "Laubsägekonsole mit Vierpass"
+      ],
+      "size_cm": [
+        2.5,
+        60,
+        25.7
+      ],
+      "method": "blender-fretwork",
+      "note": "A sawn board with a square fixing end, round and cross-shaped lobes, a spear tip and a quatrefoil, a round hole and two diamonds cut through. Traced from the reference (warm-colour mask, wall shadows removed) and built with build_fretwork_mesh.py. 60 cm long assumed, 2.5 cm thick.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Bracket_Roundel_01",
+      "mesh": "SM_HI_Bracket_Roundel_01",
+      "category": "Woodwork",
+      "type": "Brackets",
+      "name": [
+        "Fretwork corner bracket with roundel",
+        "Laubsägen-Eckkonsole mit Medaillon"
+      ],
+      "size_cm": [
+        2.5,
+        45,
+        45.1
+      ],
+      "method": "blender-fretwork",
+      "note": "A corner bracket: an upright and an arm joined by a sweeping curve, a pierced roundel with four leaves in the corner and small trefoil openings. Mirrored so the upright is against the wall. Traced from the reference (warm-colour mask, wall shadows removed) and built with build_fretwork_mesh.py. 45 cm wide assumed, 2.5 cm thick.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Bracket_Scroll_01",
+      "mesh": "SM_HI_Bracket_Scroll_01",
+      "category": "Woodwork",
+      "type": "Brackets",
+      "name": [
+        "Framed fretwork bracket with scrolls",
+        "Gerahmte Laubsägekonsole mit Ranken"
+      ],
+      "size_cm": [
+        3.0,
+        40,
+        48.9
+      ],
+      "method": "blender-fretwork",
+      "note": "A corner bracket with a frame along the top and the wall, filled with a pierced scroll: a ring with three leaves, curling tendrils and a teardrop. The openings come out slightly narrow where the photo shows their inner walls. Traced from the reference (warm-colour mask, wall shadows removed) and built with build_fretwork_mesh.py. 40 cm wide assumed, 3 cm thick.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Bracket_Spearhead_01",
+      "mesh": "SM_HI_Bracket_Spearhead_01",
+      "category": "Woodwork",
+      "type": "Brackets",
+      "name": [
+        "Carved fretwork bracket with spearhead",
+        "Geschnitzte Laubsägekonsole mit Speerspitze"
+      ],
+      "size_cm": [
+        3.0,
+        55,
+        32.6
+      ],
+      "method": "blender-fretwork",
+      "note": "A pierced board with a V-shaped fixing end, C-scrolls, pointed lobes with diamond cut-outs, two round holes and a leafy spearhead. The carved rounding of the scrolls is approximated by a large edge bevel. Mirrored so the fixing end is against the wall. Traced from the reference (warm-colour mask, wall shadows removed) and built with build_fretwork_mesh.py. 55 cm long assumed, 3 cm thick.",
+      "cutout": "warm"
     },
     {
       "id": "HI-WeatherVane_Monogram_01",
@@ -287,6 +395,41 @@
       "note": "Head beam, two scalloped braces (Kopfbänder) lapped over the beam and onto the post (traced from the photo, the right one mirrored), square upper and lower post, a turned section with collars and a four-start rope twist cut into the turned surface, a sill with V-notched ends, six forged nail heads (M_TW_Metal). 2.4 m tall assumed."
     },
     {
+      "id": "HI-Post_Console_01",
+      "mesh": "SM_HI_Post_Console_01",
+      "category": "Woodwork",
+      "type": "Posts",
+      "name": [
+        "Carved wooden post with consoles",
+        "Geschnitzter Holzpfosten mit Konsolen"
+      ],
+      "size_cm": [
+        39,
+        39,
+        175
+      ],
+      "method": "blender-modelled",
+      "note": "From an engraving: a square post with a raised band and two raised blocks per face, a lower cornice with fine dentils, a scrolled console on a plinth block on every face, an upper cornice with heavy dentils and a small scroll crest; everything modelled (build_post_console.py). 20 cm square and 1.75 m long assumed; proportions read from a drawing seen from below.",
+      "cutout": "light"
+    },
+    {
+      "id": "HI-Post_Lantern_01",
+      "mesh": "SM_HI_Post_Lantern_01",
+      "category": "Woodwork",
+      "type": "Posts",
+      "name": [
+        "Carved wooden lantern post with copper crown",
+        "Geschnitzter Holz-Laternenpfosten mit Kupferkrone"
+      ],
+      "size_cm": [
+        18.4,
+        18.4,
+        120
+      ],
+      "method": "blender-mixed",
+      "note": "A weathered square post: a copper crown (a ribbed onion spire, four face leaves and four corner leaves on a band; the rivets are not modelled), a flared cap, a lantern box with a glazed window on every face, an ogee collar, a pillow-shaped section carved with chevrons and eye-shaped arcs (simplified), an ogee collar and a plain square post. The cracks and weathering are for the texture. Copper, glass and wood are separate materials. Built with poly_lathe.py (build_batch_17.py). 120 cm tall assumed."
+    },
+    {
       "id": "HI-WeatherVane_Sun_01",
       "mesh": "SM_HI_WeatherVane_Sun_01",
       "category": "Ironwork",
@@ -407,6 +550,3120 @@
       ],
       "method": "blender-lathe",
       "note": "Turned: ring collars, a long pear-shaped body over a ball, square blocks. 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_Cup_01",
+      "mesh": "SM_HI_Baluster_Cup_01",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Wooden cup baluster",
+        "Holzbaluster mit Kelch"
+      ],
+      "size_cm": [
+        10.2,
+        10.2,
+        85
+      ],
+      "method": "blender-lathe",
+      "note": "Turned: ring collars under the cap, a long body swelling low, a fluted cup with an incised rim line over a small vase and torus foot, square blocks top and bottom (build_wood_balusters_02.py: widths measured every 1 px from the outer edges, incised lines cut as V grooves). 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_Gourd_01",
+      "mesh": "SM_HI_Baluster_Gourd_01",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Wooden gourd baluster",
+        "Holzbaluster in Kürbisform"
+      ],
+      "size_cm": [
+        13.8,
+        13.8,
+        85
+      ],
+      "method": "blender-lathe",
+      "note": "Turned: cove and ring collars, a long gourd-shaped body full at the bottom, stacked torus rings at the foot; square blocks with rounded (lamb's-tongue) shoulders. The photo crops both blocks; the piece ends where it does (build_wood_balusters_02.py: widths measured every 1 px from the outer edges, incised lines cut as V grooves). 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_DoubleVase_01",
+      "mesh": "SM_HI_Baluster_DoubleVase_01",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Wooden double-vase baluster",
+        "Holzbaluster mit Doppelvase"
+      ],
+      "size_cm": [
+        8.8,
+        8.8,
+        85
+      ],
+      "method": "blender-lathe",
+      "note": "Turned: ring collars, a long upper vase, a wide square-edged disc between rings, a short lower vase, torus foot, square blocks (build_wood_balusters_02.py: widths measured every 1 px from the outer edges, incised lines cut as V grooves). 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_Tapered_01",
+      "mesh": "SM_HI_Baluster_Tapered_01",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Wooden tapered baluster",
+        "Holzbaluster mit schlankem Schaft"
+      ],
+      "size_cm": [
+        9.0,
+        9.0,
+        85
+      ],
+      "method": "blender-lathe",
+      "note": "Turned: ring collars, a long slender shaft tapering upwards, a stack of collars, discs and a small vase at the foot, square blocks (build_wood_balusters_02.py: widths measured every 1 px from the outer edges, incised lines cut as V grooves). 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_RopeTwist_01",
+      "mesh": "SM_HI_Baluster_RopeTwist_01",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Wooden rope-twist baluster",
+        "Holzbaluster mit Seildrehung"
+      ],
+      "size_cm": [
+        12.9,
+        12.9,
+        85
+      ],
+      "method": "blender-mixed",
+      "note": "Turned knobs, collared balls and an urn top with a recessed disc, over a seven-strand rope twist cut into the turned surface (strand lead and spacing measured from the photo); square foot block (turned 45 degrees in the photo, set square) (build_wood_balusters_03.py). The twist's blank is the outline's outer envelope (rebuilt 2026-11-15). 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_Gadroon_01",
+      "mesh": "SM_HI_Baluster_Gadroon_01",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Wooden gadrooned spindle baluster",
+        "Holzbaluster mit Godronkelch"
+      ],
+      "size_cm": [
+        11.8,
+        11.8,
+        85
+      ],
+      "method": "blender-mixed",
+      "note": "Turned: a stack of knops, bowls and two balls with bead lines, a gadrooned cup (24 flutes cut into the turned surface, rim scalloped by them), a long tapering foot with a dowel hole. The photo crops both ends, so the piece ends flat where it does (build_wood_balusters_03.py). 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_Solomonic_01",
+      "mesh": "SM_HI_Baluster_Solomonic_01",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Wooden solomonic baluster",
+        "Holzbaluster mit Wellendrehung"
+      ],
+      "size_cm": [
+        15.6,
+        15.6,
+        85
+      ],
+      "method": "blender-mixed",
+      "note": "Turned urn top with a recessed disc and collared knops over a single-strand wavy (solomonic) twist: each ring's centre runs on a helix fitted to the photo (period and offset measured), square foot block (build_wood_balusters_03.py). 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_Panelled_01",
+      "mesh": "SM_HI_Baluster_Panelled_01",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Wooden panelled-head baluster",
+        "Holzbaluster mit Füllungskopf"
+      ],
+      "size_cm": [
+        15.0,
+        15.0,
+        85
+      ],
+      "method": "blender-mixed",
+      "note": "Square head block with a projecting cap moulding, a base moulding and three round-headed recessed panels with bevelled edges on every face; turned urn, ring stack and a grooved barrel below; foot block with its corners cut away under the turning, narrowing down a concave curve to a slim chamfer (build_wood_balusters_04.py). 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_BarleyTwist_02",
+      "mesh": "SM_HI_Baluster_BarleyTwist_02",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Wooden barley-twist baluster with tapered ends",
+        "Holzbaluster mit Gerstenzucker-Drehung und spitzen Enden"
+      ],
+      "size_cm": [
+        11.7,
+        11.7,
+        85
+      ],
+      "method": "blender-mixed",
+      "note": "Three-strand barley twist cut into the turned surface (lead and slant measured from the photo), the grooves narrowing to points at the collars; turned collars, a cushion and a vase foot; square blocks top and bottom (build_wood_balusters_04.py). The twist's blank is the outline's outer envelope (rebuilt 2026-11-15). 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_Solomonic_02",
+      "mesh": "SM_HI_Baluster_Solomonic_02",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Wooden solomonic baluster with socket top",
+        "Holzbaluster mit Wellendrehung und Hülsenkopf"
+      ],
+      "size_cm": [
+        11.3,
+        11.3,
+        85
+      ],
+      "method": "blender-mixed",
+      "note": "Socketed cup top, a single wavy (solomonic) twist whose centre runs on a helix fitted to the photo, collars, a ball and a vase foot over a square block (build_wood_balusters_04.py). 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_Solomonic_03",
+      "mesh": "SM_HI_Baluster_Solomonic_03",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Wooden solomonic baluster between blocks",
+        "Holzbaluster mit Wellendrehung zwischen Klötzen"
+      ],
+      "size_cm": [
+        9.9,
+        9.9,
+        85
+      ],
+      "method": "blender-mixed",
+      "note": "Square blocks top and bottom, a single wavy (solomonic) twist on the upper half whose centre runs on a helix fitted to the photo, collars and a vase below (build_wood_balusters_05.py). 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_Socket_01",
+      "mesh": "SM_HI_Baluster_Socket_01",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Wooden socket-head baluster with a ball",
+        "Holzbaluster mit Hülsenkopf und Kugel"
+      ],
+      "size_cm": [
+        11.1,
+        11.1,
+        85
+      ],
+      "method": "blender-lathe",
+      "note": "Turned: a round flat-topped socket head, collars, a long shaft swelling slightly downwards, a ring stack and a ball over a vase foot, square foot block (build_wood_balusters_05.py). 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_Tapered_02",
+      "mesh": "SM_HI_Baluster_Tapered_02",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Wooden tapered baluster between blocks",
+        "Holzbaluster mit schlankem Schaft zwischen Klötzen"
+      ],
+      "size_cm": [
+        9.9,
+        9.9,
+        85
+      ],
+      "method": "blender-lathe",
+      "note": "Turned: collars, a long shaft swelling slightly downwards, a ring stack and a vase foot, square blocks top and bottom (build_wood_balusters_05.py). 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_Socket_02",
+      "mesh": "SM_HI_Baluster_Socket_02",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Wooden socket-head baluster with an urn",
+        "Holzbaluster mit Hülsenkopf und Urne"
+      ],
+      "size_cm": [
+        10.8,
+        10.8,
+        85
+      ],
+      "method": "blender-lathe",
+      "note": "Turned: a round flat-topped socket head, collars, a long tapering shaft, a ring stack and an urn over a vase foot, square foot block (build_wood_balusters_05.py). 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_Socket_03",
+      "mesh": "SM_HI_Baluster_Socket_03",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Wooden socket-head pear baluster",
+        "Holzbaluster mit Hülsenkopf und Birnform"
+      ],
+      "size_cm": [
+        12.2,
+        12.2,
+        85
+      ],
+      "method": "blender-lathe",
+      "note": "Turned: a round flat-topped socket head, collars, a long pear body, an urn over a vase foot; square foot block (turned at an angle in the photo, set square) (build_wood_balusters_06.py). 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_Pear_02",
+      "mesh": "SM_HI_Baluster_Pear_02",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Wooden pear baluster with a ball",
+        "Holzbaluster mit Birnform und Kugel"
+      ],
+      "size_cm": [
+        12.1,
+        12.1,
+        85
+      ],
+      "method": "blender-lathe",
+      "note": "Turned: collars, a long pear body, a ring and a ball over a vase foot; square blocks top and bottom (build_wood_balusters_06.py). 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_Socket_04",
+      "mesh": "SM_HI_Baluster_Socket_04",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Wooden slender socket-head baluster",
+        "Schlanker Holzbaluster mit Hülsenkopf"
+      ],
+      "size_cm": [
+        11.3,
+        11.3,
+        85
+      ],
+      "method": "blender-lathe",
+      "note": "Turned: a round flat-topped socket head, collars, a long slender pear body, an urn over a vase foot; square foot block (build_wood_balusters_06.py). 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_Pear_03",
+      "mesh": "SM_HI_Baluster_Pear_03",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Wooden pear baluster with ring stack",
+        "Holzbaluster mit Birnform und Ringen"
+      ],
+      "size_cm": [
+        9.9,
+        9.9,
+        85
+      ],
+      "method": "blender-lathe",
+      "note": "Turned: collars, a long pear body, a ring stack and a ball over a vase foot; square blocks top and bottom (build_wood_balusters_06.py). 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_CarvedSolomonic_01",
+      "mesh": "SM_HI_Baluster_CarvedSolomonic_01",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Carved wooden solomonic baluster",
+        "Geschnitzter Holzbaluster mit Wellendrehung"
+      ],
+      "size_cm": [
+        11.3,
+        11.3,
+        85
+      ],
+      "method": "blender-mixed",
+      "note": "Square head block over a gadrooned cushion, collars, a single wavy (solomonic) twist fitted to the photo, a ring stack, an acanthus urn and a running-scroll band over the foot block. The carving is simplified: eight serrated raised leaves with sunk veins and smaller leaves between, and a raised wave line for the scroll (no curls); a mesh generator would carve these truer. The photo crops the foot block (build_wood_balusters_07.py). 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_Socket_05",
+      "mesh": "SM_HI_Baluster_Socket_05",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Wooden socket-head baluster with vase and ball",
+        "Holzbaluster mit Hülsenkopf, Vase und Kugel"
+      ],
+      "size_cm": [
+        11.7,
+        11.7,
+        85
+      ],
+      "method": "blender-lathe",
+      "note": "Turned: a round flat-topped socket head, collars, a long pear body, a vase and a ball over a vase foot; square foot block (cropped by the photo) (build_wood_balusters_07.py). 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_TaperedColumn_01",
+      "mesh": "SM_HI_Baluster_TaperedColumn_01",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Wooden baluster with a widening column",
+        "Holzbaluster mit sich weitendem Schaft"
+      ],
+      "size_cm": [
+        11.6,
+        11.6,
+        85
+      ],
+      "method": "blender-lathe",
+      "note": "Turned: collars, a long shaft widening downwards to a double ring, a cup, a pear and a vase foot; square blocks top and bottom (build_wood_balusters_07.py). 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_Pear_04",
+      "mesh": "SM_HI_Baluster_Pear_04",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Pine pear baluster",
+        "Kiefernholzbaluster mit Birnform"
+      ],
+      "size_cm": [
+        10.7,
+        10.7,
+        85
+      ],
+      "method": "blender-lathe",
+      "note": "Turned (pine in the photo): collars, a long pear body, a ring stack, a cove and a vase foot; square blocks top and bottom (both cropped by the photo) (build_wood_balusters_07.py). 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_DoublePear_01",
+      "mesh": "SM_HI_Baluster_DoublePear_01",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Wooden double-pear baluster",
+        "Holzbaluster mit doppelter Birnform"
+      ],
+      "size_cm": [
+        9.9,
+        9.9,
+        85
+      ],
+      "method": "blender-lathe",
+      "note": "Turned: collars, a long pear body, a collar and a cushion, a second pear, a vase foot; square blocks top and bottom (build_wood_balusters_08.py). 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_Slender_02",
+      "mesh": "SM_HI_Baluster_Slender_02",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Wooden slender baluster with long blocks",
+        "Schlanker Holzbaluster mit langen Klötzen"
+      ],
+      "size_cm": [
+        6.7,
+        6.7,
+        85
+      ],
+      "method": "blender-lathe",
+      "note": "Turned: collars, a long thin swelling shaft, a ring stack, a small vase and a cove foot; long square blocks top and bottom (build_wood_balusters_08.py). 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_ColumnVase_01",
+      "mesh": "SM_HI_Baluster_ColumnVase_01",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Wooden column-and-vase baluster",
+        "Holzbaluster mit Säule und Vase"
+      ],
+      "size_cm": [
+        7.6,
+        7.6,
+        85
+      ],
+      "method": "blender-lathe",
+      "note": "Turned: collars, a long shaft widening downwards into a cup, ring stacks, a pear and a vase foot on a neck; square blocks top and bottom (build_wood_balusters_08.py). 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_Pear_05",
+      "mesh": "SM_HI_Baluster_Pear_05",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Wooden pear baluster with vase foot",
+        "Holzbaluster mit Birnform und Vasenfuß"
+      ],
+      "size_cm": [
+        10.1,
+        10.1,
+        85
+      ],
+      "method": "blender-lathe",
+      "note": "Turned: collars, a long pear body, a ring stack and a vase foot; square blocks top and bottom (build_wood_balusters_08.py). 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_ColumnVase_02",
+      "mesh": "SM_HI_Baluster_ColumnVase_02",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Wooden column-and-vase baluster with pear",
+        "Holzbaluster mit Säule, Vase und Birne"
+      ],
+      "size_cm": [
+        7.5,
+        7.5,
+        85
+      ],
+      "method": "blender-lathe",
+      "note": "Turned: collars, a long shaft widening downwards into a cup, ring stack, a pear, rings and a vase foot; square blocks top and bottom (build_wood_balusters_09.py). 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_BarleyTwist_03",
+      "mesh": "SM_HI_Baluster_BarleyTwist_03",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Carved wooden barley-twist baluster",
+        "Geschnitzter Holzbaluster mit Gerstenzucker-Drehung"
+      ],
+      "size_cm": [
+        8.5,
+        8.7,
+        85
+      ],
+      "method": "blender-mixed",
+      "note": "Top block, a bell capital with raised leaves (simplified), a collar, a three-strand barley twist cut into the turning (slant and spacing measured), rings, a fluted urn and a long foot block. Built from a three-quarter view (build_wood_balusters_10.py). The twist's blank is the outline's outer envelope (rebuilt 2026-11-15). 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_RopeTwist_02",
+      "mesh": "SM_HI_Baluster_RopeTwist_02",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Carved wooden rope-twist baluster",
+        "Geschnitzter Holzbaluster mit Seildrehung"
+      ],
+      "size_cm": [
+        9.6,
+        9.6,
+        85
+      ],
+      "method": "blender-mixed",
+      "note": "Top block, a leaf capital (simplified), collars, a six-strand twist cut into the turning (slant and spacing measured), rings, a fluted urn and a long foot block. Built from a three-quarter view (build_wood_balusters_10.py). The twist's blank is the outline's outer envelope (rebuilt 2026-11-15). 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_BarleyTwist_04",
+      "mesh": "SM_HI_Baluster_BarleyTwist_04",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Wooden barley-twist baluster with spiral vase",
+        "Holzbaluster mit Gerstenzucker-Drehung und Spiralvase"
+      ],
+      "size_cm": [
+        6.2,
+        6.2,
+        85
+      ],
+      "method": "blender-mixed",
+      "note": "Blocks top and bottom, a cup collar, a two-strand barley twist, collars, a cushion and a small vase with spiral flutes slanting the other way. Twist slant and spacing measured on the photo; the twist's blank is the outline's outer envelope (build_wood_balusters_11.py). 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_RopeTwist_03",
+      "mesh": "SM_HI_Baluster_RopeTwist_03",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Wooden three-strand twist baluster",
+        "Holzbaluster mit dreifacher Drehung"
+      ],
+      "size_cm": [
+        8.1,
+        8.1,
+        85
+      ],
+      "method": "blender-mixed",
+      "note": "Blocks top and bottom, a collar, a three-strand twist, a ring and a vase foot. Twist slant and spacing measured on the photo; the twist's blank is the outline's outer envelope (build_wood_balusters_11.py). 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_SpiralFluted_01",
+      "mesh": "SM_HI_Baluster_SpiralFluted_01",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Wooden spiral-fluted baluster with flared top",
+        "Holzbaluster mit Spiralkanneluren und ausschwingendem Kopf"
+      ],
+      "size_cm": [
+        7.4,
+        7.4,
+        85
+      ],
+      "method": "blender-mixed",
+      "note": "A top block flaring from square into a round neck, a long shaft with six spiral flutes (slant and lead measured), rings, a fluted urn and a foot block (build_newel_posts_05.py). 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_Pear_06",
+      "mesh": "SM_HI_Baluster_Pear_06",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Wooden pear baluster with ring-stack foot",
+        "Holzbaluster mit Birnform und Ringfuß"
+      ],
+      "size_cm": [
+        10.4,
+        10.4,
+        85
+      ],
+      "method": "blender-lathe",
+      "note": "Turned: a cushion and collars under the top block (cropped by the photo), a long pear body, collars, a vase and a ring stack over the foot block (build_wood_balusters_12.py). 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_Ringed_01",
+      "mesh": "SM_HI_Baluster_Ringed_01",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Wooden baluster with ringed body",
+        "Holzbaluster mit geringeltem Körper"
+      ],
+      "size_cm": [
+        9.8,
+        9.8,
+        85
+      ],
+      "method": "blender-lathe",
+      "note": "Turned: collars, a long shaft swelling downwards, a ringed body, collars and a vase foot between thin square blocks (both cropped by the photo) (build_wood_balusters_12.py). 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_Socket_06",
+      "mesh": "SM_HI_Baluster_Socket_06",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Wooden socket-head column baluster with rings",
+        "Holzbaluster mit Hülsenkopf, Säule und Ringen"
+      ],
+      "size_cm": [
+        13.2,
+        13.2,
+        85
+      ],
+      "method": "blender-lathe",
+      "note": "Turned: a round socket head, a vase, ring stacks, a straight column, rings, a vase and rings over a small foot block (build_wood_balusters_13.py). 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_Column_01",
+      "mesh": "SM_HI_Baluster_Column_01",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Wooden column baluster between blocks",
+        "Holzbaluster mit Säule zwischen Klötzen"
+      ],
+      "size_cm": [
+        12.6,
+        12.6,
+        85
+      ],
+      "method": "blender-lathe",
+      "note": "Turned: collars and a column swelling downwards between square blocks (the bottom one cropped by the photo) (build_wood_balusters_13.py). 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_Leg_01",
+      "mesh": "SM_HI_Baluster_Leg_01",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Wooden turned baluster with bun foot",
+        "Gedrechselter Holzbaluster mit Kugelfuß"
+      ],
+      "size_cm": [
+        12.9,
+        12.9,
+        85
+      ],
+      "method": "blender-lathe",
+      "note": "A top block with a rounded lower edge, then turned all the way down: collars, a long column, a barrel, collars, a neck and a ring-and-bun foot (no foot block) (build_wood_balusters_13.py). 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_Ringed_02",
+      "mesh": "SM_HI_Baluster_Ringed_02",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Wooden baluster with ringed vase",
+        "Holzbaluster mit geringelter Vase"
+      ],
+      "size_cm": [
+        10.9,
+        10.9,
+        85
+      ],
+      "method": "blender-lathe",
+      "note": "Turned: collars, a long neck swelling to a ringed vase, collars, a small vase and a ring between square blocks (both cropped by the photo) (build_wood_balusters_13.py). 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_Slender_03",
+      "mesh": "SM_HI_Baluster_Slender_03",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Slender wooden baluster with long neck",
+        "Schlanker Holzbaluster mit langem Hals"
+      ],
+      "size_cm": [
+        10.9,
+        10.9,
+        85
+      ],
+      "method": "blender-lathe",
+      "note": "Turned: collars, a long shaft swelling downwards, collars, a small vase and a long neck between square blocks (both cropped by the photo; the bottom one chamfered) (build_wood_balusters_14.py). 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_CarvedTwist_01",
+      "mesh": "SM_HI_Baluster_CarvedTwist_01",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Carved wooden twist baluster with leaf capital",
+        "Geschnitzter Holzbaluster mit Drehung und Blattkapitell"
+      ],
+      "size_cm": [
+        7.6,
+        7.6,
+        85
+      ],
+      "method": "blender-mixed",
+      "note": "Top block, a leaf capital (simplified), a five-strand twist (slant and lead measured), collars and a band, a bulb with spiral flutes slanting the other way, a gadrooned urn and a foot block. The photo's brass rings and ornaments are wood here (one material) (build_wood_balusters_14.py). 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_Mahogany_01",
+      "mesh": "SM_HI_Baluster_Mahogany_01",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Mahogany baluster with ring stacks",
+        "Mahagonibaluster mit Ringen"
+      ],
+      "size_cm": [
+        12.0,
+        12.0,
+        85
+      ],
+      "method": "blender-lathe",
+      "note": "Turned: ring stacks, a vase, rings, a pear and rings between long square blocks; block widths corrected for the post's turn in the photo (build_wood_balusters_14.py). 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_Pyramid_01",
+      "mesh": "SM_HI_Baluster_Pyramid_01",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Wooden baluster with a square tapered block",
+        "Holzbaluster mit sich verjüngendem Vierkant"
+      ],
+      "size_cm": [
+        16.5,
+        16.5,
+        85
+      ],
+      "method": "blender-lathe",
+      "note": "A top block with a pommel shoulder, ring stacks, a square block tapering upwards, cushions and a double bulb, and a foot block. Built with poly_lathe.py (build_batch_15.py). 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_Reeded_01",
+      "mesh": "SM_HI_Baluster_Reeded_01",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Wooden baluster with fluted head and reeded foot",
+        "Holzbaluster mit kanneliertem Kopf und geripptem Fuß"
+      ],
+      "size_cm": [
+        7.2,
+        7.2,
+        85
+      ],
+      "method": "blender-lathe",
+      "note": "A round socket head with 24 flutes, ring stacks, a long column, rings, a vase and a foot block with eleven reeds on every face. Built with poly_lathe.py (build_batch_15.py). 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_Beaded_01",
+      "mesh": "SM_HI_Baluster_Beaded_01",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Wooden baluster with bead row",
+        "Holzbaluster mit Perlband"
+      ],
+      "size_cm": [
+        7.6,
+        7.6,
+        85
+      ],
+      "method": "blender-lathe",
+      "note": "Blocks top and bottom, collars, a vase, a band of fine rings, a row of oval beads, a cushion, a vase and rings. Built with poly_lathe.py (build_batch_15.py). 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_MidBlock_01",
+      "mesh": "SM_HI_Baluster_MidBlock_01",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Wooden baluster with a square middle block",
+        "Holzbaluster mit Vierkant in der Mitte"
+      ],
+      "size_cm": [
+        8.1,
+        8.1,
+        85
+      ],
+      "method": "blender-lathe",
+      "note": "A top block, a neck, collars, a long pear body, collars, a square block in the middle, a vase and a foot block. Built with poly_lathe.py (build_batch_15.py). 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_Spire_01",
+      "mesh": "SM_HI_Baluster_Spire_01",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Wooden spire baluster with chamfered block",
+        "Holzbaluster mit Spitzschaft und gefastem Vierkant"
+      ],
+      "size_cm": [
+        5.6,
+        5.6,
+        85
+      ],
+      "method": "blender-lathe",
+      "note": "A long spire widening downwards, a ball between collars, a chamfered square block, collars and a round foot. Built with poly_lathe.py (build_batch_15.py). 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_Bobbin_01",
+      "mesh": "SM_HI_Baluster_Bobbin_01",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Wooden bobbin baluster",
+        "Holzbaluster mit Spulendrechslung"
+      ],
+      "size_cm": [
+        9.8,
+        9.8,
+        85
+      ],
+      "method": "blender-lathe",
+      "note": "Blocks top and bottom with a stack of collars, bobbins and cushions between them. Built with poly_lathe.py (build_batch_15.py). 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_TwistBullseye_01",
+      "mesh": "SM_HI_Baluster_TwistBullseye_01",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Wooden rope-twist baluster with bullseye foot block",
+        "Holzbaluster mit Seildrehung und Ochsenaugen-Fußklotz"
+      ],
+      "size_cm": [
+        14.6,
+        14.6,
+        85
+      ],
+      "method": "blender-lathe",
+      "note": "A plain top block, rings, a neck, a four-strand rope twist, rings, a bulb, a foot block with rounded corners and shoulders and a turned bullseye on every face, rings and a stepped round foot. The photo's brass rings are wood here. Twist slant and lead measured on the photo. Built with poly_lathe.py (build_batch_16.py). 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_Tapered_03",
+      "mesh": "SM_HI_Baluster_Tapered_03",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Wooden tapered baluster with vase neck",
+        "Holzbaluster mit schlankem Schaft und Vasenhals"
+      ],
+      "size_cm": [
+        6.0,
+        6.0,
+        85
+      ],
+      "method": "blender-lathe",
+      "note": "Square blocks top and bottom, a vase neck and collars, a long round shaft widening downwards, a collar and a vase. Built with poly_lathe.py (build_batch_16.py). 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_Swag_01",
+      "mesh": "SM_HI_Baluster_Swag_01",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Wooden baluster with carved swag blocks",
+        "Holzbaluster mit geschnitzten Girlandenklötzen"
+      ],
+      "size_cm": [
+        14.0,
+        14.0,
+        85
+      ],
+      "method": "blender-lathe",
+      "note": "Square blocks top and bottom, each face carved with a swag, a palmette and a cross-hatched band (simplified relief), collars, a long taper, rings and a ball. Built with poly_lathe.py (build_batch_17.py). 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_Tapered_04",
+      "mesh": "SM_HI_Baluster_Tapered_04",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Wooden tapered baluster with ball collars",
+        "Holzbaluster mit schlankem Schaft und Kugelringen"
+      ],
+      "size_cm": [
+        8.9,
+        8.9,
+        85
+      ],
+      "method": "blender-lathe",
+      "note": "Square blocks top and bottom, a cushion and a ball collar, a long round shaft widening downwards, a ball and a vase. Built with poly_lathe.py (build_batch_18.py). 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_FacetedCollar_01",
+      "mesh": "SM_HI_Baluster_FacetedCollar_01",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Wooden baluster with octagonal collars",
+        "Holzbaluster mit achteckigen Manschetten"
+      ],
+      "size_cm": [
+        6.3,
+        6.3,
+        85
+      ],
+      "method": "blender-lathe",
+      "note": "Square blocks top and bottom, ring stacks, an octagonal faceted collar, a ball, a long vase body, collars, a second octagonal collar and a small vase. Built with poly_lathe.py (build_batch_18.py). 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_Lobed_01",
+      "mesh": "SM_HI_Baluster_Lobed_01",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Wooden baluster with lobed ring",
+        "Holzbaluster mit gebuckeltem Ring"
+      ],
+      "size_cm": [
+        6.5,
+        6.5,
+        85
+      ],
+      "method": "blender-lathe",
+      "note": "Square blocks top and bottom, a cushion, a carved ring of beads, a neck and a ball, a long taper, a ring of rounded lobes, collars, an egg-shaped body and a vase foot. Built with poly_lathe.py (build_batch_18.py). 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_FlutedGadroon_01",
+      "mesh": "SM_HI_Baluster_FlutedGadroon_01",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Wooden fluted baluster with gadrooned bulb",
+        "Kannelierter Holzbaluster mit gebuckeltem Bauch"
+      ],
+      "size_cm": [
+        14.9,
+        14.9,
+        85
+      ],
+      "method": "blender-lathe",
+      "note": "Square blocks top and bottom, a cushion and ring, a taper with 16 flutes, collars, a bulb with 16 gadroons, collars and a ring. Built with poly_lathe.py (build_batch_18.py). 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_LongVase_01",
+      "mesh": "SM_HI_Baluster_LongVase_01",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Wooden baluster with long vase body",
+        "Holzbaluster mit langem Vasenkörper"
+      ],
+      "size_cm": [
+        18.6,
+        18.6,
+        85
+      ],
+      "method": "blender-lathe",
+      "note": "Square blocks top and bottom, ring stacks, a long vase body, rings and a vase foot. Built with poly_lathe.py (build_batch_19.py). 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_Toothed_01",
+      "mesh": "SM_HI_Baluster_Toothed_01",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Wooden baluster with notched drums",
+        "Holzbaluster mit gekerbten Trommeln"
+      ],
+      "size_cm": [
+        8.4,
+        8.4,
+        85
+      ],
+      "method": "blender-lathe",
+      "note": "Square blocks top and bottom, a vase neck, a taper, two drums cut with V-notched teeth between ring stacks, a taper and a ball foot. Built with poly_lathe.py (build_batch_19.py). 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_Tapered_05",
+      "mesh": "SM_HI_Baluster_Tapered_05",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Wooden tapered baluster with ball foot",
+        "Holzbaluster mit schlankem Schaft und Kugelfuß"
+      ],
+      "size_cm": [
+        8.4,
+        8.4,
+        85
+      ],
+      "method": "blender-lathe",
+      "note": "Square blocks top and bottom, a cushion and collar, a long taper widening downwards, a ball and a vase. Built with poly_lathe.py (build_batch_20.py). 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_EggBand_01",
+      "mesh": "SM_HI_Baluster_EggBand_01",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Wooden baluster with egg and lobe bands",
+        "Holzbaluster mit Eier- und Buckelbändern"
+      ],
+      "size_cm": [
+        10.2,
+        10.2,
+        85
+      ],
+      "method": "blender-lathe",
+      "note": "Square blocks top and bottom, ring stacks, a band of lobes hanging from a ring, a cushion, a band of eggs, a cushion, a band of lobes standing on a ring, a vase and rings. Built with poly_lathe.py (build_batch_20.py). 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_FlutedColumn_01",
+      "mesh": "SM_HI_Baluster_FlutedColumn_01",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Wooden baluster with fluted column",
+        "Holzbaluster mit kannelierter Säule"
+      ],
+      "size_cm": [
+        10.4,
+        10.4,
+        85
+      ],
+      "method": "blender-lathe",
+      "note": "Square blocks top and bottom, a cushion, collars, a column with round-ended flutes, a cushion, a vase and a ball. Built with poly_lathe.py (build_batch_20.py). 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_DoubleVase_02",
+      "mesh": "SM_HI_Baluster_DoubleVase_02",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Wooden double-vase baluster",
+        "Holzbaluster mit Doppelvase"
+      ],
+      "size_cm": [
+        8.4,
+        8.4,
+        85
+      ],
+      "method": "blender-lathe",
+      "note": "Square blocks top and bottom, collars, a long upper vase, a ring, a lower vase and collars. Built with poly_lathe.py (build_batch_20.py). 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_LongVase_02",
+      "mesh": "SM_HI_Baluster_LongVase_02",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Wooden baluster with slender vase",
+        "Holzbaluster mit schlanker Vase"
+      ],
+      "size_cm": [
+        11.1,
+        11.1,
+        85
+      ],
+      "method": "blender-lathe",
+      "note": "Square blocks top and bottom, ring stacks, a long slender vase and ring stacks. Built with poly_lathe.py (build_batch_21.py). 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_DoubleBarrel_01",
+      "mesh": "SM_HI_Baluster_DoubleBarrel_01",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Wooden double-barrel baluster",
+        "Holzbaluster mit zwei Walzen"
+      ],
+      "size_cm": [
+        9.9,
+        9.9,
+        85
+      ],
+      "method": "blender-lathe",
+      "note": "Square blocks top and bottom, collars, and two long barrels with rounded ends either side of a ring stack. Built with poly_lathe.py (build_batch_21.py). 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_Tapered_06",
+      "mesh": "SM_HI_Baluster_Tapered_06",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Wooden baluster with long vase and ball",
+        "Holzbaluster mit langer Vase und Kugel"
+      ],
+      "size_cm": [
+        13.4,
+        13.4,
+        85
+      ],
+      "method": "blender-lathe",
+      "note": "Square blocks top and bottom, a cushion, collars, a long vase widening downwards, a ball and a ring. Built with poly_lathe.py (build_batch_22.py). 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_RoundBlock_01",
+      "mesh": "SM_HI_Baluster_RoundBlock_01",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Wooden baluster with round blocks and fluted neck",
+        "Holzbaluster mit runden Klötzen und kanneliertem Hals"
+      ],
+      "size_cm": [
+        13.7,
+        13.7,
+        85
+      ],
+      "method": "blender-lathe",
+      "note": "Round blocks top and bottom, a cup, collars, a neck with flutes, a ring, a ball, collars and a vase. The ring's knurled texture is left for the texture. Built with poly_lathe.py (build_batch_22.py). 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_ReededDrum_01",
+      "mesh": "SM_HI_Baluster_ReededDrum_01",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Wooden baluster with reeded drum",
+        "Holzbaluster mit gerippter Trommel"
+      ],
+      "size_cm": [
+        8.1,
+        8.1,
+        85
+      ],
+      "method": "blender-lathe",
+      "note": "Square blocks top and bottom, ring stacks and a ball, a drum with reeds crossed by ringed bands and a band of round discs, ring stacks, a vase and ring stacks. Built with poly_lathe.py (build_batch_22.py). 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_Ringed_03",
+      "mesh": "SM_HI_Baluster_Ringed_03",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Wooden ringed vase baluster",
+        "Holzbaluster mit Ringen und Vase"
+      ],
+      "size_cm": [
+        10.3,
+        10.3,
+        85
+      ],
+      "method": "blender-lathe",
+      "note": "Square blocks top and bottom, ring stacks, a long vase body and ring stacks. Built with poly_lathe.py (build_batch_22.py). 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_DoubleBarrel_02",
+      "mesh": "SM_HI_Baluster_DoubleBarrel_02",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Wooden double-barrel baluster with ring stack",
+        "Holzbaluster mit zwei Walzen und Ringen"
+      ],
+      "size_cm": [
+        6.1,
+        6.1,
+        85
+      ],
+      "method": "blender-lathe",
+      "note": "Square blocks top and bottom, a vase neck and ring, two long barrels either side of a ring stack, a ring and a vase. Built with poly_lathe.py (build_batch_23.py). 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_DoubleBarrel_03",
+      "mesh": "SM_HI_Baluster_DoubleBarrel_03",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Wooden baluster with two straight barrels",
+        "Holzbaluster mit zwei geraden Walzen"
+      ],
+      "size_cm": [
+        6.4,
+        6.4,
+        85
+      ],
+      "method": "blender-lathe",
+      "note": "Square blocks top and bottom, a vase neck, ring stacks, two straight barrels either side of a ringed band, ring stacks and a vase. Built with poly_lathe.py (build_batch_23.py). 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_SwirlVase_01",
+      "mesh": "SM_HI_Baluster_SwirlVase_01",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Wooden baluster with swirled vase",
+        "Holzbaluster mit gedrehter Vase"
+      ],
+      "size_cm": [
+        13.1,
+        13.1,
+        85
+      ],
+      "method": "blender-lathe",
+      "note": "Square blocks top and bottom, collars, a bead ring, a vase with swirling flutes, a ring of lobes, a ball and rings. Built with poly_lathe.py (build_batch_24.py). 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_ReededBlock_01",
+      "mesh": "SM_HI_Baluster_ReededBlock_01",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Wooden baluster with reeded blocks",
+        "Holzbaluster mit gerippten Klötzen"
+      ],
+      "size_cm": [
+        13.9,
+        13.9,
+        85
+      ],
+      "method": "blender-lathe",
+      "note": "Square blocks top and bottom with deep reeds on every face, collars, a long vase widening downwards, ring stacks and a vase. Built with poly_lathe.py (build_batch_24.py). 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_ReededBlock_02",
+      "mesh": "SM_HI_Baluster_ReededBlock_02",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Wooden baluster with finely reeded blocks",
+        "Holzbaluster mit fein gerippten Klötzen"
+      ],
+      "size_cm": [
+        13.4,
+        13.4,
+        85
+      ],
+      "method": "blender-lathe",
+      "note": "Square blocks top and bottom with fine reeds on every face (the foot block's reeds end under an arch), collars, a long taper, a ring, a vase and rings. (build_batch_25.py). 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_ReededBlock_03",
+      "mesh": "SM_HI_Baluster_ReededBlock_03",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Wooden baluster with reeded blocks and fluted taper",
+        "Holzbaluster mit gerippten Klötzen und kanneliertem Schaft"
+      ],
+      "size_cm": [
+        17.8,
+        17.8,
+        85
+      ],
+      "method": "blender-lathe",
+      "note": "Blocks top and bottom with fine reeds (the top block bevelled, the foot block's reeds ending under an arch), a cushion, collars, a taper with flutes, a ring, a ball and a vase. Built with poly_lathe.py (build_batch_26.py). 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_GadroonCup_01",
+      "mesh": "SM_HI_Baluster_GadroonCup_01",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Wooden baluster with gadrooned cup and rings",
+        "Holzbaluster mit gebuckeltem Kelch und Ringen"
+      ],
+      "size_cm": [
+        16.6,
+        16.6,
+        85
+      ],
+      "method": "blender-lathe",
+      "note": "A round top block, a cup of lobes, a neck, a ring of lobes, a vase with shallow flutes, a ring of small lobes, a neck, a lobed base and a square foot block. Built with poly_lathe.py (build_batch_27.py). 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_ReededBlock_04",
+      "mesh": "SM_HI_Baluster_ReededBlock_04",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Wooden vase baluster with reeded blocks",
+        "Holzbaluster mit Vase und gerippten Klötzen"
+      ],
+      "size_cm": [
+        18.7,
+        18.7,
+        85
+      ],
+      "method": "blender-lathe",
+      "note": "Square blocks top and bottom with reeds on every face (the foot block's end under an arch), a vase neck, collars, a long vase, collars and a vase. Built with poly_lathe.py (build_batch_27.py). 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_Spindle_01",
+      "mesh": "SM_HI_Baluster_Spindle_01",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Wooden spindle baluster with ringed middle",
+        "Holzspindel-Baluster mit beringter Mitte"
+      ],
+      "size_cm": [
+        5.7,
+        5.7,
+        85
+      ],
+      "method": "blender-lathe",
+      "note": "Square blocks top and bottom, a ball, collars, a taper, a ringed middle with two short drums, a taper, collars and a ball. Built with poly_lathe.py (build_batch_27.py). 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_FlutedDrum_01",
+      "mesh": "SM_HI_Baluster_FlutedDrum_01",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Wooden baluster with fluted neck and fluted drum",
+        "Holzbaluster mit kanneliertem Hals und kannelierter Trommel"
+      ],
+      "size_cm": [
+        15.4,
+        15.4,
+        85
+      ],
+      "method": "blender-lathe",
+      "note": "Square blocks top and bottom, rings, a neck with round-ended flutes, a ring of lobes, a drum with flutes, a ring of lobes, collars, a ring and a vase. Built with poly_lathe.py (build_batch_28.py). 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_FlutedCenter_01",
+      "mesh": "SM_HI_Baluster_FlutedCenter_01",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Wooden baluster with fluted centre drum",
+        "Holzbaluster mit kannelierter Mitteltrommel"
+      ],
+      "size_cm": [
+        13.1,
+        13.1,
+        85
+      ],
+      "method": "blender-lathe",
+      "note": "Square blocks top and bottom, vases and ring stacks either side of a drum with flutes. Built with poly_lathe.py (build_batch_29.py). 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_Tapered_07",
+      "mesh": "SM_HI_Baluster_Tapered_07",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Wooden tapered baluster",
+        "Schlanker Holzbaluster"
+      ],
+      "size_cm": [
+        10.0,
+        10.0,
+        85
+      ],
+      "method": "blender-lathe",
+      "note": "Square blocks top and bottom, a cushion and collar, a long taper widening downwards, a ring, a ball and a vase. (build_batch_30.py). 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_Acanthus_01",
+      "mesh": "SM_HI_Baluster_Acanthus_01",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Carved wooden baluster with acanthus cups",
+        "Geschnitzter Holzbaluster mit Akanthuskelchen"
+      ],
+      "size_cm": [
+        11.7,
+        11.7,
+        85
+      ],
+      "method": "blender-lathe",
+      "note": "Square blocks top and bottom, a carved leaf capital, a cup of round-ended lobes, a fluted neck, collars, a cup of raised acanthus leaves and a ring. The acanthus is simplified to raised leaves. (build_batch_30.py). 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_Ringed_04",
+      "mesh": "SM_HI_Baluster_Ringed_04",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Wooden baluster with ring stacks and waisted necks",
+        "Holzbaluster mit Ringpaketen und taillierten Hälsen"
+      ],
+      "size_cm": [
+        14.3,
+        14.3,
+        85
+      ],
+      "method": "blender-lathe",
+      "note": "Square blocks with rounded inner edges, ring stacks either side of a waisted neck and a ring stack. (build_batch_31.py). 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_Spindle_02",
+      "mesh": "SM_HI_Baluster_Spindle_02",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Wooden spindle baluster with fluted drum",
+        "Holzspindel-Baluster mit kannelierter Trommel"
+      ],
+      "size_cm": [
+        5.7,
+        5.7,
+        85
+      ],
+      "method": "blender-lathe",
+      "note": "Square blocks, a ball, collars, a taper, a fluted drum and ringed middle, a taper, collars and a ball. (build_batch_31.py). 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_FlutedVase_01",
+      "mesh": "SM_HI_Baluster_FlutedVase_01",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Wooden baluster with fluted vase and bead collar",
+        "Holzbaluster mit kannelierter Vase und Perlkragen"
+      ],
+      "size_cm": [
+        14.7,
+        14.7,
+        85
+      ],
+      "method": "blender-lathe",
+      "note": "Square blocks, a bead collar, a vase with flutes, collars, a vase and rings. (build_batch_31.py). 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_Spindle_03",
+      "mesh": "SM_HI_Baluster_Spindle_03",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Wooden spindle baluster with rounded collars",
+        "Holzspindel-Baluster mit runden Wülsten"
+      ],
+      "size_cm": [
+        5.9,
+        5.9,
+        85
+      ],
+      "method": "blender-lathe",
+      "note": "Square blocks, rings and vases with a notched ring, a run of rounded collars, a vase and rings. (build_batch_31.py). 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_Bobbin_02",
+      "mesh": "SM_HI_Baluster_Bobbin_02",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Wooden bobbin baluster",
+        "Holzbaluster mit Spulenform"
+      ],
+      "size_cm": [
+        11.4,
+        11.4,
+        85
+      ],
+      "method": "blender-lathe",
+      "note": "Square blocks top and bottom and a stack of bobbins, cushions and collars. (build_batch_32.py). 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_ReededBlock_05",
+      "mesh": "SM_HI_Baluster_ReededBlock_05",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Wooden baluster with reeded blocks and reeded drum",
+        "Holzbaluster mit gerippten Klötzen und Trommel"
+      ],
+      "size_cm": [
+        7.9,
+        7.9,
+        85
+      ],
+      "method": "blender-lathe",
+      "note": "Blocks with fine reeds, a fluted taper, a reeded drum, a fluted vase and rings. (build_batch_32.py). 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_PanelledVase_01",
+      "mesh": "SM_HI_Baluster_PanelledVase_01",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Wooden baluster with panelled square vase",
+        "Holzbaluster mit gefelderter Vierkantvase"
+      ],
+      "size_cm": [
+        11.5,
+        11.5,
+        85
+      ],
+      "method": "blender-lathe",
+      "note": "Square blocks, ring stacks, a square vase-shaped shaft with a recessed panel on every face, a lobed knop and a tapering square block with panels. (build_batch_32.py). 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Baluster_SpiralFluted_02",
+      "mesh": "SM_HI_Baluster_SpiralFluted_02",
+      "category": "Woodwork",
+      "type": "Balusters",
+      "name": [
+        "Wooden baluster with spiral flutes and bead row",
+        "Holzbaluster mit Spiralkanneluren und Perlreihe"
+      ],
+      "size_cm": [
+        14.5,
+        14.5,
+        85
+      ],
+      "method": "blender-lathe",
+      "note": "Square blocks, a taper with spiral flutes, a row of beads and a bulb with spiral flutes. (build_batch_32.py). 85 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-NewelPost_Panelled_01",
+      "mesh": "SM_HI_NewelPost_Panelled_01",
+      "category": "Woodwork",
+      "type": "NewelPosts",
+      "name": [
+        "Wooden newel post with panelled pedestal",
+        "Holztreppenpfosten mit gefeldertem Sockel"
+      ],
+      "size_cm": [
+        13.6,
+        13.6,
+        120
+      ],
+      "method": "blender-mixed",
+      "note": "Moulded square cap, a turned collar, vase, ring stacks and a shaft widening downwards, a pedestal with a bevelled recessed panel on every face, base moulding and plinth. Built from a three-quarter view: turned parts measured about the shaft's axis, square parts corrected for the post's turn (build_newel_posts.py). 120 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-NewelPost_Corinthian_01",
+      "mesh": "SM_HI_NewelPost_Corinthian_01",
+      "category": "Woodwork",
+      "type": "NewelPosts",
+      "name": [
+        "Wooden Corinthian newel post",
+        "Korinthischer Holztreppenpfosten"
+      ],
+      "size_cm": [
+        13.8,
+        13.8,
+        120
+      ],
+      "method": "blender-mixed",
+      "note": "Moulded cap, a square die with a recessed panel, abacus, a turned bell capital with raised acanthus leaves, a fluted shaft (20 flutes), torus rings, a panelled pedestal, base moulding and plinth. The carving is simplified: the die's palmette is not modelled and the capital has no volutes; a mesh generator would carve them truer. Built from a three-quarter view: turned parts measured about the shaft's axis, square parts corrected for the post's turn (build_newel_posts.py). 120 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-NewelPost_Canopy_01",
+      "mesh": "SM_HI_NewelPost_Canopy_01",
+      "category": "Woodwork",
+      "type": "NewelPosts",
+      "name": [
+        "Wooden newel post with arched canopy",
+        "Holztreppenpfosten mit Bogengehäuse"
+      ],
+      "size_cm": [
+        18.3,
+        16.2,
+        120
+      ],
+      "method": "blender-mixed",
+      "note": "An open square housing (a pointed arch through front and back, recessed side panels, stepped cap) set on the post's top and reaching out to one side, a stepped corbel with a turned drop under its free side, a thin turned shaft with collars and a bulb, a panelled pedestal, base moulding and plinth. The housing's depth and offset are a reading of an ambiguous picture. Built from a three-quarter view: turned parts measured about the shaft's axis, square parts corrected for the post's turn (build_newel_posts.py). 120 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-NewelPost_Ball_01",
+      "mesh": "SM_HI_NewelPost_Ball_01",
+      "category": "Woodwork",
+      "type": "NewelPosts",
+      "name": [
+        "Wooden newel post with ball finial",
+        "Holztreppenpfosten mit Kugelaufsatz"
+      ],
+      "size_cm": [
+        17.8,
+        17.8,
+        120
+      ],
+      "method": "blender-lathe",
+      "note": "A ball finial on a collar stack, a head block with pommel shoulders, a column shaft, a ring stack and torus, a base block with pommels on top, a stepped plinth moulding and plinth. Built as one square-limited lathe: flat block faces, round turnings, and pommel (lamb's-tongue) shoulders where the blocks are turned away into the round. Built from a three-quarter view (build_newel_posts_02.py). 120 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-NewelPost_Acorn_01",
+      "mesh": "SM_HI_NewelPost_Acorn_01",
+      "category": "Woodwork",
+      "type": "NewelPosts",
+      "name": [
+        "Wooden newel post with acorn finial",
+        "Holztreppenpfosten mit Eichelaufsatz"
+      ],
+      "size_cm": [
+        13.6,
+        13.6,
+        120
+      ],
+      "method": "blender-lathe",
+      "note": "An acorn finial on collars, a head block with pommel shoulders top and bottom, a column shaft, a ring stack and torus, a tall base block with pommels on top (no plinth). Built as one square-limited lathe: flat block faces, round turnings, and pommel (lamb's-tongue) shoulders where the blocks are turned away into the round. Built from a three-quarter view (build_newel_posts_02.py). 120 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-NewelPost_Pyramid_01",
+      "mesh": "SM_HI_NewelPost_Pyramid_01",
+      "category": "Woodwork",
+      "type": "NewelPosts",
+      "name": [
+        "Wooden newel post with pyramid cap",
+        "Holztreppenpfosten mit Pyramidenkappe"
+      ],
+      "size_cm": [
+        16.0,
+        16.0,
+        120
+      ],
+      "method": "blender-lathe",
+      "note": "A pyramid finial on stepped square cap plates, a square neck flaring onto a thin plate, a head block with pommel shoulders below, collars, a column shaft, rings, a vase and ring, a base block with pommels on top, plinth. Built as one square-limited lathe: flat block faces, round turnings, and pommel (lamb's-tongue) shoulders where the blocks are turned away into the round. Built from a three-quarter view (build_newel_posts_02.py). 120 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-NewelPost_Panelled_02",
+      "mesh": "SM_HI_NewelPost_Panelled_02",
+      "category": "Woodwork",
+      "type": "NewelPosts",
+      "name": [
+        "Wooden newel post with ringed shaft and panelled pedestal",
+        "Holztreppenpfosten mit Ringen und gefeldertem Sockel"
+      ],
+      "size_cm": [
+        13.1,
+        13.1,
+        120
+      ],
+      "method": "blender-mixed",
+      "note": "A moulded square cap, ring stacks, a shaft widening downwards, a bulb between rings, a pedestal with a bevelled recessed panel on every face, base moulding and plinth; square parts corrected for the post's turn in the photo. Built from a three-quarter view (build_newel_posts_02.py). 120 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-NewelPost_Rosette_01",
+      "mesh": "SM_HI_NewelPost_Rosette_01",
+      "category": "Woodwork",
+      "type": "NewelPosts",
+      "name": [
+        "Carved wooden newel post with rosette head",
+        "Geschnitzter Holztreppenpfosten mit Rosettenkopf"
+      ],
+      "size_cm": [
+        19.5,
+        19.5,
+        120
+      ],
+      "method": "blender-mixed",
+      "note": "A ball finial with spiral flutes, collars, a square head block with a recessed panel on every face, a row of beads, a vase body with fourteen spiral flutes, carved collars simplified to lobes and a foot block. The photo's carved rosettes and beaded frames are not modelled; a mesh generator would carve them truer. Built from a three-quarter view (build_newel_posts_03.py). 120 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-NewelPost_Acanthus_01",
+      "mesh": "SM_HI_NewelPost_Acanthus_01",
+      "category": "Woodwork",
+      "type": "NewelPosts",
+      "name": [
+        "Wooden newel post with acanthus head",
+        "Holztreppenpfosten mit Akanthuskopf"
+      ],
+      "size_cm": [
+        16.3,
+        16.3,
+        120
+      ],
+      "method": "blender-mixed",
+      "note": "A moulded square cap, a head block with a recessed panel on every face and pommel shoulders below, a collar stack, a long swelling shaft, a ring and torus, and a base block with pommel shoulders on top. The photo's acanthus carving in the panel is not modelled. Built from a three-quarter view (build_newel_posts_03.py). 120 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-NewelPost_Melon_01",
+      "mesh": "SM_HI_NewelPost_Melon_01",
+      "category": "Woodwork",
+      "type": "NewelPosts",
+      "name": [
+        "Carved wooden newel post with melon finial",
+        "Geschnitzter Holztreppenpfosten mit Melonenaufsatz"
+      ],
+      "size_cm": [
+        20.0,
+        20.0,
+        120
+      ],
+      "method": "blender-mixed",
+      "note": "A melon ball with vertical flutes, collars, a head block with a recessed panel on every face, a row of beads, a column with spiral flutes, a rope band, a gadrooned cushion and a foot block. The carved motifs in the panels are not modelled. (build_newel_posts_04.py). 120 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-NewelPost_Roundel_01",
+      "mesh": "SM_HI_NewelPost_Roundel_01",
+      "category": "Woodwork",
+      "type": "NewelPosts",
+      "name": [
+        "Carved wooden newel post with roundel head",
+        "Geschnitzter Holztreppenpfosten mit Rundmedaillons"
+      ],
+      "size_cm": [
+        15.8,
+        15.8,
+        120
+      ],
+      "method": "blender-mixed",
+      "note": "A ball with spiral flutes, collars, a head block with a round recess on every face, a fluted cup, ring stacks, a swelling body with spiral flutes, rings and a foot block with a rounded top edge. The carved flowers in the roundels are not modelled. (build_newel_posts_04.py). 120 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-NewelPost_Roundel_02",
+      "mesh": "SM_HI_NewelPost_Roundel_02",
+      "category": "Woodwork",
+      "type": "NewelPosts",
+      "name": [
+        "Wooden twist newel post with roundel head and ball",
+        "Holztreppenpfosten mit Drehung, Medaillonkopf und Kugel"
+      ],
+      "size_cm": [
+        11.1,
+        11.1,
+        120
+      ],
+      "method": "blender-mixed",
+      "note": "A ball finial, collars, a head block with a round recess on every face and pommel shoulders below, a three-strand twist, rings, a cushion with spiral flutes and a foot block with pommel shoulders. The carved flowers in the roundels are not modelled. Twist slant and lead measured on the photo (build_newel_posts_05.py). 120 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-NewelPost_Roundel_03",
+      "mesh": "SM_HI_NewelPost_Roundel_03",
+      "category": "Woodwork",
+      "type": "NewelPosts",
+      "name": [
+        "Wooden newel post with fluted dome and spiral bulb",
+        "Holztreppenpfosten mit Rippenkuppel und Spiralbauch"
+      ],
+      "size_cm": [
+        16.9,
+        16.9,
+        120
+      ],
+      "method": "blender-mixed",
+      "note": "A fluted dome finial, collars, a head block with a round recess on every face, a bulb with ten deep spiral flutes, rings, a band of beads and a foot block with pommel shoulders. The carved flowers in the roundels are not modelled. Twist slant and lead measured on the photo (build_newel_posts_05.py). 120 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-NewelPost_OpenTwist_01",
+      "mesh": "SM_HI_NewelPost_OpenTwist_01",
+      "category": "Woodwork",
+      "type": "NewelPosts",
+      "name": [
+        "Wooden open-twist newel post with urn finial",
+        "Holztreppenpfosten mit offener Drehung und Urnenaufsatz"
+      ],
+      "size_cm": [
+        10.8,
+        10.8,
+        120
+      ],
+      "method": "blender-mixed",
+      "note": "An urn finial with ring grooves, collars, a head block with a round recess on every face, a two-strand twist cut deep to a thin core (the photo's see-through gaps are not opened), rings, a cushion with spiral flutes and a foot block with pommel shoulders. Twist slant and lead measured on the photo (build_newel_posts_05.py). 120 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Finial_Flame_01",
+      "mesh": "SM_HI_Finial_Flame_01",
+      "category": "Woodwork",
+      "type": "Finials",
+      "name": [
+        "Wooden flame finial",
+        "Holzaufsatz mit Flamme"
+      ],
+      "size_cm": [
+        8.6,
+        8.6,
+        40
+      ],
+      "method": "blender-lathe",
+      "note": "Turned: a flame tip on a flat collar, rings, a slender neck flaring into a pear body split by a double groove, a vase neck and a stepped round foot (build_finials.py). 40 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Finial_SpireBall_01",
+      "mesh": "SM_HI_Finial_SpireBall_01",
+      "category": "Woodwork",
+      "type": "Finials",
+      "name": [
+        "Wooden spire finial with ball",
+        "Holzaufsatz mit Turmspitze und Kugel"
+      ],
+      "size_cm": [
+        8.4,
+        8.4,
+        40
+      ],
+      "method": "blender-lathe",
+      "note": "Turned: a ball on rings, a long spire widening down to a ring, a cushion, a neck, a ball body, a vase foot and rings (build_finials.py). 40 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Finial_Ball_01",
+      "mesh": "SM_HI_Finial_Ball_01",
+      "category": "Woodwork",
+      "type": "Finials",
+      "name": [
+        "Wooden ball finial with pear body",
+        "Holzaufsatz mit Kugel und Birnkörper"
+      ],
+      "size_cm": [
+        7.6,
+        7.6,
+        35
+      ],
+      "method": "blender-lathe",
+      "note": "Turned: a ball on rings, a slender neck flaring into a pear body with a groove, and a vase foot (build_finials.py). 35 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Finial_Pendant_01",
+      "mesh": "SM_HI_Finial_Pendant_01",
+      "category": "Woodwork",
+      "type": "Finials",
+      "name": [
+        "Wooden pendant drop",
+        "Hängezapfen aus Holz"
+      ],
+      "size_cm": [
+        13.8,
+        13.8,
+        25
+      ],
+      "method": "blender-lathe",
+      "note": "A hanging drop under a square top plate: a cove, a ring, a neck, a large cushion, a collar and a ball. Measured above the wall's shadow (build_finials.py). 25 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Finial_Pendant_02",
+      "mesh": "SM_HI_Finial_Pendant_02",
+      "category": "Woodwork",
+      "type": "Finials",
+      "name": [
+        "Wooden pendant drop with egg",
+        "Hängezapfen aus Holz mit Ei"
+      ],
+      "size_cm": [
+        13.5,
+        13.5,
+        25
+      ],
+      "method": "blender-lathe",
+      "note": "A hanging drop under a square top plate: a cove, a neck, a large cushion, a tapering neck, collars and an egg at the tip. Measured above the wall's shadow (build_finials.py). 25 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Finial_Pendant_03",
+      "mesh": "SM_HI_Finial_Pendant_03",
+      "category": "Woodwork",
+      "type": "Finials",
+      "name": [
+        "Wooden pendant drop with acorn",
+        "Hängezapfen aus Holz mit Eichel"
+      ],
+      "size_cm": [
+        13.6,
+        13.6,
+        25
+      ],
+      "method": "blender-lathe",
+      "note": "A hanging drop under a square top plate: a cove, a neck, a large cushion, a tapering neck, collars and an acorn at the tip. Measured above the wall's shadow (build_finials.py). 25 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Finial_GlassBall_01",
+      "mesh": "SM_HI_Finial_GlassBall_01",
+      "category": "Woodwork",
+      "type": "Finials",
+      "name": [
+        "Wooden urn finial with glass ball",
+        "Holz-Urnenaufsatz mit Glaskugel"
+      ],
+      "size_cm": [
+        14.2,
+        14.2,
+        40
+      ],
+      "method": "blender-lathe",
+      "note": "A glass ball on a disc, a cone lid, stepped rims, an urn with 16 round-topped gadroons, rings, a collar, a neck, two tori with a cove between and a round plinth. The ball is its own glass material. Built with poly_lathe.py (build_batch_17.py). 40 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Finial_CoveredUrn_01",
+      "mesh": "SM_HI_Finial_CoveredUrn_01",
+      "category": "Woodwork",
+      "type": "Finials",
+      "name": [
+        "Wooden covered urn finial",
+        "Hölzerner Deckelurnen-Aufsatz"
+      ],
+      "size_cm": [
+        26.0,
+        26.0,
+        40
+      ],
+      "method": "blender-lathe",
+      "note": "A ball knob on a collar, a long trumpet neck flaring into a domed lid, a squat bowl whose lower rim carries 30 rounded lobes, a slender stem with a collar and a knop, a spreading foot and a stepped round plinth. The photo's slanted notches on the upper bowl show on one side only and are left out; the photo looks down on the piece, so the plinth steps are read from its outline. Built with poly_lathe.py (build_batch_19.py). 40 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Finial_BallCup_01",
+      "mesh": "SM_HI_Finial_BallCup_01",
+      "category": "Woodwork",
+      "type": "Finials",
+      "name": [
+        "Wooden ball finial on a fluted cup",
+        "Holz-Kugelaufsatz auf kanneliertem Kelch"
+      ],
+      "size_cm": [
+        28.2,
+        28.2,
+        40
+      ],
+      "method": "blender-lathe",
+      "note": "A large ball on a band of square teeth, a ring, a cup with round-ended flutes, a knop, a spreading foot and a stepped round plinth. Built with poly_lathe.py (build_batch_20.py). 40 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Finial_Crenellated_01",
+      "mesh": "SM_HI_Finial_Crenellated_01",
+      "category": "Woodwork",
+      "type": "Finials",
+      "name": [
+        "Wooden crenellated finial",
+        "Zinnenbekrönter Holzaufsatz"
+      ],
+      "size_cm": [
+        14.5,
+        14.5,
+        40
+      ],
+      "method": "blender-lathe",
+      "note": "A cup with a battlemented rim, a neck, a squat bulb, a plain drum and a cone foot. Built with poly_lathe.py (build_batch_24.py). 40 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Finial_CoveredUrn_02",
+      "mesh": "SM_HI_Finial_CoveredUrn_02",
+      "category": "Woodwork",
+      "type": "Finials",
+      "name": [
+        "Wooden covered urn finial with scalloped rims",
+        "Hölzerner Deckelurnen-Aufsatz mit gewellten Rändern"
+      ],
+      "size_cm": [
+        26.8,
+        26.8,
+        40
+      ],
+      "method": "blender-lathe",
+      "note": "A ball knob, a trumpet neck flaring into the lid, a lid rim of scallops and a bowl rim of scallops hanging from the joint, a stem with a knop and a stepped round plinth. Built with poly_lathe.py (build_batch_29.py). 40 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-NewelPost_Bullseye_01",
+      "mesh": "SM_HI_NewelPost_Bullseye_01",
+      "category": "Woodwork",
+      "type": "NewelPosts",
+      "name": [
+        "Wooden newel post with bullseye head",
+        "Holztreppenpfosten mit Ochsenaugen-Kopf"
+      ],
+      "size_cm": [
+        22.4,
+        22.4,
+        120
+      ],
+      "method": "blender-mixed",
+      "note": "A ball finial with a groove ring, a vase neck and cushion, a square head block with a large shallow round recess on every face and a turned bullseye (a dome and three rings) in each, a ring stack, a long vase body, a cushion and ring, and a square foot block (build_newel_posts_06.py). 120 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-NewelPost_PinTop_01",
+      "mesh": "SM_HI_NewelPost_PinTop_01",
+      "category": "Woodwork",
+      "type": "NewelPosts",
+      "name": [
+        "Wooden newel post with pin top",
+        "Holztreppenpfosten mit Zapfenkopf"
+      ],
+      "size_cm": [
+        11.5,
+        11.5,
+        120
+      ],
+      "method": "blender-lathe",
+      "note": "A pin top, a cushion and collars, a long round column widening downwards, collars, bulbs and a cushion, and a foot block. Built with poly_lathe.py (build_batch_15.py). 120 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-NewelPost_Octagonal_01",
+      "mesh": "SM_HI_NewelPost_Octagonal_01",
+      "category": "Woodwork",
+      "type": "NewelPosts",
+      "name": [
+        "Octagonal panelled wooden newel post",
+        "Achteckiger gefelderter Holztreppenpfosten"
+      ],
+      "size_cm": [
+        25.6,
+        25.6,
+        120
+      ],
+      "method": "blender-lathe",
+      "note": "A turned cap with a disc, a fluted bowl and a knob, an octagonal shaft tapering upwards with a bevelled recessed panel on every face, a turned collar, and an octagonal base with a panel on every face over three reeds per face. The cap's carving and the panels' raised mouldings are simplified to recesses. Built with poly_lathe.py (build_batch_15.py). 120 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-NewelPost_Garland_01",
+      "mesh": "SM_HI_NewelPost_Garland_01",
+      "category": "Woodwork",
+      "type": "NewelPosts",
+      "name": [
+        "Carved wooden newel post with capital and garland",
+        "Geschnitzter Holztreppenpfosten mit Kapitell und Girlande"
+      ],
+      "size_cm": [
+        22.8,
+        22.8,
+        120
+      ],
+      "method": "blender-lathe",
+      "note": "A Corinthian capital simplified to a corner-on square abacus over a bell with two tiers of raised leaves, a drum with bead rows and a flower band, an acanthus collar, two fluted drums either side of a laurel garland, base turnings, and an octagonal base with a moulded cap and a recessed panel on every face on a wider octagonal plinth. The volutes, flowers, garland leaves and carved palmettes are simplified or not modelled (the flower band is a row of oval bosses, the garland a wrapped torus). Built with poly_lathe.py (build_batch_16.py). 120 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-NewelPost_PinTop_02",
+      "mesh": "SM_HI_NewelPost_PinTop_02",
+      "category": "Woodwork",
+      "type": "NewelPosts",
+      "name": [
+        "Wooden newel post with pin top and chamfered shaft",
+        "Holztreppenpfosten mit Zapfenkopf und gefastem Schaft"
+      ],
+      "size_cm": [
+        9.3,
+        9.3,
+        120
+      ],
+      "method": "blender-lathe",
+      "note": "A pin top, a cushion and collars, a long square shaft with chamfered corners widening downwards, collars, a vase and a pear, and a round foot. Built with poly_lathe.py (build_batch_16.py). 120 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-NewelPost_FlutedSpire_01",
+      "mesh": "SM_HI_NewelPost_FlutedSpire_01",
+      "category": "Woodwork",
+      "type": "NewelPosts",
+      "name": [
+        "Wooden newel post with spire and fluted shaft",
+        "Holztreppenpfosten mit Turmspitze und kanneliertem Schaft"
+      ],
+      "size_cm": [
+        10.8,
+        10.8,
+        120
+      ],
+      "method": "blender-lathe",
+      "note": "A spire, collars, a round shaft widening downwards with 16 flutes, collars, a square block with stopped chamfers, a ball between ring stacks and a square foot block with five reeds on every face. Built with poly_lathe.py (build_batch_16.py). 120 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-NewelPost_Rosette_02",
+      "mesh": "SM_HI_NewelPost_Rosette_02",
+      "category": "Woodwork",
+      "type": "NewelPosts",
+      "name": [
+        "Wooden rope-twist newel post with rosette head",
+        "Holztreppenpfosten mit Seildrehung und Rosettenkopf"
+      ],
+      "size_cm": [
+        11.8,
+        11.8,
+        120
+      ],
+      "method": "blender-lathe",
+      "note": "An urn finial, collars, a head block with a recessed panel and a raised eight-petal rosette on every face, rings, a three-strand rope twist widening downwards, rings and a band, a gadrooned ball and a gadrooned urn, and a foot block. The photo's brass rings and ornamented band are wood here; the rosettes are simplified. Twist slant and lead measured on the photo. Built with poly_lathe.py (build_batch_16.py). 120 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-NewelPost_PinTop_03",
+      "mesh": "SM_HI_NewelPost_PinTop_03",
+      "category": "Woodwork",
+      "type": "NewelPosts",
+      "name": [
+        "Wooden newel post with pin top and round shaft",
+        "Holztreppenpfosten mit Zapfenkopf und rundem Schaft"
+      ],
+      "size_cm": [
+        8.6,
+        8.6,
+        120
+      ],
+      "method": "blender-lathe",
+      "note": "A tapering pin, collars, a long round shaft widening downwards, collars, a vase and a round foot. Built with poly_lathe.py (build_batch_17.py). 120 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-NewelPost_FlutedSpire_02",
+      "mesh": "SM_HI_NewelPost_FlutedSpire_02",
+      "category": "Woodwork",
+      "type": "NewelPosts",
+      "name": [
+        "Wooden reeded newel post with pin top",
+        "Holztreppenpfosten mit Zapfenkopf und Rippen"
+      ],
+      "size_cm": [
+        11.8,
+        11.8,
+        120
+      ],
+      "method": "blender-lathe",
+      "note": "A pin, ring stacks, a taper with 32 reeds, a ball with rings, a bead row, an urn with 28 reeds, collars and a foot block with 14 fine reeds on every face. Built with poly_lathe.py (build_batch_17.py). 120 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-NewelPost_Rosette_03",
+      "mesh": "SM_HI_NewelPost_Rosette_03",
+      "category": "Woodwork",
+      "type": "NewelPosts",
+      "name": [
+        "Wooden twist newel post with rosette and onion finial",
+        "Holztreppenpfosten mit Drehung, Rosette und Zwiebelaufsatz"
+      ],
+      "size_cm": [
+        12.4,
+        12.4,
+        120
+      ],
+      "method": "blender-lathe",
+      "note": "An onion finial with a knob, rings, a head block with a round recess and a 12-petal rosette on every face, a two-strand twist, rings, an octagonal collar, a bulb with spiral flutes slanting the other way, rings and a tall foot block. The photo's brass rings are wood here; the rosettes are simplified. Twist slant and lead measured on the photo. Built with poly_lathe.py (build_batch_17.py). 120 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-NewelPost_Reeded_01",
+      "mesh": "SM_HI_NewelPost_Reeded_01",
+      "category": "Woodwork",
+      "type": "NewelPosts",
+      "name": [
+        "Reeded wooden newel post with disc cap",
+        "Gerippter Holztreppenpfosten mit Scheibenkappe"
+      ],
+      "size_cm": [
+        22.5,
+        22.5,
+        120
+      ],
+      "method": "blender-lathe",
+      "note": "A spike on a wide disc cap, collars, a second disc, a taper with 40 reeds, collars, and a round drum with 44 reeds whose ends scallop the bottom edge. Built with poly_lathe.py (build_batch_18.py). 120 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-NewelPost_ReededFoot_01",
+      "mesh": "SM_HI_NewelPost_ReededFoot_01",
+      "category": "Woodwork",
+      "type": "NewelPosts",
+      "name": [
+        "Wooden newel post with cushion head and reeded foot",
+        "Holztreppenpfosten mit Kissenkopf und geripptem Fuß"
+      ],
+      "size_cm": [
+        13.4,
+        13.4,
+        120
+      ],
+      "method": "blender-lathe",
+      "note": "A knob finial on rings, a head block with rounded corners and edges, a ball, a long taper widening downwards, rings, two vases and a foot block with fine reeds on every face ending under an arch at the top. Built with poly_lathe.py (build_batch_19.py). 120 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-NewelPost_Carved_01",
+      "mesh": "SM_HI_NewelPost_Carved_01",
+      "category": "Woodwork",
+      "type": "NewelPosts",
+      "name": [
+        "Carved wooden newel post with rose roundels and strapwork",
+        "Geschnitzter Holztreppenpfosten mit Rosenmedaillons und Bandwerk"
+      ],
+      "size_cm": [
+        25.3,
+        25.3,
+        120
+      ],
+      "method": "blender-lathe",
+      "note": "A carved knob, a leafy dome, an octagonal cap with a recessed panel on every face, a leaf collar, a head block with chamfered corners and a framed roundel with a five-petal rose on every face, a neck with flutes, a drum with leaf carving and a row of round studs between bands, a vase, and a foot block with an incised border and strapwork motif on every face. The corner acanthus, the drum's palmettes and scrolls and the finer carving are simplified or not modelled. Built with poly_lathe.py (build_batch_19.py). 120 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-NewelPost_PinRoundel_01",
+      "mesh": "SM_HI_NewelPost_PinRoundel_01",
+      "category": "Woodwork",
+      "type": "NewelPosts",
+      "name": [
+        "Wooden newel post with fluted column and rose block",
+        "Holztreppenpfosten mit kannelierter Säule und Rosenklotz"
+      ],
+      "size_cm": [
+        15.9,
+        15.9,
+        120
+      ],
+      "method": "blender-lathe",
+      "note": "A pin, carved bead collars, a column with flutes, a block with rounded corners and a framed six-petal rose on every face, a cone, bead collars and a foot block. The roses are simplified. Built with poly_lathe.py (build_batch_20.py). 120 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-NewelPost_Inlaid_01",
+      "mesh": "SM_HI_NewelPost_Inlaid_01",
+      "category": "Woodwork",
+      "type": "NewelPosts",
+      "name": [
+        "Wooden newel post with inlaid shaft and diamond block",
+        "Holztreppenpfosten mit eingelegtem Schaft und Rautenklotz"
+      ],
+      "size_cm": [
+        13.5,
+        13.5,
+        120
+      ],
+      "method": "blender-lathe",
+      "note": "A pin, collars and a cushion, a waisted square shaft with scrolled ends, a square block tapering to a point above and below, collars and a foot block with stopped chamfers at its top corners. The inlaid scroll panels are left for the texture and the chip carving on the diamond block is not modelled. Built with poly_lathe.py (build_batch_20.py). 120 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-NewelPost_BallTop_01",
+      "mesh": "SM_HI_NewelPost_BallTop_01",
+      "category": "Woodwork",
+      "type": "NewelPosts",
+      "name": [
+        "Wooden newel post with ball top and reeded foot",
+        "Holztreppenpfosten mit Kugelkopf und geripptem Fuß"
+      ],
+      "size_cm": [
+        18.8,
+        18.8,
+        120
+      ],
+      "method": "blender-lathe",
+      "note": "A ball finial, a head block with chamfered corners, collars, a bead ring, a taper, a vase and a foot block with reeds on every face ending under an arch. Built with poly_lathe.py (build_batch_20.py). 120 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-NewelPost_Rosette_04",
+      "mesh": "SM_HI_NewelPost_Rosette_04",
+      "category": "Woodwork",
+      "type": "NewelPosts",
+      "name": [
+        "Wooden spiral newel post with rosette and metal-capped ball",
+        "Holztreppenpfosten mit Spirale, Rosette und Metallkappe"
+      ],
+      "size_cm": [
+        15.0,
+        15.0,
+        120
+      ],
+      "method": "blender-lathe",
+      "note": "A ball finial whose upper part is a metal cap (its own material), rings, a head block with a round recess and a 12-petal rosette on every face, rings, a ball, a tapering column with spiral strands, rings, a vase and a tall foot block. The brass rings are wood here; the cap's hammered texture is for the texture. Built with poly_lathe.py (build_batch_20.py). 120 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-NewelPost_ReededFoot_02",
+      "mesh": "SM_HI_NewelPost_ReededFoot_02",
+      "category": "Woodwork",
+      "type": "NewelPosts",
+      "name": [
+        "Wooden newel post with cushion head and reeded foot",
+        "Holztreppenpfosten mit Kissenkopf und geripptem Fuß"
+      ],
+      "size_cm": [
+        14.1,
+        14.1,
+        120
+      ],
+      "method": "blender-lathe",
+      "note": "A knob finial on rings, a head block with rounded corners and edges, a ball, a taper, a vase and a foot block with reeds on every face ending under an arch. Built with poly_lathe.py (build_batch_20.py). 120 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-NewelPost_PinTop_04",
+      "mesh": "SM_HI_NewelPost_PinTop_04",
+      "category": "Woodwork",
+      "type": "NewelPosts",
+      "name": [
+        "Wooden newel post with pin top and octagonal shaft",
+        "Holztreppenpfosten mit Zapfenkopf und achteckigem Schaft"
+      ],
+      "size_cm": [
+        11.2,
+        11.2,
+        120
+      ],
+      "method": "blender-lathe",
+      "note": "A pin, a ringed drum, an octagonal shaft widening downwards, rings, a short drum, a vase, a pear and a foot block. Built with poly_lathe.py (build_batch_21.py). 120 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-NewelPost_Rosette_05",
+      "mesh": "SM_HI_NewelPost_Rosette_05",
+      "category": "Woodwork",
+      "type": "NewelPosts",
+      "name": [
+        "Wooden newel post with fluted dome and rosette block",
+        "Holztreppenpfosten mit Rippenkuppel und Rosettenklotz"
+      ],
+      "size_cm": [
+        18.9,
+        18.9,
+        120
+      ],
+      "method": "blender-lathe",
+      "note": "A fluted dome finial, collars, a head block with rounded corners and a round recess with a 12-petal rosette on every face, a bulb with spiral strands, a ringed drum with a row of beads, a vase and a foot block. The brass rings are wood here; the rosettes are simplified. Built with poly_lathe.py (build_batch_21.py). 120 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-NewelPost_Rosette_06",
+      "mesh": "SM_HI_NewelPost_Rosette_06",
+      "category": "Woodwork",
+      "type": "NewelPosts",
+      "name": [
+        "Wooden twist newel post with rosette block and octagonal foot",
+        "Holztreppenpfosten mit Drehung, Rosettenklotz und achteckigem Fuß"
+      ],
+      "size_cm": [
+        17.0,
+        17.0,
+        120
+      ],
+      "method": "blender-lathe",
+      "note": "A fluted ball knob, an urn with a bead band, a spiral bulb, a two-strand twist, collars, a block with rounded corners and a recessed rosette on every face, a fluted vase and an octagonal foot. The brass rings are wood here; the rosettes are simplified. Twist slant measured on the photo. Built with poly_lathe.py (build_batch_21.py). 120 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-NewelPost_Basketweave_01",
+      "mesh": "SM_HI_NewelPost_Basketweave_01",
+      "category": "Woodwork",
+      "type": "NewelPosts",
+      "name": [
+        "Panelled box newel post with basket-weave carving",
+        "Kastenförmiger Treppenpfosten mit Flechtwerk-Schnitzerei"
+      ],
+      "size_cm": [
+        17.3,
+        17.3,
+        120
+      ],
+      "method": "blender-lathe",
+      "note": "A square box newel: a brass ball (its own material) on a small plinth, a flared square cap, an acanthus frieze, a moulding, a shaft with stopped chamfers and a recessed panel on every face filled with basket weave, a moulded base, a plinth and a band of scrolls. The acanthus, the weave and the scrolls are simplified reliefs; the panels' acanthus ends are not modelled. Built with poly_lathe.py (build_batch_22.py). 120 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-NewelPost_PinTop_05",
+      "mesh": "SM_HI_NewelPost_PinTop_05",
+      "category": "Woodwork",
+      "type": "NewelPosts",
+      "name": [
+        "Wooden pin-top newel post with fluted barrel",
+        "Holztreppenpfosten mit Zapfenkopf und kannelierter Walze"
+      ],
+      "size_cm": [
+        9.3,
+        9.3,
+        120
+      ],
+      "method": "blender-lathe",
+      "note": "A pin, a ringed drum, collars, a barrel with round-ended flutes, a ringed drum, collars, a vase and a foot block. Built with poly_lathe.py (build_batch_23.py). 120 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-NewelPost_PinTop_06",
+      "mesh": "SM_HI_NewelPost_PinTop_06",
+      "category": "Woodwork",
+      "type": "NewelPosts",
+      "name": [
+        "Wooden pin-top newel post with octagonal shaft and foot",
+        "Holztreppenpfosten mit Zapfenkopf, achteckigem Schaft und Fuß"
+      ],
+      "size_cm": [
+        8.9,
+        8.9,
+        120
+      ],
+      "method": "blender-lathe",
+      "note": "A pin, a cushion and collar, a long octagonal shaft widening downwards, collars, a vase, rings and an octagonal foot. Built with poly_lathe.py (build_batch_23.py). 120 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-NewelPost_PinTop_07",
+      "mesh": "SM_HI_NewelPost_PinTop_07",
+      "category": "Woodwork",
+      "type": "NewelPosts",
+      "name": [
+        "Wooden pin-top newel post with ringed drums",
+        "Holztreppenpfosten mit Zapfenkopf und Ringtrommeln"
+      ],
+      "size_cm": [
+        9.0,
+        9.0,
+        120
+      ],
+      "method": "blender-lathe",
+      "note": "A pin, a ringed drum, collars, a round taper widening downwards, a ringed drum, collars, a vase and a foot block. Built with poly_lathe.py (build_batch_23.py). 120 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-NewelPost_FlutedSpire_03",
+      "mesh": "SM_HI_NewelPost_FlutedSpire_03",
+      "category": "Woodwork",
+      "type": "NewelPosts",
+      "name": [
+        "Wooden spire newel post with fluted column and lobed egg",
+        "Holztreppenpfosten mit Turmspitze, kannelierter Säule und gebuckeltem Ei"
+      ],
+      "size_cm": [
+        9.5,
+        9.5,
+        120
+      ],
+      "method": "blender-lathe",
+      "note": "A spire, collars, a column with round-ended flutes, collars, a vase, an egg with rounded lobes, a vase and a foot block. Built with poly_lathe.py (build_batch_24.py). 120 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-NewelPost_Octagonal_02",
+      "mesh": "SM_HI_NewelPost_Octagonal_02",
+      "category": "Woodwork",
+      "type": "NewelPosts",
+      "name": [
+        "Octagonal wooden newel post with bullseye drum and panels",
+        "Achteckiger Holztreppenpfosten mit Ochsenaugen-Trommel und Feldern"
+      ],
+      "size_cm": [
+        25.7,
+        25.7,
+        120
+      ],
+      "method": "blender-lathe",
+      "note": "A ball finial, a ringed bell, an octagonal head drum with a turned bullseye on every face, a collar, an octagonal shaft widening downwards with a recessed panel on every face, base turnings and a chamfered square base with a recessed panel on every face. The reeding on alternate faces and the rope edges are not modelled; the burl veneer is for the texture. Built with poly_lathe.py (build_batch_24.py). 120 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-NewelPost_BoxColonnette_01",
+      "mesh": "SM_HI_NewelPost_BoxColonnette_01",
+      "category": "Woodwork",
+      "type": "NewelPosts",
+      "name": [
+        "Carved box newel post with corner colonnettes",
+        "Geschnitzter Kastenpfosten mit Ecksäulchen"
+      ],
+      "size_cm": [
+        22.7,
+        22.7,
+        120
+      ],
+      "method": "blender-mixed",
+      "note": "A turned finial, a stepped square cap, a carved frieze, a carved upper block, a moulding, a shaft with a turned colonnette in every cut-back corner and a carved panel on every face, a moulded base and a plain plinth. The vermiculated carving is a generic relief. (build_batch_25.py). 120 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-NewelPost_ConsolePier_01",
+      "mesh": "SM_HI_NewelPost_ConsolePier_01",
+      "category": "Woodwork",
+      "type": "NewelPosts",
+      "name": [
+        "Wooden pier newel with fluted half-columns and scroll consoles",
+        "Holzpfeiler-Pfosten mit kannelierten Halbsäulen und Volutenkonsolen"
+      ],
+      "size_cm": [
+        19.6,
+        19.6,
+        120
+      ],
+      "method": "blender-modelled",
+      "note": "A rectangular pier: a ball finial on a beaded collar, a front face with a framed bullseye and raised ribs, on each side a fluted half-column between two scrolled consoles with volute bosses and a bullseye block, a moulding and a deeper plinth. Modelled from one three-quarter photo, so the layout and depths are read, not measured. (build_batch_25.py). 120 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-NewelPost_BoxFluted_01",
+      "mesh": "SM_HI_NewelPost_BoxFluted_01",
+      "category": "Woodwork",
+      "type": "NewelPosts",
+      "name": [
+        "Fluted box newel post with diamond frieze",
+        "Kannelierter Kastenpfosten mit Rautenfries"
+      ],
+      "size_cm": [
+        22.4,
+        22.4,
+        120
+      ],
+      "method": "blender-mixed",
+      "note": "A turned finial, a stepped cap, a frieze block with a raised diamond boss on every face, a shaft with four flutes and two rows of drilled dots on every face and a colonnette in every cut-back corner, a moulded base block with a raised panel on every face and a plinth. The small balusters at the frieze corners are not modelled. (build_batch_25.py). 120 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-NewelPost_ChamferBlock_01",
+      "mesh": "SM_HI_NewelPost_ChamferBlock_01",
+      "category": "Woodwork",
+      "type": "NewelPosts",
+      "name": [
+        "Wooden newel post with chamfered blocks",
+        "Holztreppenpfosten mit gefasten Klötzen"
+      ],
+      "size_cm": [
+        11.4,
+        11.4,
+        120
+      ],
+      "method": "blender-lathe",
+      "note": "A knob top, a head block with chamfered corners, collars and a ball, a long taper widening downwards, a ring and a long foot block with chamfered corners. (build_batch_25.py). 120 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-NewelPost_Corinthian_02",
+      "mesh": "SM_HI_NewelPost_Corinthian_02",
+      "category": "Woodwork",
+      "type": "NewelPosts",
+      "name": [
+        "Wooden Corinthian column newel post on a square plinth",
+        "Korinthischer Holztreppenpfosten auf quadratischem Sockel"
+      ],
+      "size_cm": [
+        24.7,
+        24.7,
+        120
+      ],
+      "method": "blender-lathe",
+      "note": "A Corinthian capital (square abacus, a bell with two tiers of leaves), three fluted drums, a band of oval discs, a leaf band, rings, a torus of rounded lobes and a tall plain square plinth. The volutes, flowers and mask on the capital are not modelled. Built with poly_lathe.py (build_batch_26.py). 120 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-NewelPost_FlutedTaper_01",
+      "mesh": "SM_HI_NewelPost_FlutedTaper_01",
+      "category": "Woodwork",
+      "type": "NewelPosts",
+      "name": [
+        "Wooden newel post with fluted taper and brass collar",
+        "Holztreppenpfosten mit kanneliertem Schaft und Messingring"
+      ],
+      "size_cm": [
+        24.3,
+        24.3,
+        120
+      ],
+      "method": "blender-lathe",
+      "note": "A stepped finial, collars, a taper with flutes widening downwards, a brass collar (its own material), a cushion and rings, and a foot block with two grooves at every corner. Built with poly_lathe.py (build_batch_26.py). 120 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-NewelPost_BrassStrap_01",
+      "mesh": "SM_HI_NewelPost_BrassStrap_01",
+      "category": "Woodwork",
+      "type": "NewelPosts",
+      "name": [
+        "Wooden newel post with brass cap and corner straps",
+        "Holztreppenpfosten mit Messingkappe und Eckbeschlägen"
+      ],
+      "size_cm": [
+        21.0,
+        21.0,
+        120
+      ],
+      "method": "blender-mixed",
+      "note": "A square newel with a brass pyramid cap, a moulding, a shaft with a carved scroll panel and brass studs on every face, brass corner straps at the top and foot and brass bands, a moulded base and a finely reeded plinth. The straps are simplified to plates with a dome and the filigree carving to a scroll relief; brass parts are their own material. Built with poly_lathe.py (build_batch_26.py). 120 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-NewelPost_PinBullseye_01",
+      "mesh": "SM_HI_NewelPost_PinBullseye_01",
+      "category": "Woodwork",
+      "type": "NewelPosts",
+      "name": [
+        "Wooden pin-top newel post with toothed drums and bullseye block",
+        "Holztreppenpfosten mit Zapfenkopf, gezahnten Trommeln und Ochsenaugen-Klotz"
+      ],
+      "size_cm": [
+        10.7,
+        10.7,
+        120
+      ],
+      "method": "blender-lathe",
+      "note": "A pin, ring stacks, a taper, four drums cut into square teeth, a vase, a square block with a turned bullseye on every face and a stepped drop below it. Built with poly_lathe.py (build_batch_26.py). 120 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-NewelPost_FlutedBox_01",
+      "mesh": "SM_HI_NewelPost_FlutedBox_01",
+      "category": "Woodwork",
+      "type": "NewelPosts",
+      "name": [
+        "Fluted box newel post with carved cap and leaf panels",
+        "Kannelierter Kastenpfosten mit geschnitzter Kappe und Blattfeldern"
+      ],
+      "size_cm": [
+        16.7,
+        16.7,
+        120
+      ],
+      "method": "blender-lathe",
+      "note": "A carved cap, a cornice, an egg band, a block with a carved leaf panel on every face, a collar, a shaft with five round-ended flutes on every face, a splayed base and a plain plinth. The carving is a generic relief. Built with poly_lathe.py (build_batch_27.py). 120 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-NewelPost_Gothic_01",
+      "mesh": "SM_HI_NewelPost_Gothic_01",
+      "category": "Woodwork",
+      "type": "NewelPosts",
+      "name": [
+        "Gothic box newel post with lancet panels",
+        "Neugotischer Kastenpfosten mit Spitzbogenfeldern"
+      ],
+      "size_cm": [
+        21.9,
+        21.9,
+        120
+      ],
+      "method": "blender-lathe",
+      "note": "A rolled top ornament (simplified to a turned dome), a moulded cap, a block with a four-petal rosette on every face, a moulding, a shaft with an arched panel with a dotted ground between two colonnettes on every face, a base block with a fluted panel, a moulding and a finely reeded plinth. The cap's leaf band and the arches' tracery are not modelled. Built with poly_lathe.py (build_batch_27.py). 120 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-NewelPost_PinTop_08",
+      "mesh": "SM_HI_NewelPost_PinTop_08",
+      "category": "Woodwork",
+      "type": "NewelPosts",
+      "name": [
+        "Wooden pin-top newel post with fluted barrel (oak)",
+        "Holztreppenpfosten mit Zapfenkopf und kannelierter Walze (Eiche)"
+      ],
+      "size_cm": [
+        9.9,
+        9.9,
+        120
+      ],
+      "method": "blender-lathe",
+      "note": "A pin, a ringed drum, a cushion, a barrel with flutes widening downwards, a ringed drum, collars, a vase and a foot block. Close to PinTop_05, from a second photo. Built with poly_lathe.py (build_batch_28.py). 120 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-NewelPost_Octagonal_03",
+      "mesh": "SM_HI_NewelPost_Octagonal_03",
+      "category": "Woodwork",
+      "type": "NewelPosts",
+      "name": [
+        "Octagonal panelled wooden newel post with three stages",
+        "Achteckiger gefelderter Holztreppenpfosten in drei Stufen"
+      ],
+      "size_cm": [
+        20.3,
+        20.3,
+        120
+      ],
+      "method": "blender-lathe",
+      "note": "A ball finial on an urn, an octagonal head with a recessed panel on every face, a bead collar, a fluted cup, an octagonal drum with panels, an urn and torus, and an octagonal base with panels. The incised zigzag is left for the texture and the reeding between the panels is not modelled. Built with poly_lathe.py (build_batch_28.py). 120 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-NewelPost_Spire_01",
+      "mesh": "SM_HI_NewelPost_Spire_01",
+      "category": "Woodwork",
+      "type": "NewelPosts",
+      "name": [
+        "Wooden newel post with cone spire and pear bulb",
+        "Holztreppenpfosten mit Kegelspitze und Birnbauch"
+      ],
+      "size_cm": [
+        14.1,
+        14.1,
+        120
+      ],
+      "method": "blender-lathe",
+      "note": "A cone spire, a ball, collars, a long neck, a pear-shaped bulb, a vase and a tall foot block whose upper corners are chamfered and run out in curved stops. Built with poly_lathe.py (build_batch_28.py). 120 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-NewelPost_Octagonal_04",
+      "mesh": "SM_HI_NewelPost_Octagonal_04",
+      "category": "Woodwork",
+      "type": "NewelPosts",
+      "name": [
+        "Octagonal tapering wooden newel post with disc cap",
+        "Achteckiger verjüngter Holztreppenpfosten mit Scheibenkappe"
+      ],
+      "size_cm": [
+        25.1,
+        25.1,
+        120
+      ],
+      "method": "blender-lathe",
+      "note": "A carved knob, a wide disc, a cup of lobes, a second disc, an octagonal shaft widening downwards with a recessed panel on every face, collars and an octagonal base with panels. The burl veneer is for the texture. Built with poly_lathe.py (build_batch_28.py). 120 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-NewelPost_ReededDrums_01",
+      "mesh": "SM_HI_NewelPost_ReededDrums_01",
+      "category": "Woodwork",
+      "type": "NewelPosts",
+      "name": [
+        "Wooden newel post with reeded drums",
+        "Holztreppenpfosten mit gerippten Trommeln"
+      ],
+      "size_cm": [
+        20.2,
+        20.2,
+        120
+      ],
+      "method": "blender-lathe",
+      "note": "A knob finial, stepped discs, a reeded drum under a notched ring, collars, two reeded drums either side of a ring, a vase and a foot block with reeds on every face. Built with poly_lathe.py (build_batch_29.py). 120 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-NewelPost_CarvedBox_01",
+      "mesh": "SM_HI_NewelPost_CarvedBox_01",
+      "category": "Woodwork",
+      "type": "NewelPosts",
+      "name": [
+        "Carved box newel post with urn finial",
+        "Geschnitzter Kastenpfosten mit Urnenaufsatz"
+      ],
+      "size_cm": [
+        21.9,
+        21.9,
+        120
+      ],
+      "method": "blender-lathe",
+      "note": "An urn finial, a stepped cap, a block with a carved cartouche on every face, a moulding, a shaft with a carved panel on every face, a moulding, a base block with a carved panel, a moulded base and a plain plinth. The scroll carving is a generic relief; the bead band under the cap is not modelled. Built with poly_lathe.py (build_batch_29.py). 120 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-NewelPost_Rosette_07",
+      "mesh": "SM_HI_NewelPost_Rosette_07",
+      "category": "Woodwork",
+      "type": "NewelPosts",
+      "name": [
+        "Wooden newel post with ball, rosette block and spiral vase",
+        "Holztreppenpfosten mit Kugel, Rosettenklotz und gedrehter Vase"
+      ],
+      "size_cm": [
+        15.4,
+        15.4,
+        120
+      ],
+      "method": "blender-lathe",
+      "note": "A ball finial, a head block with a round recess and a rosette on every face, a fluted cup, ring stacks, a vase with spiral flutes, rings and a tall foot block. The brass rings are wood here; the rosettes are simplified. Built with poly_lathe.py (build_batch_29.py). 120 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-NewelPost_CarvedRosette_01",
+      "mesh": "SM_HI_NewelPost_CarvedRosette_01",
+      "category": "Woodwork",
+      "type": "NewelPosts",
+      "name": [
+        "Carved wooden newel post with rose head and reeded foot",
+        "Geschnitzter Holztreppenpfosten mit Rosenkopf und geripptem Fuß"
+      ],
+      "size_cm": [
+        18.3,
+        18.3,
+        120
+      ],
+      "method": "blender-lathe",
+      "note": "A knob, stepped discs, a cushioned head block with a carved rose roundel on every face, rings, a drum with a carved band (simplified to beads), ring stacks and a tall foot block with fine reeds ending under an arch. (build_batch_30.py). 120 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-NewelPost_Marquetry_01",
+      "mesh": "SM_HI_NewelPost_Marquetry_01",
+      "category": "Woodwork",
+      "type": "NewelPosts",
+      "name": [
+        "Box newel post with colonnettes and marquetry",
+        "Kastenpfosten mit Ecksäulchen und Intarsien"
+      ],
+      "size_cm": [
+        21.4,
+        21.4,
+        120
+      ],
+      "method": "blender-mixed",
+      "note": "A carved urn finial, a stepped cap with a carved frieze, a block with a carved panel on every face, a marquetry band, a shaft with central flutes and a colonnette in every cut-back corner, a marquetry block, a moulded base with a swag band and a plain plinth. The marquetry is for the texture; the carving is a generic relief. (build_batch_30.py). 120 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-NewelPost_BallTop_02",
+      "mesh": "SM_HI_NewelPost_BallTop_02",
+      "category": "Woodwork",
+      "type": "NewelPosts",
+      "name": [
+        "Wooden newel post with ball top and cushion head",
+        "Holztreppenpfosten mit Kugelkopf und Kissenklotz"
+      ],
+      "size_cm": [
+        15.9,
+        15.9,
+        120
+      ],
+      "method": "blender-lathe",
+      "note": "A ball finial, a head block with rounded corners, ring stacks, a taper with ring grooves, a vase and a foot block with reeds ending under an arch. (build_batch_30.py). 120 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-NewelPost_FlutedTaper_02",
+      "mesh": "SM_HI_NewelPost_FlutedTaper_02",
+      "category": "Woodwork",
+      "type": "NewelPosts",
+      "name": [
+        "Wooden newel post with disc finial and fluted taper",
+        "Holztreppenpfosten mit Scheibenaufsatz und kanneliertem Schaft"
+      ],
+      "size_cm": [
+        25.2,
+        25.2,
+        120
+      ],
+      "method": "blender-lathe",
+      "note": "Disc finial, collars, a taper with flutes, rings and a vase, and a foot block with two grooves at every corner. (build_batch_30.py). 120 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-NewelPost_Pilaster_01",
+      "mesh": "SM_HI_NewelPost_Pilaster_01",
+      "category": "Woodwork",
+      "type": "NewelPosts",
+      "name": [
+        "Box newel post with pilasters and lattice plinth",
+        "Kastenpfosten mit Pilastern und Gittersockel"
+      ],
+      "size_cm": [
+        22.4,
+        22.4,
+        120
+      ],
+      "method": "blender-mixed",
+      "note": "An urn finial, a stepped cap, a frieze block with a carved panel, a shaft with flutes on every face and a colonnette in every cut-back corner, a block with a bullseye on every face, a moulded base and a plinth with a lattice cut on every face. The consoles, shells and drops are not modelled and the cruciform plinth is square. (build_batch_30.py). 120 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-NewelPost_Pyramid_02",
+      "mesh": "SM_HI_NewelPost_Pyramid_02",
+      "category": "Woodwork",
+      "type": "NewelPosts",
+      "name": [
+        "Box newel post with pyramid finial and colonnettes",
+        "Kastenpfosten mit Pyramidenaufsatz und Ecksäulchen"
+      ],
+      "size_cm": [
+        20.9,
+        20.9,
+        120
+      ],
+      "method": "blender-mixed",
+      "note": "A square pyramid finial on a small block, a cap, a block with a rose roundel on every face, a shaft with flutes and a colonnette in every cut-back corner, a base block with a raised panel, a moulded base and a finely reeded plinth. The leaf frieze and carved balusters on the head block are not modelled. (build_batch_30.py). 120 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-NewelPost_FlutedBox_02",
+      "mesh": "SM_HI_NewelPost_FlutedBox_02",
+      "category": "Woodwork",
+      "type": "NewelPosts",
+      "name": [
+        "Fluted box newel post with bullseye block and reeded plinth",
+        "Kannelierter Kastenpfosten mit Ochsenaugen-Klotz und geripptem Sockel"
+      ],
+      "size_cm": [
+        21.1,
+        21.1,
+        120
+      ],
+      "method": "blender-lathe",
+      "note": "A ball finial, a stepped cap, a block with a bullseye roundel on every face, a shaft with two groups of flutes and stopped chamfers on every face, a moulded base and a finely reeded plinth. The bead and egg bands are not modelled. (build_batch_30.py). 120 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-NewelPost_GothicArch_01",
+      "mesh": "SM_HI_NewelPost_GothicArch_01",
+      "category": "Woodwork",
+      "type": "NewelPosts",
+      "name": [
+        "Box newel post with pointed cap and carved panels",
+        "Kastenpfosten mit Spitzbogenkappe und geschnitzten Feldern"
+      ],
+      "size_cm": [
+        16.9,
+        16.9,
+        120
+      ],
+      "method": "blender-lathe",
+      "note": "An ogee-pointed cap, a moulding, an upper block with a raised panel, a ring, a shaft with a carved panel on every face, a base moulding and a carved plinth. The flame-like carving is a generic relief. (build_batch_31.py). 120 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-NewelPost_Cross_01",
+      "mesh": "SM_HI_NewelPost_Cross_01",
+      "category": "Woodwork",
+      "type": "NewelPosts",
+      "name": [
+        "Box newel post with cross panels and colonnettes",
+        "Kastenpfosten mit Kreuzfeldern und Ecksäulchen"
+      ],
+      "size_cm": [
+        24.1,
+        24.1,
+        120
+      ],
+      "method": "blender-mixed",
+      "note": "An urn finial, a stepped cap, a block with a sunk cross on every face, a shaft with a raised panel and a colonnette in every cut-back corner, a moulded base and a plinth with corner grooves. The bead band under the head block is not modelled. (build_batch_31.py). 120 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-NewelPost_RopeEdge_01",
+      "mesh": "SM_HI_NewelPost_RopeEdge_01",
+      "category": "Woodwork",
+      "type": "NewelPosts",
+      "name": [
+        "Box newel post with reeded panels and rope corners",
+        "Kastenpfosten mit gerippten Feldern und Kordelkanten"
+      ],
+      "size_cm": [
+        16.3,
+        16.3,
+        120
+      ],
+      "method": "blender-lathe",
+      "note": "A carved crest, a cap, a block with reeded panels, a shaft with reeded panels and rope-twist corners, a moulded base and a plain plinth. The pierced scrolls of the crest are a relief; the burl veneer is for the texture. (build_batch_31.py). 120 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-NewelPost_BrassRoundel_01",
+      "mesh": "SM_HI_NewelPost_BrassRoundel_01",
+      "category": "Woodwork",
+      "type": "NewelPosts",
+      "name": [
+        "Wooden newel post with roundel head and reeded drums",
+        "Holztreppenpfosten mit Medaillonkopf und gerippten Trommeln"
+      ],
+      "size_cm": [
+        20.5,
+        20.5,
+        120
+      ],
+      "method": "blender-lathe",
+      "note": "A knob finial, a chamfered head block with a turned roundel on every face, two reeded drums, a vase and a foot block with reeds ending under an arch. The brass plates and swirl bosses are wood here. (build_batch_31.py). 120 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-NewelPost_ReededBullseye_01",
+      "mesh": "SM_HI_NewelPost_ReededBullseye_01",
+      "category": "Woodwork",
+      "type": "NewelPosts",
+      "name": [
+        "Wooden newel post with reeded neck and bullseye block",
+        "Holztreppenpfosten mit geripptem Hals und Ochsenaugen-Klotz"
+      ],
+      "size_cm": [
+        18.7,
+        18.7,
+        120
+      ],
+      "method": "blender-lathe",
+      "note": "A ball finial, a reeded neck, a chamfered head block with a bullseye on every face, two reeded drums and a foot block with reeds ending under an arch. (build_batch_31.py). 120 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-NewelPost_PinLobed_01",
+      "mesh": "SM_HI_NewelPost_PinLobed_01",
+      "category": "Woodwork",
+      "type": "NewelPosts",
+      "name": [
+        "Wooden pin-top newel post with lobed cups",
+        "Holztreppenpfosten mit Zapfenkopf und gebuckelten Kelchen"
+      ],
+      "size_cm": [
+        9.3,
+        9.3,
+        120
+      ],
+      "method": "blender-lathe",
+      "note": "A pin, a collar and ball, a long taper, a lobed cup, a ball, a lobed vase and a round foot. (build_batch_31.py). 120 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-NewelPost_CarvedUrn_01",
+      "mesh": "SM_HI_NewelPost_CarvedUrn_01",
+      "category": "Woodwork",
+      "type": "NewelPosts",
+      "name": [
+        "Carved box newel post with urn finial and rose block",
+        "Geschnitzter Kastenpfosten mit Urnenaufsatz und Rosenklotz"
+      ],
+      "size_cm": [
+        19.4,
+        19.4,
+        120
+      ],
+      "method": "blender-mixed",
+      "note": "A carved urn finial with lobes and bead rows, a head block with a large carved rose on every face, a shaft with a lattice panel and a colonnette in every cut-back corner, a base block with a carved panel and a chamfered plinth. The corner leaves and capitals are not modelled; the carving is simplified. (build_batch_32.py). 120 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-NewelPost_PinFluted_01",
+      "mesh": "SM_HI_NewelPost_PinFluted_01",
+      "category": "Woodwork",
+      "type": "NewelPosts",
+      "name": [
+        "Wooden pin-top newel post with fluted drums",
+        "Holztreppenpfosten mit Zapfenkopf und kannelierten Trommeln"
+      ],
+      "size_cm": [
+        11.1,
+        11.1,
+        120
+      ],
+      "method": "blender-lathe",
+      "note": "A pin, ring stacks, two fluted drums either side of a ring stack, rings and a foot block. (build_batch_32.py). 120 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-NewelPost_DiamondFluted_01",
+      "mesh": "SM_HI_NewelPost_DiamondFluted_01",
+      "category": "Woodwork",
+      "type": "NewelPosts",
+      "name": [
+        "Box newel post with diamond block and fluted shaft",
+        "Kastenpfosten mit Rautenklotz und kanneliertem Schaft"
+      ],
+      "size_cm": [
+        17.8,
+        17.8,
+        120
+      ],
+      "method": "blender-lathe",
+      "note": "A ball finial, a stepped cap, a block with a sunk diamond on every face, a shaft with stopped chamfers and two groups of flutes, a moulded base and a plain plinth. (build_batch_32.py). 120 cm tall assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-NewelPost_Stepped_01",
+      "mesh": "SM_HI_NewelPost_Stepped_01",
+      "category": "Woodwork",
+      "type": "NewelPosts",
+      "name": [
+        "Box newel post with urn finial and stepped base",
+        "Kastenpfosten mit Urnenaufsatz und gestuftem Sockel"
+      ],
+      "size_cm": [
+        21.0,
+        21.0,
+        120
+      ],
+      "method": "blender-lathe",
+      "note": "An urn finial, a stepped cap, a block with a small raised diamond, a ring, a shaft with stopped chamfers and flutes on every face, a stepped base and a plain plinth. The inlay, the roundels and the lettering on the base are not modelled. (build_batch_32.py). 120 cm tall assumed.",
       "cutout": "warm"
     }
   ]
