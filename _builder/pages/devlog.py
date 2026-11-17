@@ -165,6 +165,12 @@ VIDEOS = [
                "Ein Test des Charakterfensters und des Inventars nebeneinander. Ausrüstung lässt sich auf zwei Wegen anlegen: über das "
                "Menü eines Gegenstands oder indem man ihn aus einem Taschenplatz direkt auf seinen Platz an der Figur zieht, und auf "
                "dieselbe Weise wieder ablegen.")),
+    dict(loom="c674ed183cbe458680cd257bfe9ab98f", series="greyboxing", ratio="4 / 3", minutes=("4 min", "4 Min."), when=("November 2026", "November 2026"),
+         title=("Detailing the town", "Die Stadt im Detail"),
+         text=("The greybox of Hayn filled in with the new meshes and props: the town's streets and buildings get their details, "
+               "so it starts to look like a lived-in place rather than a set of blocks.",
+               "Das Greyboxing von Hayn, ausgefüllt mit den neuen Meshes und Requisiten: Die Gassen und Gebäude der Stadt bekommen "
+               "ihre Details, sodass sie wie ein bewohnter Ort wirkt statt wie eine Reihe von Blöcken.")),
 ]
 
 
