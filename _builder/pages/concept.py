@@ -45,22 +45,24 @@ def label(ctx, e):
     return name
 
 
-def sheet_grid(ctx, entries, tall=False, shape=""):
-    """Made sheets first, then a box for each sheet still to come."""
+def sheet_grid(ctx, entries, tall=False, shape="", cut=False):
+    """Made sheets first, then a box for each sheet still to come. cut: show an image's transparent copy <ID>-CUT where there is one
+    (made by _Docs/Tools/cutout.py; the original stays as it is)."""
     made = [e for e in entries if ctx.has(e["id"])]
     todo = [e for e in entries if not ctx.has(e["id"])]
-    figs = "".join(ctx.figure(e["id"], label(ctx, e), swap=False, note=ctx.t("Coming soon", "Demnächst")) for e in made + todo)
+    shown = lambda i: i + "-CUT" if cut and ctx.has(i + "-CUT") else i
+    figs = "".join(ctx.figure(shown(e["id"]), label(ctx, e), swap=False, note=ctx.t("Coming soon", "Demnächst")) for e in made + todo)
     return f'<div class="gallery gallery-sheets{" gallery-tall" if tall else ""}{" " + shape if shape else ""}">{figs}</div>'
 
 
-def block(ctx, title, intro, entries, tall=False, first=False, shape=""):
+def block(ctx, title, intro, entries, tall=False, first=False, shape="", cut=False):
     if not entries:
         return ""
     made = sum(1 for e in entries if ctx.has(e["id"]))
     count = ctx.t(f"{made} of {len(entries)} made", f"{made} von {len(entries)} fertig")
     p = f'<p class="sheet-intro">{ctx.t(*intro)}</p>' if intro else ""
     return (f'<div class="sheet-block{" first" if first else ""}"><div class="sheet-head"><h2>{ctx.t(*title)}</h2>'
-            f'<span class="sheet-count">{count}</span></div>{p}{sheet_grid(ctx, entries, tall, shape)}</div>')
+            f'<span class="sheet-count">{count}</span></div>{p}{sheet_grid(ctx, entries, tall, shape, cut)}</div>')
 
 
 def pick(folder, pattern=None, exclude=None):
@@ -104,7 +106,7 @@ def people(ctx):
     return section(
         block(ctx, ("The named townsfolk", "Die Leute mit Namen"), ("A portrait and a full-body image for everyone the heroes meet by name.",
                                                                      "Ein Porträt und ein Bild in voller Größe für jeden, den die Helden mit Namen kennenlernen."),
-              pick("people", r"^CH-.*-(PT|FULL)$"), tall=True, first=True)
+              pick("people", r"^CH-.*-(PT|FULL)$"), tall=True, first=True, cut=True)
         + block(ctx, ("Townsfolk", "Stadtbewohner"), ("Line-ups for the people who fill the streets, the market and the inn.",
                                                      "Gruppenbilder für die Leute auf den Gassen, auf dem Markt und im Gasthaus."), pick("people", r"^NP-"))
         + block(ctx, ("Model sheets", "Modellblätter"), None, pick("people", r"-C1$")))
