@@ -47,6 +47,23 @@
             "Turned finials that crown newel posts, gables and roof ridges, and drops that hang beneath brackets and stair landings.",
             "Gedrechselte Aufsätze auf Treppenpfosten, Giebeln und Firsten, und Zapfen, die unter Konsolen und Treppenpodesten hängen."
           ]
+        },
+        "GraveCrosses": {
+          "de": "Grabkreuze",
+          "en": "Grave crosses",
+          "tall": true,
+          "intro": [
+            "Carved and painted wooden grave crosses for churchyards and wayside graves.",
+            "Geschnitzte und bemalte Holzgrabkreuze für Kirchhöfe und Wegränder."
+          ]
+        },
+        "Footbridges": {
+          "de": "Stege",
+          "en": "Footbridges",
+          "intro": [
+            "Timber footbridges over brooks, ditches and mill races.",
+            "Holzstege über Bäche, Gräben und Mühlgräben."
+          ]
         }
       }
     },
@@ -93,8 +110,31 @@
             "Forged scrollwork from round bar, for doors and walls.",
             "Geschmiedete Ranken aus Rundeisen für Türen und Wände."
           ]
+        },
+        "CandleStands": {
+          "de": "Kerzenständer",
+          "en": "Candle stands",
+          "tall": true,
+          "intro": [
+            "Forged floor stands for candles and lamps, with a pan on top and splayed legs.",
+            "Geschmiedete Standleuchter für Kerzen und Lampen, mit Schale oben und gespreizten Beinen."
+          ]
         }
       }
+    },
+    "Furniture": {
+      "de": "Möbel",
+      "types": {
+        "Tables": {
+          "de": "Tische",
+          "en": "Tables",
+          "intro": [
+            "Joined and turned tables for halls, inns and parlours.",
+            "Gezimmerte und gedrechselte Tische für Hallen, Wirtsstuben und Stuben."
+          ]
+        }
+      },
+      "en": "Furniture"
     }
   },
   "pieces": [
@@ -3665,6 +3705,95 @@
       "method": "blender-lathe",
       "note": "An urn finial, a stepped cap, a block with a small raised diamond, a ring, a shaft with stopped chamfers and flutes on every face, a stepped base and a plain plinth. The inlay, the roundels and the lettering on the base are not modelled. (build_batch_32.py). 120 cm tall assumed.",
       "cutout": "warm"
+    },
+    {
+      "id": "HI-CandleStand_Tripod_01",
+      "mesh": "SM_HI_CandleStand_Tripod_01",
+      "category": "Ironwork",
+      "type": "CandleStands",
+      "name": [
+        "Wrought-iron tripod candle stand",
+        "Schmiedeeiserner Dreibein-Kerzenständer"
+      ],
+      "size_cm": [
+        46.1,
+        39.9,
+        110.2
+      ],
+      "method": "blender-forged",
+      "note": "Modelled from the engraving (build_candlestand.py): a shallow pan with a flat flared rim, a round upper rod with a twisted square section, a flared socket collar, a square lower stem with a socket block, and three flat strap legs that arch out, drop and end in flat feet. The drawing has no scale; 110 cm tall assumed. The rod's chased decoration is simplified to the twist."
+    },
+    {
+      "id": "HI-Table_Turned_01",
+      "mesh": "SM_HI_Table_Turned_01",
+      "category": "Furniture",
+      "type": "Tables",
+      "name": [
+        "Oak table with turned legs and scalloped apron",
+        "Eichentisch mit gedrechselten Beinen und geschweifter Zarge"
+      ],
+      "size_cm": [
+        170,
+        95,
+        80
+      ],
+      "method": "blender-mixed",
+      "note": "A plank top with a moulded edge, a scalloped apron on all four sides, four turned legs between square blocks, a flat stretcher frame just above the floor and bun feet. The planks and the apron's carving are texture (build_batch_33.py). 1.70 x 0.95 m top, 80 cm high, assumed.",
+      "cutout": "light"
+    },
+    {
+      "id": "HI-GraveCross_Ring_01",
+      "mesh": "SM_HI_GraveCross_Ring_01",
+      "category": "Woodwork",
+      "type": "GraveCrosses",
+      "name": [
+        "Wooden grave cross with arched ring",
+        "Holzgrabkreuz mit Bogenkranz"
+      ],
+      "size_cm": [
+        91.8,
+        13.9,
+        155
+      ],
+      "method": "blender-modelled",
+      "note": "A square post and arm with capped ends (square blocks with low pyramid tips), a round boss on the crossing and a flat board ring of concave arcs joining post and arms (build_batch_33.py). 1.55 m above ground assumed.",
+      "cutout": "light"
+    },
+    {
+      "id": "HI-GraveCross_Roofed_01",
+      "mesh": "SM_HI_GraveCross_Roofed_01",
+      "category": "Woodwork",
+      "type": "GraveCrosses",
+      "name": [
+        "Roofed wooden grave cross with name board",
+        "Holzgrabkreuz mit Dach und Namenstafel"
+      ],
+      "size_cm": [
+        102.1,
+        18,
+        190
+      ],
+      "method": "blender-modelled",
+      "note": "A stepped board cross with square-ended arms under a small gable roof of two boards, a name board with an arched sunk panel, a shelf with two candle posts with flame finials and a wide post into the ground. The inscription, IHS and painted flames are left for the texture (M_HI_Inscription on the panel) (build_batch_33.py). 1.90 m above ground assumed.",
+      "cutout": "light"
+    },
+    {
+      "id": "HI-Footbridge_Braced_01",
+      "mesh": "SM_HI_Footbridge_Braced_01",
+      "category": "Woodwork",
+      "type": "Footbridges",
+      "name": [
+        "Braced timber footbridge",
+        "Verstrebter Holzsteg"
+      ],
+      "size_cm": [
+        534,
+        210,
+        208
+      ],
+      "method": "blender-modelled",
+      "note": "Two cambered stringers with an arched soffit, cross planks with gaps, a sill on each stringer, seven posts a side, a cambered top rail, braces rising in pairs to every second post, cusped spandrel boards, tall end posts with necked pyramid caps and raking struts to the banks (build_footbridge.py). 4.0 m between the stringer ends, rails 1.05 m above the deck, assumed; the stone abutments and water are not part of it.",
+      "cutout": "light"
     }
   ]
 }

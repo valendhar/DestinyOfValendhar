@@ -1692,6 +1692,30 @@
 "folder": "wolfwood"
 },
 {
+"id": "EX-44",
+"name": "Market parasol stalls",
+"number": 786,
+"folder": "props"
+},
+{
+"id": "EX-45",
+"name": "Garden beds",
+"number": 787,
+"folder": "props"
+},
+{
+"id": "EX-46",
+"name": "Field implements",
+"number": 788,
+"folder": "props"
+},
+{
+"id": "EX-47",
+"name": "Sparring circle of stones",
+"number": 789,
+"folder": "props"
+},
+{
 "id": "DK-01",
 "name": "Barrow architecture kit",
 "number": 75,
