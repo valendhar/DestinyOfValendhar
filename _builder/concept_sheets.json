@@ -1657,7 +1657,7 @@
 },
 {
 "id": "BL-30",
-"name": "Frankfurt gate",
+"name": "Large town gate (reserve design)",
 "number": 79,
 "folder": "buildings"
 },
@@ -1887,24 +1887,6 @@
 "id": "BL-29-E1",
 "name": "front elevation and top plan, for modelling",
 "number": 308,
-"folder": "buildings"
-},
-{
-"id": "BL-30-E1",
-"name": "front and rear elevations",
-"number": 311,
-"folder": "buildings"
-},
-{
-"id": "BL-30-E2",
-"name": "left and right elevations",
-"number": 312,
-"folder": "buildings"
-},
-{
-"id": "BL-30-D",
-"name": "construction details",
-"number": 313,
 "folder": "buildings"
 },
 {

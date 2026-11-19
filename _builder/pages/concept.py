@@ -224,7 +224,7 @@ SUB = [
     ("concept/heroes.html", ("Heroes", "Helden"), "PC-GROUP-M", heroes, "heroes"),
     ("concept/people.html", ("People of Hayn", "Die Leute von Hayn"), "NP-02", people, "people"),
     ("concept/creatures.html", ("Creatures & Enemies", "Kreaturen & Gegner"), "EN-04-S", creatures, "creatures"),
-    ("concept/buildings.html", ("Buildings & Landmarks", "Gebäude & Wahrzeichen"), "BL-30", buildings, "buildings"),
+    ("concept/buildings.html", ("Buildings & Landmarks", "Gebäude & Wahrzeichen"), "BL-06", buildings, "buildings"),
     ("concept/props.html", ("Props & Interiors", "Requisiten & Innenräume"), None, props, "props"),
     ("concept/wolfwood.html", ("Wolfwood & Barrow", "Wolfwood & Hügelgrab"), "DK-02", wolfwood, "wolfwood"),
     ("concept/kit.html", ("Modular Kit", "Baukasten"), "KX-TIMBER", kit, "kit"),
