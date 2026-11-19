@@ -197,6 +197,10 @@ def plain_light_border(thumb):
     return med.mean() > 165 and (med.max() - med.min()) < 22 and near > .6
 
 
+# a cut-out older than the cut-out tool itself is remade, so a better method reaches every picture
+CUT_TOOL_TIME = (HERE.parent / "_Docs" / "Tools" / "cutout.py").stat().st_mtime if (HERE.parent / "_Docs" / "Tools" / "cutout.py").exists() else 0
+
+
 def make_cutouts():
     """A transparent thumbnail for every picture on a plain light background (user, 2026-11-19): the pages show the cut-out on the
     site's own dusk stage, so sheets, portraits and props look alike; the lightbox still opens the full original with its
@@ -213,7 +217,7 @@ def make_cutouts():
         dst = out / f"{img_id}.webp"
         if not src or not thumb.exists():
             continue
-        if dst.exists() and dst.stat().st_size > 0 and dst.stat().st_mtime >= src.stat().st_mtime:
+        if dst.exists() and dst.stat().st_size > 0 and dst.stat().st_mtime >= max(src.stat().st_mtime, CUT_TOOL_TIME):
             CUT.add(img_id)
             continue
         if not plain_light_border(thumb):
