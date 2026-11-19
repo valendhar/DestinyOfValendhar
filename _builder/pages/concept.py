@@ -61,8 +61,24 @@ def block(ctx, title, intro, entries, tall=False, first=False, shape="", cut=Fal
     made = sum(1 for e in entries if ctx.has(e["id"]))
     count = ctx.t(f"{made} of {len(entries)} made", f"{made} von {len(entries)} fertig")
     p = f'<p class="sheet-intro">{ctx.t(*intro)}</p>' if intro else ""
-    return (f'<div class="sheet-block{" first" if first else ""}"><div class="sheet-head"><h2>{ctx.t(*title)}</h2>'
+    return (f'<div class="sheet-block{" first" if first else ""}" id="{slug(ctx.t(*title))}"><div class="sheet-head"><h2>{ctx.t(*title)}</h2>'
             f'<span class="sheet-count">{count}</span></div>{p}{sheet_grid(ctx, entries, tall, shape, cut)}</div>')
+
+
+def slug(text):
+    return "s-" + re.sub(r"[^a-z0-9]+", "-", text.lower().replace("ä", "ae").replace("ö", "oe").replace("ü", "ue").replace("ß", "ss")).strip("-")
+
+
+def with_index(html):
+    """A row of links to each section of a long page, with how many of its sheets are made (user, 2026-11-19: easier to find
+    things on the longer Concept Art pages). Only for pages with three or more sections."""
+    heads = re.findall(r'<div class="sheet-block[^"]*" id="([^"]+)"><div class="sheet-head"><h2>(.*?)</h2><span class="sheet-count">(.*?)</span>', html)
+    if len(heads) < 3:
+        return html
+    items = "".join(f'<li><a href="#{i}">{t}<span>{c.split(" ")[0]}</span></a></li>' for i, t, c in heads)
+    nav = f'<nav class="sheet-index" aria-label="Sections"><ul>{items}</ul></nav>'
+    k = html.find('<div class="sheet-block')
+    return html[:k] + nav + html[k:] if k >= 0 else html
 
 
 def pick(folder, pattern=None, exclude=None):
@@ -80,7 +96,7 @@ def fixed(ctx, title, intro, items, tall=False, first=False):
     count = ctx.t(f"{made} of {len(items)} made", f"{made} von {len(items)} fertig")
     figs = "".join(ctx.figure(i, ctx.t(*c), swap=False, note=ctx.t("Coming soon", "Demnächst")) for i, c in items)
     p = f'<p class="sheet-intro">{ctx.t(*intro)}</p>' if intro else ""
-    return (f'<div class="sheet-block{" first" if first else ""}"><div class="sheet-head"><h2>{ctx.t(*title)}</h2>'
+    return (f'<div class="sheet-block{" first" if first else ""}" id="{slug(ctx.t(*title))}"><div class="sheet-head"><h2>{ctx.t(*title)}</h2>'
             f'<span class="sheet-count">{count}</span></div>{p}'
             f'<div class="gallery gallery-sheets{" gallery-tall" if tall else ""}">{figs}</div></div>')
 
@@ -201,7 +217,7 @@ def historical(ctx):
                 figs += ctx.figure(p["id"].upper(), name, swap=False, note=ctx.t("Coming soon", "Demnächst"))
             title = f'{ctx.t(c.get("en", cat), c["de"])}: {ctx.t(t.get("en", typ), t["de"])}'  # display names; the keys are folder names
             count = ctx.t(f"{len(shown)} of {len(pieces)} shown", f"{len(shown)} von {len(pieces)} gezeigt")
-            out.append(f'<div class="sheet-block{" first" if first else ""}"><div class="sheet-head"><h2>{title}</h2>'
+            out.append(f'<div class="sheet-block{" first" if first else ""}" id="{slug(title)}"><div class="sheet-head"><h2>{title}</h2>'
                        f'<span class="sheet-count">{count}</span></div><p class="sheet-intro">{ctx.t(*t["intro"])}</p>'
                        f'<div class="gallery gallery-sheets{" gallery-tall" if t.get("tall") else ""}">{figs}</div></div>')  # tall pieces in 3:4 cards
             first = False
@@ -292,4 +308,5 @@ PAGES = {
         banner=["BE-01", "KA-01"], body=overview),
 }
 for _path, _title, _cover, _fn, _folder in SUB:
-    PAGES[_path] = dict(title=_title, kicker=("Concept Art", "Konzeptkunst"), lede=LEDE[_folder], banner=None, body=_fn)
+    PAGES[_path] = dict(title=_title, kicker=("Concept Art", "Konzeptkunst"), lede=LEDE[_folder], banner=None,
+                        body=lambda ctx, fn=_fn: with_index(fn(ctx)))

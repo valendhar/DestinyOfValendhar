@@ -31,6 +31,9 @@
   --cut: 14px;
   --plate: polygon(var(--cut) 0, calc(100% - var(--cut)) 0, 100% var(--cut), 100% calc(100% - var(--cut)), calc(100% - var(--cut)) 100%, var(--cut) 100%, 0 calc(100% - var(--cut)), 0 var(--cut));
   --brass-edge: linear-gradient(160deg, #EBC77F, #7A5524 45%, #D0A155);
+  /* the dusk stage every cut-out stands on: lamplight on the night, as in the guild-hall portraits */
+  --stage: radial-gradient(ellipse 78% 70% at 50% 44%, rgba(208, 161, 85, .22), transparent 72%), linear-gradient(180deg, var(--night-3), var(--night-deep));
+  --stage-lit: radial-gradient(ellipse 80% 72% at 50% 44%, rgba(235, 199, 127, .32), transparent 74%), linear-gradient(180deg, #2E2D44, var(--night-deep));
 }
 
 * { box-sizing: border-box; }
@@ -346,9 +349,11 @@ html { scroll-padding-top: calc(var(--header-h) + 62px); }
 .fig { margin: 0; }
 .fig img { background: var(--night-2); width: 100%; clip-path: var(--plate); }
 .fig a.lb { display: block; cursor: zoom-in; padding: 1px; background: var(--brass-edge); clip-path: var(--plate); }
-/* cut-out people stand in the guild-hall dusk instead of on white */
-.fig img[src*="/CH-"], .fig img[src*="/PORTRAIT-"], .fig img[src*="/PC-GROUP"], .fig img[src*="/FULL_"], .fig img[src*="/EN-05"] {
-  background: radial-gradient(ellipse 75% 65% at 50% 38%, rgba(208, 161, 85, .26), transparent 72%), linear-gradient(180deg, var(--night-3), var(--night-deep)); }
+/* cut-outs (pictures on a plain studio background, made transparent by the build) all stand on the same dusk stage, so
+   sheets, props and people read as one set; the lightbox still opens the full original with its background */
+.fig img.cut, .fig img[src*="/CH-"], .fig img[src*="/PORTRAIT-"], .fig img[src*="/PC-GROUP"], .fig img[src*="/FULL_"], .fig img[src*="/EN-05"] {
+  background: var(--stage); }
+.fig a.lb:hover img.cut, .fig a.lb:focus-visible img.cut { background: var(--stage-lit); }
 .fig figcaption { font-size: .98rem; font-style: italic; color: var(--parchment-dim); margin-top: 8px; text-align: center; }
 .ph-box {
   display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px;
@@ -434,6 +439,7 @@ html { scroll-padding-top: calc(var(--header-h) + 62px); }
 .lightbox figure { margin: 0; max-width: 100%; max-height: 100%; display: flex; flex-direction: column; align-items: center; }
 .lightbox img { max-width: 100%; max-height: calc(100vh - 140px); object-fit: contain; border-radius: 0; }
 .lightbox figcaption { color: var(--parchment-dim); margin-top: 12px; text-align: center; max-width: 900px; }
+.lightbox .lb-count { display: block; font: italic .9rem var(--body); color: var(--muted); margin-top: 2px; }
 .lightbox button { position: absolute; background: rgba(240, 231, 211, .08); border: 1px solid var(--line); color: var(--parchment); font-size: 2rem; line-height: 1; width: 48px; height: 48px; border-radius: 50%; cursor: pointer; }
 .lightbox button:hover { background: rgba(208, 161, 85, .2); }
 .lb-close { top: 14px; right: 14px; }
@@ -501,7 +507,16 @@ html { scroll-padding-top: calc(var(--header-h) + 62px); }
 }
 
 /* ---------- concept art: sheets by section, made ones first, a box for each one still to come ---------- */
-.sheet-block { margin-top: 80px; }
+.sheet-block { margin-top: 80px; scroll-margin-top: calc(var(--header-h) + 72px); }
+/* the sections of a long page, each with how many of its sheets are made */
+.sheet-index { margin: 0 0 64px; }
+.sheet-index ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; }
+.sheet-index a {
+  --cut: 7px; display: inline-flex; align-items: baseline; gap: 9px; padding: 8px 15px 9px;
+  font: 400 1rem/1.2 var(--display); color: var(--parchment); text-decoration: none;
+  background: var(--night-2); clip-path: var(--plate); }
+.sheet-index a span { font: italic 400 .88rem var(--body); color: var(--brass); }
+.sheet-index a:hover, .sheet-index a:focus-visible { background: var(--night-3); color: var(--brass-hi); }
 .sheet-block.first { margin-top: 0; }
 .sheet-head { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; border-bottom: 1px solid var(--line); margin-bottom: 18px; }
 .sheet-head h2 { margin: 0 0 10px; }
@@ -509,6 +524,9 @@ html { scroll-padding-top: calc(var(--header-h) + 62px); }
 .sheet-intro { color: var(--parchment-dim); max-width: 70ch; margin: 0 0 24px; }
 .gallery.gallery-sheets { grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 28px 20px; }
 .gallery-sheets .fig img { aspect-ratio: 16 / 9; object-fit: contain; }
+/* a little air round a cut-out, so the objects don't touch the plate's cut corners */
+.gallery-sheets .fig img.cut { padding: 4% 5%; }
+.concept-card .fig img.cut { object-fit: contain; padding: 5% 6%; }
 .gallery-sheets.gallery-tall .fig img, .gallery-sheets.gallery-tall .ph-box { aspect-ratio: 3 / 4; }
 /* materials are square, seamless surfaces: they fill their tile, smaller and more of them to a row */
 .gallery.gallery-sheets.gallery-square { grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); }

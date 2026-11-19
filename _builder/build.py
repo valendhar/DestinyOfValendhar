@@ -39,6 +39,8 @@ FULL_MAX = 1600   # published full size, capped so web copies are of little use 
 THUMB_MAX = 960
 
 IMAGES = {}  # id -> dict(w, h, tw, th)
+SRC = {}     # id -> source file
+CUT = set()  # ids with a transparent thumbnail in assets/img/cut (the page shows it, the lightbox the full original)
 WM_REBUILT = set()  # ids whose web copy was rebuilt from its source in this build
 
 # Kit piece and kit reference images (KP-, KE-) keep their plain grey or white background in the sources, because Tripo and Meshy need it; the site
@@ -177,6 +179,63 @@ def stamp(path, cap=None):
     (im.convert("RGB") if opaque else im).save(path, "WEBP", quality=84, method=6)
 
 
+def plain_light_border(thumb):
+    """True when an opaque picture stands on a plain light studio background (sheets, character art): its top edge and the
+    upper two thirds of its sides are pale, colourless and even. Paintings, photos and seamless textures are not."""
+    import numpy as np
+    with Image.open(thumb) as im:
+        if im.mode in ("RGBA", "LA", "P") and im.convert("RGBA").getchannel("A").getextrema()[0] < 250:
+            return False                                                   # already transparent
+        im = im.convert("RGB")
+        im.thumbnail((240, 240))
+    a = np.asarray(im, float)
+    h, w, _ = a.shape
+    b = max(3, int(min(h, w) * .04))
+    ring = np.concatenate([a[:b].reshape(-1, 3), a[:int(h * .66), :b].reshape(-1, 3), a[:int(h * .66), -b:].reshape(-1, 3)])
+    med = np.median(ring, 0)
+    near = (np.abs(ring - med).max(1) < 18).mean()
+    return med.mean() > 165 and (med.max() - med.min()) < 22 and near > .6
+
+
+def make_cutouts():
+    """A transparent thumbnail for every picture on a plain light background (user, 2026-11-19): the pages show the cut-out on the
+    site's own dusk stage, so sheets, portraits and props look alike; the lightbox still opens the full original with its
+    background. Made from the source at thumbnail size (about 5 s each) and only when the source is newer than the cut-out."""
+    if not _cutout:
+        return
+    out = IMG_OUT / "cut"
+    out.mkdir(parents=True, exist_ok=True)
+    made = 0
+    for img_id in sorted(IMAGES):
+        if img_id.startswith(("LOGO", "TITLE")) or img_id.endswith("-CUT"):
+            continue
+        thumb, src = IMG_OUT / "thumb" / f"{img_id}.webp", SRC.get(img_id)
+        dst = out / f"{img_id}.webp"
+        if not src or not thumb.exists():
+            continue
+        if dst.exists() and dst.stat().st_size > 0 and dst.stat().st_mtime >= src.stat().st_mtime:
+            CUT.add(img_id)
+            continue
+        if not plain_light_border(thumb):
+            dst.unlink(missing_ok=True)
+            continue
+        tmp_in, tmp_out = IMG_OUT / "_cut_in.png", IMG_OUT / "_cut_out.png"
+        with Image.open(src) as im:
+            im = im.convert("RGB")
+            im.thumbnail((THUMB_MAX, THUMB_MAX), Image.LANCZOS)
+            im.save(tmp_in)
+        _cutout(tmp_in, tmp_out, shadow=True)
+        Image.open(tmp_out).save(dst, "WEBP", quality=82, method=6)
+        tmp_in.unlink(); tmp_out.unlink()
+        stamp(dst)
+        CUT.add(img_id)
+        made += 1
+    for old in out.glob("*.webp"):                                         # a picture that was removed or is no longer plain
+        if old.stem.upper() not in CUT:
+            old.unlink()
+    print(f"cut-outs: {len(CUT)} ({made} new)")
+
+
 def watermark_images():
     import json as _json
     done = set(_json.loads(WM_LIST.read_text(encoding="utf-8"))) if WM_LIST.exists() else set()
@@ -239,6 +298,7 @@ def process_images():
             with Image.open(thumb) as t:
                 tw, th = t.size
         IMAGES[img_id] = dict(w=w, h=h, tw=tw, th=th)
+    SRC.update(chosen)
     # Fresh web copies lose their mark; stamp everything not yet stamped and refresh the sizes of what changed
     if WM_REBUILT and WM_LIST.exists():
         import json as _json
@@ -318,8 +378,9 @@ class Ctx:
         if img_id in IMAGES:
             m = IMAGES[img_id]
             loading = 'fetchpriority="high"' if eager else 'loading="lazy" decoding="async"'
-            tag = (f'<img src="{self.img_src(img_id, swap=False)}" alt="{esc(alt)}" width="{m["tw"]}" '
-                   f'height="{m["th"]}" {loading}>')
+            cut = img_id in CUT                     # the cut-out on the page, the full original in the lightbox
+            tag = (f'<img src="{self.img_src(img_id, "cut" if cut else "thumb", swap=False)}" alt="{esc(alt)}" width="{m["tw"]}" '
+                   f'height="{m["th"]}" {loading}{' class="cut"' if cut else ""}>')
             if link:
                 tag = (f'<a class="lb" href="{self.img_src(img_id, "full", swap=False)}" '
                        f'data-caption="{esc(caption or "")}">{tag}</a>')
@@ -597,6 +658,7 @@ MOVED = {"world/timberwatch.html": "world/hayn.html", "world/three-oaks.html": "
 
 def main():
     process_images()
+    make_cutouts()
     pages = load_pages()
     for d in ("css", "js", "media"):
         dst = OUT / "assets" / d

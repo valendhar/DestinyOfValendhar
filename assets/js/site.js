@@ -200,6 +200,12 @@
     lbImg.alt = (a.querySelector("img") || {}).alt || "";
     lbCap.textContent = a.dataset.caption || "";
     const multi = links.length > 1;
+    if (multi) {                                         // where you are in this gallery, e.g. "3 / 47"
+      const n = document.createElement("span");
+      n.className = "lb-count";
+      n.textContent = `${idx + 1} / ${links.length}`;
+      lbCap.appendChild(n);
+    }
     lb.querySelector(".lb-prev").hidden = !multi;
     lb.querySelector(".lb-next").hidden = !multi;
   }
