@@ -132,6 +132,14 @@
             "Joined and turned tables for halls, inns and parlours.",
             "Gezimmerte und gedrechselte Tische für Hallen, Wirtsstuben und Stuben."
           ]
+        },
+        "Cupboards": {
+          "de": "Schränke",
+          "en": "Cupboards and dressers",
+          "intro": [
+            "Joined cupboards, dressers and shelves for kitchens, halls and taverns.",
+            "Gezimmerte Schränke, Anrichten und Regale für Küchen, Stuben und Schenken."
+          ]
         }
       },
       "en": "Furniture"
@@ -3794,6 +3802,96 @@
       "method": "blender-modelled",
       "note": "Two cambered stringers with an arched soffit, cross planks with gaps, a sill on each stringer, seven posts a side, a cambered top rail, braces rising in pairs to every second post, cusped spandrel boards, tall end posts with necked pyramid caps and raking struts to the banks (build_footbridge.py). 4.0 m between the stringer ends, rails 1.05 m above the deck, assumed; the stone abutments and water are not part of it.",
       "cutout": "light"
+    },
+    {
+      "id": "HI-Table_JointStool_01",
+      "mesh": "SM_HI_Table_JointStool_01",
+      "category": "Furniture",
+      "type": "Tables",
+      "name": [
+        "Oak joint-stool side table",
+        "Eichener Beistelltisch in Hockerform"
+      ],
+      "size_cm": [
+        46,
+        40,
+        58
+      ],
+      "method": "blender-modelled",
+      "note": "A top with a rounded edge, aprons on all four sides, four legs splayed about 4 degrees with chamfered square blocks, turned vases, rings and beads and ball feet, and four square stretchers between the lower blocks (build_joint_stool.py). 46 x 40 cm top, 58 cm high, assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Cupboard_Dresser_01",
+      "mesh": "SM_HI_Cupboard_Dresser_01",
+      "category": "Furniture",
+      "type": "Cupboards",
+      "name": [
+        "Oak dresser with open shelves and a two-door cupboard",
+        "Eichene Anrichte mit offenem Regal und zweitürigem Unterschrank"
+      ],
+      "size_cm": [
+        122,
+        49,
+        148
+      ],
+      "method": "blender-modelled",
+      "note": "A plinth with bracket-foot cut-outs, a cupboard with a face frame and two frame-and-panel doors with fielded panels, iron hinge plates and a drop handle, a counter top with a rounded edge and cove, open shelves with vertical back boards, a shelf with a lip and a scalloped valance, a top with a cornice, a waved back gallery and spiked corner boards (build_dresser.py). 1.15 m wide, 1.45 m to the crest, assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Cupboard_Cabinet_01",
+      "mesh": "SM_HI_Cupboard_Cabinet_01",
+      "category": "Furniture",
+      "type": "Cupboards",
+      "name": [
+        "Oak cabinet with an open shelf, carved crest and two-door cupboard",
+        "Eichenschrank mit offenem Fach, geschnitztem Aufsatz und zweitürigem Unterschrank"
+      ],
+      "size_cm": [
+        106,
+        49,
+        148
+      ],
+      "method": "blender-modelled",
+      "note": "A plinth with low shaped cut-outs and a moulded strip, full-height plank sides, a face frame and two frame-and-panel doors with fielded panels, long iron pintle hinges with turned knuckles and straps, two bar handles, a projecting counter shelf, an open shelf section with vertical back boards, a shelf with a lip and a small iron plate, a scalloped valance with dropped ends, an overhanging top with a keyhole plate and a carved crest with lobed outline, two roundels, scroll rings and leaves (build_cabinet.py). 1.00 m wide over the case, assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Cupboard_GothicDresser_01",
+      "mesh": "SM_HI_Cupboard_GothicDresser_01",
+      "category": "Furniture",
+      "type": "Cupboards",
+      "name": [
+        "Oak dresser with a pierced Gothic valance and two-door cupboard",
+        "Eichene Anrichte mit gotischem Bogenfries und zweitürigem Unterschrank"
+      ],
+      "size_cm": [
+        138,
+        54,
+        175
+      ],
+      "method": "blender-modelled",
+      "note": "Trim-modelling rule: a plinth with bracket feet and mouldings, a face frame, two frame-and-panel doors with arched raised panels, carved strips on the meeting stiles (flat, trim strip), knuckle hinges, a counter top with a moulded edge, an open upper stage with scrolled side edges and split balusters, vertical back boards, a shelf with a rounded lip, a valance of pointed arches with pendant drops and a raised middle arch, a frieze and a stepped cornice (build_gothic_dresser.py). 1.30 m wide over the case, assumed.",
+      "cutout": "warm"
+    },
+    {
+      "id": "HI-Cupboard_CrestedDresser_01",
+      "mesh": "SM_HI_Cupboard_CrestedDresser_01",
+      "category": "Furniture",
+      "type": "Cupboards",
+      "name": [
+        "Oak dresser with a waved crest, spiked galleries and two-door cupboard",
+        "Eichene Anrichte mit geschweiftem Aufsatz, Zackengalerien und zweitürigem Unterschrank"
+      ],
+      "size_cm": [
+        116,
+        49,
+        161
+      ],
+      "method": "blender-modelled",
+      "note": "Trim-modelling rule: a plinth with curled bracket feet and a shallow arch, mouldings, a face frame with a muntin, two frame-and-panel doors with fielded panels, small butterfly hinges and a drop pull, a counter with a moulded edge, an open upper stage with thick front stiles, vertical back boards, a shelf with a moulded front and bead, a scalloped valance, a top board with a moulded edge, a waved crest at the back and side galleries with three spikes each (build_crested_dresser.py). 1.10 m wide over the case, assumed.",
+      "cutout": "warm"
     }
   ]
 }
