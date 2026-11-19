@@ -268,8 +268,8 @@ def process_images():
     # _Docs/Tools/cutout.py) replace the portraits of the same name in characters.
     chosen = {}
     for src in [f for d in SOURCES for f in sorted(d.rglob("*"))]:
-        if PRIVATE_SHEETS in src.parents:
-            continue  # the material library stays off the site (2026-11-11): no web copy, so nothing is published
+        if PRIVATE_SHEETS in src.parents or (HERE / "images" / "sheets" / "cc5") in src.parents:
+            continue  # the CC5 base-body templates are working references for the prompts, not site pictures  # the material library stays off the site (2026-11-11): no web copy, so nothing is published
         if src.suffix.lower() in (".png", ".jpg", ".jpeg", ".webp"):
             chosen[src.stem.strip().upper()] = src  # a stray space before the extension happens when saving
     for img_id, src in chosen.items():
