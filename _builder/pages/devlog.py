@@ -171,6 +171,12 @@ VIDEOS = [
                "so it starts to look like a lived-in place rather than a set of blocks.",
                "Das Greyboxing von Hayn, ausgefüllt mit den neuen Meshes und Requisiten: Die Gassen und Gebäude der Stadt bekommen "
                "ihre Details, sodass sie wie ein bewohnter Ort wirkt statt wie eine Reihe von Blöcken.")),
+    dict(loom="597eb74e841045be9fce06a95336e3e6", series="gameplay", ratio="4 / 3", minutes=("3½ min", "3½ Min."), when=("November 2026", "November 2026"),
+         title=("A first combat test", "Ein erster Kampftest"),
+         text=("Fighting gets its first test on the Bootcamp: the player takes on enemies, to try out attacks, abilities and how a "
+               "fight feels before combat moves into the town and the forest.",
+               "Der Kampf bekommt seinen ersten Test auf dem Bootcamp: Die Spielfigur tritt gegen Gegner an, um Angriffe, Fähigkeiten "
+               "und das Gefühl eines Kampfes auszuprobieren, bevor der Kampf in die Stadt und den Wald kommt.")),
 ]
 
 
