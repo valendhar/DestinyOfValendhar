@@ -1082,19 +1082,19 @@
 {
 "id": "PC-WM-M-C1",
 "name": "White Mage, male, CC5 1: four-view character",
-"number": 706,
+"number": 702,
 "folder": "heroes"
 },
 {
 "id": "PC-WM-M-K",
 "name": "White Mage, male, starter outfit, full body",
-"number": 722,
+"number": 718,
 "folder": "heroes"
 },
 {
 "id": "PC-ELE-M-C1",
 "name": "Elementalist, male, CC5 1: four-view character",
-"number": 739,
+"number": 735,
 "folder": "heroes"
 },
 {
@@ -1106,13 +1106,13 @@
 {
 "id": "PC-ELE-F-C1",
 "name": "Elementalist, female, CC5 1: four-view character",
-"number": 763,
+"number": 759,
 "folder": "heroes"
 },
 {
 "id": "PC-ELE-F-K",
 "name": "Elementalist, female, starter outfit, full body",
-"number": 777,
+"number": 773,
 "folder": "heroes"
 },
 {
@@ -1130,7 +1130,7 @@
 {
 "id": "CH-ROLAND-C1",
 "name": "Captain Roland, CC5 1: four-view character",
-"number": 790,
+"number": 786,
 "folder": "people"
 },
 {
@@ -1148,7 +1148,7 @@
 {
 "id": "CH-BRON-C1",
 "name": "Bron, CC5 1: four-view character",
-"number": 814,
+"number": 810,
 "folder": "people"
 },
 {
@@ -1166,7 +1166,7 @@
 {
 "id": "CH-HAGEN-C1",
 "name": "Hagen, CC5 1: four-view character",
-"number": 832,
+"number": 828,
 "folder": "people"
 },
 {
@@ -1184,7 +1184,7 @@
 {
 "id": "CH-MIRA-C1",
 "name": "Mira, CC5 1: four-view character",
-"number": 852,
+"number": 848,
 "folder": "people"
 },
 {
@@ -1202,7 +1202,7 @@
 {
 "id": "CH-ELWYN-C1",
 "name": "Elwyn, CC5 1: four-view character",
-"number": 868,
+"number": 864,
 "folder": "people"
 },
 {
@@ -1220,7 +1220,7 @@
 {
 "id": "CH-HALDOR-C1",
 "name": "Hermann, CC5 1: four-view character",
-"number": 884,
+"number": 880,
 "folder": "people"
 },
 {
@@ -1238,7 +1238,7 @@
 {
 "id": "CH-GUARD-M-C1",
 "name": "Town guard, male, CC5 1: four-view character",
-"number": 902,
+"number": 898,
 "folder": "people"
 },
 {
@@ -1256,7 +1256,7 @@
 {
 "id": "CH-GUARD-F-C1",
 "name": "Town guard, female, CC5 1: four-view character",
-"number": 924,
+"number": 920,
 "folder": "people"
 },
 {
@@ -1274,7 +1274,7 @@
 {
 "id": "CH-INNKEEPER-C1",
 "name": "The innkeeper, CC5 1: four-view character",
-"number": 944,
+"number": 940,
 "folder": "people"
 },
 {
@@ -1292,7 +1292,7 @@
 {
 "id": "CH-STOREKEEPER-C1",
 "name": "The storekeeper, CC5 1: four-view character",
-"number": 962,
+"number": 958,
 "folder": "people"
 },
 {
@@ -1310,7 +1310,7 @@
 {
 "id": "CH-WOODCUTTER-C1",
 "name": "The woodcutter, CC5 1: four-view character",
-"number": 980,
+"number": 976,
 "folder": "people"
 },
 {
@@ -1328,7 +1328,7 @@
 {
 "id": "CH-MERCHANT-C1",
 "name": "The merchant, CC5 1: four-view character",
-"number": 996,
+"number": 992,
 "folder": "people"
 },
 {
@@ -1346,7 +1346,7 @@
 {
 "id": "CH-SCOUT-C1",
 "name": "The wounded scout, CC5 1: four-view character",
-"number": 1016,
+"number": 1012,
 "folder": "people"
 },
 {
@@ -1496,7 +1496,7 @@
 {
 "id": "EN-05A-C1",
 "name": "Bandit cutthroat, CC5 1: four-view character",
-"number": 1048,
+"number": 1044,
 "folder": "creatures"
 },
 {
@@ -1520,7 +1520,7 @@
 {
 "id": "EN-05B-C1",
 "name": "Bandit archer, CC5 1: four-view character",
-"number": 1074,
+"number": 1070,
 "folder": "creatures"
 },
 {
@@ -1544,7 +1544,7 @@
 {
 "id": "EN-05C-C1",
 "name": "Bandit leader, CC5 1: four-view character",
-"number": 1094,
+"number": 1090,
 "folder": "creatures"
 },
 {
@@ -1562,7 +1562,7 @@
 {
 "id": "EN-06A-C1",
 "name": "Barrow thrall, CC5 1: four-view character",
-"number": 1114,
+"number": 1110,
 "folder": "creatures"
 },
 {
@@ -1580,7 +1580,7 @@
 {
 "id": "EN-06B-C1",
 "name": "Barrow archer, CC5 1: four-view character",
-"number": 1126,
+"number": 1122,
 "folder": "creatures"
 },
 {
@@ -1610,7 +1610,7 @@
 {
 "id": "EN-07-C1",
 "name": "Barrow Warden, CC5 1: four-view character",
-"number": 1136,
+"number": 1132,
 "folder": "creatures"
 },
 {
@@ -1634,25 +1634,25 @@
 {
 "id": "BL-32",
 "name": "West Gate (postern)",
-"number": 1204,
+"number": 1200,
 "folder": "buildings"
 },
 {
 "id": "BL-29-B",
 "name": "Market fountain, stonework alone (for Meshy)",
-"number": 1206,
+"number": 1202,
 "folder": "buildings"
 },
 {
 "id": "BL-29-ST",
 "name": "Market fountain, statue alone (for Meshy)",
-"number": 1207,
+"number": 1203,
 "folder": "buildings"
 },
 {
 "id": "BL-29-SP",
 "name": "Market fountain, stag-head spout alone (for Meshy)",
-"number": 1208,
+"number": 1204,
 "folder": "buildings"
 },
 {
@@ -1694,25 +1694,25 @@
 {
 "id": "EX-44",
 "name": "Market parasol stalls",
-"number": 1209,
+"number": 1205,
 "folder": "props"
 },
 {
 "id": "EX-45",
 "name": "Garden beds",
-"number": 1210,
+"number": 1206,
 "folder": "props"
 },
 {
 "id": "EX-46",
 "name": "Field implements",
-"number": 1211,
+"number": 1207,
 "folder": "props"
 },
 {
 "id": "EX-47",
 "name": "Sparring circle of stones",
-"number": 1212,
+"number": 1208,
 "folder": "props"
 },
 {
@@ -1946,49 +1946,49 @@
 {
 "id": "BL-24-E1",
 "name": "front and rear elevations",
-"number": 1189,
+"number": 1185,
 "folder": "buildings"
 },
 {
 "id": "BL-24-E2",
 "name": "left and right elevations",
-"number": 1190,
+"number": 1186,
 "folder": "buildings"
 },
 {
 "id": "BL-24-D",
 "name": "construction details",
-"number": 1191,
+"number": 1187,
 "folder": "buildings"
 },
 {
 "id": "BL-27-E1",
 "name": "front and rear elevations",
-"number": 1198,
+"number": 1194,
 "folder": "buildings"
 },
 {
 "id": "BL-27-D",
 "name": "construction details",
-"number": 1200,
+"number": 1196,
 "folder": "buildings"
 },
 {
 "id": "BL-28-E1",
 "name": "front and rear elevations",
-"number": 1201,
+"number": 1197,
 "folder": "buildings"
 },
 {
 "id": "BL-28-E2",
 "name": "left and right elevations",
-"number": 1202,
+"number": 1198,
 "folder": "buildings"
 },
 {
 "id": "BL-28-D",
 "name": "construction details",
-"number": 1203,
+"number": 1199,
 "folder": "buildings"
 },
 {
@@ -2738,13 +2738,13 @@
 {
 "id": "AR-01",
 "name": "Coat of arms of Hayn",
-"number": 1154,
+"number": 1150,
 "folder": "props"
 },
 {
 "id": "AR-02",
 "name": "Coat of arms of the kingdom",
-"number": 1155,
+"number": 1151,
 "folder": "props"
 },
 {
