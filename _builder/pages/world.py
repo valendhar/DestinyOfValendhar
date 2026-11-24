@@ -210,6 +210,10 @@ def road(ctx):
      "ist die Straße ruhig.")])}
 <h2 style="margin-top:56px">{t("Along the road", "Entlang der Straße")}</h2>
 <ol class="loops loops-3">{"".join(f'<li><span class="loop-label">{ctx.t(*a)}</span><p>{ctx.t(*b)}</p></li>' for a, b in steps)}</ol>
+<div style="margin-top:56px">{ctx.gallery([
+    ("RD-02", t("The ambush: two waves of bandits at the overturned cart", "Der Hinterhalt: zwei Wellen von Banditen am umgestürzten Karren")),
+    ("RD-04", t("The wounded scout points to the arch on the hill", "Der verwundete Kundschafter zeigt auf den Bogen am Hügel")),
+], "gallery-2 gallery-169")}</div>
 <div style="margin-top:80px">
 {feature(ctx, "DG-01", ("Beneath the hill", "Unter dem Hügel"), ("The dungeon", "Das Verlies"), [
     ("An entrance hall, three rooms of enemies, a bridge, a round boss chamber thirty metres across, and a tunnel back out to "
@@ -217,7 +221,27 @@ def road(ctx):
      "Eine Eingangshalle, drei Räume voller Gegner, eine Brücke, eine runde Bosskammer von dreißig Metern und ein Tunnel zurück "
      "zur Straße. Am besten mit anderen Spielern. Es ist das Hügelgrab eines vergessenen Wolfskults, und seine Toten halten noch immer Wache.")],
     flip=True)}
-</div>""")
+</div>
+{barrow(ctx)}""")
+
+
+def barrow(ctx):
+    t = ctx.t
+    shots = [(i, t(*c)) for i, c in [
+        ("DG-03", ("The bridge: skeleton archers and a bone wolf over the chasm", "Die Brücke: Skelettbogenschützen und ein Knochenwolf über dem Abgrund")),
+        ("DG-07", ("The wolf-cult altar, and a sealed door that starts to open", "Der Altar des Wolfskults und eine versiegelte Tür, die sich öffnet")),
+        ("DG-04", ("The Barrow Warden wakes: step out of the line of its blow", "Der Hügelgrabwächter erwacht: Raus aus der Bahn seines Hiebs")),
+        ("DG-05", ("Phase two: the wolf spirit breaks free", "Phase zwei: Der Wolfsgeist bricht hervor")),
+    ] if ctx.has(i)]
+    if not shots:
+        return ""
+    lede = t("Past the bridge and the cult chamber waits the Barrow Warden, a wolf-skulled guardian in old bronze. "
+             "Halfway through the fight its armour cracks and the wolf spirit inside it breaks free.",
+             "Hinter der Brücke und der Kultkammer wartet der Hügelgrabwächter, ein Wächter mit Wolfsschädel in altem Bronze. "
+             "Mitten im Kampf bricht seine Rüstung auf, und der Wolfsgeist in ihr kommt frei.")
+    return (f'<h2 style="margin-top:72px">{t("Inside the barrow", "Im Hügelgrab")}</h2>'
+            f'<p class="lede" style="margin-bottom:28px">{lede}</p>'
+            + ctx.gallery(shots, "gallery-2 gallery-169"))
 
 
 PAGES = {

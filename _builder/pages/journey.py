@@ -82,6 +82,22 @@ QUESTS = [
 ]
 
 
+# Pictures from the quest chain, in story order. Each appears once it is made.
+QUEST_MOMENTS = [
+    ("QS-09", ("Step 9 · Bitter Remedy: a brew that foams over at Mira's table", "Schritt 9 · Bittere Arznei: ein Trank, der an Miras Tisch überschäumt")),
+    ("QS-10", ("Step 10 · The Old Watchtower: the satchel, and a dark wolf on the stair", "Schritt 10 · Der alte Wachturm: die Tasche und ein dunkler Wolf auf der Treppe")),
+    ("QS-13", ("Step 13 · Rest at the Golden Acorn: the Alpha's fang on the table", "Schritt 13 · Rast in der Goldenen Eichel: der Zahn des Alphas auf dem Tisch")),
+]
+
+
+def quest_moments(ctx):
+    shots = [(i, ctx.t(*c)) for i, c in QUEST_MOMENTS if ctx.has(i)]
+    if not shots:
+        return ""
+    return (f'<h2 style="margin-top:80px">{ctx.t("Moments along the way", "Momente unterwegs")}</h2>'
+            + ctx.gallery(shots, "gallery-3 gallery-169"))
+
+
 def quests_page(ctx):
     t = ctx.t
     rows = [[str(k + 1), (en, de), (den, dde)] for k, (en, de, den, dde) in enumerate(QUESTS)]
@@ -89,6 +105,7 @@ def quests_page(ctx):
 <p class="lede" style="margin-bottom:28px">{t("Eighteen steps from the first signpost to the watchtower above Frankfurt. Names are working names.",
                      "Achtzehn Schritte vom ersten Wegweiser bis zur Warte über Frankfurt. Die Namen sind Arbeitstitel.")}</p>
 {table(ctx, [("Step", "Schritt"), ("Quest", "Quest"), ("What you do", "Was du tust")], rows, "quest-table")}
+{quest_moments(ctx)}
 <h2 style="margin-top:80px">{t("On the side", "Nebenbei")}</h2>
 {modes(ctx, [
     (("The linden", "Die Linde"), ("The bounty board", "Das Kopfgeldbrett"),
@@ -125,13 +142,13 @@ def alpha_page(ctx):
 {modes(ctx, [
     (("100 – 60 %", "100 – 60 %"), ("The hunt", "Die Jagd"),
      ("Bite combos, a Lunge along a line you can see coming, and Rend, a bleed that a healer can cleanse.",
-      "Bisskombos, ein Sprung entlang einer Linie, die du kommen siehst, und Zerfleischen, eine Blutung, die ein Heiler reinigen kann.")),
+      "Bisskombos, ein Sprung entlang einer Linie, die du kommen siehst, und Zerfleischen, eine Blutung, die ein Heiler reinigen kann."), "ALPHA-1"),
     (("60 – 25 %", "60 – 25 %"), ("The howl", "Das Heulen"),
      ("It howls for two grey wolves and grows stronger. Interrupt the howl, or kill the adds fast.",
-      "Er heult nach zwei grauen Wölfen und wird stärker. Unterbrich das Heulen oder töte die Helfer schnell.")),
+      "Er heult nach zwei grauen Wölfen und wird stärker. Unterbrich das Heulen oder töte die Helfer schnell."), "ALPHA-2"),
     (("Below 25 %", "Unter 25 %"), ("Frenzy", "Raserei"),
      ("Faster attacks and Savage Spin, a circle around it marked on the ground. Step out, then finish it.",
-      "Schnellere Angriffe und Wilder Wirbel, ein Kreis um ihn, der am Boden markiert ist. Raus aus dem Kreis, dann erledige ihn.")),
+      "Schnellere Angriffe und Wilder Wirbel, ein Kreis um ihn, der am Boden markiert ist. Raus aus dem Kreis, dann erledige ihn."), "ALPHA-3"),
 ])}
 <div style="margin-top:72px">
 {feature(ctx, "KA-07", ("The arena", "Die Arena"), ("The den", "Der Bau"), [
@@ -140,7 +157,18 @@ def alpha_page(ctx):
      "Eine Lichtung aus zertrampelter Erde und Fichtennadeln, umringt von umgestürzten Stämmen, mit dem Höhleneingang im Hintergrund. "
      "Knochen und ein zerrissener Reisesack am Eingang. Ein einzelner Strahl fahlen Lichts.")])}
 </div>
+{after_alpha(ctx)}
 {back(ctx, "journey/index.html", ("Back to the journey", "Zurück zur Reise"))}""")
+
+
+def after_alpha(ctx):
+    if not ctx.has("ALPHA-4"):
+        return ""
+    return '<div style="margin-top:72px">' + feature(ctx, "ALPHA-4", ("After the fight", "Nach dem Kampf"), ("The den goes quiet", "Im Bau wird es still"), [
+        ("When the Alpha falls, the clearing goes still. Catch your breath, let the healer patch you up, and take its fang back to "
+         "Hayn: the town will want to hear about it.",
+         "Wenn der Alpha fällt, wird es auf der Lichtung still. Komm wieder zu Atem, lass dich vom Heiler verarzten und bring seinen "
+         "Zahn nach Hayn: Die Stadt wird davon hören wollen.")], flip=True) + "</div>"
 
 
 PAGES = {

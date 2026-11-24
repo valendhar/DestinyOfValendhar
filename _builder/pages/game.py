@@ -153,6 +153,32 @@ JOB_DETAILS = [
 ]
 
 
+# Each job in action: its first lesson, then two of its abilities. A picture appears once it is made.
+JOB_ACTION = {
+    "paladin": [("JOB-PAL-3", ("First lessons in the training yard", "Erste Lektionen auf dem Übungsplatz")),
+                ("JOB-PAL-1", ("Shield Bash", "Schildstoß")),
+                ("JOB-PAL-2", ("Radiant Sweep: a cone of holy light", "Strahlender Hieb: ein Kegel aus heiligem Licht"))],
+    "ranger": [("JOB-RAN-3", ("First lessons on the archery range", "Erste Lektionen auf dem Schießplatz")),
+               ("JOB-RAN-1", ("Volley: arrows rain down on a marked circle", "Salve: Pfeile regnen auf einen markierten Kreis")),
+               ("JOB-RAN-2", ("Snare Trap, then Disengage", "Schlingfalle, dann Rückzugssprung"))],
+    "whitemage": [("JOB-WM-3", ("First lessons at the spring shrine", "Erste Lektionen am Quellschrein")),
+                  ("JOB-WM-1", ("Medica: one heal for the whole group", "Medica: eine Heilung für die ganze Gruppe")),
+                  ("JOB-WM-2", ("Raise: bringing a fallen friend back", "Wiederbeleben: einen gefallenen Freund zurückholen"))],
+    "elementalist": [("JOB-ELE-3", ("First lessons in the rune circle", "Erste Lektionen im Runenkreis")),
+                     ("JOB-ELE-1", ("Lightning Beam", "Blitzstrahl")),
+                     ("JOB-ELE-2", ("Frost Cone and Earth Spike", "Frostkegel und Erdstachel"))],
+}
+
+
+def job_action(ctx, key):
+    shots = [(i, ctx.t(*c)) for i, c in JOB_ACTION.get(key, []) if ctx.has(i)]
+    if not shots:
+        return ""
+    return ('<div class="job-action" style="margin:-24px 0 88px">'
+            f'<p class="kicker">{ctx.t("In action", "Im Einsatz")}</p>'
+            + ctx.gallery(shots, "gallery-3 gallery-169") + "</div>")
+
+
 # Same left-to-right order as the line-ups.
 PORTRAIT_JOBS = [
     ("WHITEMAGE", ("White Mage", "Weißmagier")),
@@ -171,7 +197,7 @@ def jobs(ctx):
         body = (f'<p class="job-role" style="font-size:1rem">{ctx.t(*role)}</p><p>{ctx.t(*text)}</p>'
                 f'{tags(ctx, [trainer, banner])}')
         out.append(f'<div id="{key}" class="job-{key}" style="scroll-margin-top:90px">'
-                   + feature(ctx, img, None, name, body, flip=k % 2 == 1, extra=extra) + '</div>')
+                   + feature(ctx, img, None, name, body, flip=k % 2 == 1, extra=extra) + job_action(ctx, key) + '</div>')
     # The two line-ups appear once both images exist, so the page never shows a placeholder for them.
     line_ups = ""
     if ctx.has("PC-GROUP-M") and ctx.has("PC-GROUP-F"):
