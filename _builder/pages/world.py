@@ -189,7 +189,9 @@ def wolfwood(ctx):
     (("WOOD-CLEARING", "KA-07"), t("The woodcutters' clearing", "Die Lichtung der Holzfäller") if ctx.has("WOOD-CLEARING") else t("The wolf den", "Der Wolfsbau")),
     ("BE-02", t("From the north-west, over the forest to the town", "Von Nordwesten über den Wald zur Stadt")),
     ("VW-10", t("From the forest ridge", "Vom Waldkamm aus")),
-], "gallery-2")}""")
+    ("SD-02", t("Hagen's hunting stand in the beech forest", "Hagens Hochsitz im Buchenwald")),
+    ("CO-03", t("A campfire at the hunters' camp, at dusk", "Ein Lagerfeuer im Jägerlager, in der Dämmerung")),
+], "gallery-3")}""")
 
 
 def road(ctx):
@@ -228,10 +230,12 @@ def road(ctx):
 def barrow(ctx):
     t = ctx.t
     shots = [(i, t(*c)) for i, c in [
+        ("DG-02", ("The first pack, in the entrance hall", "Das erste Rudel in der Eingangshalle")),
         ("DG-03", ("The bridge: skeleton archers and a bone wolf over the chasm", "Die Brücke: Skelettbogenschützen und ein Knochenwolf über dem Abgrund")),
         ("DG-07", ("The wolf-cult altar, and a sealed door that starts to open", "Der Altar des Wolfskults und eine versiegelte Tür, die sich öffnet")),
         ("DG-04", ("The Barrow Warden wakes: step out of the line of its blow", "Der Hügelgrabwächter erwacht: Raus aus der Bahn seines Hiebs")),
         ("DG-05", ("Phase two: the wolf spirit breaks free", "Phase zwei: Der Wolfsgeist bricht hervor")),
+        ("DG-06", ("Back into the light, out through the tunnel to the road", "Zurück ins Licht, durch den Tunnel hinaus zur Straße")),
     ] if ctx.has(i)]
     if not shots:
         return ""
@@ -241,7 +245,7 @@ def barrow(ctx):
              "Mitten im Kampf bricht seine Rüstung auf, und der Wolfsgeist in ihr kommt frei.")
     return (f'<h2 style="margin-top:72px">{t("Inside the barrow", "Im Hügelgrab")}</h2>'
             f'<p class="lede" style="margin-bottom:28px">{lede}</p>'
-            + ctx.gallery(shots, "gallery-2 gallery-169"))
+            + ctx.gallery(shots, "gallery-3 gallery-169"))
 
 
 PAGES = {
